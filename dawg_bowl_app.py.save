@@ -1,0 +1,65 @@
+import pandas as pd
+from utils.draft_helpers import calculate_adp, detect_stacks, find_combos
+
+st.title("🏈 Dawg Bowl Draft Analyzer")
+
+df = pd.read_csv("data/week9_drafts.csv")
+
+st.subheader("📊 ADP")
+st.dataframe(calculate_adp(df))
+
+st.subheader("🔗 Stacks")
+st.dataframe(detect_stacks(df))
+
+st.subheader("👥 Common Combos")
+st.dataframe(find_combos(df))kkk
+mport streamlit as st
+import pandas as pd
+from utils.draft_helpers import calculate_adp, detect_stacks, find_combos
+
+st.title("🏈 Dawg Bowl Draft Analyzer")
+
+df = pd.read_csv("data/week9_drafts.csv")
+
+st.subheader("📊 ADP")
+st.dataframe(calculate_adp(df))
+
+st.subheader("🔗 Stacks")
+st.dataframe(detect_stacks(df))
+
+st.subheader("👥 Common Combos")
+st.dataframe(find_combos(df))
+import streamlit as st
+import pandas as pd
+from utils.draft_helpers import calculate_adp, detect_stacks, find_combos
+
+st.title("🏈 Dawg Bowl Draft Analyzer")
+
+df = pd.read_csv("data/week9_drafts.csv")
+
+st.subheader("📊 ADP")
+st.dataframe(calculate_adp(df))
+
+st.subheader("🔗 Stacks")
+st.dataframe(detect_stacks(df))
+
+st.subheader("👥 Common Combos")
+st.dataframe(find_combos(df))
+import streamlit as st
+import pandas as pd
+from utils.draft_helpers import calculate_adp, detect_stacks, find_combos
+
+st.title("🏈 Dawg Bowl Draft Analyzer")
+
+df = pd.read_csv("data/week9_drafts.csv")
+
+st.subheader("📊 ADP")
+st.dataframe(calculate_adp(df))
+
+st.subheader("🔗 Stacks")
+st.dataframe(detect_stacks(df))
+
+st.subheader("👥 Common Combos")
+st.dataframe(find_combos(df))
+
+
