@@ -45,7 +45,7 @@ name, auth_status, username = authenticator.login(
     fields={'Form name': 'Login'},
     location='main'
 )
-authenticator.logout(location='sidebar', label='Logout')
+authenticator.logout('Logout', location='sidebar')
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
