@@ -31,8 +31,11 @@ preauthorized:
   emails: []
 """
 
+# --- Load Config and Initialize Authenticator ---
 config = yaml.safe_load(config_yaml)
 authenticator = stauth.Authenticate(config)
+
+# --- Login Widget ---
 name, auth_status, username = authenticator.login("Login", "main")
 
 if auth_status:
