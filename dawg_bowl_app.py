@@ -1,16 +1,29 @@
-import streamlit_authenticator as stauth
+import yaml
 
-# --- AUTHENTICATION SETUP ---
-names = ["Chad", "Dave", "Chris", "Andrew", "Matt"]
-usernames = ["Lee121503", "D4ve", "CGEEEEEE", "Nez", "Wutang"]
-passwords = ["Lee1215032025", "D4ve2025", "CGEEEEEE2025", "Nez2025", "Wutang2025"]  # Replace with hashed passwords later
+# --- AUTHENTICATION CONFIG ---
+config = {
+    "credentials": {
+        "usernames": {
+            "Lee121503": {"name": "Chad", "password": "Lee1215032025"},
+            "D4ve": {"name": "Dave", "password": "D4ve2025"},
+            "CGEEEEEE": {"name": "Chris", "password": "CGEEEEEE2025"},
+            "Nez": {"name": "Andrew", "password": "Nez2025"},
+            "Wutang": {"name": "Matt", "password": "Wutang2025"},
+        }
+    },
+    "cookie": {
+        "name": "dawg_bowl",
+        "key": "abcdef",
+        "expiry_days": 1
+    },
+    "preauthorized": {
+        "emails": []
+    }
+}
 
-authenticator = stauth.Authenticate(
-    names, usernames, passwords,
-    "dawg_bowl", "abcdef", cookie_expiry_days=1
-)
-
+authenticator = stauth.Authenticate(config)
 name, auth_status, username = authenticator.login("Login", "main")
+
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
