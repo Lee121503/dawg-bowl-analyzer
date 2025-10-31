@@ -43,6 +43,7 @@ authenticator = stauth.Authenticate(config)
 # --- Login Widget ---
 name, auth_status, username = authenticator.login("Login", "main")
 
+
 if auth_status:
     st.success(f"Welcome {name} 👋")
     
