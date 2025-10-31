@@ -2,7 +2,8 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
 
-# --- AUTHENTICATION CONFIG ---
+st.set_page_config(layout="wide")# --- AUTHENTICATION CONFIG ---
+
 config_yaml = """
 credentials:
   usernames:
@@ -38,16 +39,14 @@ authenticator = stauth.Authenticate(config)
 # --- Login Widget ---
 name, auth_status, username = authenticator.login("Login", "main")
 
+
 if auth_status:
     st.success(f"Welcome {name} 👋")
     
-    import streamlit as st
     import pandas as pd
     from utils.draft_helpers import calculate_adp
-    
-    # 👇 Add this line immediately after imports
-    st.set_page_config(layout="wide")
-    
+
+
     # --- Load Draft Data First ---
     df = pd.read_csv("data/week9_drafts.csv", sep=None, engine="python")
     
