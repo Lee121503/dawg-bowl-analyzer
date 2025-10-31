@@ -2,10 +2,8 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
 
-# --- Set layout early ---
 st.set_page_config(layout="wide")
 
-# --- AUTHENTICATION CONFIG ---
 config_yaml = """
 credentials:
   usernames:
@@ -34,15 +32,18 @@ preauthorized:
   emails: []
 """
 
-
-# --- Load Config and Initialize Authenticator ---
 config = yaml.safe_load(config_yaml)
-st.write(config)  # Debug print
-authenticator = stauth.Authenticate(config)
+st.write(config)  # Optional debug print
 
-# --- Login Widget ---
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
+
 name, auth_status, username = authenticator.login("Login", "main")
-
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
