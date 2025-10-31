@@ -42,9 +42,7 @@ authenticator = stauth.Authenticate(
 
 # --- Login Widget ---
 name, auth_status, username = authenticator.login("Login", "main")
-
-# --- Optional: Logout Button in Sidebar ---
-authenticator.logout("Logout", "sidebar")
+authenticator.logout(location="sidebar", label="Logout")
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
