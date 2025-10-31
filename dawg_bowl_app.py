@@ -27,9 +27,6 @@ cookie:
   name: dawg_bowl
   key: abcdef
   expiry_days: 1
-
-preauthorized:
-  emails: []
 """
 
 config = yaml.safe_load(config_yaml)
@@ -39,8 +36,7 @@ authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
     config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
+    config['cookie']['expiry_days']
 )
 
 name, auth_status, username = authenticator.login("Login", "main")
