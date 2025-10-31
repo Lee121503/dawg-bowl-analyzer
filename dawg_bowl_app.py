@@ -41,8 +41,11 @@ authenticator = stauth.Authenticate(
 )
 
 # --- Login Widget ---
-name, auth_status, username = authenticator.login("Login", "main")
-authenticator.logout("Logout", "sidebar")
+name, auth_status, username = authenticator.login(
+    fields={'Form name': 'Login'},
+    location='main'
+)
+authenticator.logout(location='sidebar', label='Logout')
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
