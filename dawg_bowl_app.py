@@ -1,7 +1,8 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
-#Dummy comment
+st.write(f"Authenticator version: {stauth.__version__}")
+
 # --- Set layout early ---
 st.set_page_config(layout="wide")
 
