@@ -1,8 +1,6 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
-st.write(f"Authenticator version: {stauth.__version__}")
-# force rebuild
 
 # --- Set layout early ---
 st.set_page_config(layout="wide")
@@ -43,8 +41,8 @@ authenticator = stauth.Authenticate(
 )
 
 # --- Login Widget ---
-name, auth_status, username = authenticator.login(label="Login", location="main")
-authenticator.logout(location="sidebar", label="Logout")
+name, auth_status, username = authenticator.login("Login", "main")
+authenticator.logout("Logout", "sidebar")
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
