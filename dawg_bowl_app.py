@@ -34,10 +34,10 @@ preauthorized:
   emails: []
 """
 
+
 # --- Load Config and Initialize Authenticator ---
 config = yaml.safe_load(config_yaml)
-st.write(config)  # 👈 Debug print to verify structure
-
+st.write(config)  # Debug print
 authenticator = stauth.Authenticate(config)
 
 # --- Login Widget ---
