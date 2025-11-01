@@ -2,6 +2,16 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
 from fuzzywuzzy import fuzz
+import re
+
+def clean_name(name):
+    name = name.lower()
+    name = re.sub(r"[^\w\s]", "", name)
+    name = re.sub(r"\s+", " ", name)
+    return name.strip()
+
+def is_fuzzy_match(name, name_list, threshold=90):
+    return any(fuzz.ratio(name, target) >= threshold for target in name_list)
 
 # --- Set layout early ---
 st.set_page_config(layout="wide")
