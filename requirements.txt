@@ -4,3 +4,4 @@ scikit-learn
 pyyaml
 streamlit-authenticator==0.3.1
 matplotlib
+fuzzywuzzy
