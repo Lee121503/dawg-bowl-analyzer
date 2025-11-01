@@ -67,6 +67,7 @@ if auth_status:
 
     # --- Load Draft Data First ---
     df = pd.read_csv("data/week9_drafts.csv", sep=None, engine="python")
+    df["CleanPlayer"] = df["Player"].apply(clean_name)
     
     # --- Shared Filters (now safe to use df) ---
     all_positions = sorted(df["Position"].dropna().unique())
