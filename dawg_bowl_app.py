@@ -475,7 +475,7 @@ if auth_status:
         # --- Week-specific injury file mapping ---
         injury_file_map = {
             "Week 9": "Week9UD.csv",
-            "Week 10": "Week10UD.csv"
+            "Week 10": "week10UD.csv"
         }
     
         injury_file = injury_file_map.get(selected_week_label, "Week10UD.csv")
