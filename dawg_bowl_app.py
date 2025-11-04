@@ -64,10 +64,20 @@ if auth_status:
     import pandas as pd
     from utils.draft_helpers import calculate_adp
 
+    week_options = {
+        "Week 9": "week9_drafts.csv",
+        "Week 10": "week10_drafts.csv"
+    }
 
-    # --- Load Draft Data First ---
-    df = pd.read_csv("data/week9_drafts.csv", sep=None, engine="python")
+    selected_week_label = st.selectbox("Select Week", list(week_options.keys()))
+    selected_week_file = week_options[selected_week_label]
+
+    st.title(f"Dawg Bowl Contest Dashboard — {selected_week_label}")
+
+    # --- Load Draft Data ---
+    df = pd.read_csv(f"data/{selected_week_file}", sep=None, engine="python")
     df["CleanPlayer"] = df["Player"].apply(clean_name)
+
     
     # --- Shared Filters (now safe to use df) ---
     all_positions = sorted(df["Position"].dropna().unique())
@@ -446,13 +456,19 @@ if auth_status:
         else:
             st.info("No users meet the similarity threshold.")
     with tab7:
-      st.subheader("🩹 Injury Swap Tool")
+      st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
+
+        # --- Week-specific injury file mapping ---
+        injury_file_map = {
+            "Week 9": "Week9UD.csv",
+            "Week 10": "Week10UD.csv"
+        }
+
+        injury_file = injury_file_map.get(selected_week_label, "Week10UD.csv")
+        injury_df = pd.read_csv(f"data/{injury_file}")
+        etr_df = pd.read_csv("data/ETR Projections.csv")  # Static unless you want to make this week-specific too
   
-      # Load injury and projection data
-      injury_df = pd.read_csv("data/Week9UD.csv")
-      etr_df = pd.read_csv("data/ETR Projections.csv")
-  
-      # Normalize injury data
+        # Normalize injury data
       injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
       injury_df["CleanName"] = (
           injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()
