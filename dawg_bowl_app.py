@@ -112,27 +112,34 @@ if auth_status:
     with tab1:
         st.subheader("📋 Draft Viewer")
     
-        # Select a draft number
-        all_drafts = sorted(df["Draft"].unique())
+        # --- Optional: Filter by User ---
+        all_users = sorted(df["User"].dropna().unique())
+        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users)
+    
+        if selected_user != "All Users":
+            user_drafts = df[df["User"] == selected_user]["Draft"].unique()
+            st.markdown(f"**Drafts for `{selected_user}`:** {sorted(user_drafts)}")
+            filtered_df = df[df["Draft"].isin(user_drafts)]
+        else:
+            filtered_df = df.copy()
+    
+        # --- Select a draft number ---
+        all_drafts = sorted(filtered_df["Draft"].unique())
         selected_draft = st.selectbox("Select Draft Number", all_drafts)
     
-        # Filter to selected draft
-        draft_df = df[df["Draft"] == selected_draft]
+        # --- Filter to selected draft ---
+        draft_df = filtered_df[filtered_df["Draft"] == selected_draft]
     
-        # Group by NFL_Team and show players + user
-        # Group by Team and show players + user
+        # --- Group by fantasy team and show players + user ---
         team_groups = draft_df.groupby("Team")
         for team_num, group in team_groups:
             st.markdown(f"### 🏈 Team {team_num} — User: `{group['User'].iloc[0]}`")
-
+    
             team_df = group[["Player", "Position", "Team", "Pick"]].sort_values("Pick")
-            team_df = team_df.rename(columns={"Team": "NFL_Team"})
-
-
-
             styled_df = team_df.style.format({"Pick": "{:.2f}"}).background_gradient(subset=["Pick"], cmap="Blues")
     
             st.dataframe(styled_df, use_container_width=True)
+
     
     # --- Tab 2: Player Dashboard ---
     with tab2:
