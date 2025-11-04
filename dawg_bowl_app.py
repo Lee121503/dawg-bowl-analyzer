@@ -63,10 +63,11 @@ authenticator.logout('Logout', location='sidebar')
 
 if auth_status:
     st.success(f"Welcome {name} 👋")
-    
+
     import pandas as pd
     from utils.draft_helpers import calculate_adp
 
+    # --- Week selector ---
     week_options = {
         "Week 9": "week9_drafts.csv",
         "Week 10": "week10_drafts.csv"
@@ -77,11 +78,16 @@ if auth_status:
 
     st.title(f"Dawg Bowl Contest Dashboard — {selected_week_label}")
 
-    # --- Load Draft Data ---
+    # --- Load and normalize draft data ---
     df = pd.read_csv(f"data/{selected_week_file}", sep=None, engine="python")
+
+    # Rename 'Team' to 'NFL_Team' for consistency
+    if "Team" in df.columns and "NFL_Team" not in df.columns:
+        df = df.rename(columns={"Team": "NFL_Team"})
+
+    # Normalize player names
     df["CleanPlayer"] = df["Player"].apply(clean_name)
 
-    
     # --- Shared Filters (now safe to use df) ---
     all_positions = sorted(df["Position"].dropna().unique())
     shared_positions = st.multiselect("Filter by Position (shared)", all_positions, default=all_positions, key="shared_position_filter")
