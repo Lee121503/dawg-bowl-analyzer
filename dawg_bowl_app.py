@@ -120,11 +120,14 @@ if auth_status:
         draft_df = df[df["Draft"] == selected_draft]
     
         # Group by NFL_Team and show players + user
-        team_groups = draft_df.groupby("NFL_Team")
+        # Group by Team and show players + user
+        team_groups = draft_df.groupby("Team")
         for team_num, group in team_groups:
             st.markdown(f"### 🏈 Team {team_num} — User: `{group['User'].iloc[0]}`")
 
-            team_df = group[["Player", "Position", "NFL_Team", "Pick"]].sort_values("Pick")
+            team_df = group[["Player", "Position", "Team", "Pick"]].sort_values("Pick")
+            team_df = team_df.rename(columns={"Team": "NFL_Team"})
+
 
 
             styled_df = team_df.style.format({"Pick": "{:.2f}"}).background_gradient(subset=["Pick"], cmap="Blues")
