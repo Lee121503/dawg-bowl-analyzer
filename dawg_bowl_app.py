@@ -456,121 +456,122 @@ if auth_status:
         else:
             st.info("No users meet the similarity threshold.")
     with tab7:
-      st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
-
+        st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
+    
         # --- Week-specific injury file mapping ---
         injury_file_map = {
             "Week 9": "Week9UD.csv",
             "Week 10": "Week10UD.csv"
         }
-
+    
         injury_file = injury_file_map.get(selected_week_label, "Week10UD.csv")
         injury_df = pd.read_csv(f"data/{injury_file}")
-        etr_df = pd.read_csv("data/ETR Projections.csv")  # Static unless you want to make this week-specific too
-  
-        # Normalize injury data
-      injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
-      injury_df["CleanName"] = (
-          injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()
-      ).apply(clean_name)
-  
-      # Normalize ETR projections
-      main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
-      main_slate = main_slate[["Player", "Pos", "Half PPR Proj", "FD Ceiling"]].dropna()
-      main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
-  
-      clean_to_original = dict(zip(main_slate["CleanPlayer"], main_slate["Player"]))
-      proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
-      ceiling_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["FD Ceiling"]))
-  
-      rankings = (
-          main_slate.sort_values("Half PPR Proj", ascending=False)
-          .groupby("Pos")["CleanPlayer"]
-          .apply(list)
-          .to_dict()
-      )
-  
-      # Select user
-      user = st.selectbox("Select a user", df["User"].unique())
-      user_drafts = df[df["User"] == user]
-      user_clean_names = set(user_drafts["Player"].apply(clean_name))
-  
-      # Manual override for QUESTIONABLE players
-      st.subheader("QUESTIONABLE Players — Manual Override")
-      questionable_df = injury_df[
-          (injury_df["CleanStatus"] == "QUESTIONABLE") &
-          (injury_df["CleanName"].apply(lambda x: is_fuzzy_match(x, user_clean_names)))
-      ].copy()
-  
-      if "manual_out" not in st.session_state:
-          st.session_state.manual_out = set()
-  
-      for _, row in questionable_df.iterrows():
-          full_name = f"{row['firstName'].strip()} {row['lastName'].strip()}"
-          clean = row["CleanName"]
-          slot = row.get("slotName", "Unknown")
-          toggle = st.toggle(f"{full_name} ({slot})", value=False, key=f"toggle_{clean}")
-          if toggle:
-              st.session_state.manual_out.add(clean)
-          else:
-              st.session_state.manual_out.discard(clean)
-  
-      manual_text = st.text_input("Manually mark a player OUT (e.g. Tyreek Hill)")
-      if manual_text:
-          st.session_state.manual_out.add(clean_name(manual_text))
-  
-      if st.session_state.manual_out:
-          st.subheader("Manually Added OUT Players")
-          to_remove = set()
-          for name in sorted(st.session_state.manual_out):
-              if not st.checkbox(f"{name}", value=True, key=f"manual_{name}"):
-                  to_remove.add(name)
-          st.session_state.manual_out -= to_remove
-  
-      # Build out_players dictionary scoped to drafted pool
-      injured_df = injury_df[injury_df["CleanStatus"].isin(["OUT", "DOUBTFUL"])].copy()
-      df["CleanPlayer"] = df["Player"].apply(clean_name)
-      drafted_names = set(df["CleanPlayer"])
-      out_players = {}
-      for pos in injured_df["slotName"].dropna().unique():
-          injured_at_pos = injured_df[injured_df["slotName"] == pos]
-          filtered = injured_at_pos[injured_at_pos["CleanName"].apply(lambda x: is_fuzzy_match(x, drafted_names))]
-          out_players[pos] = filtered["CleanName"].tolist()
-  
-      # Identify flagged drafts
-      flagged_drafts = []
-      out_names = sum(out_players.values(), []) + list(st.session_state.manual_out)
-      for draft_id in user_drafts["Draft"].unique():
-          full_draft = df[df["Draft"] == draft_id]
-          user_picks = user_drafts[user_drafts["Draft"] == draft_id]
-          user_out_picks = user_picks[user_picks["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))]
-          if not user_out_picks.empty:
-              flagged_drafts.append((draft_id, full_draft, user_out_picks))
-  
-      # Display flagged drafts
-      if flagged_drafts:
-          st.subheader(f"Flagged Drafts for {user}")
-          for draft_id, full_draft, user_out_picks in flagged_drafts:
-              st.markdown(f"### Draft {draft_id}")
-              st.dataframe(full_draft)
-              st.markdown("**Out Players for This User:**")
-              st.dataframe(user_out_picks)
-  
-              affected_positions = user_out_picks["Position"].unique()
-              for pos in affected_positions:
-                  drafted = set(df[df["Position"] == pos]["CleanPlayer"])
-                  available = [
-                      p for p in rankings.get(pos, [])
-                      if not is_fuzzy_match(p, drafted)
-                  ]
-                  st.markdown(f"**Top {pos} replacements:**")
-                  for p in available[:5]:
-                      name = clean_to_original.get(p, p)
-                      proj = proj_lookup.get(p, "N/A")
-                      ceiling = ceiling_lookup.get(p, "N/A")
-                      st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
-      else:
-          st.success("No drafts with out/doubtful players for this user.")
+        etr_df = pd.read_csv("data/ETR Projections.csv")  # Static unless modularized
+    
+        # --- Normalize injury data ---
+        injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
+        injury_df["CleanName"] = (
+            injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()
+        ).apply(clean_name)
+    
+        # --- Normalize ETR projections ---
+        main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
+        main_slate = main_slate[["Player", "Pos", "Half PPR Proj", "FD Ceiling"]].dropna()
+        main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
+    
+        clean_to_original = dict(zip(main_slate["CleanPlayer"], main_slate["Player"]))
+        proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
+        ceiling_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["FD Ceiling"]))
+    
+        rankings = (
+            main_slate.sort_values("Half PPR Proj", ascending=False)
+            .groupby("Pos")["CleanPlayer"]
+            .apply(list)
+            .to_dict()
+        )
+    
+        # --- Select user ---
+        user = st.selectbox("Select a user", df["User"].unique())
+        user_drafts = df[df["User"] == user]
+        user_clean_names = set(user_drafts["Player"].apply(clean_name))
+    
+        # --- Manual override for QUESTIONABLE players ---
+        st.subheader("QUESTIONABLE Players — Manual Override")
+        questionable_df = injury_df[
+            (injury_df["CleanStatus"] == "QUESTIONABLE") &
+            (injury_df["CleanName"].apply(lambda x: is_fuzzy_match(x, user_clean_names)))
+        ].copy()
+    
+        if "manual_out" not in st.session_state:
+            st.session_state.manual_out = set()
+    
+        for _, row in questionable_df.iterrows():
+            full_name = f"{row['firstName'].strip()} {row['lastName'].strip()}"
+            clean = row["CleanName"]
+            slot = row.get("slotName", "Unknown")
+            toggle = st.toggle(f"{full_name} ({slot})", value=False, key=f"toggle_{clean}")
+            if toggle:
+                st.session_state.manual_out.add(clean)
+            else:
+                st.session_state.manual_out.discard(clean)
+    
+        manual_text = st.text_input("Manually mark a player OUT (e.g. Tyreek Hill)")
+        if manual_text:
+            st.session_state.manual_out.add(clean_name(manual_text))
+    
+        if st.session_state.manual_out:
+            st.subheader("Manually Added OUT Players")
+            to_remove = set()
+            for name in sorted(st.session_state.manual_out):
+                if not st.checkbox(f"{name}", value=True, key=f"manual_{name}"):
+                    to_remove.add(name)
+            st.session_state.manual_out -= to_remove
+    
+        # --- Build out_players dictionary scoped to drafted pool ---
+        injured_df = injury_df[injury_df["CleanStatus"].isin(["OUT", "DOUBTFUL"])].copy()
+        df["CleanPlayer"] = df["Player"].apply(clean_name)
+        drafted_names = set(df["CleanPlayer"])
+        out_players = {}
+        for pos in injured_df["slotName"].dropna().unique():
+            injured_at_pos = injured_df[injured_df["slotName"] == pos]
+            filtered = injured_at_pos[injured_at_pos["CleanName"].apply(lambda x: is_fuzzy_match(x, drafted_names))]
+            out_players[pos] = filtered["CleanName"].tolist()
+    
+        # --- Identify flagged drafts ---
+        flagged_drafts = []
+        out_names = sum(out_players.values(), []) + list(st.session_state.manual_out)
+        for draft_id in user_drafts["Draft"].unique():
+            full_draft = df[df["Draft"] == draft_id]
+            user_picks = user_drafts[user_drafts["Draft"] == draft_id]
+            user_out_picks = user_picks[user_picks["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))]
+            if not user_out_picks.empty:
+                flagged_drafts.append((draft_id, full_draft, user_out_picks))
+    
+        # --- Display flagged drafts ---
+        if flagged_drafts:
+            st.subheader(f"Flagged Drafts for {user}")
+            for draft_id, full_draft, user_out_picks in flagged_drafts:
+                st.markdown(f"### Draft {draft_id}")
+                st.dataframe(full_draft)
+                st.markdown("**Out Players for This User:**")
+                st.dataframe(user_out_picks)
+    
+                affected_positions = user_out_picks["Position"].unique()
+                for pos in affected_positions:
+                    drafted = set(df[df["Position"] == pos]["CleanPlayer"])
+                    available = [
+                        p for p in rankings.get(pos, [])
+                        if not is_fuzzy_match(p, drafted)
+                    ]
+                    st.markdown(f"**Top {pos} replacements:**")
+                    for p in available[:5]:
+                        name = clean_to_original.get(p, p)
+                        proj = proj_lookup.get(p, "N/A")
+                        ceiling = ceiling_lookup.get(p, "N/A")
+                        st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
+        else:
+            st.success("No drafts with out/doubtful players for this user.")
+
 
 
 
