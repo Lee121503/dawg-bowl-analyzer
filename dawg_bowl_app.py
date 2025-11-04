@@ -5,10 +5,13 @@ from fuzzywuzzy import fuzz
 import re
 
 def clean_name(name):
+    if not isinstance(name, str):
+        return ""
     name = name.lower()
     name = re.sub(r"[^\w\s]", "", name)
     name = re.sub(r"\s+", " ", name)
     return name.strip()
+
 
 def is_fuzzy_match(name, name_list, threshold=90):
     return any(fuzz.ratio(name, target) >= threshold for target in name_list)
