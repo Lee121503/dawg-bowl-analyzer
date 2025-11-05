@@ -281,9 +281,9 @@ if auth_status:
     
         combo_summary = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).agg({
             "ADP A": "mean",
-            "ADP B": "mean",
-            "Is_Teammate": "first"
+            "ADP B": "mean"
         }).reset_index()
+
     
         combo_summary["Times Drafted Together"] = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).size().values
         combo_summary["Exposure %"] = (combo_summary["Times Drafted Together"] / combo_base_df["Draft"].nunique() * 100).round(2)
