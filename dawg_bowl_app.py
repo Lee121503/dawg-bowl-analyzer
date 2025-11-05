@@ -279,6 +279,15 @@ if auth_status:
         combo_summary = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).size().reset_index(name="Times Drafted Together")
         combo_summary["Exposure %"] = (combo_summary["Times Drafted Together"] / combo_base_df["Draft"].nunique() * 100).round(2)
     
+        # --- Optional: Filter by Player Name ---
+        player_search = st.text_input("Search combos by Player name (optional)")
+        if player_search:
+            clean_search = clean_name(player_search)
+            filtered = combo_summary[
+                combo_summary["Player A"].apply(clean_name).str.contains(clean_search) |
+                combo_summary["Player B"].apply(clean_name).str.contains(clean_search)
+            ]
+        
         # --- Filter by minimum frequency ---
         min_combo_count = st.slider("Minimum Times Drafted Together", 1, 10, 2)
         filtered = combo_summary[combo_summary["Times Drafted Together"] >= min_combo_count]
