@@ -280,14 +280,14 @@ if auth_status:
         combo_summary["Exposure %"] = (combo_summary["Times Drafted Together"] / combo_base_df["Draft"].nunique() * 100).round(2)
     
         # --- Optional: Filter by Player Name ---
-        player_search = st.text_input("Search combos by Player name (optional)")
+        player_search = st.text_input("Search for combos involving a specific player (optional)")
         if player_search:
             clean_search = clean_name(player_search)
-            filtered = combo_summary[
-                combo_summary["Player A"].apply(clean_name).str.contains(clean_search) |
-                combo_summary["Player B"].apply(clean_name).str.contains(clean_search)
+            combo_summary = combo_summary[
+                combo_summary["Player A"].apply(clean_name).eq(clean_search) |
+                combo_summary["Player B"].apply(clean_name).eq(clean_search)
             ]
-        
+    
         # --- Filter by minimum frequency ---
         min_combo_count = st.slider("Minimum Times Drafted Together", 1, 10, 2)
         filtered = combo_summary[combo_summary["Times Drafted Together"] >= min_combo_count]
@@ -342,6 +342,7 @@ if auth_status:
                 )
         else:
             st.info("No non-teammate combos found at this frequency.")
+
 
     
     # --- Tab 4: Co-Drafted Dashboard ---
