@@ -244,7 +244,7 @@ if auth_status:
     
         # --- User filter ---
         all_users = sorted(df["User"].dropna().unique())
-        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users)
+        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="combo_user_filter")
     
         if selected_user != "All Users":
             user_drafts = df[df["User"] == selected_user]["Draft"].unique()
