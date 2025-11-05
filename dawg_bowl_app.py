@@ -263,6 +263,7 @@ if auth_status:
         combo_pairs = []
         for (draft_id, team_id), group in combo_df.groupby(["Draft", "Team"]):
             player_team_map = group.set_index("Player")["NFL_Team"].to_dict()
+            pick_lookup = group.set_index("Player")["Pick"].to_dict()
             players = sorted(player_team_map.keys())
             for i in range(len(players)):
                 for j in range(i + 1, len(players)):
@@ -270,14 +271,24 @@ if auth_status:
                         "Player A": players[i],
                         "Player B": players[j],
                         "Team A": player_team_map[players[i]],
-                        "Team B": player_team_map[players[j]]
+                        "Team B": player_team_map[players[j]],
+                        "ADP A": pick_lookup.get(players[i], None),
+                        "ADP B": pick_lookup.get(players[j], None)
                     })
     
         combo_df = pd.DataFrame(combo_pairs)
         combo_df["Is_Teammate"] = combo_df["Team A"] == combo_df["Team B"]
     
-        combo_summary = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).size().reset_index(name="Times Drafted Together")
+        combo_summary = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).agg({
+            "ADP A": "mean",
+            "ADP B": "mean",
+            "Is_Teammate": "first"
+        }).reset_index()
+    
+        combo_summary["Times Drafted Together"] = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).size().values
         combo_summary["Exposure %"] = (combo_summary["Times Drafted Together"] / combo_base_df["Draft"].nunique() * 100).round(2)
+        combo_summary["ADP A"] = combo_summary["ADP A"].round(2)
+        combo_summary["ADP B"] = combo_summary["ADP B"].round(2)
     
         # --- Optional: Filter by Player Name ---
         player_search = st.text_input("Search for combos involving a specific player (optional)")
@@ -303,8 +314,10 @@ if auth_status:
             if view_mode == "Gradient":
                 styled = all_combo_df.style.format({
                     "Times Drafted Together": "{:.0f}",
-                    "Exposure %": "{:.2f}"
-                }).background_gradient(subset=["Times Drafted Together", "Exposure %"], cmap="Blues")
+                    "Exposure %": "{:.2f}",
+                    "ADP A": "{:.2f}",
+                    "ADP B": "{:.2f}"
+                }).background_gradient(subset=["Times Drafted Together", "Exposure %", "ADP A", "ADP B"], cmap="Blues")
                 st.dataframe(styled, use_container_width=True)
             else:
                 st.data_editor(
@@ -313,7 +326,9 @@ if auth_status:
                     height=900,
                     column_config={
                         "Times Drafted Together": st.column_config.NumberColumn(format="%d"),
-                        "Exposure %": st.column_config.NumberColumn(format="%.2f")
+                        "Exposure %": st.column_config.NumberColumn(format="%.2f"),
+                        "ADP A": st.column_config.NumberColumn(format="%.2f"),
+                        "ADP B": st.column_config.NumberColumn(format="%.2f")
                     }
                 )
         else:
@@ -327,8 +342,10 @@ if auth_status:
             if view_mode == "Gradient":
                 styled = non_teammates_df.style.format({
                     "Times Drafted Together": "{:.0f}",
-                    "Exposure %": "{:.2f}"
-                }).background_gradient(subset=["Times Drafted Together", "Exposure %"], cmap="Oranges")
+                    "Exposure %": "{:.2f}",
+                    "ADP A": "{:.2f}",
+                    "ADP B": "{:.2f}"
+                }).background_gradient(subset=["Times Drafted Together", "Exposure %", "ADP A", "ADP B"], cmap="Oranges")
                 st.dataframe(styled, use_container_width=True)
             else:
                 st.data_editor(
@@ -337,11 +354,14 @@ if auth_status:
                     height=900,
                     column_config={
                         "Times Drafted Together": st.column_config.NumberColumn(format="%d"),
-                        "Exposure %": st.column_config.NumberColumn(format="%.2f")
+                        "Exposure %": st.column_config.NumberColumn(format="%.2f"),
+                        "ADP A": st.column_config.NumberColumn(format="%.2f"),
+                        "ADP B": st.column_config.NumberColumn(format="%.2f")
                     }
                 )
         else:
             st.info("No non-teammate combos found at this frequency.")
+
 
 
     
