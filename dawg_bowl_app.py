@@ -242,14 +242,24 @@ if auth_status:
     with tab3:
         st.subheader("🔍 Combo Finder")
     
-        # Filter base dataframe using shared filters
-        combo_df = df[
-            (df["Position"].isin(shared_positions)) &
-            (df["Pick"] >= shared_adp_range[0]) &
-            (df["Pick"] <= shared_adp_range[1])
+        # --- User filter ---
+        all_users = sorted(df["User"].dropna().unique())
+        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users)
+    
+        if selected_user != "All Users":
+            user_drafts = df[df["User"] == selected_user]["Draft"].unique()
+            combo_base_df = df[df["Draft"].isin(user_drafts)]
+        else:
+            combo_base_df = df.copy()
+    
+        # --- Apply shared filters ---
+        combo_df = combo_base_df[
+            (combo_base_df["Position"].isin(shared_positions)) &
+            (combo_base_df["Pick"] >= shared_adp_range[0]) &
+            (combo_base_df["Pick"] <= shared_adp_range[1])
         ]
     
-        # Build combos per fantasy team (Draft + Team)
+        # --- Build combos per fantasy team (Draft + Team) ---
         combo_pairs = []
         for (draft_id, team_id), group in combo_df.groupby(["Draft", "Team"]):
             player_team_map = group.set_index("Player")["NFL_Team"].to_dict()
@@ -267,9 +277,9 @@ if auth_status:
         combo_df["Is_Teammate"] = combo_df["Team A"] == combo_df["Team B"]
     
         combo_summary = combo_df.groupby(["Player A", "Player B", "Is_Teammate"]).size().reset_index(name="Times Drafted Together")
-        combo_summary["Exposure %"] = (combo_summary["Times Drafted Together"] / df["Draft"].nunique() * 100).round(2)
+        combo_summary["Exposure %"] = (combo_summary["Times Drafted Together"] / combo_base_df["Draft"].nunique() * 100).round(2)
     
-        # Filter by minimum frequency
+        # --- Filter by minimum frequency ---
         min_combo_count = st.slider("Minimum Times Drafted Together", 1, 10, 2)
         filtered = combo_summary[combo_summary["Times Drafted Together"] >= min_combo_count]
     
@@ -323,6 +333,7 @@ if auth_status:
                 )
         else:
             st.info("No non-teammate combos found at this frequency.")
+
     
     # --- Tab 4: Co-Drafted Dashboard ---
     with tab4:
