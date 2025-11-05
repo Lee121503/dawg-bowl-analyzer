@@ -247,8 +247,8 @@ if auth_status:
         selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="combo_user_filter")
     
         if selected_user != "All Users":
-            user_drafts = df[df["User"] == selected_user]["Draft"].unique()
-            combo_base_df = df[df["Draft"].isin(user_drafts)]
+            user_teams = df[df["User"] == selected_user][["Draft", "Team"]].drop_duplicates()
+            combo_base_df = pd.merge(df, user_teams, on=["Draft", "Team"])
         else:
             combo_base_df = df.copy()
     
