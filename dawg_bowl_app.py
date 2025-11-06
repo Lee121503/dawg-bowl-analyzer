@@ -73,7 +73,11 @@ if auth_status:
         "Week 10": "week10_drafts.csv"
     }
 
-    selected_week_label = st.selectbox("Select Week", list(week_options.keys()))
+    selected_week_label = st.selectbox(
+        "Select Week",
+        list(week_options.keys()),
+        index=list(week_options.keys()).index("Week 10")  # Default to Week 10
+    )
     selected_week_file = week_options[selected_week_label]
 
     st.title(f"Dawg Bowl Contest Dashboard — {selected_week_label}")
