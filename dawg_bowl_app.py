@@ -102,15 +102,17 @@ if auth_status:
     if st.button("🔄 Reset Filters"):
         st.experimental_rerun()
     
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
         "📋 Draft Viewer",
         "📋 Player Dashboard",
         "🔍 Combo Finder",
         "🤝 Co-Drafted Dashboard",
         "📊 User Exposure Dashboard",
         "🧠 User Similarity Dashboard",
-        "🩹 Injury Swap"
+        "🩹 Injury Swap",
+        "📈 ETR Leaderboard"
     ])
+
     
     # --- Tab 1: Draft Viewer ---
     with tab1:
@@ -661,7 +663,46 @@ if auth_status:
                         st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
         else:
             st.success("No drafts with out/doubtful players for this user.")
-
+    with tab8:
+        st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
+    
+        # --- Normalize ETR projections ---
+        etr_df = pd.read_csv("data/ETR Projections.csv")
+        main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
+        main_slate = main_slate[["Player", "Half PPR Proj"]].dropna()
+        main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
+        proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
+    
+        # --- Normalize draft data ---
+        df["CleanPlayer"] = df["Player"].apply(clean_name)
+    
+        # --- Aggregate projected points per team ---
+        team_scores = []
+        for (draft_id, team_id), group in df.groupby(["Draft", "Team"]):
+            clean_names = group["CleanPlayer"]
+            total_proj = sum(proj_lookup.get(name, 0) for name in clean_names)
+            team_scores.append({
+                "Draft": draft_id,
+                "Team": team_id,
+                "User": group["User"].iloc[0],
+                "Projected Points": round(total_proj, 2)
+            })
+    
+        leaderboard_df = pd.DataFrame(team_scores)
+        leaderboard_df = leaderboard_df.sort_values(["Draft", "Projected Points"], ascending=[True, False])
+    
+        # --- Optional: Filter by Draft ---
+        all_drafts = sorted(leaderboard_df["Draft"].unique())
+        selected_draft = st.selectbox("Select Draft", all_drafts)
+    
+        filtered_df = leaderboard_df[leaderboard_df["Draft"] == selected_draft]
+    
+        # --- Display leaderboard ---
+        st.markdown(f"### 🏆 Leaderboard for Draft {selected_draft}")
+        styled_df = filtered_df.style.format({
+            "Projected Points": "{:.2f}"
+        }).background_gradient(subset=["Projected Points"], cmap="Greens")
+        st.dataframe(styled_df, use_container_width=True)
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
