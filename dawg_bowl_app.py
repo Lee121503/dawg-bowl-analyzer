@@ -590,7 +590,7 @@ if auth_status:
         df = df.groupby(["Draft", "Team"]).apply(tag_flex_players).reset_index(drop=True)
     
         # --- Select user ---
-        user = st.selectbox("Select a user", df["User"].unique())
+        user = st.selectbox("Select a user", sorted(df["User"].unique()))
         user_drafts = df[df["User"] == user]
         user_clean_names = set(user_drafts["CleanPlayer"])
     
