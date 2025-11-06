@@ -623,12 +623,21 @@ if auth_status:
                 st.markdown("**Out Players for This User:**")
                 st.dataframe(user_out_picks)
     
+                # --- Show all injured players in this draft ---
+                st.markdown("**All Injured Players in This Draft:**")
+                injured_in_draft = full_draft[full_draft["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))]
+                if not injured_in_draft.empty:
+                    styled = injured_in_draft[["Player", "Position", "User", "Pick"]].sort_values("Pick").style.format({
+                        "Pick": "{:.2f}"
+                    }).background_gradient(subset=["Pick"], cmap="Oranges")
+                    st.dataframe(styled, use_container_width=True)
+                else:
+                    st.info("No other injured players drafted in this draft.")
+    
+                # --- Replacement suggestions for affected positions ---
                 affected_positions = user_out_picks["Position"].unique()
                 for pos in affected_positions:
                     drafted = set(df[df["Draft"] == draft_id][df["Position"] == pos]["CleanPlayer"])
-                    # st.write(f"Drafted CleanPlayers at {pos}:", sorted(drafted))
-                    # st.write(f"ETR candidates at {pos}:", rankings.get(pos, [])[:10])
-    
                     if match_mode == "Fuzzy":
                         available = [
                             p for p in rankings.get(pos, [])
