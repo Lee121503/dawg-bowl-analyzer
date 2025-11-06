@@ -517,6 +517,7 @@ if auth_status:
                 )
         else:
             st.info("No users meet the similarity threshold.")
+            
     with tab7:
         st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
     
@@ -526,9 +527,9 @@ if auth_status:
             "Week 10": "week10UD.csv"
         }
     
-        injury_file = injury_file_map.get(selected_week_label, "Week10UD.csv")
+        injury_file = injury_file_map.get(selected_week_label, "week10UD.csv")
         injury_df = pd.read_csv(f"data/{injury_file}")
-        etr_df = pd.read_csv("data/ETR Projections.csv")  # Static unless modularized
+        etr_df = pd.read_csv("data/ETR Projections.csv")
     
         # --- Normalize injury data ---
         injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
@@ -538,6 +539,7 @@ if auth_status:
     
         # --- Normalize ETR projections ---
         main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
+        main_slate["Pos"] = main_slate["Pos"].str.upper().str.strip()
         main_slate = main_slate[["Player", "Pos", "Half PPR Proj", "FD Ceiling"]].dropna()
         main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
     
@@ -599,6 +601,9 @@ if auth_status:
             filtered = injured_at_pos[injured_at_pos["CleanName"].apply(lambda x: is_fuzzy_match(x, drafted_names))]
             out_players[pos] = filtered["CleanName"].tolist()
     
+        # --- Match mode toggle ---
+        match_mode = st.radio("Replacement Match Mode", ["Fuzzy", "Exact"], horizontal=True)
+    
         # --- Identify flagged drafts ---
         flagged_drafts = []
         out_names = sum(out_players.values(), []) + list(st.session_state.manual_out)
@@ -620,11 +625,21 @@ if auth_status:
     
                 affected_positions = user_out_picks["Position"].unique()
                 for pos in affected_positions:
-                    drafted = set(df[df["Position"] == pos]["CleanPlayer"])
-                    available = [
-                        p for p in rankings.get(pos, [])
-                        if not is_fuzzy_match(p, drafted)
-                    ]
+                    drafted = set(df[df["Draft"] == draft_id][df["Position"] == pos]["CleanPlayer"])
+                    st.write(f"Drafted CleanPlayers at {pos}:", sorted(drafted))
+                    st.write(f"ETR candidates at {pos}:", rankings.get(pos, [])[:10])
+    
+                    if match_mode == "Fuzzy":
+                        available = [
+                            p for p in rankings.get(pos, [])
+                            if not is_fuzzy_match(p, drafted)
+                        ]
+                    else:
+                        available = [
+                            p for p in rankings.get(pos, [])
+                            if p not in drafted
+                        ]
+    
                     st.markdown(f"**Top {pos} replacements:**")
                     for p in available[:5]:
                         name = clean_to_original.get(p, p)
@@ -633,8 +648,6 @@ if auth_status:
                         st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
         else:
             st.success("No drafts with out/doubtful players for this user.")
-
-
 
 
 elif auth_status is False:
