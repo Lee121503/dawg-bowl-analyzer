@@ -676,9 +676,17 @@ if auth_status:
         # --- Normalize draft data ---
         df["CleanPlayer"] = df["Player"].apply(clean_name)
     
+        # --- User filter ---
+        all_users = sorted(df["User"].dropna().unique())
+        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="etr_user_filter")
+    
         # --- Aggregate projected points and picks per team ---
         team_rows = []
         for (draft_id, team_id), group in df.groupby(["Draft", "Team"]):
+            user = group["User"].iloc[0]
+            if selected_user != "All Users" and user != selected_user:
+                continue
+    
             group_sorted = group.sort_values("Pick")
             clean_names = group_sorted["CleanPlayer"]
             original_names = group_sorted["Player"].tolist()
@@ -687,11 +695,10 @@ if auth_status:
             row = {
                 "Draft": draft_id,
                 "Team": team_id,
-                "User": group_sorted["User"].iloc[0],
+                "User": user,
                 "Projected Points": round(total_proj, 2)
             }
     
-            # Add picks as Round 1, Round 2, ...
             for i, player in enumerate(original_names):
                 row[f"Round {i+1}"] = player
     
@@ -699,15 +706,17 @@ if auth_status:
     
         leaderboard_df = pd.DataFrame(team_rows)
         leaderboard_df = leaderboard_df.sort_values("Projected Points", ascending=False).reset_index(drop=True)
-        leaderboard_df.index += 1  # Start rank at 1
+        leaderboard_df.index += 1
         leaderboard_df.insert(0, "Rank", leaderboard_df.index)
     
-        # --- Display full leaderboard ---
-        st.markdown("### 🏆 Full ETR Leaderboard Across All Drafts")
+        # --- Display leaderboard ---
+        st.markdown("### 🏆 ETR Leaderboard")
+        st.write(f"Teams shown: {len(leaderboard_df)}")
         styled_df = leaderboard_df.style.format({
             "Projected Points": "{:.2f}"
         }).background_gradient(subset=["Projected Points"], cmap="Greens")
         st.dataframe(styled_df, use_container_width=True)
+
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
