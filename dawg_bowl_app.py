@@ -626,8 +626,8 @@ if auth_status:
                 affected_positions = user_out_picks["Position"].unique()
                 for pos in affected_positions:
                     drafted = set(df[df["Draft"] == draft_id][df["Position"] == pos]["CleanPlayer"])
-                    st.write(f"Drafted CleanPlayers at {pos}:", sorted(drafted))
-                    st.write(f"ETR candidates at {pos}:", rankings.get(pos, [])[:10])
+                    # st.write(f"Drafted CleanPlayers at {pos}:", sorted(drafted))
+                    # st.write(f"ETR candidates at {pos}:", rankings.get(pos, [])[:10])
     
                     if match_mode == "Fuzzy":
                         available = [
