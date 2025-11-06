@@ -666,7 +666,7 @@ if auth_status:
     with tab8:
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
     
-        # --- Normalize ETR projections ---
+        # --- Load and normalize ETR projections ---
         etr_df = pd.read_csv("data/ETR Projections.csv")
         main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
         main_slate = main_slate[["Player", "Half PPR Proj"]].dropna()
@@ -689,20 +689,15 @@ if auth_status:
             })
     
         leaderboard_df = pd.DataFrame(team_scores)
-        leaderboard_df = leaderboard_df.sort_values(["Draft", "Projected Points"], ascending=[True, False])
+        leaderboard_df = leaderboard_df.sort_values(["Projected Points"], ascending=False)
     
-        # --- Optional: Filter by Draft ---
-        all_drafts = sorted(leaderboard_df["Draft"].unique())
-        selected_draft = st.selectbox("Select Draft", all_drafts)
-    
-        filtered_df = leaderboard_df[leaderboard_df["Draft"] == selected_draft]
-    
-        # --- Display leaderboard ---
-        st.markdown(f"### 🏆 Leaderboard for Draft {selected_draft}")
-        styled_df = filtered_df.style.format({
+        # --- Display full leaderboard ---
+        st.markdown("### 🏆 Full ETR Leaderboard Across All Drafts")
+        styled_df = leaderboard_df.style.format({
             "Projected Points": "{:.2f}"
         }).background_gradient(subset=["Projected Points"], cmap="Greens")
         st.dataframe(styled_df, use_container_width=True)
+
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
