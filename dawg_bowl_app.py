@@ -676,19 +676,28 @@ if auth_status:
         # --- Normalize draft data ---
         df["CleanPlayer"] = df["Player"].apply(clean_name)
     
-        # --- Aggregate projected points per team ---
-        team_scores = []
+        # --- Aggregate projected points and picks per team ---
+        team_rows = []
         for (draft_id, team_id), group in df.groupby(["Draft", "Team"]):
-            clean_names = group["CleanPlayer"]
+            group_sorted = group.sort_values("Pick")
+            clean_names = group_sorted["CleanPlayer"]
+            original_names = group_sorted["Player"].tolist()
             total_proj = sum(proj_lookup.get(name, 0) for name in clean_names)
-            team_scores.append({
+    
+            row = {
                 "Draft": draft_id,
                 "Team": team_id,
-                "User": group["User"].iloc[0],
+                "User": group_sorted["User"].iloc[0],
                 "Projected Points": round(total_proj, 2)
-            })
+            }
     
-        leaderboard_df = pd.DataFrame(team_scores)
+            # Add picks as Round 1, Round 2, ...
+            for i, player in enumerate(original_names):
+                row[f"Round {i+1}"] = player
+    
+            team_rows.append(row)
+    
+        leaderboard_df = pd.DataFrame(team_rows)
         leaderboard_df = leaderboard_df.sort_values("Projected Points", ascending=False).reset_index(drop=True)
         leaderboard_df.index += 1  # Start rank at 1
         leaderboard_df.insert(0, "Rank", leaderboard_df.index)
@@ -699,8 +708,6 @@ if auth_status:
             "Projected Points": "{:.2f}"
         }).background_gradient(subset=["Projected Points"], cmap="Greens")
         st.dataframe(styled_df, use_container_width=True)
-
-
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
