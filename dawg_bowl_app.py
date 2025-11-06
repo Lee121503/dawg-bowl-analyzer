@@ -9,9 +9,9 @@ def clean_name(name):
         return ""
     name = name.lower()
     name = re.sub(r"[^\w\s]", "", name)
+    name = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", name)  # Remove suffixes
     name = re.sub(r"\s+", " ", name)
     return name.strip()
-
 
 def is_fuzzy_match(name, name_list, threshold=90):
     return any(fuzz.ratio(name, target) >= threshold for target in name_list)
