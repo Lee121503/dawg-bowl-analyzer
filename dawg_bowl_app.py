@@ -743,6 +743,39 @@ if auth_status:
             "% in Top 100": "{:.2f}"
         }).background_gradient(subset=["Top 100 Teams", "% in Top 100"], cmap="Blues")
         st.dataframe(styled_summary, use_container_width=True)
+        
+        # --- Dashboard 2: Top 30 Player Frequency + ADP Comparison ---
+        st.markdown("### 📊 Top 30 Player Frequency and ADP Comparison")
+    
+        # Get top 30 teams from full leaderboard
+        top_30_df = leaderboard_df.sort_values("Projected Points", ascending=False).head(30)
+    
+        # Get all players from those teams
+        top_30_teams = df.merge(top_30_df[["Draft", "Team"]], on=["Draft", "Team"])
+    
+        # Count appearances and average ADP in top 30 teams
+        top_player_counts = top_30_teams.groupby("Player")["Pick"].agg([
+            ("Top 30 Appearances", "count"),
+            ("Top 30 ADP", "mean")
+        ]).reset_index()
+    
+        # Get overall ADP across all teams
+        overall_adp = df.groupby("Player")["Pick"].mean().reset_index()
+        overall_adp.columns = ["Player", "Overall ADP"]
+    
+        # Merge and calculate ADP delta
+        player_summary = pd.merge(top_player_counts, overall_adp, on="Player", how="left")
+        player_summary["ADP Delta"] = (player_summary["Overall ADP"] - player_summary["Top 30 ADP"]).round(2)
+    
+        # Display
+        player_summary = player_summary.sort_values("Top 30 Appearances", ascending=False)
+        styled_players = player_summary.style.format({
+            "Top 30 ADP": "{:.2f}",
+            "Overall ADP": "{:.2f}",
+            "ADP Delta": "{:.2f}"
+        }).background_gradient(subset=["Top 30 Appearances", "ADP Delta"], cmap="Purples")
+        st.dataframe(styled_players, use_container_width=True)
+
 
 
 elif auth_status is False:
