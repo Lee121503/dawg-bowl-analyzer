@@ -719,6 +719,31 @@ if auth_status:
         }).background_gradient(subset=["Projected Points"], cmap="Greens")
         st.dataframe(styled_df, use_container_width=True)
 
+            # --- Dashboard 1: Top 100 Team Frequency ---
+            st.markdown("### 📊 Top 100 Team Frequency by User")
+        
+            # Get top 100 teams from full leaderboard (not filtered)
+            top_100_df = leaderboard_df.sort_values("Projected Points", ascending=False).head(100)
+        
+            # Count top 100 appearances per user
+            top_counts = top_100_df["User"].value_counts().reset_index()
+            top_counts.columns = ["User", "Top 100 Teams"]
+        
+            # Count total teams per user
+            total_counts = leaderboard_df["User"].value_counts().reset_index()
+            total_counts.columns = ["User", "Total Teams"]
+        
+            # Merge and calculate percentage
+            user_summary = pd.merge(total_counts, top_counts, on="User", how="left").fillna(0)
+            user_summary["Top 100 Teams"] = user_summary["Top 100 Teams"].astype(int)
+            user_summary["% in Top 100"] = (user_summary["Top 100 Teams"] / user_summary["Total Teams"] * 100).round(2)
+        
+            # Display
+            styled_summary = user_summary.sort_values("Top 100 Teams", ascending=False).style.format({
+                "% in Top 100": "{:.2f}"
+            }).background_gradient(subset=["Top 100 Teams", "% in Top 100"], cmap="Blues")
+            st.dataframe(styled_summary, use_container_width=True)
+
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
