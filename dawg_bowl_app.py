@@ -689,7 +689,9 @@ if auth_status:
             })
     
         leaderboard_df = pd.DataFrame(team_scores)
-        leaderboard_df = leaderboard_df.sort_values(["Projected Points"], ascending=False)
+        leaderboard_df = leaderboard_df.sort_values("Projected Points", ascending=False).reset_index(drop=True)
+        leaderboard_df.index += 1  # Start rank at 1
+        leaderboard_df.insert(0, "Rank", leaderboard_df.index)
     
         # --- Display full leaderboard ---
         st.markdown("### 🏆 Full ETR Leaderboard Across All Drafts")
@@ -697,6 +699,7 @@ if auth_status:
             "Projected Points": "{:.2f}"
         }).background_gradient(subset=["Projected Points"], cmap="Greens")
         st.dataframe(styled_df, use_container_width=True)
+
 
 
 elif auth_status is False:
