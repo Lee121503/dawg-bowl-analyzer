@@ -566,9 +566,13 @@ if auth_status:
             team_df = team_df.sort_values("Pick").copy()
             pos_counts = {"RB": 0, "WR": 0, "TE": 0}
             flex_flags = []
-    
+        
             for _, row in team_df.iterrows():
                 pos = row["Position"]
+                if pos not in pos_counts:
+                    flex_flags.append(False)
+                    continue
+        
                 pos_counts[pos] += 1
                 if (pos == "RB" and pos_counts[pos] == 2) or \
                    (pos == "WR" and pos_counts[pos] == 3) or \
@@ -576,9 +580,10 @@ if auth_status:
                     flex_flags.append(True)
                 else:
                     flex_flags.append(False)
-    
+        
             team_df["IsFlex"] = flex_flags
             return team_df
+
     
         # --- Apply flex tagging ---
         df["CleanPlayer"] = df["Player"].apply(clean_name)
