@@ -644,7 +644,7 @@ if auth_status:
                 # --- Replacement suggestions for affected positions ---
                 affected_positions = user_out_picks["Position"].unique()
                 for pos in affected_positions:
-                    drafted = set(df[df["Draft"] == draft_id][df["Position"] == pos]["CleanPlayer"])
+                    drafted = set(full_draft[full_draft["Position"] == pos]["CleanPlayer"])
                     if match_mode == "Fuzzy":
                         available = [
                             p for p in rankings.get(pos, [])
@@ -662,6 +662,48 @@ if auth_status:
                         proj = proj_lookup.get(p, "N/A")
                         ceiling = ceiling_lookup.get(p, "N/A")
                         st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
+    
+                # --- Swap Priority Table for This Draft ---
+                st.markdown("**Swap Priority for Injured Picks in This Draft (Underdog Logic):**")
+    
+                injured_in_draft["Round"] = injured_in_draft["Pick"].astype(int)
+                injured_in_draft["PickInRound"] = injured_in_draft["Pick"].astype(int)
+                injured_in_draft["Swap Priority"] = injured_in_draft.apply(
+                    lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
+                )
+    
+                injured_sorted = injured_in_draft.sort_values("Swap Priority")
+    
+                swap_rows = []
+                used_replacements = set()
+                for _, row in injured_sorted.iterrows():
+                    pos = row["Position"]
+                    team_id = row["Team"]
+                    user_name = row["User"]
+                    drafted = set(full_draft[full_draft["Position"] == pos]["CleanPlayer"])
+    
+                    available = [
+                        p for p in rankings.get(pos, [])
+                        if p not in drafted and p not in used_replacements
+                    ]
+                    replacement = available[0] if available else "None Available"
+                    used_replacements.add(replacement)
+    
+                    swap_rows.append({
+                        "Team": team_id,
+                        "User": user_name,
+                        "Player": row["Player"],
+                        "Round": row["Round"],
+                        "Pick": row["Pick"],
+                        "Swap Priority": f"{row['Round']}-{13 - row['PickInRound']}",
+                        "Suggested Replacement": clean_to_original.get(replacement, replacement)
+                    })
+    
+                swap_df = pd.DataFrame(swap_rows)
+                styled_swap_df = swap_df.style.format({
+                    "Pick": "{:.2f}"
+                }).background_gradient(subset=["Pick"], cmap="Oranges")
+                st.dataframe(styled_swap_df, use_container_width=True)
         else:
             st.success("No drafts with out/doubtful players for this user.")
 
