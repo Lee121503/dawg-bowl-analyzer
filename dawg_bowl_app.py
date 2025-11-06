@@ -524,6 +524,7 @@ if auth_status:
         else:
             st.info("No users meet the similarity threshold.")
             
+    # --- Tab 7: Injury Swap Dashboard ---
     with tab7:
         st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
     
@@ -663,6 +664,8 @@ if auth_status:
                         st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
         else:
             st.success("No drafts with out/doubtful players for this user.")
+
+    # --- Tab 8: ETR Leaderboard ---
     with tab8:
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
     
@@ -676,17 +679,9 @@ if auth_status:
         # --- Normalize draft data ---
         df["CleanPlayer"] = df["Player"].apply(clean_name)
     
-        # --- User filter ---
-        all_users = sorted(df["User"].dropna().unique())
-        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="etr_user_filter")
-    
         # --- Aggregate projected points and picks per team ---
         team_rows = []
         for (draft_id, team_id), group in df.groupby(["Draft", "Team"]):
-            user = group["User"].iloc[0]
-            if selected_user != "All Users" and user != selected_user:
-                continue
-    
             group_sorted = group.sort_values("Pick")
             clean_names = group_sorted["CleanPlayer"]
             original_names = group_sorted["Player"].tolist()
@@ -695,7 +690,7 @@ if auth_status:
             row = {
                 "Draft": draft_id,
                 "Team": team_id,
-                "User": user,
+                "User": group_sorted["User"].iloc[0],
                 "Projected Points": round(total_proj, 2)
             }
     
@@ -708,6 +703,13 @@ if auth_status:
         leaderboard_df = leaderboard_df.sort_values("Projected Points", ascending=False).reset_index(drop=True)
         leaderboard_df.index += 1
         leaderboard_df.insert(0, "Rank", leaderboard_df.index)
+    
+        # --- User filter (after rank is assigned) ---
+        all_users = sorted(leaderboard_df["User"].dropna().unique())
+        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="etr_user_filter")
+    
+        if selected_user != "All Users":
+            leaderboard_df = leaderboard_df[leaderboard_df["User"] == selected_user]
     
         # --- Display leaderboard ---
         st.markdown("### 🏆 ETR Leaderboard")
