@@ -681,7 +681,8 @@ if auth_status:
     
                 # --- Swap Priority Table for This Draft ---
                 st.markdown("**Swap Priority for Injured Picks in This Draft (Underdog Logic):**")
-                
+
+                injured_in_draft = full_draft[full_draft["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))].copy()
                 injured_in_draft["Round"] = injured_in_draft["Pick"].astype(int)
                 injured_in_draft["PickInRound"] = injured_in_draft["Pick"].astype(int)
                 injured_in_draft["Swap Priority"] = injured_in_draft.apply(
