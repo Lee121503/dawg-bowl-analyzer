@@ -3,6 +3,8 @@ import streamlit_authenticator as stauth
 import yaml
 from fuzzywuzzy import fuzz
 import re
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def clean_name(name):
     if not isinstance(name, str):
@@ -102,7 +104,7 @@ if auth_status:
     if st.button("🔄 Reset Filters"):
         st.experimental_rerun()
     
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
         "📋 Draft Viewer",
         "📋 Player Dashboard",
         "🔍 Combo Finder",
@@ -111,8 +113,10 @@ if auth_status:
         "🧠 User Similarity Dashboard",
         "🩹 Injury Swap",
         "📈 ETR Leaderboard",
-        "📊 ETR Impact Dashboard"
+        "📊 ETR Impact Dashboard",
+        "📊 Visual Insights Dashboard"
     ])
+
 
     
     # --- Tab 1: Draft Viewer ---
@@ -930,6 +934,111 @@ if auth_status:
             "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
         }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
         st.dataframe(styled, use_container_width=True)
+       
+    with tab10:
+        st.subheader("📊 Visual Insights Dashboard")
+    
+        # --- Clean player names ---
+        df["CleanPlayer"] = df["Player"].apply(clean_name)
+    
+        # --- Total drafts ---
+        total_drafts = df["Draft"].nunique()
+        draft_counts = df.groupby("ETR Timing")["Draft"].nunique().to_dict()
+    
+        # --- Full player × draft grid ---
+        all_players = df["CleanPlayer"].unique()
+        all_drafts = df[["Draft", "ETR Timing"]].drop_duplicates()
+        full_grid = pd.MultiIndex.from_product(
+            [all_players, all_drafts["Draft"]],
+            names=["CleanPlayer", "Draft"]
+        ).to_frame(index=False)
+        full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
+    
+        # --- Merge actual picks ---
+        merged = full_grid.merge(
+            df[["Draft", "CleanPlayer", "Pick"]],
+            on=["Draft", "CleanPlayer"],
+            how="left"
+        )
+        merged["Pick"] = merged["Pick"].fillna(72)
+    
+        # --- Group by player and timing ---
+        grouped = merged.groupby(["CleanPlayer", "ETR Timing"]).agg(
+            ADP=("Pick", "mean"),
+            Drafted=("Pick", lambda x: (x < 72).sum())
+        ).reset_index()
+        grouped["% Drafted"] = grouped.apply(
+            lambda row: row["Drafted"] / draft_counts.get(row["ETR Timing"], 1), axis=1
+        )
+    
+        # --- Group across all drafts ---
+        all_grouped = merged.groupby("CleanPlayer").agg(
+            ADP_All=("Pick", "mean"),
+            Drafted_All=("Pick", lambda x: (x < 72).sum())
+        ).reset_index()
+        all_grouped["% Drafted_All"] = all_grouped["Drafted_All"] / total_drafts
+    
+        # --- Pivot Pre/Post ---
+        pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
+        pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
+    
+        # --- Rename safely ---
+        rename_map = {}
+        for col in pivot.columns:
+            if "ADP_Pre" in col or "ADP_Pre-ETR" in col:
+                rename_map[col] = "ADP_Pre"
+            elif "ADP_Post" in col or "ADP_Post-ETR" in col:
+                rename_map[col] = "ADP_Post"
+            elif "Drafted_Pre" in col or "% Drafted_Pre-ETR" in col:
+                rename_map[col] = "Pct_Pre"
+            elif "Drafted_Post" in col or "% Drafted_Post-ETR" in col:
+                rename_map[col] = "Pct_Post"
+        pivot = pivot.rename(columns=rename_map)
+    
+        # --- Merge with overall stats ---
+        summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
+    
+        # --- Calculate differences ---
+        summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+        summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+    
+        # --- Add original player name ---
+        name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
+        summary = summary.merge(name_map, on="CleanPlayer", how="left")
+    
+        # --- Chart 1: ADP Shift Distribution ---
+        st.markdown("### 📉 ADP Change Distribution")
+        fig, ax = plt.subplots()
+        sns.histplot(summary["ADP_Diff"].dropna(), bins=30, kde=True, ax=ax, color="skyblue")
+        ax.set_title("Distribution of ADP Change (Post - Pre)")
+        ax.set_xlabel("ADP Change")
+        st.pyplot(fig)
+    
+        # --- Chart 2: Top ADP Risers ---
+        st.markdown("### 🔼 Top ADP Risers")
+        top_risers = summary.sort_values("ADP_Diff").head(10)
+        fig, ax = plt.subplots(figsize=(8, 6))
+        sns.barplot(x="ADP_Diff", y="Player", data=top_risers, ax=ax, palette="Greens_r")
+        ax.set_title("Top ADP Risers (Post - Pre)")
+        st.pyplot(fig)
+    
+        # --- Chart 3: Top ADP Fallers ---
+        st.markdown("### 🔽 Top ADP Fallers")
+        top_fallers = summary.sort_values("ADP_Diff", ascending=False).head(10)
+        fig, ax = plt.subplots(figsize=(8, 6))
+        sns.barplot(x="ADP_Diff", y="Player", data=top_fallers, ax=ax, palette="Reds")
+        ax.set_title("Top ADP Fallers (Post - Pre)")
+        st.pyplot(fig)
+    
+        # --- Chart 4: Exposure Shift Scatter Plot ---
+        st.markdown("### 📈 Exposure Shift: Pre vs Post")
+        fig, ax = plt.subplots()
+        sns.scatterplot(x="Pct_Pre", y="Pct_Post", data=summary, ax=ax)
+        ax.plot([0, 1], [0, 1], linestyle="--", color="gray")
+        ax.set_xlabel("Pre-ETR % Drafted")
+        ax.set_ylabel("Post-ETR % Drafted")
+        ax.set_title("Exposure Shift: Pre vs Post")
+        st.pyplot(fig)
 
 
 elif auth_status is False:
