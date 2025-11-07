@@ -849,13 +849,14 @@ if auth_status:
     with tab9:
         st.subheader("📊 ETR Impact Dashboard")
     
-        # Step 1: Clean player names
+        # Clean player names
         df["CleanPlayer"] = df["Player"].apply(clean_name)
     
-        # Step 2: Total drafts per timing group
+        # Total drafts per group
+        total_drafts = df["Draft"].nunique()
         draft_counts = df.groupby("ETR Timing")["Draft"].nunique().to_dict()
     
-        # Step 3: Full player × draft grid
+        # Build full player × draft grid
         all_players = df["CleanPlayer"].unique()
         all_drafts = df[["Draft", "ETR Timing"]].drop_duplicates()
         full_grid = pd.MultiIndex.from_product(
@@ -864,75 +865,55 @@ if auth_status:
         ).to_frame(index=False)
         full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
     
-        # Step 4: Merge actual picks
-        merged = full_grid.merge(
-            df[["Draft", "CleanPlayer", "Pick"]],
-            on=["Draft", "CleanPlayer"],
-            how="left"
-        )
+        # Merge actual picks
+        merged = full_grid.merge(df[["Draft", "CleanPlayer", "Pick"]], on=["Draft", "CleanPlayer"], how="left")
         merged["Pick"] = merged["Pick"].fillna(72)
     
-        # Step 5: ADP and % Drafted
-        adp_summary = merged.groupby(["CleanPlayer", "ETR Timing"]).agg(
+        # Group by player and timing
+        grouped = merged.groupby(["CleanPlayer", "ETR Timing"]).agg(
             ADP=("Pick", "mean"),
             Drafted=("Pick", lambda x: (x < 72).sum())
         ).reset_index()
-    
-        adp_summary["% Drafted"] = adp_summary.apply(
+        grouped["% Drafted"] = grouped.apply(
             lambda row: row["Drafted"] / draft_counts.get(row["ETR Timing"], 1), axis=1
         )
     
-        # Step 6: Pivot for comparison
-        pivot = adp_summary.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
-        pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
-        st.write("Pivot columns:", pivot.columns.tolist())  # Optional debug
+        # Group across all drafts
+        all_grouped = merged.groupby("CleanPlayer").agg(
+            ADP_All=("Pick", "mean"),
+            Drafted_All=("Pick", lambda x: (x < 72).sum())
+        ).reset_index()
+        all_grouped["% Drafted_All"] = all_grouped["Drafted_All"] / total_drafts
     
-        # Rename columns safely
-        pivot = pivot.rename(columns={
-            "ADP_Pre-ETR": "ADP_Pre",
-            "ADP_Post-ETR": "ADP_Post",
-            "% Drafted_Pre-ETR": "Pct_Pre",
-            "% Drafted_Post-ETR": "Pct_Post"
-        })
+        # Pivot Pre/Post
+        pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
+        pivot.columns = ["ADP_Pre", "ADP_Post", "Pct_Pre", "Pct_Post"]
+        pivot = pivot.reset_index()
     
-        pivot = pivot.dropna(subset=["ADP_Pre", "ADP_Post", "Pct_Pre", "Pct_Post"])
-        pivot["ADP Change"] = pivot["ADP_Pre"] - pivot["ADP_Post"]
-        pivot["Exposure Change"] = pivot["Pct_Post"] - pivot["Pct_Pre"]
+        # Merge with overall stats
+        summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
     
-        # Step 7: Display tables
-        st.markdown("### 🔼 Top ADP Risers (Post-ETR)")
-        st.dataframe(
-            pivot.sort_values("ADP Change", ascending=False).head(10).style.format({
-                "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP Change": "{:.2f}"
-            }).background_gradient(subset=["ADP Change"], cmap="Greens"),
-            use_container_width=True
-        )
+        # Calculate differences
+        summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+        summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
     
-        st.markdown("### 🔽 Top ADP Fallers (Post-ETR)")
-        st.dataframe(
-            pivot.sort_values("ADP Change").head(10).style.format({
-                "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP Change": "{:.2f}"
-            }).background_gradient(subset=["ADP Change"], cmap="Reds"),
-            use_container_width=True
-        )
+        # Optional: add original player name
+        name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
+        summary = summary.merge(name_map, on="CleanPlayer", how="left")
     
-        st.markdown("### 📈 Top Exposure Gainers")
-        st.dataframe(
-            pivot.sort_values("Exposure Change", ascending=False).head(10).style.format({
-                "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "Exposure Change": "{:.2%}"
-            }).background_gradient(subset=["Exposure Change"], cmap="Blues"),
-            use_container_width=True
-        )
+        # Reorder columns
+        summary = summary[[
+            "Player", "ADP_Pre", "ADP_Post", "ADP_All", "ADP_Diff",
+            "Pct_Pre", "Pct_Post", "% Drafted_All", "Pct_Diff"
+        ]].sort_values("ADP_Diff", ascending=False)
     
-        st.markdown("### 📉 Top Exposure Droppers")
-        st.dataframe(
-            pivot.sort_values("Exposure Change").head(10).style.format({
-                "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "Exposure Change": "{:.2%}"
-            }).background_gradient(subset=["Exposure Change"], cmap="Oranges"),
-            use_container_width=True
-        )
-
-
+        # Display
+        st.write(f"Players compared: {len(summary)}")
+        styled = summary.style.format({
+            "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
+            "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
+        }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
+        st.dataframe(styled, use_container_width=True)
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
