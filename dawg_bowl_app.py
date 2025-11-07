@@ -852,7 +852,7 @@ if auth_status:
         # Clean player names
         df["CleanPlayer"] = df["Player"].apply(clean_name)
     
-        # Total drafts per group
+        # Total drafts
         total_drafts = df["Draft"].nunique()
         draft_counts = df.groupby("ETR Timing")["Draft"].nunique().to_dict()
     
@@ -866,7 +866,11 @@ if auth_status:
         full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
     
         # Merge actual picks
-        merged = full_grid.merge(df[["Draft", "CleanPlayer", "Pick"]], on=["Draft", "CleanPlayer"], how="left")
+        merged = full_grid.merge(
+            df[["Draft", "CleanPlayer", "Pick"]],
+            on=["Draft", "CleanPlayer"],
+            how="left"
+        )
         merged["Pick"] = merged["Pick"].fillna(72)
     
         # Group by player and timing
@@ -887,8 +891,20 @@ if auth_status:
     
         # Pivot Pre/Post
         pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
-        pivot.columns = ["ADP_Pre", "ADP_Post", "Pct_Pre", "Pct_Post"]
-        pivot = pivot.reset_index()
+        pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
+    
+        # Rename safely
+        rename_map = {}
+        for col in pivot.columns:
+            if "ADP_Pre" in col or "ADP_Pre-ETR" in col:
+                rename_map[col] = "ADP_Pre"
+            elif "ADP_Post" in col or "ADP_Post-ETR" in col:
+                rename_map[col] = "ADP_Post"
+            elif "Drafted_Pre" in col or "% Drafted_Pre-ETR" in col:
+                rename_map[col] = "Pct_Pre"
+            elif "Drafted_Post" in col or "% Drafted_Post-ETR" in col:
+                rename_map[col] = "Pct_Post"
+        pivot = pivot.rename(columns=rename_map)
     
         # Merge with overall stats
         summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
@@ -897,7 +913,7 @@ if auth_status:
         summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
         summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
     
-        # Optional: add original player name
+        # Add original player name
         name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
         summary = summary.merge(name_map, on="CleanPlayer", how="left")
     
@@ -914,6 +930,7 @@ if auth_status:
             "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
         }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
         st.dataframe(styled, use_container_width=True)
+
 
 elif auth_status is False:
     st.error("Username or password is incorrect ❌")
