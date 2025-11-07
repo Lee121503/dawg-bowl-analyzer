@@ -858,11 +858,18 @@ if auth_status:
         # Step 3: Full player × draft grid
         all_players = df["CleanPlayer"].unique()
         all_drafts = df[["Draft", "ETR Timing"]].drop_duplicates()
-        full_grid = pd.MultiIndex.from_product([all_players, all_drafts["Draft"]], names=["CleanPlayer", "Draft"]).to_frame(index=False)
+        full_grid = pd.MultiIndex.from_product(
+            [all_players, all_drafts["Draft"]],
+            names=["CleanPlayer", "Draft"]
+        ).to_frame(index=False)
         full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
     
         # Step 4: Merge actual picks
-        merged = full_grid.merge(df[["Draft", "CleanPlayer", "Pick"]], on=["Draft", "CleanPlayer"], how="left")
+        merged = full_grid.merge(
+            df[["Draft", "CleanPlayer", "Pick"]],
+            on=["Draft", "CleanPlayer"],
+            how="left"
+        )
         merged["Pick"] = merged["Pick"].fillna(72)
     
         # Step 5: ADP and % Drafted
@@ -877,9 +884,18 @@ if auth_status:
     
         # Step 6: Pivot for comparison
         pivot = adp_summary.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
-        pivot.columns = ["ADP_Pre", "ADP_Post", "Pct_Pre", "Pct_Post"]
-        pivot = pivot.dropna()
+        pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
+        st.write("Pivot columns:", pivot.columns.tolist())  # Optional debug
     
+        # Rename columns safely
+        pivot = pivot.rename(columns={
+            "ADP_Pre-ETR": "ADP_Pre",
+            "ADP_Post-ETR": "ADP_Post",
+            "% Drafted_Pre-ETR": "Pct_Pre",
+            "% Drafted_Post-ETR": "Pct_Post"
+        })
+    
+        pivot = pivot.dropna(subset=["ADP_Pre", "ADP_Post", "Pct_Pre", "Pct_Post"])
         pivot["ADP Change"] = pivot["ADP_Pre"] - pivot["ADP_Post"]
         pivot["Exposure Change"] = pivot["Pct_Post"] - pivot["Pct_Pre"]
     
@@ -915,6 +931,7 @@ if auth_status:
             }).background_gradient(subset=["Exposure Change"], cmap="Oranges"),
             use_container_width=True
         )
+
 
 
 elif auth_status is False:
