@@ -110,7 +110,7 @@ if auth_status:
         "📊 User Exposure Dashboard",
         "🧠 User Similarity Dashboard",
         "🩹 Injury Swap",
-        "📈 ETR Leaderboard"
+        "📈 ETR Leaderboard",
         "📊 ETR Impact Dashboard"
     ])
 
