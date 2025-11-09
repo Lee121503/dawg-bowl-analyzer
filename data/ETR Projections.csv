@@ -128,7 +128,7 @@ Tyler Loop,K,BAL,@MIN,9,9,9.6,9,9,9,15.2,15.2,Main
 Christian Watson,WR,GB,PHI,8.9,7.5,8.6,5.9,7.3,8.6,18.9,16.6,Monday
 Matthew Wright,K,HOU,JAX,8.9,8.9,9.6,8.9,8.9,8.9,15.6,15.6,Main
 Chase McLaughlin,K,TB,NE,8.9,8.9,9.6,8.9,8.9,8.9,15.2,15.2,Main
-Rashid Shaheed,WR,SEA,ARI,8.8,7.5,8.7,5.9,7.3,8.7,18.8,16.5,Main
+Rashid Shaheed,WR,SEA,ARI,0,0,0,0,0,0,0,0,Main
 Matt Prater,K,BUF,@MIA,8.8,8.8,9.4,8.8,8.8,8.8,14.9,14.9,Main
 Michael Badgley,K,IND,ATL,8.8,8.8,9.4,8.8,8.8,8.8,15,15,Other
 Cam Little,K,JAX,@HOU,8.8,8.8,9.5,8.8,8.8,8.8,15.5,15.5,Main
@@ -408,4 +408,5 @@ George Holani,RB,SEA,ARI,0.1,0.1,0.1,0.1,0.1,0.1,0.5,0.5,Main
 Robbie Ouzts,RB,SEA,ARI,0.1,0.1,0.1,0.1,0.1,0.1,0.6,0.4,Main
 Ricky White,WR,SEA,ARI,0.1,0.1,0.1,0.1,0.1,0.1,0.6,0.5,Main
 Nick Kallerup,TE,SEA,ARI,0.1,0.1,0.2,0.1,0.1,0.1,0.6,0.5,Main
+
 Feleipe Franks,TE,ATL,IND,0,0,0,0,0,0,0,0,Other
