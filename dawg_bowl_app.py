@@ -244,6 +244,7 @@ if auth_status:
             display_cols.insert(display_cols.index("Stack Rate"), "User Exposure %")
     
         filtered_df = filtered_df[display_cols]
+        display_cols_for_table = [col for col in display_cols if col != "UD_ID"]
     
         # --- Display ---
         st.write(f"Filtered rows: {len(filtered_df)}")
@@ -251,18 +252,18 @@ if auth_status:
         gradient_cols = [col for col in [
             "Average Draft Position", "Earliest Pick", "Latest Pick",
             "Exposure", "Stack Rate", "User Exposure %"
-        ] if col in filtered_df.columns]
+        ] if col in display_cols_for_table]
     
         view_mode = st.radio("View mode", ["Gradient", "Editor"], horizontal=True, key="dashboard_view_mode")
     
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("Average Draft Position")
             if view_mode == "Gradient":
-                styled_df = safe_gradient_style(sorted_df, gradient_cols, cmap="Blues")
+                styled_df = safe_gradient_style(sorted_df[display_cols_for_table], gradient_cols, cmap="Blues")
                 st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
-                    sorted_df,
+                    sorted_df[display_cols_for_table],
                     use_container_width=True,
                     height=900,
                     column_config={
@@ -270,7 +271,7 @@ if auth_status:
                     }
                 )
     
-            # --- CSV Export ---
+            # --- CSV Export (includes UD_ID) ---
             csv_bytes = sorted_df.to_csv(index=False).encode("utf-8")
             st.download_button(
                 label="📥 Download CSV (with UD ID)",
