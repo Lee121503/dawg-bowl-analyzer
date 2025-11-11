@@ -242,7 +242,7 @@ if auth_status:
                         col: "{:.2f}" for col in gradient_cols
                     }).background_gradient(subset=gradient_cols, cmap="Blues")
                 else:
-                    styled_df = sorted_df.style
+                    styled_df = sorted_df.style  # ✅ This else is now valid
                 st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
@@ -255,15 +255,7 @@ if auth_status:
                 )
         else:
             st.warning("No players match the current filters. Try adjusting position, ADP range, or user.")
-            else:
-                st.data_editor(
-                    filtered_df.sort_values("Average Draft Position"),
-                    use_container_width=True,
-                    height=900,
-                    column_config={col: st.column_config.NumberColumn(format="%.2f") for col in gradient_cols}
-                )
-        else:
-            st.warning("No players match the current filters. Try adjusting position, ADP range, or user.")
+
     
     # --- Tab 3: Combo Finder ---
     with tab3:
