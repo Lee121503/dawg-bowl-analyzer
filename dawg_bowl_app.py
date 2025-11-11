@@ -926,7 +926,8 @@ if auth_status:
         # Calculate differences
         if "ADP_Post" in summary.columns and "ADP_Pre" in summary.columns:        
             summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
-        summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+        if "Pct_Post" in summary.columns and "Pct_Pre" in summary.columns:
+            summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
     
         # Add original player name
         name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
