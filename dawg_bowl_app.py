@@ -18,6 +18,17 @@ def clean_name(name):
 def is_fuzzy_match(name, name_list, threshold=90):
     return any(fuzz.ratio(name, target) >= threshold for target in name_list)
 
+def safe_gradient_style(df, gradient_cols, cmap="Blues"):
+    valid_cols = [col for col in gradient_cols if col in df.columns]
+    try:
+        styled = df.style.format({col: "{:.2f}" for col in valid_cols})
+        if valid_cols:
+            styled = styled.background_gradient(subset=valid_cols, cmap=cmap)
+        return styled
+    except Exception as e:
+        st.warning(f"Styling failed: {e}. Showing unstyled table.")
+        return df
+
 # --- Set layout early ---
 st.set_page_config(layout="wide")
 
@@ -148,9 +159,9 @@ if auth_status:
             st.markdown(f"### 🏈 Team {team_num} — User: `{group['User'].iloc[0]}`")
     
             team_df = group[["Player", "Position", "Team", "Pick"]].sort_values("Pick")
-            styled_df = team_df.style.format({"Pick": "{:.2f}"}).background_gradient(subset=["Pick"], cmap="Blues")
-    
+            styled_df = safe_gradient_style(team_df, ["Pick"], cmap="Blues")
             st.dataframe(styled_df, use_container_width=True)
+
 
     
     # --- Tab 2: Player Dashboard ---
@@ -242,9 +253,7 @@ if auth_status:
             sorted_df = filtered_df.sort_values("Average Draft Position")
             if view_mode == "Gradient":
                 if gradient_cols:
-                    styled_df = sorted_df.style.format({
-                        col: "{:.2f}" for col in gradient_cols
-                    }).background_gradient(subset=gradient_cols, cmap="Blues")
+                    styled_df = safe_gradient_style(sorted_df, gradient_cols, cmap="Blues")
                     st.dataframe(styled_df, use_container_width=True)
                 else:
                     st.dataframe(sorted_df, use_container_width=True)
@@ -334,12 +343,8 @@ if auth_status:
         if not filtered.empty:
             all_combo_df = filtered.sort_values("Times Drafted Together", ascending=False)
             if view_mode == "Gradient":
-                styled = all_combo_df.style.format({
-                    "Times Drafted Together": "{:.0f}",
-                    "Exposure %": "{:.2f}",
-                    "ADP A": "{:.2f}",
-                    "ADP B": "{:.2f}"
-                }).background_gradient(subset=["Times Drafted Together", "Exposure %", "ADP A", "ADP B"], cmap="Blues")
+                gradient_cols = ["Times Drafted Together", "Exposure %", "ADP A", "ADP B"]
+                styled = safe_gradient_style(all_combo_df, gradient_cols, cmap="Blues")
                 st.dataframe(styled, use_container_width=True)
             else:
                 st.data_editor(
@@ -362,12 +367,8 @@ if auth_status:
         if not non_teammates.empty:
             non_teammates_df = non_teammates.sort_values("Times Drafted Together", ascending=False)
             if view_mode == "Gradient":
-                styled = non_teammates_df.style.format({
-                    "Times Drafted Together": "{:.0f}",
-                    "Exposure %": "{:.2f}",
-                    "ADP A": "{:.2f}",
-                    "ADP B": "{:.2f}"
-                }).background_gradient(subset=["Times Drafted Together", "Exposure %", "ADP A", "ADP B"], cmap="Oranges")
+                gradient_cols = ["Times Drafted Together", "Exposure %", "ADP A", "ADP B"]
+                styled = safe_gradient_style(non_teammates_df, gradient_cols, cmap="Oranges")
                 st.dataframe(styled, use_container_width=True)
             else:
                 st.data_editor(
@@ -421,11 +422,8 @@ if auth_status:
                     "Player", "Position", "NFL_Team", "Average Draft Position", "Times Co-Drafted"
                 ]].sort_values("Times Co-Drafted", ascending=False)
     
-                styled_df = coplayer_summary.style.format({
-                    "Average Draft Position": "{:.2f}",
-                    "Times Co-Drafted": "{:.0f}"
-                }).background_gradient(subset=["Average Draft Position", "Times Co-Drafted"], cmap="Blues")
-    
+                gradient_cols = ["Average Draft Position", "Times Co-Drafted"]
+                styled_df = safe_gradient_style(coplayer_summary, gradient_cols, cmap="Blues")
                 st.dataframe(styled_df, use_container_width=True)
             else:
                 st.info("No teams drafted all selected players together.")
@@ -468,12 +466,10 @@ if auth_status:
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("User Exposure %", ascending=False)
             if view_mode == "Gradient":
-                styled_df = sorted_df.style.format({
-                    "User Exposure %": "{:.2f}",
-                    "Player Drafts": "{:.0f}",
-                    "User Drafts": "{:.0f}"
-                }).background_gradient(subset=["User Exposure %"], cmap="Blues")
+                gradient_cols = ["User Exposure %"]
+                styled_df = safe_gradient_style(sorted_df, gradient_cols, cmap="Blues")
                 st.dataframe(styled_df, use_container_width=True)
+
             else:
                 st.data_editor(
                     sorted_df,
@@ -524,9 +520,8 @@ if auth_status:
     
         if not filtered_scores.empty:
             if view_mode == "Gradient":
-                styled_df = filtered_scores.style.format({
-                    "Similarity Score": "{:.3f}"
-                }).background_gradient(subset=["Similarity Score"], cmap="Greens")
+                gradient_cols = ["Similarity Score"]
+                styled_df = safe_gradient_style(filtered_scores, gradient_cols, cmap="Greens")
                 st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
