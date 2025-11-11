@@ -202,12 +202,12 @@ if auth_status:
         dashboard_df = dashboard_df.merge(stack_rate[["Player", "Stack Rate"]], on="Player", how="left")
     
         # --- Load and normalize UD IDs from week11UD.csv ---
-        ud_df = pd.read_csv("data/week11UD.csv", usecols=[0, 1, 2], names=["UD_ID", "First", "Last"], header=0)
+        ud_df = pd.read_csv("data/week11UD.csv", usecols=[0, 1, 2], names=["id", "First", "Last"], header=0)
         ud_df["FullName"] = (ud_df["First"].str.strip() + " " + ud_df["Last"].str.strip()).str.strip()
         ud_df["CleanPlayer"] = ud_df["FullName"].apply(clean_name)
     
         dashboard_df["CleanPlayer"] = dashboard_df["Player"].apply(clean_name)
-        dashboard_df = dashboard_df.merge(ud_df[["CleanPlayer", "UD_ID"]], on="CleanPlayer", how="left")
+        dashboard_df = dashboard_df.merge(ud_df[["CleanPlayer", "id"]], on="CleanPlayer", how="left")
     
         # --- Filters ---
         positions = sorted(dashboard_df["Position"].dropna().unique())
@@ -237,14 +237,14 @@ if auth_status:
     
         # --- Display Columns ---
         display_cols = [
-            "UD_ID", "Player", "Position", "NFL_Team", "Average Draft Position",
+            "id", "Player", "Position", "NFL_Team", "Average Draft Position",
             "Earliest Pick", "Latest Pick", "Exposure", "Stack Rate"
         ]
         if "User Exposure %" in filtered_df.columns:
             display_cols.insert(display_cols.index("Stack Rate"), "User Exposure %")
     
         filtered_df = filtered_df[display_cols]
-        display_cols_for_table = [col for col in display_cols if col != "UD_ID"]
+        display_cols_for_table = [col for col in display_cols if col != "id"]
     
         # --- Display ---
         st.write(f"Filtered rows: {len(filtered_df)}")
@@ -271,10 +271,10 @@ if auth_status:
                     }
                 )
     
-            # --- CSV Export (includes UD_ID) ---
+            # --- CSV Export (includes "id" column) ---
             csv_bytes = sorted_df.to_csv(index=False).encode("utf-8")
             st.download_button(
-                label="📥 Download CSV (with UD ID)",
+                label="📥 Download CSV (with id)",
                 data=csv_bytes,
                 file_name=f"{selected_week_label.replace(' ', '_')}_PlayerDashboard.csv",
                 mime="text/csv"
