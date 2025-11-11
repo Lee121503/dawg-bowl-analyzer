@@ -171,7 +171,7 @@ if auth_status:
         dashboard_df = dashboard_df.merge(pick_stats, on="Player", how="left")
         dashboard_df["Exposure"] = (dashboard_df["Times Drafted"] / total_drafts * 100).round(2)
     
-        # --- Correct Stack Rate Calculation ---
+        # --- Stack Rate Calculation ---
         stack_counts = []
         for (draft_id, team_id), group in df.groupby(["Draft", "Team"]):
             nfl_team_map = group.set_index("Player")["NFL_Team"].to_dict()
@@ -215,25 +215,29 @@ if auth_status:
             user_exposure_df["User Exposure %"] = (user_exposure_df["Player Drafts"] / user_exposure_df["User Drafts"] * 100).round(2)
             user_exposure_df = user_exposure_df[user_exposure_df["User"] == selected_user]
             filtered_df = pd.merge(filtered_df, user_exposure_df[["Player", "User Exposure %"]], on="Player", how="inner")
-            filtered_df = filtered_df[[
+            display_cols = [
                 "Player", "Position", "NFL_Team", "Average Draft Position", "Earliest Pick", "Latest Pick",
                 "Exposure", "User Exposure %", "Stack Rate"
-            ]]
+            ]
         else:
-            filtered_df = filtered_df[[
+            display_cols = [
                 "Player", "Position", "NFL_Team", "Average Draft Position", "Earliest Pick", "Latest Pick",
                 "Exposure", "Stack Rate"
-            ]]
+            ]
+    
+        filtered_df = filtered_df[display_cols]
     
         # --- Display ---
         st.write(f"Filtered rows: {len(filtered_df)}")
     
-        # --- Dynamically filter gradient columns ---
-        base_cols = ["Average Draft Position", "Earliest Pick", "Latest Pick", "Exposure", "Stack Rate", "User Exposure %"]
-        gradient_cols = [col for col in base_cols if col in filtered_df.columns]
-        
+        base_gradient_cols = [
+            "Average Draft Position", "Earliest Pick", "Latest Pick",
+            "Exposure", "Stack Rate", "User Exposure %"
+        ]
+        gradient_cols = [col for col in base_gradient_cols if col in filtered_df.columns]
+    
         view_mode = st.radio("View mode", ["Gradient", "Editor"], horizontal=True, key="dashboard_view_mode")
-        
+    
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("Average Draft Position")
             if view_mode == "Gradient":
@@ -241,9 +245,9 @@ if auth_status:
                     styled_df = sorted_df.style.format({
                         col: "{:.2f}" for col in gradient_cols
                     }).background_gradient(subset=gradient_cols, cmap="Blues")
+                    st.dataframe(styled_df, use_container_width=True)
                 else:
-                    styled_df = sorted_df.style  # ✅ This else is now valid
-                st.dataframe(styled_df, use_container_width=True)
+                    st.dataframe(sorted_df, use_container_width=True)
             else:
                 st.data_editor(
                     sorted_df,
@@ -256,7 +260,6 @@ if auth_status:
         else:
             st.warning("No players match the current filters. Try adjusting position, ADP range, or user.")
 
-    
     # --- Tab 3: Combo Finder ---
     with tab3:
         st.subheader("🔍 Combo Finder")
