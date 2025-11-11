@@ -201,6 +201,13 @@ if auth_status:
         stack_rate["Stack Rate"] = (stack_rate["Is_Stacked"] * 100).round(2)
         dashboard_df = dashboard_df.merge(stack_rate[["Player", "Stack Rate"]], on="Player", how="left")
     
+        # --- Load UD IDs from week11UD.csv ---
+        ud_df = pd.read_csv("data/week11UD.csv", usecols=[0, 1], names=["UD_ID", "Player"], header=0)
+        ud_df["CleanPlayer"] = ud_df["Player"].apply(clean_name)
+    
+        dashboard_df["CleanPlayer"] = dashboard_df["Player"].apply(clean_name)
+        dashboard_df = dashboard_df.merge(ud_df[["CleanPlayer", "UD_ID"]], on="CleanPlayer", how="left")
+    
         # --- Filters ---
         positions = sorted(dashboard_df["Position"].dropna().unique())
         selected_positions = st.multiselect("Filter by Position", positions, default=positions)
@@ -226,37 +233,32 @@ if auth_status:
             user_exposure_df["User Exposure %"] = (user_exposure_df["Player Drafts"] / user_exposure_df["User Drafts"] * 100).round(2)
             user_exposure_df = user_exposure_df[user_exposure_df["User"] == selected_user]
             filtered_df = pd.merge(filtered_df, user_exposure_df[["Player", "User Exposure %"]], on="Player", how="inner")
-            display_cols = [
-                "Player", "Position", "NFL_Team", "Average Draft Position", "Earliest Pick", "Latest Pick",
-                "Exposure", "User Exposure %", "Stack Rate"
-            ]
-        else:
-            display_cols = [
-                "Player", "Position", "NFL_Team", "Average Draft Position", "Earliest Pick", "Latest Pick",
-                "Exposure", "Stack Rate"
-            ]
+    
+        # --- Display Columns ---
+        display_cols = [
+            "UD_ID", "Player", "Position", "NFL_Team", "Average Draft Position",
+            "Earliest Pick", "Latest Pick", "Exposure", "Stack Rate"
+        ]
+        if "User Exposure %" in filtered_df.columns:
+            display_cols.insert(display_cols.index("Stack Rate"), "User Exposure %")
     
         filtered_df = filtered_df[display_cols]
     
         # --- Display ---
         st.write(f"Filtered rows: {len(filtered_df)}")
     
-        base_gradient_cols = [
+        gradient_cols = [col for col in [
             "Average Draft Position", "Earliest Pick", "Latest Pick",
             "Exposure", "Stack Rate", "User Exposure %"
-        ]
-        gradient_cols = [col for col in base_gradient_cols if col in filtered_df.columns]
+        ] if col in filtered_df.columns]
     
         view_mode = st.radio("View mode", ["Gradient", "Editor"], horizontal=True, key="dashboard_view_mode")
     
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("Average Draft Position")
             if view_mode == "Gradient":
-                if gradient_cols:
-                    styled_df = safe_gradient_style(sorted_df, gradient_cols, cmap="Blues")
-                    st.dataframe(styled_df, use_container_width=True)
-                else:
-                    st.dataframe(sorted_df, use_container_width=True)
+                styled_df = safe_gradient_style(sorted_df, gradient_cols, cmap="Blues")
+                st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
                     sorted_df,
@@ -266,6 +268,15 @@ if auth_status:
                         col: st.column_config.NumberColumn(format="%.2f") for col in gradient_cols
                     }
                 )
+    
+            # --- CSV Export ---
+            csv_bytes = sorted_df.to_csv(index=False).encode("utf-8")
+            st.download_button(
+                label="📥 Download CSV (with UD ID)",
+                data=csv_bytes,
+                file_name=f"{selected_week_label.replace(' ', '_')}_PlayerDashboard.csv",
+                mime="text/csv"
+            )
         else:
             st.warning("No players match the current filters. Try adjusting position, ADP range, or user.")
 
