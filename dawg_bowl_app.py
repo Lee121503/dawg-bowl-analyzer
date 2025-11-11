@@ -242,7 +242,7 @@ if auth_status:
                         col: "{:.2f}" for col in gradient_cols
                     }).background_gradient(subset=gradient_cols, cmap="Blues")
                 else:
-                    styled_df = sorted_df.style  # No gradient if no numeric columns
+                    styled_df = sorted_df.style
                 st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
