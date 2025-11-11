@@ -933,11 +933,22 @@ if auth_status:
         name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
         summary = summary.merge(name_map, on="CleanPlayer", how="left")
     
-        # Reorder columns
-        summary = summary[[
+       
+        # --- Safely select available columns and sort ---
+        expected_cols = [
             "Player", "ADP_Pre", "ADP_Post", "ADP_All", "ADP_Diff",
             "Pct_Pre", "Pct_Post", "% Drafted_All", "Pct_Diff"
-        ]].sort_values("ADP_Diff", ascending=False)
+        ]
+        available_cols = [col for col in expected_cols if col in summary.columns]
+        
+        if available_cols:
+            summary = summary[available_cols]
+            sort_col = "ADP_Diff" if "ADP_Diff" in summary.columns else "Pct_Diff" if "Pct_Diff" in summary.columns else None
+            if sort_col:
+                summary = summary.sort_values(sort_col, ascending=False)
+        else:
+            st.warning("No comparison columns available yet. ETR projections may not be loaded or merged.")
+
     
         # Display
         st.write(f"Players compared: {len(summary)}")
