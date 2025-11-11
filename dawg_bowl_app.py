@@ -201,10 +201,9 @@ if auth_status:
         stack_rate["Stack Rate"] = (stack_rate["Is_Stacked"] * 100).round(2)
         dashboard_df = dashboard_df.merge(stack_rate[["Player", "Stack Rate"]], on="Player", how="left")
     
-        # --- Load UD IDs from week11UD.csv ---
+        # --- Load and merge UD_IDs from week11UD.csv ---
         ud_df = pd.read_csv("data/week11UD.csv", usecols=[0, 1], names=["UD_ID", "Player"], header=0)
         ud_df["CleanPlayer"] = ud_df["Player"].apply(clean_name)
-    
         dashboard_df["CleanPlayer"] = dashboard_df["Player"].apply(clean_name)
         dashboard_df = dashboard_df.merge(ud_df[["CleanPlayer", "UD_ID"]], on="CleanPlayer", how="left")
     
