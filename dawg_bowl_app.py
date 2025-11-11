@@ -72,13 +72,14 @@ if auth_status:
     # --- Week selector ---
     week_options = {
         "Week 9": "week9_drafts.csv",
-        "Week 10": "week10_drafts.csv"
+        "Week 10": "week10_drafts.csv",
+        "Week 11": "week11_drafts.csv"  # ← Add this line
     }
 
     selected_week_label = st.selectbox(
         "Select Week",
         list(week_options.keys()),
-        index=list(week_options.keys()).index("Week 10")  # Default to Week 10
+        index=list(week_options.keys()).index("Week 11")  # Default to Week 10
     )
     selected_week_file = week_options[selected_week_label]
 
@@ -536,12 +537,18 @@ if auth_status:
         # --- Week-specific injury file mapping ---
         injury_file_map = {
             "Week 9": "Week9UD.csv",
-            "Week 10": "week10UD.csv"
+            "Week 10": "week10UD.csv",
+            "Week 11": "week11UD.csv"  # ← Add this line
         }
     
         injury_file = injury_file_map.get(selected_week_label, "week10UD.csv")
         injury_df = pd.read_csv(f"data/{injury_file}")
-        etr_df = pd.read_csv("data/ETR Projections.csv")
+        try:
+            etr_df = pd.read_csv("data/ETR Projections.csv")
+        except FileNotFoundError:
+            etr_df = pd.DataFrame(columns=["Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"])
+            st.warning("ETR projections not yet available. Injury replacements will exclude projection-based ranking.")
+
     
         # --- Normalize injury data ---
         injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
@@ -550,21 +557,24 @@ if auth_status:
         ).apply(clean_name)
     
         # --- Normalize ETR projections ---
-        main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
-        main_slate["Pos"] = main_slate["Pos"].str.upper().str.strip()
-        main_slate = main_slate[["Player", "Pos", "Half PPR Proj", "FD Ceiling"]].dropna()
-        main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
-    
-        clean_to_original = dict(zip(main_slate["CleanPlayer"], main_slate["Player"]))
-        proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
-        ceiling_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["FD Ceiling"]))
-    
-        rankings = (
-            main_slate.sort_values("Half PPR Proj", ascending=False)
-            .groupby("Pos")["CleanPlayer"]
-            .apply(list)
-            .to_dict()
-        )
+        if not etr_df.empty:
+            main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
+            main_slate["Pos"] = main_slate["Pos"].str.upper().str.strip()
+            main_slate = main_slate[["Player", "Pos", "Half PPR Proj", "FD Ceiling"]].dropna()
+            main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
+        
+            clean_to_original = dict(zip(main_slate["CleanPlayer"], main_slate["Player"]))
+            proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
+            ceiling_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["FD Ceiling"]))
+        
+            rankings = (
+                main_slate.sort_values("Half PPR Proj", ascending=False)
+                .groupby("Pos")["CleanPlayer"]
+                .apply(list)
+                .to_dict()
+            )
+        else:
+            rankings = {}
     
         # --- Flex tagging function ---
         def tag_flex_players(team_df):
