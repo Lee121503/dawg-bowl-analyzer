@@ -1,0 +1,1513 @@
+Draft,Team,Pick,Player,Position,NFL_Team,User,Fantasy QB,QB Team,Stacked,DBL Stack,QB Stack,Opponent,Double Run,Runback,ETR Timing
+1,1,1,Christian McCaffrey,RB,San Francisco 49ers,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Arizona Cardinals,0,0,Pre-ETR
+1,2,2,Puka Nacua,WR,Los Angeles Rams,DAK4MVPNOT,Patrick Mahomes,Kansas City Chiefs,0,,,Seattle Seahawks,0,0,Pre-ETR
+1,3,3,Bijan Robinson,RB,Atlanta Falcons,STEADY314,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+1,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+1,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,DABK,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Rams,2,1,Pre-ETR
+1,6,6,Josh Jacobs,RB,Green Bay Packers,SCHWEC03,Josh Allen,Buffalo Bills,0,,,New York Giants,1,1,Pre-ETR
+1,7,7,Justin Jefferson,WR,Minnesota Vikings,MATHOLOGY,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+1,8,8,Lamar Jackson,QB,Baltimore Ravens,HOGWILD,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+1,9,9,Drake London,WR,Atlanta Falcons,LEE121503,Jaxson Dart,New York Giants,0,,,Carolina Panthers,0,0,Pre-ETR
+1,10,10,Rashee Rice,WR,Kansas City Chiefs,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Denver Broncos,0,0,Pre-ETR
+1,11,11,Trey McBride,TE,Arizona Cardinals,TUBINIS2121,Trevor Lawrence,Jacksonville Jaguars,0,,,San Francisco 49ers,0,0,Pre-ETR
+1,12,12,Rico Dowdle,RB,Carolina Panthers,HOTSIZAUCE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Atlanta Falcons,0,0,Pre-ETR
+1,12,13,Emeka Egbuka,WR,Tampa Bay Buccaneers,HOTSIZAUCE,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+1,11,14,Jaylen Warren,RB,Pittsburgh Steelers,TUBINIS2121,Trevor Lawrence,Jacksonville Jaguars,0,,,Cincinnati Bengals,0,0,Pre-ETR
+1,10,15,George Kittle,TE,San Francisco 49ers,PATRICKBARN,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+1,9,16,Nico Collins,WR,Houston Texans,LEE121503,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR
+1,8,17,James Cook,RB,Buffalo Bills,HOGWILD,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+1,7,18,Kyren Williams,RB,Los Angeles Rams,MATHOLOGY,J.J. McCarthy,Minnesota Vikings,0,,,Seattle Seahawks,0,0,Pre-ETR
+1,6,19,Josh Allen,QB,Buffalo Bills,SCHWEC03,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,1,1,Pre-ETR
+1,5,20,Davante Adams,WR,Los Angeles Rams,DABK,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,1,1,Pre-ETR
+1,4,21,Ladd McConkey,WR,Los Angeles Chargers,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+1,3,22,Justin Herbert,QB,Los Angeles Chargers,STEADY314,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+1,2,23,Derrick Henry,RB,Baltimore Ravens,DAK4MVPNOT,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,0,0,Pre-ETR
+1,1,24,Tee Higgins,WR,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+1,1,25,Chase Brown,RB,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+1,2,26,Patrick Mahomes,QB,Kansas City Chiefs,DAK4MVPNOT,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+1,3,27,DK Metcalf,WR,Pittsburgh Steelers,STEADY314,Justin Herbert,Los Angeles Chargers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+1,4,28,Quinshon Judkins,RB,Cleveland Browns,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Baltimore Ravens,0,0,Pre-ETR
+1,5,29,D'Andre Swift,RB,Chicago Bears,DABK,Matthew Stafford,Los Angeles Rams,0,,,Minnesota Vikings,0,0,Pre-ETR
+1,6,30,Zay Flowers,WR,Baltimore Ravens,SCHWEC03,Josh Allen,Buffalo Bills,0,,,Cleveland Browns,0,0,Pre-ETR
+1,7,31,Marvin Harrison,WR,Arizona Cardinals,MATHOLOGY,J.J. McCarthy,Minnesota Vikings,0,,,San Francisco 49ers,0,0,Pre-ETR
+1,8,32,Rome Odunze,WR,Chicago Bears,HOGWILD,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR
+1,9,33,Travis Etienne Jr.,RB,Jacksonville Jaguars,LEE121503,Jaxson Dart,New York Giants,0,,,Los Angeles Chargers,0,0,Pre-ETR
+1,10,34,Rachaad White,RB,Tampa Bay Buccaneers,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Buffalo Bills,0,0,Pre-ETR
+1,11,35,Kimani Vidal,RB,Los Angeles Chargers,TUBINIS2121,Trevor Lawrence,Jacksonville Jaguars,0,,,Jacksonville Jaguars,2,1,Pre-ETR
+1,12,36,Baker Mayfield,QB,Tampa Bay Buccaneers,HOTSIZAUCE,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,0,0,Pre-ETR
+1,12,37,Courtland Sutton,WR,Denver Broncos,HOTSIZAUCE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+1,11,38,Tetairoa McMillan,WR,Carolina Panthers,TUBINIS2121,Trevor Lawrence,Jacksonville Jaguars,0,,,Atlanta Falcons,0,0,Pre-ETR
+1,10,39,Aaron Jones,RB,Minnesota Vikings,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Chicago Bears,0,0,Pre-ETR
+1,9,40,Dalton Schultz,TE,Houston Texans,LEE121503,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR
+1,8,41,Khalil Shakir,WR,Buffalo Bills,HOGWILD,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+1,7,42,Travis Kelce,TE,Kansas City Chiefs,MATHOLOGY,J.J. McCarthy,Minnesota Vikings,0,,,Denver Broncos,1,1,Pre-ETR
+1,6,43,Jordan Addison,WR,Minnesota Vikings,SCHWEC03,Josh Allen,Buffalo Bills,0,,,Chicago Bears,0,0,Pre-ETR
+1,5,44,Matthew Stafford,QB,Los Angeles Rams,DABK,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,1,1,Pre-ETR
+1,4,45,RJ Harvey,RB,Denver Broncos,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Kansas City Chiefs,0,0,Pre-ETR
+1,3,46,Keenan Allen,WR,Los Angeles Chargers,STEADY314,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+1,2,47,Bucky Irving,RB,Tampa Bay Buccaneers,DAK4MVPNOT,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+1,1,48,Quentin Johnston,WR,Los Angeles Chargers,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+1,1,49,Joe Flacco,QB,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR
+1,2,50,Xavier Worthy,WR,Kansas City Chiefs,DAK4MVPNOT,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+1,3,51,Woody Marks,RB,Houston Texans,STEADY314,Justin Herbert,Los Angeles Chargers,0,,,Tennessee Titans,0,0,Pre-ETR
+1,4,52,Caleb Williams,QB,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,0,0,Minnesota Vikings,0,0,Pre-ETR
+1,5,53,Romeo Doubs,WR,Green Bay Packers,DABK,Matthew Stafford,Los Angeles Rams,0,,,New York Giants,0,0,Pre-ETR
+1,6,54,Wan'Dale Robinson,WR,New York Giants,SCHWEC03,Josh Allen,Buffalo Bills,0,,,Green Bay Packers,1,1,Pre-ETR
+1,7,55,RJ Harvey,RB,Denver Broncos,MATHOLOGY,J.J. McCarthy,Minnesota Vikings,0,,,Kansas City Chiefs,1,1,Pre-ETR
+1,8,56,Jauan Jennings,WR,San Francisco 49ers,HOGWILD,Lamar Jackson,Baltimore Ravens,0,,,Arizona Cardinals,0,0,Pre-ETR
+1,9,57,Jaxson Dart,QB,New York Giants,LEE121503,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,0,0,Pre-ETR
+1,10,58,Brock Purdy,QB,San Francisco 49ers,PATRICKBARN,Brock Purdy,San Francisco 49ers,1,2,1,Arizona Cardinals,0,0,Pre-ETR
+1,11,59,Brian Thomas,WR,Jacksonville Jaguars,TUBINIS2121,Trevor Lawrence,Jacksonville Jaguars,1,,,Los Angeles Chargers,1,1,Pre-ETR
+1,12,60,Oronde Gadsden,TE,Los Angeles Chargers,HOTSIZAUCE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+1,12,61,Kenneth Walker III,RB,Seattle Seahawks,HOTSIZAUCE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Rams,0,0,Pre-ETR
+1,11,62,Trevor Lawrence,QB,Jacksonville Jaguars,TUBINIS2121,Trevor Lawrence,Jacksonville Jaguars,1,1,1,Los Angeles Chargers,1,1,Pre-ETR
+1,10,63,Ricky Pearsall,WR,San Francisco 49ers,PATRICKBARN,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+1,9,64,Troy Franklin,WR,Denver Broncos,LEE121503,Jaxson Dart,New York Giants,0,,,Kansas City Chiefs,0,0,Pre-ETR
+1,8,65,Mark Andrews,TE,Baltimore Ravens,HOGWILD,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+1,7,66,J.J. McCarthy,QB,Minnesota Vikings,MATHOLOGY,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,0,0,Pre-ETR
+1,6,67,Cade Otton,TE,Tampa Bay Buccaneers,SCHWEC03,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,1,1,Pre-ETR
+1,5,68,Colston Loveland,TE,Chicago Bears,DABK,Matthew Stafford,Los Angeles Rams,0,,,Minnesota Vikings,0,0,Pre-ETR
+1,4,69,Harold Fannin,TE,Cleveland Browns,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Baltimore Ravens,0,0,Pre-ETR
+1,3,70,Kyle Pitts,TE,Atlanta Falcons,STEADY314,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+1,2,71,T.J. Hockenson,TE,Minnesota Vikings,DAK4MVPNOT,Patrick Mahomes,Kansas City Chiefs,0,,,Chicago Bears,0,0,Pre-ETR
+1,1,72,Theo Johnson,TE,New York Giants,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Green Bay Packers,0,0,Pre-ETR
+2,1,1,Christian McCaffrey,RB,San Francisco 49ers,DRAPP,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR
+2,2,2,Puka Nacua,WR,Los Angeles Rams,DABK,Jaxson Dart,New York Giants,0,,,Seattle Seahawks,0,0,Pre-ETR
+2,3,3,Bijan Robinson,RB,Atlanta Falcons,DYLANCASH22,Aaron Rodgers,Pittsburgh Steelers,0,,,Carolina Panthers,0,0,Pre-ETR
+2,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,ECOXER10,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Rams,2,1,Pre-ETR
+2,5,5,Ja'Marr Chase,WR,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+2,6,6,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,New York Giants,1,1,Pre-ETR
+2,7,7,Justin Jefferson,WR,Minnesota Vikings,SCHWEC03,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,1,1,Pre-ETR
+2,8,8,Drake London,WR,Atlanta Falcons,MERKZ13,Sam Darnold,Seattle Seahawks,0,,,Carolina Panthers,0,0,Pre-ETR
+2,9,9,Trey McBride,TE,Arizona Cardinals,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,San Francisco 49ers,0,0,Pre-ETR
+2,10,10,Rashee Rice,WR,Kansas City Chiefs,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,Denver Broncos,2,1,Pre-ETR
+2,11,11,Rico Dowdle,RB,Carolina Panthers,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,1,1,Pre-ETR
+2,12,12,James Cook,RB,Buffalo Bills,WOODOGGY15,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+2,12,13,Josh Allen,QB,Buffalo Bills,WOODOGGY15,Josh Allen,Buffalo Bills,1,2,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+2,11,14,Emeka Egbuka,WR,Tampa Bay Buccaneers,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+2,10,15,Kyren Williams,RB,Los Angeles Rams,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,Seattle Seahawks,0,0,Pre-ETR
+2,9,16,Derrick Henry,RB,Baltimore Ravens,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,Cleveland Browns,0,0,Pre-ETR
+2,8,17,Jaylen Warren,RB,Pittsburgh Steelers,MERKZ13,Sam Darnold,Seattle Seahawks,0,,,Cincinnati Bengals,0,0,Pre-ETR
+2,7,18,Lamar Jackson,QB,Baltimore Ravens,SCHWEC03,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,1,1,Pre-ETR
+2,6,19,Nico Collins,WR,Houston Texans,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tennessee Titans,0,0,Pre-ETR
+2,5,20,George Kittle,TE,San Francisco 49ers,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Arizona Cardinals,0,0,Pre-ETR
+2,4,21,Davante Adams,WR,Los Angeles Rams,ECOXER10,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,1,1,Pre-ETR
+2,3,22,Chase Brown,RB,Cincinnati Bengals,DYLANCASH22,Aaron Rodgers,Pittsburgh Steelers,0,,,Pittsburgh Steelers,3,1,Pre-ETR
+2,2,23,Ladd McConkey,WR,Los Angeles Chargers,DABK,Jaxson Dart,New York Giants,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+2,1,24,Quinshon Judkins,RB,Cleveland Browns,DRAPP,Caleb Williams,Chicago Bears,0,,,Baltimore Ravens,0,0,Pre-ETR
+2,1,25,Rome Odunze,WR,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+2,2,26,Travis Etienne Jr.,RB,Jacksonville Jaguars,DABK,Jaxson Dart,New York Giants,0,,,Los Angeles Chargers,1,1,Pre-ETR
+2,3,27,DK Metcalf,WR,Pittsburgh Steelers,DYLANCASH22,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+2,4,28,Kimani Vidal,RB,Los Angeles Chargers,ECOXER10,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+2,5,29,Tee Higgins,WR,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+2,6,30,Baker Mayfield,QB,Tampa Bay Buccaneers,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,0,0,Pre-ETR
+2,7,31,Zay Flowers,WR,Baltimore Ravens,SCHWEC03,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,1,1,Pre-ETR
+2,8,32,D'Andre Swift,RB,Chicago Bears,MERKZ13,Sam Darnold,Seattle Seahawks,0,,,Minnesota Vikings,1,1,Pre-ETR
+2,9,33,Justin Herbert,QB,Los Angeles Chargers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+2,10,34,Marvin Harrison,WR,Arizona Cardinals,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,San Francisco 49ers,0,0,Pre-ETR
+2,11,35,Rachaad White,RB,Tampa Bay Buccaneers,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+2,12,36,Tetairoa McMillan,WR,Carolina Panthers,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Atlanta Falcons,0,0,Pre-ETR
+2,12,37,Khalil Shakir,WR,Buffalo Bills,WOODOGGY15,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+2,11,38,Patrick Mahomes,QB,Kansas City Chiefs,D4VE,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+2,10,39,Travis Kelce,TE,Kansas City Chiefs,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,Denver Broncos,2,1,Pre-ETR
+2,9,40,Bucky Irving,RB,Tampa Bay Buccaneers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+2,8,41,Jordan Addison,WR,Minnesota Vikings,MERKZ13,Sam Darnold,Seattle Seahawks,0,,,Chicago Bears,1,1,Pre-ETR
+2,7,42,Aaron Jones,RB,Minnesota Vikings,SCHWEC03,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,1,1,Pre-ETR
+2,6,43,Tez Johnson,WR,Tampa Bay Buccaneers,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+2,5,44,Woody Marks,RB,Houston Texans,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+2,4,45,RJ Harvey,RB,Denver Broncos,ECOXER10,Matthew Stafford,Los Angeles Rams,0,,,Kansas City Chiefs,0,0,Pre-ETR
+2,3,46,Quentin Johnston,WR,Los Angeles Chargers,DYLANCASH22,Aaron Rodgers,Pittsburgh Steelers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+2,2,47,Courtland Sutton,WR,Denver Broncos,DABK,Jaxson Dart,New York Giants,0,,,Kansas City Chiefs,0,0,Pre-ETR
+2,1,48,Wan'Dale Robinson,WR,New York Giants,DRAPP,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR
+2,1,49,Caleb Williams,QB,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,0,0,Pre-ETR
+2,2,50,Cade Otton,TE,Tampa Bay Buccaneers,DABK,Jaxson Dart,New York Giants,0,,,Buffalo Bills,0,0,Pre-ETR
+2,3,51,Aaron Rodgers,QB,Pittsburgh Steelers,DYLANCASH22,Aaron Rodgers,Pittsburgh Steelers,1,2,1,Cincinnati Bengals,1,1,Pre-ETR
+2,4,52,Oronde Gadsden,TE,Los Angeles Chargers,ECOXER10,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+2,5,53,Joe Flacco,QB,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR
+2,6,54,Jauan Jennings,WR,San Francisco 49ers,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Arizona Cardinals,0,0,Pre-ETR
+2,7,55,Harold Fannin,TE,Cleveland Browns,SCHWEC03,Lamar Jackson,Baltimore Ravens,0,,,Baltimore Ravens,2,1,Pre-ETR
+2,8,56,Sam Darnold,QB,Seattle Seahawks,MERKZ13,Sam Darnold,Seattle Seahawks,1,1,1,Los Angeles Rams,0,0,Pre-ETR
+2,9,57,Keenan Allen,WR,Los Angeles Chargers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+2,10,58,Troy Franklin,WR,Denver Broncos,LINEOFSCRIM,Bo Nix,Denver Broncos,1,,,Kansas City Chiefs,2,1,Pre-ETR
+2,11,59,Xavier Worthy,WR,Kansas City Chiefs,D4VE,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+2,12,60,J.K. Dobbins,RB,Denver Broncos,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+2,12,61,Dalton Schultz,TE,Houston Texans,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Tennessee Titans,0,0,Pre-ETR
+2,11,62,Kyle Pitts,TE,Atlanta Falcons,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,1,1,Pre-ETR
+2,10,63,Bo Nix,QB,Denver Broncos,LINEOFSCRIM,Bo Nix,Denver Broncos,1,1,1,Kansas City Chiefs,2,1,Pre-ETR
+2,9,64,Romeo Doubs,WR,Green Bay Packers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,New York Giants,0,0,Pre-ETR
+2,8,65,AJ Barner,TE,Seattle Seahawks,MERKZ13,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,0,0,Pre-ETR
+2,7,66,D.J. Moore,WR,Chicago Bears,SCHWEC03,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,2,1,Pre-ETR
+2,6,67,Theo Johnson,TE,New York Giants,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Green Bay Packers,1,1,Pre-ETR
+2,5,68,Brian Thomas,WR,Jacksonville Jaguars,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Los Angeles Chargers,0,0,Pre-ETR
+2,4,69,Matthew Stafford,QB,Los Angeles Rams,ECOXER10,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,1,1,Pre-ETR
+2,3,70,Jonnu Smith,TE,Pittsburgh Steelers,DYLANCASH22,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+2,2,71,Jaxson Dart,QB,New York Giants,DABK,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,0,0,Pre-ETR
+2,1,72,Colston Loveland,TE,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+3,1,1,Christian McCaffrey,RB,San Francisco 49ers,D4VE,Justin Herbert,Los Angeles Chargers,0,,,Arizona Cardinals,0,0,Pre-ETR
+3,2,2,Puka Nacua,WR,Los Angeles Rams,DABK,Aaron Rodgers,Pittsburgh Steelers,0,,,Seattle Seahawks,0,0,Pre-ETR
+3,3,3,Bijan Robinson,RB,Atlanta Falcons,LGREWE50,Josh Allen,Buffalo Bills,0,,,Carolina Panthers,0,0,Pre-ETR
+3,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,SHAGNASTYB,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+3,5,5,Lamar Jackson,QB,Baltimore Ravens,JTRUJILLO640,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+3,6,6,Jaxon Smith-Njigba,WR,Seattle Seahawks,MWOLF,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Rams,0,0,Pre-ETR
+3,7,7,Josh Jacobs,RB,Green Bay Packers,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,New York Giants,0,0,Pre-ETR
+3,8,8,Trey McBride,TE,Arizona Cardinals,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,San Francisco 49ers,1,1,Pre-ETR
+3,9,9,James Cook,RB,Buffalo Bills,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,3,1,Pre-ETR
+3,10,10,Jaylen Warren,RB,Pittsburgh Steelers,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Cincinnati Bengals,0,0,Pre-ETR
+3,11,11,Rico Dowdle,RB,Carolina Panthers,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Atlanta Falcons,1,1,Pre-ETR
+3,12,12,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR
+3,12,13,Nico Collins,WR,Houston Texans,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+3,11,14,Drake London,WR,Atlanta Falcons,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Carolina Panthers,1,1,Pre-ETR
+3,10,15,Rashee Rice,WR,Kansas City Chiefs,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Denver Broncos,0,0,Pre-ETR
+3,9,16,Emeka Egbuka,WR,Tampa Bay Buccaneers,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+3,8,17,Kyren Williams,RB,Los Angeles Rams,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,Seattle Seahawks,0,0,Pre-ETR
+3,7,18,Justin Jefferson,WR,Minnesota Vikings,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR
+3,6,19,Derrick Henry,RB,Baltimore Ravens,MWOLF,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,1,1,Pre-ETR
+3,5,20,Davante Adams,WR,Los Angeles Rams,JTRUJILLO640,Lamar Jackson,Baltimore Ravens,0,,,Seattle Seahawks,0,0,Pre-ETR
+3,4,21,Tee Higgins,WR,Cincinnati Bengals,SHAGNASTYB,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+3,3,22,Josh Allen,QB,Buffalo Bills,LGREWE50,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+3,2,23,Quinshon Judkins,RB,Cleveland Browns,DABK,Aaron Rodgers,Pittsburgh Steelers,0,,,Baltimore Ravens,0,0,Pre-ETR
+3,1,24,Ladd McConkey,WR,Los Angeles Chargers,D4VE,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+3,1,25,Justin Herbert,QB,Los Angeles Chargers,D4VE,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+3,2,26,DK Metcalf,WR,Pittsburgh Steelers,DABK,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+3,3,27,Zay Flowers,WR,Baltimore Ravens,LGREWE50,Josh Allen,Buffalo Bills,0,,,Cleveland Browns,0,0,Pre-ETR
+3,4,28,Jordan Addison,WR,Minnesota Vikings,SHAGNASTYB,Joe Flacco,Cincinnati Bengals,0,,,Chicago Bears,0,0,Pre-ETR
+3,5,29,Rome Odunze,WR,Chicago Bears,JTRUJILLO640,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR
+3,6,30,Patrick Mahomes,QB,Kansas City Chiefs,MWOLF,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,0,0,Pre-ETR
+3,7,31,Chase Brown,RB,Cincinnati Bengals,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+3,8,32,Marvin Harrison,WR,Arizona Cardinals,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,San Francisco 49ers,1,1,Pre-ETR
+3,9,33,Baker Mayfield,QB,Tampa Bay Buccaneers,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,1,1,Pre-ETR
+3,10,34,Kimani Vidal,RB,Los Angeles Chargers,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+3,11,35,Travis Etienne Jr.,RB,Jacksonville Jaguars,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Chargers,0,0,Pre-ETR
+3,12,36,Woody Marks,RB,Houston Texans,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+3,12,37,Quentin Johnston,WR,Los Angeles Chargers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+3,11,38,Travis Kelce,TE,Kansas City Chiefs,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Denver Broncos,0,0,Pre-ETR
+3,10,39,Tetairoa McMillan,WR,Carolina Panthers,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Atlanta Falcons,0,0,Pre-ETR
+3,9,40,D'Andre Swift,RB,Chicago Bears,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,Minnesota Vikings,0,0,Pre-ETR
+3,8,41,RJ Harvey,RB,Denver Broncos,LINEOFSCRIM,Bo Nix,Denver Broncos,1,,,Kansas City Chiefs,0,0,Pre-ETR
+3,7,42,Oronde Gadsden,TE,Los Angeles Chargers,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+3,6,43,Aaron Jones,RB,Minnesota Vikings,MWOLF,Patrick Mahomes,Kansas City Chiefs,0,,,Chicago Bears,0,0,Pre-ETR
+3,5,44,Rachaad White,RB,Tampa Bay Buccaneers,JTRUJILLO640,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,0,0,Pre-ETR
+3,4,45,T.J. Hockenson,TE,Minnesota Vikings,SHAGNASTYB,Joe Flacco,Cincinnati Bengals,0,,,Chicago Bears,0,0,Pre-ETR
+3,3,46,Khalil Shakir,WR,Buffalo Bills,LGREWE50,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+3,2,47,Dalton Schultz,TE,Houston Texans,DABK,Aaron Rodgers,Pittsburgh Steelers,0,,,Tennessee Titans,0,0,Pre-ETR
+3,1,48,Romeo Doubs,WR,Green Bay Packers,D4VE,Justin Herbert,Los Angeles Chargers,0,,,New York Giants,0,0,Pre-ETR
+3,1,49,Kyle Pitts,TE,Atlanta Falcons,D4VE,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+3,2,50,Aaron Rodgers,QB,Pittsburgh Steelers,DABK,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,0,0,Pre-ETR
+3,3,51,Courtland Sutton,WR,Denver Broncos,LGREWE50,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+3,4,52,Joe Flacco,QB,Cincinnati Bengals,SHAGNASTYB,Joe Flacco,Cincinnati Bengals,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR
+3,5,53,Wan'Dale Robinson,WR,New York Giants,JTRUJILLO640,Lamar Jackson,Baltimore Ravens,0,,,Green Bay Packers,0,0,Pre-ETR
+3,6,54,Harold Fannin,TE,Cleveland Browns,MWOLF,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,1,1,Pre-ETR
+3,7,55,Xavier Worthy,WR,Kansas City Chiefs,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Denver Broncos,0,0,Pre-ETR
+3,8,56,Jauan Jennings,WR,San Francisco 49ers,LINEOFSCRIM,Bo Nix,Denver Broncos,0,,,Arizona Cardinals,2,1,Pre-ETR
+3,9,57,Cade Otton,TE,Tampa Bay Buccaneers,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+3,10,58,Dalton Kincaid,TE,Buffalo Bills,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+3,11,59,Tez Johnson,WR,Tampa Bay Buccaneers,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Buffalo Bills,0,0,Pre-ETR
+3,12,60,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,1,1,San Francisco 49ers,1,1,Pre-ETR
+3,12,61,Michael Wilson,WR,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+3,11,62,Matthew Stafford,QB,Los Angeles Rams,KRUTCHES93,Matthew Stafford,Los Angeles Rams,1,0,0,Seattle Seahawks,0,0,Pre-ETR
+3,10,63,Sam Darnold,QB,Seattle Seahawks,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,1,0,0,Los Angeles Rams,0,0,Pre-ETR
+3,9,64,Troy Franklin,WR,Denver Broncos,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+3,8,65,Bo Nix,QB,Denver Broncos,LINEOFSCRIM,Bo Nix,Denver Broncos,1,1,1,Kansas City Chiefs,0,0,Pre-ETR
+3,7,66,Caleb Williams,QB,Chicago Bears,MATHOLOGY,Caleb Williams,Chicago Bears,1,0,0,Minnesota Vikings,1,1,Pre-ETR
+3,6,67,Brian Thomas,WR,Jacksonville Jaguars,MWOLF,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Chargers,0,0,Pre-ETR
+3,5,68,Mark Andrews,TE,Baltimore Ravens,JTRUJILLO640,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+3,4,69,Tyrone Tracy,RB,New York Giants,SHAGNASTYB,Joe Flacco,Cincinnati Bengals,0,,,Green Bay Packers,0,0,Pre-ETR
+3,3,70,Jonnu Smith,TE,Pittsburgh Steelers,LGREWE50,Josh Allen,Buffalo Bills,0,,,Cincinnati Bengals,0,0,Pre-ETR
+3,2,71,Keenan Allen,WR,Los Angeles Chargers,DABK,Aaron Rodgers,Pittsburgh Steelers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+3,1,72,Bucky Irving,RB,Tampa Bay Buccaneers,D4VE,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+4,1,1,Christian McCaffrey,RB,San Francisco 49ers,ECOXER10,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR
+4,2,2,Josh Jacobs,RB,Green Bay Packers,KINGSCHUSTER,Brock Purdy,San Francisco 49ers,0,,,New York Giants,0,0,Pre-ETR
+4,3,3,Puka Nacua,WR,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+4,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+4,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Los Angeles Rams,1,1,Pre-ETR
+4,6,6,Bijan Robinson,RB,Atlanta Falcons,DRAPP,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,1,1,Pre-ETR
+4,7,7,Lamar Jackson,QB,Baltimore Ravens,MATHOLOGY,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+4,8,8,Justin Jefferson,WR,Minnesota Vikings,BRADC,Bo Nix,Denver Broncos,0,,,Chicago Bears,1,1,Pre-ETR
+4,9,9,Rico Dowdle,RB,Carolina Panthers,SCHWEC03,Joe Flacco,Cincinnati Bengals,0,,,Atlanta Falcons,0,0,Pre-ETR
+4,10,10,James Cook,RB,Buffalo Bills,JGFC,J.J. McCarthy,Minnesota Vikings,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+4,11,11,Trey McBride,TE,Arizona Cardinals,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,San Francisco 49ers,0,0,Pre-ETR
+4,12,12,Rashee Rice,WR,Kansas City Chiefs,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Denver Broncos,0,0,Pre-ETR
+4,12,13,Drake London,WR,Atlanta Falcons,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Carolina Panthers,0,0,Pre-ETR
+4,11,14,Josh Allen,QB,Buffalo Bills,PATRICKBARN,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,1,1,Pre-ETR
+4,10,15,Emeka Egbuka,WR,Tampa Bay Buccaneers,JGFC,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,1,1,Pre-ETR
+4,9,16,Jaylen Warren,RB,Pittsburgh Steelers,SCHWEC03,Joe Flacco,Cincinnati Bengals,0,,,Cincinnati Bengals,2,1,Pre-ETR
+4,8,17,Derrick Henry,RB,Baltimore Ravens,BRADC,Bo Nix,Denver Broncos,0,,,Cleveland Browns,0,0,Pre-ETR
+4,7,18,Kyren Williams,RB,Los Angeles Rams,MATHOLOGY,Lamar Jackson,Baltimore Ravens,0,,,Seattle Seahawks,0,0,Pre-ETR
+4,6,19,Nico Collins,WR,Houston Texans,DRAPP,Patrick Mahomes,Kansas City Chiefs,0,,,Tennessee Titans,0,0,Pre-ETR
+4,5,20,Quinshon Judkins,RB,Cleveland Browns,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Baltimore Ravens,0,0,Pre-ETR
+4,4,21,Chase Brown,RB,Cincinnati Bengals,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+4,3,22,George Kittle,TE,San Francisco 49ers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Arizona Cardinals,0,0,Pre-ETR
+4,2,23,Ladd McConkey,WR,Los Angeles Chargers,KINGSCHUSTER,Brock Purdy,San Francisco 49ers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+4,1,24,Rome Odunze,WR,Chicago Bears,ECOXER10,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+4,1,25,Travis Etienne Jr.,RB,Jacksonville Jaguars,ECOXER10,Caleb Williams,Chicago Bears,0,,,Los Angeles Chargers,0,0,Pre-ETR
+4,2,26,DK Metcalf,WR,Pittsburgh Steelers,KINGSCHUSTER,Brock Purdy,San Francisco 49ers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+4,3,27,Kimani Vidal,RB,Los Angeles Chargers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+4,4,28,Justin Herbert,QB,Los Angeles Chargers,RAZOR33,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+4,5,29,Davante Adams,WR,Los Angeles Rams,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Seattle Seahawks,1,1,Pre-ETR
+4,6,30,Patrick Mahomes,QB,Kansas City Chiefs,DRAPP,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+4,7,31,Zay Flowers,WR,Baltimore Ravens,MATHOLOGY,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+4,8,32,Marvin Harrison,WR,Arizona Cardinals,BRADC,Bo Nix,Denver Broncos,0,,,San Francisco 49ers,0,0,Pre-ETR
+4,9,33,Tee Higgins,WR,Cincinnati Bengals,SCHWEC03,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,1,1,Pre-ETR
+4,10,34,Aaron Jones,RB,Minnesota Vikings,JGFC,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+4,11,35,Rachaad White,RB,Tampa Bay Buccaneers,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,1,1,Pre-ETR
+4,12,36,D'Andre Swift,RB,Chicago Bears,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Minnesota Vikings,0,0,Pre-ETR
+4,12,37,Baker Mayfield,QB,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,0,0,Pre-ETR
+4,11,38,RJ Harvey,RB,Denver Broncos,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+4,10,39,Jordan Addison,WR,Minnesota Vikings,JGFC,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+4,9,40,Travis Kelce,TE,Kansas City Chiefs,SCHWEC03,Joe Flacco,Cincinnati Bengals,0,,,Denver Broncos,1,1,Pre-ETR
+4,8,41,Khalil Shakir,WR,Buffalo Bills,BRADC,Bo Nix,Denver Broncos,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+4,7,42,Oronde Gadsden,TE,Los Angeles Chargers,MATHOLOGY,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+4,6,43,Tetairoa McMillan,WR,Carolina Panthers,DRAPP,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,1,1,Pre-ETR
+4,5,44,Woody Marks,RB,Houston Texans,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Tennessee Titans,0,0,Pre-ETR
+4,4,45,Quentin Johnston,WR,Los Angeles Chargers,RAZOR33,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+4,3,46,Matthew Stafford,QB,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+4,2,47,Courtland Sutton,WR,Denver Broncos,KINGSCHUSTER,Brock Purdy,San Francisco 49ers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+4,1,48,Caleb Williams,QB,Chicago Bears,ECOXER10,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,0,0,Pre-ETR
+4,1,49,Cade Otton,TE,Tampa Bay Buccaneers,ECOXER10,Caleb Williams,Chicago Bears,0,,,Buffalo Bills,0,0,Pre-ETR
+4,2,50,Dalton Schultz,TE,Houston Texans,KINGSCHUSTER,Brock Purdy,San Francisco 49ers,0,,,Tennessee Titans,0,0,Pre-ETR
+4,3,51,Romeo Doubs,WR,Green Bay Packers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,New York Giants,0,0,Pre-ETR
+4,4,52,Kenneth Walker III,RB,Seattle Seahawks,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Rams,0,0,Pre-ETR
+4,5,53,Aaron Rodgers,QB,Pittsburgh Steelers,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,0,0,Pre-ETR
+4,6,54,Xavier Worthy,WR,Kansas City Chiefs,DRAPP,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+4,7,55,Jauan Jennings,WR,San Francisco 49ers,MATHOLOGY,Lamar Jackson,Baltimore Ravens,0,,,Arizona Cardinals,0,0,Pre-ETR
+4,8,56,Colston Loveland,TE,Chicago Bears,BRADC,Bo Nix,Denver Broncos,0,,,Minnesota Vikings,1,1,Pre-ETR
+4,9,57,Troy Franklin,WR,Denver Broncos,SCHWEC03,Joe Flacco,Cincinnati Bengals,0,,,Kansas City Chiefs,1,1,Pre-ETR
+4,10,58,Kyle Pitts,TE,Atlanta Falcons,JGFC,J.J. McCarthy,Minnesota Vikings,0,,,Carolina Panthers,0,0,Pre-ETR
+4,11,59,Wan'Dale Robinson,WR,New York Giants,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Green Bay Packers,1,1,Pre-ETR
+4,12,60,Tez Johnson,WR,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+4,12,61,Harold Fannin,TE,Cleveland Browns,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Baltimore Ravens,0,0,Pre-ETR
+4,11,62,Christian Watson,WR,Green Bay Packers,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,New York Giants,1,1,Pre-ETR
+4,10,63,J.J. McCarthy,QB,Minnesota Vikings,JGFC,J.J. McCarthy,Minnesota Vikings,1,2,1,Chicago Bears,0,0,Pre-ETR
+4,9,64,Joe Flacco,QB,Cincinnati Bengals,SCHWEC03,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,1,1,Pre-ETR
+4,8,65,Bo Nix,QB,Denver Broncos,BRADC,Bo Nix,Denver Broncos,1,0,0,Kansas City Chiefs,0,0,Pre-ETR
+4,7,66,Brian Thomas,WR,Jacksonville Jaguars,MATHOLOGY,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Chargers,1,1,Pre-ETR
+4,6,67,Dalton Kincaid,TE,Buffalo Bills,DRAPP,Patrick Mahomes,Kansas City Chiefs,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+4,5,68,Jonnu Smith,TE,Pittsburgh Steelers,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+4,4,69,Evan Engram,TE,Denver Broncos,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+4,3,70,Keenan Allen,WR,Los Angeles Chargers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+4,2,71,Brock Purdy,QB,San Francisco 49ers,KINGSCHUSTER,Brock Purdy,San Francisco 49ers,1,0,0,Arizona Cardinals,0,0,Pre-ETR
+4,1,72,D.J. Moore,WR,Chicago Bears,ECOXER10,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+5,1,1,Christian McCaffrey,RB,San Francisco 49ers,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Arizona Cardinals,0,0,Pre-ETR
+5,2,2,Puka Nacua,WR,Los Angeles Rams,PLAYERQ,Aaron Rodgers,Pittsburgh Steelers,0,,,Seattle Seahawks,0,0,Pre-ETR
+5,3,3,Ja'Marr Chase,WR,Cincinnati Bengals,KINGSCHUSTER,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+5,4,4,Bijan Robinson,RB,Atlanta Falcons,URBANIK,Lamar Jackson,Baltimore Ravens,0,,,Carolina Panthers,0,0,Pre-ETR
+5,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,DABK,Caleb Williams,Chicago Bears,0,,,Los Angeles Rams,1,1,Pre-ETR
+5,6,6,Josh Jacobs,RB,Green Bay Packers,SHAGNASTYB,Baker Mayfield,Tampa Bay Buccaneers,0,,,New York Giants,0,0,Pre-ETR
+5,7,7,Trey McBride,TE,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,2,1,Pre-ETR
+5,8,8,Justin Herbert,QB,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,2,1,Jacksonville Jaguars,1,1,Pre-ETR
+5,9,9,Justin Jefferson,WR,Minnesota Vikings,ICEYFFB,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+5,10,10,Drake London,WR,Atlanta Falcons,BRADC,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,1,1,Pre-ETR
+5,11,11,Rashee Rice,WR,Kansas City Chiefs,CGEEEEEE,Jaxson Dart,New York Giants,0,,,Denver Broncos,0,0,Pre-ETR
+5,12,12,Emeka Egbuka,WR,Tampa Bay Buccaneers,D4VE,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,2,1,Pre-ETR
+5,12,13,Josh Allen,QB,Buffalo Bills,D4VE,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,2,1,Pre-ETR
+5,11,14,Jaylen Warren,RB,Pittsburgh Steelers,CGEEEEEE,Jaxson Dart,New York Giants,0,,,Cincinnati Bengals,0,0,Pre-ETR
+5,10,15,Rico Dowdle,RB,Carolina Panthers,BRADC,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,1,1,Pre-ETR
+5,9,16,Derrick Henry,RB,Baltimore Ravens,ICEYFFB,J.J. McCarthy,Minnesota Vikings,0,,,Cleveland Browns,0,0,Pre-ETR
+5,8,17,Ladd McConkey,WR,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+5,7,18,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,3,1,Pre-ETR
+5,6,19,James Cook,RB,Buffalo Bills,SHAGNASTYB,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+5,5,20,Kyren Williams,RB,Los Angeles Rams,DABK,Caleb Williams,Chicago Bears,0,,,Seattle Seahawks,1,1,Pre-ETR
+5,4,21,Lamar Jackson,QB,Baltimore Ravens,URBANIK,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,1,1,Pre-ETR
+5,3,22,Chase Brown,RB,Cincinnati Bengals,KINGSCHUSTER,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+5,2,23,DK Metcalf,WR,Pittsburgh Steelers,PLAYERQ,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+5,1,24,Davante Adams,WR,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+5,1,25,Quinshon Judkins,RB,Cleveland Browns,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+5,2,26,Tee Higgins,WR,Cincinnati Bengals,PLAYERQ,Aaron Rodgers,Pittsburgh Steelers,0,,,Pittsburgh Steelers,3,1,Pre-ETR
+5,3,27,Nico Collins,WR,Houston Texans,KINGSCHUSTER,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+5,4,28,Zay Flowers,WR,Baltimore Ravens,URBANIK,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,1,1,Pre-ETR
+5,5,29,Rome Odunze,WR,Chicago Bears,DABK,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+5,6,30,Marvin Harrison,WR,Arizona Cardinals,SHAGNASTYB,Baker Mayfield,Tampa Bay Buccaneers,0,,,San Francisco 49ers,0,0,Pre-ETR
+5,7,31,Woody Marks,RB,Houston Texans,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+5,8,32,Travis Etienne Jr.,RB,Jacksonville Jaguars,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,3,1,Pre-ETR
+5,9,33,D'Andre Swift,RB,Chicago Bears,ICEYFFB,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,3,1,Pre-ETR
+5,10,34,Patrick Mahomes,QB,Kansas City Chiefs,BRADC,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,1,1,Pre-ETR
+5,11,35,Kimani Vidal,RB,Los Angeles Chargers,CGEEEEEE,Jaxson Dart,New York Giants,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+5,12,36,RJ Harvey,RB,Denver Broncos,D4VE,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+5,12,37,Rachaad White,RB,Tampa Bay Buccaneers,D4VE,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,2,1,Pre-ETR
+5,11,38,Travis Kelce,TE,Kansas City Chiefs,CGEEEEEE,Jaxson Dart,New York Giants,0,,,Denver Broncos,0,0,Pre-ETR
+5,10,39,Courtland Sutton,WR,Denver Broncos,BRADC,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,2,1,Pre-ETR
+5,9,40,Jordan Addison,WR,Minnesota Vikings,ICEYFFB,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+5,8,41,Tetairoa McMillan,WR,Carolina Panthers,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Atlanta Falcons,1,1,Pre-ETR
+5,7,42,Jauan Jennings,WR,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,3,1,Pre-ETR
+5,6,43,Oronde Gadsden,TE,Los Angeles Chargers,SHAGNASTYB,Baker Mayfield,Tampa Bay Buccaneers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+5,5,44,Aaron Jones,RB,Minnesota Vikings,DABK,Caleb Williams,Chicago Bears,0,,,Chicago Bears,2,1,Pre-ETR
+5,4,45,Quentin Johnston,WR,Los Angeles Chargers,URBANIK,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+5,3,46,Brian Thomas,WR,Jacksonville Jaguars,KINGSCHUSTER,Joe Flacco,Cincinnati Bengals,0,,,Los Angeles Chargers,0,0,Pre-ETR
+5,2,47,Aaron Rodgers,QB,Pittsburgh Steelers,PLAYERQ,Aaron Rodgers,Pittsburgh Steelers,1,2,1,Cincinnati Bengals,1,1,Pre-ETR
+5,1,48,Matthew Stafford,QB,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+5,1,49,Khalil Shakir,WR,Buffalo Bills,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+5,2,50,Kareem Hunt,RB,Kansas City Chiefs,PLAYERQ,Aaron Rodgers,Pittsburgh Steelers,0,,,Denver Broncos,0,0,Pre-ETR
+5,3,51,Joe Flacco,QB,Cincinnati Bengals,KINGSCHUSTER,Joe Flacco,Cincinnati Bengals,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR
+5,4,52,RJ Harvey,RB,Denver Broncos,URBANIK,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+5,5,53,Caleb Williams,QB,Chicago Bears,DABK,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,1,1,Pre-ETR
+5,6,54,Baker Mayfield,QB,Tampa Bay Buccaneers,SHAGNASTYB,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,1,1,Pre-ETR
+5,7,55,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,2,1,San Francisco 49ers,2,1,Pre-ETR
+5,8,56,Kyle Pitts,TE,Atlanta Falcons,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,1,1,Pre-ETR
+5,9,57,Dalton Kincaid,TE,Buffalo Bills,ICEYFFB,J.J. McCarthy,Minnesota Vikings,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+5,10,58,Xavier Worthy,WR,Kansas City Chiefs,BRADC,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+5,11,59,Romeo Doubs,WR,Green Bay Packers,CGEEEEEE,Jaxson Dart,New York Giants,0,,,New York Giants,1,1,Pre-ETR
+5,12,60,Keon Coleman,WR,Buffalo Bills,D4VE,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+5,12,61,Dalton Schultz,TE,Houston Texans,D4VE,Josh Allen,Buffalo Bills,0,,,Tennessee Titans,0,0,Pre-ETR
+5,11,62,Jaxson Dart,QB,New York Giants,CGEEEEEE,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,1,1,Pre-ETR
+5,10,63,Cade Otton,TE,Tampa Bay Buccaneers,BRADC,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+5,9,64,J.J. McCarthy,QB,Minnesota Vikings,ICEYFFB,J.J. McCarthy,Minnesota Vikings,1,2,1,Chicago Bears,1,1,Pre-ETR
+5,8,65,Keenan Allen,WR,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+5,7,66,Michael Wilson,WR,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,2,1,Pre-ETR
+5,6,67,Tez Johnson,WR,Tampa Bay Buccaneers,SHAGNASTYB,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+5,5,68,Mark Andrews,TE,Baltimore Ravens,DABK,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR
+5,4,69,Harold Fannin,TE,Cleveland Browns,URBANIK,Lamar Jackson,Baltimore Ravens,0,,,Baltimore Ravens,2,1,Pre-ETR
+5,3,70,Colston Loveland,TE,Chicago Bears,KINGSCHUSTER,Joe Flacco,Cincinnati Bengals,0,,,Minnesota Vikings,0,0,Pre-ETR
+5,2,71,Jonnu Smith,TE,Pittsburgh Steelers,PLAYERQ,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+5,1,72,Pat Freiermuth,TE,Pittsburgh Steelers,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Cincinnati Bengals,0,0,Pre-ETR
+6,1,1,Christian McCaffrey,RB,San Francisco 49ers,KCPOLACK,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+6,2,2,Puka Nacua,WR,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+6,3,3,Bijan Robinson,RB,Atlanta Falcons,MATHOLOGY,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,1,1,Pre-ETR
+6,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Rams,1,1,Pre-ETR
+6,5,5,Ja'Marr Chase,WR,Cincinnati Bengals,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+6,6,6,Josh Jacobs,RB,Green Bay Packers,FANTASYDOGP,C.J. Stroud,Houston Texans,0,,,New York Giants,0,0,Pre-ETR
+6,7,7,Josh Allen,QB,Buffalo Bills,DMOZONE,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,1,1,Pre-ETR
+6,8,8,Trey McBride,TE,Arizona Cardinals,KRUTCHES93,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,0,0,Pre-ETR
+6,9,9,Justin Herbert,QB,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,2,1,Jacksonville Jaguars,1,1,Pre-ETR
+6,10,10,Justin Jefferson,WR,Minnesota Vikings,KREAR72,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,0,0,Pre-ETR
+6,11,11,Rico Dowdle,RB,Carolina Panthers,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Atlanta Falcons,0,0,Pre-ETR
+6,12,12,Jaylen Warren,RB,Pittsburgh Steelers,LEE121503,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+6,12,13,Rashee Rice,WR,Kansas City Chiefs,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Denver Broncos,0,0,Pre-ETR
+6,11,14,James Cook,RB,Buffalo Bills,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+6,10,15,Lamar Jackson,QB,Baltimore Ravens,KREAR72,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+6,9,16,Ladd McConkey,WR,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+6,8,17,Drake London,WR,Atlanta Falcons,KRUTCHES93,Jacoby Brissett,Arizona Cardinals,0,,,Carolina Panthers,0,0,Pre-ETR
+6,7,18,Bucky Irving,RB,Tampa Bay Buccaneers,DMOZONE,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,1,1,Pre-ETR
+6,6,19,Nico Collins,WR,Houston Texans,FANTASYDOGP,C.J. Stroud,Houston Texans,1,,,Tennessee Titans,0,0,Pre-ETR
+6,5,20,Emeka Egbuka,WR,Tampa Bay Buccaneers,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Buffalo Bills,0,0,Pre-ETR
+6,4,21,Kyren Williams,RB,Los Angeles Rams,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Seattle Seahawks,1,1,Pre-ETR
+6,3,22,Derrick Henry,RB,Baltimore Ravens,MATHOLOGY,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,0,0,Pre-ETR
+6,2,23,Quinshon Judkins,RB,Cleveland Browns,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,1,1,Pre-ETR
+6,1,24,George Kittle,TE,San Francisco 49ers,KCPOLACK,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+6,1,25,Davante Adams,WR,Los Angeles Rams,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,Seattle Seahawks,0,0,Pre-ETR
+6,2,26,Kimani Vidal,RB,Los Angeles Chargers,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+6,3,27,Patrick Mahomes,QB,Kansas City Chiefs,MATHOLOGY,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+6,4,28,Chase Brown,RB,Cincinnati Bengals,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+6,5,29,Rome Odunze,WR,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+6,6,30,Tee Higgins,WR,Cincinnati Bengals,FANTASYDOGP,C.J. Stroud,Houston Texans,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+6,7,31,Travis Kelce,TE,Kansas City Chiefs,DMOZONE,Josh Allen,Buffalo Bills,0,,,Denver Broncos,0,0,Pre-ETR
+6,8,32,Travis Etienne Jr.,RB,Jacksonville Jaguars,KRUTCHES93,Jacoby Brissett,Arizona Cardinals,0,,,Los Angeles Chargers,0,0,Pre-ETR
+6,9,33,Quentin Johnston,WR,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+6,10,34,Zay Flowers,WR,Baltimore Ravens,KREAR72,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+6,11,35,Courtland Sutton,WR,Denver Broncos,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Kansas City Chiefs,0,0,Pre-ETR
+6,12,36,Rachaad White,RB,Tampa Bay Buccaneers,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Buffalo Bills,0,0,Pre-ETR
+6,12,37,Marvin Harrison,WR,Arizona Cardinals,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,San Francisco 49ers,0,0,Pre-ETR
+6,11,38,Oronde Gadsden,TE,Los Angeles Chargers,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+6,10,39,DK Metcalf,WR,Pittsburgh Steelers,KREAR72,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR
+6,9,40,Woody Marks,RB,Houston Texans,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Tennessee Titans,0,0,Pre-ETR
+6,8,41,Khalil Shakir,WR,Buffalo Bills,KRUTCHES93,Jacoby Brissett,Arizona Cardinals,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+6,7,42,D'Andre Swift,RB,Chicago Bears,DMOZONE,Josh Allen,Buffalo Bills,0,,,Minnesota Vikings,0,0,Pre-ETR
+6,6,43,Jordan Addison,WR,Minnesota Vikings,FANTASYDOGP,C.J. Stroud,Houston Texans,0,,,Chicago Bears,0,0,Pre-ETR
+6,5,44,Aaron Jones,RB,Minnesota Vikings,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Chicago Bears,3,1,Pre-ETR
+6,4,45,Baker Mayfield,QB,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,0,0,Pre-ETR
+6,3,46,Tetairoa McMillan,WR,Carolina Panthers,MATHOLOGY,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,1,1,Pre-ETR
+6,2,47,Matthew Stafford,QB,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+6,1,48,Romeo Doubs,WR,Green Bay Packers,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,New York Giants,0,0,Pre-ETR
+6,1,49,Brock Purdy,QB,San Francisco 49ers,KCPOLACK,Brock Purdy,San Francisco 49ers,1,2,1,Arizona Cardinals,0,0,Pre-ETR
+6,2,50,Wan'Dale Robinson,WR,New York Giants,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Green Bay Packers,0,0,Pre-ETR
+6,3,51,Xavier Worthy,WR,Kansas City Chiefs,MATHOLOGY,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+6,4,52,Cade Otton,TE,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+6,5,53,Caleb Williams,QB,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,1,1,Pre-ETR
+6,6,54,Dalton Schultz,TE,Houston Texans,FANTASYDOGP,C.J. Stroud,Houston Texans,1,,,Tennessee Titans,0,0,Pre-ETR
+6,7,55,Keenan Allen,WR,Los Angeles Chargers,DMOZONE,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+6,8,56,RJ Harvey,RB,Denver Broncos,KRUTCHES93,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR
+6,9,57,Kyle Pitts,TE,Atlanta Falcons,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+6,10,58,Kenneth Walker III,RB,Seattle Seahawks,KREAR72,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Rams,0,0,Pre-ETR
+6,11,59,Joe Flacco,QB,Cincinnati Bengals,INGELX,Joe Flacco,Cincinnati Bengals,1,0,0,Pittsburgh Steelers,0,0,Pre-ETR
+6,12,60,Aaron Rodgers,QB,Pittsburgh Steelers,LEE121503,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,0,0,Pre-ETR
+6,12,61,Harold Fannin,TE,Cleveland Browns,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Baltimore Ravens,0,0,Pre-ETR
+6,11,62,Luther Burden,WR,Chicago Bears,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Minnesota Vikings,0,0,Pre-ETR
+6,10,63,Luke Musgrave,TE,Green Bay Packers,KREAR72,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR
+6,9,64,Parker Washington,WR,Jacksonville Jaguars,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,3,1,Pre-ETR
+6,8,65,Jacoby Brissett,QB,Arizona Cardinals,KRUTCHES93,Jacoby Brissett,Arizona Cardinals,1,1,1,San Francisco 49ers,0,0,Pre-ETR
+6,7,66,D.J. Moore,WR,Chicago Bears,DMOZONE,Josh Allen,Buffalo Bills,0,,,Minnesota Vikings,0,0,Pre-ETR
+6,6,67,C.J. Stroud,QB,Houston Texans,FANTASYDOGP,C.J. Stroud,Houston Texans,1,2,1,Tennessee Titans,0,0,Pre-ETR
+6,5,68,Colston Loveland,TE,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+6,4,69,Tez Johnson,WR,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+6,3,70,Brenton Strange,TE,Jacksonville Jaguars,MATHOLOGY,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Chargers,0,0,Pre-ETR
+6,2,71,Mark Andrews,TE,Baltimore Ravens,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Cleveland Browns,1,1,Pre-ETR
+6,1,72,J.K. Dobbins,RB,Denver Broncos,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+7,1,1,Christian McCaffrey,RB,San Francisco 49ers,KREAR72,Matthew Stafford,Los Angeles Rams,0,,,Arizona Cardinals,0,0,Pre-ETR
+7,2,2,Puka Nacua,WR,Los Angeles Rams,URBANIK,Aaron Rodgers,Pittsburgh Steelers,0,,,Seattle Seahawks,0,0,Pre-ETR
+7,3,3,Josh Jacobs,RB,Green Bay Packers,JGFC,Patrick Mahomes,Kansas City Chiefs,0,,,New York Giants,0,0,Pre-ETR
+7,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,MIKEC6212,C.J. Stroud,Houston Texans,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+7,5,5,Bijan Robinson,RB,Atlanta Falcons,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+7,6,6,Jaxon Smith-Njigba,WR,Seattle Seahawks,LEE121503,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,1,1,Pre-ETR
+7,7,7,Trey McBride,TE,Arizona Cardinals,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,San Francisco 49ers,0,0,Pre-ETR
+7,8,8,Sean Tucker,RB,Tampa Bay Buccaneers,HETT711,Caleb Williams,Chicago Bears,0,,,Buffalo Bills,0,0,Pre-ETR
+7,9,9,Drake London,WR,Atlanta Falcons,KEVIN0215,Lamar Jackson,Baltimore Ravens,0,,,Carolina Panthers,0,0,Pre-ETR
+7,10,10,Jaylen Warren,RB,Pittsburgh Steelers,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Cincinnati Bengals,1,1,Pre-ETR
+7,11,11,Josh Allen,QB,Buffalo Bills,KRUTCHES93,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,1,1,Pre-ETR
+7,12,12,Rico Dowdle,RB,Carolina Panthers,INGELX,Jordan Love,Green Bay Packers,0,,,Atlanta Falcons,0,0,Pre-ETR
+7,12,13,James Cook,RB,Buffalo Bills,INGELX,Jordan Love,Green Bay Packers,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+7,11,14,Rashee Rice,WR,Kansas City Chiefs,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Denver Broncos,1,1,Pre-ETR
+7,10,15,Justin Jefferson,WR,Minnesota Vikings,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Chicago Bears,0,0,Pre-ETR
+7,9,16,Lamar Jackson,QB,Baltimore Ravens,KEVIN0215,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+7,8,17,Derrick Henry,RB,Baltimore Ravens,HETT711,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR
+7,7,18,Emeka Egbuka,WR,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+7,6,19,Kyren Williams,RB,Los Angeles Rams,LEE121503,Sam Darnold,Seattle Seahawks,0,,,Seattle Seahawks,2,1,Pre-ETR
+7,5,20,Justin Herbert,QB,Los Angeles Chargers,ATRAYN460,Justin Herbert,Los Angeles Chargers,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR
+7,4,21,Nico Collins,WR,Houston Texans,MIKEC6212,C.J. Stroud,Houston Texans,1,,,Tennessee Titans,0,0,Pre-ETR
+7,3,22,Quinshon Judkins,RB,Cleveland Browns,JGFC,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR
+7,2,23,George Kittle,TE,San Francisco 49ers,URBANIK,Aaron Rodgers,Pittsburgh Steelers,0,,,Arizona Cardinals,0,0,Pre-ETR
+7,1,24,Davante Adams,WR,Los Angeles Rams,KREAR72,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+7,1,25,Rachaad White,RB,Tampa Bay Buccaneers,KREAR72,Matthew Stafford,Los Angeles Rams,0,,,Buffalo Bills,1,1,Pre-ETR
+7,2,26,DK Metcalf,WR,Pittsburgh Steelers,URBANIK,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+7,3,27,Patrick Mahomes,QB,Kansas City Chiefs,JGFC,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+7,4,28,Travis Etienne Jr.,RB,Jacksonville Jaguars,MIKEC6212,C.J. Stroud,Houston Texans,0,,,Los Angeles Chargers,0,0,Pre-ETR
+7,5,29,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+7,6,30,Chase Brown,RB,Cincinnati Bengals,LEE121503,Sam Darnold,Seattle Seahawks,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+7,7,31,Ladd McConkey,WR,Los Angeles Chargers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+7,8,32,Rome Odunze,WR,Chicago Bears,HETT711,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+7,9,33,Zay Flowers,WR,Baltimore Ravens,KEVIN0215,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+7,10,34,Kimani Vidal,RB,Los Angeles Chargers,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+7,11,35,Oronde Gadsden,TE,Los Angeles Chargers,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+7,12,36,Tee Higgins,WR,Cincinnati Bengals,INGELX,Jordan Love,Green Bay Packers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+7,12,37,Courtland Sutton,WR,Denver Broncos,INGELX,Jordan Love,Green Bay Packers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+7,11,38,Aaron Jones,RB,Minnesota Vikings,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Chicago Bears,0,0,Pre-ETR
+7,10,39,Marvin Harrison,WR,Arizona Cardinals,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,San Francisco 49ers,0,0,Pre-ETR
+7,9,40,D'Andre Swift,RB,Chicago Bears,KEVIN0215,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR
+7,8,41,Tetairoa McMillan,WR,Carolina Panthers,HETT711,Caleb Williams,Chicago Bears,0,,,Atlanta Falcons,0,0,Pre-ETR
+7,7,42,Baker Mayfield,QB,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,0,0,Pre-ETR
+7,6,43,Travis Kelce,TE,Kansas City Chiefs,LEE121503,Sam Darnold,Seattle Seahawks,0,,,Denver Broncos,0,0,Pre-ETR
+7,5,44,Jordan Addison,WR,Minnesota Vikings,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Chicago Bears,0,0,Pre-ETR
+7,4,45,Woody Marks,RB,Houston Texans,MIKEC6212,C.J. Stroud,Houston Texans,1,,,Tennessee Titans,0,0,Pre-ETR
+7,3,46,Dalton Schultz,TE,Houston Texans,JGFC,Patrick Mahomes,Kansas City Chiefs,0,,,Tennessee Titans,0,0,Pre-ETR
+7,2,47,J.K. Dobbins,RB,Denver Broncos,URBANIK,Aaron Rodgers,Pittsburgh Steelers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+7,1,48,Matthew Stafford,QB,Los Angeles Rams,KREAR72,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+7,1,49,Khalil Shakir,WR,Buffalo Bills,KREAR72,Matthew Stafford,Los Angeles Rams,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+7,2,50,Aaron Rodgers,QB,Pittsburgh Steelers,URBANIK,Aaron Rodgers,Pittsburgh Steelers,1,2,1,Cincinnati Bengals,0,0,Pre-ETR
+7,3,51,Quentin Johnston,WR,Los Angeles Chargers,JGFC,Patrick Mahomes,Kansas City Chiefs,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+7,4,52,Kyle Pitts,TE,Atlanta Falcons,MIKEC6212,C.J. Stroud,Houston Texans,0,,,Carolina Panthers,0,0,Pre-ETR
+7,5,53,Wan'Dale Robinson,WR,New York Giants,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Green Bay Packers,0,0,Pre-ETR
+7,6,54,Jauan Jennings,WR,San Francisco 49ers,LEE121503,Sam Darnold,Seattle Seahawks,0,,,Arizona Cardinals,0,0,Pre-ETR
+7,7,55,Cade Otton,TE,Tampa Bay Buccaneers,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+7,8,56,Caleb Williams,QB,Chicago Bears,HETT711,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,0,0,Pre-ETR
+7,9,57,Keenan Allen,WR,Los Angeles Chargers,KEVIN0215,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+7,10,58,Joe Flacco,QB,Cincinnati Bengals,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,1,0,0,Pittsburgh Steelers,1,1,Pre-ETR
+7,11,59,Tez Johnson,WR,Tampa Bay Buccaneers,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,1,1,Pre-ETR
+7,12,60,Colston Loveland,TE,Chicago Bears,INGELX,Jordan Love,Green Bay Packers,0,,,Minnesota Vikings,0,0,Pre-ETR
+7,12,61,Jordan Love,QB,Green Bay Packers,INGELX,Jordan Love,Green Bay Packers,1,0,0,New York Giants,0,0,Pre-ETR
+7,11,62,RJ Harvey,RB,Denver Broncos,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,1,1,Pre-ETR
+7,10,63,Harold Fannin,TE,Cleveland Browns,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Baltimore Ravens,0,0,Pre-ETR
+7,9,64,Dalton Kincaid,TE,Buffalo Bills,KEVIN0215,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+7,8,65,Theo Johnson,TE,New York Giants,HETT711,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR
+7,7,66,Kareem Hunt,RB,Kansas City Chiefs,FFLINX,Baker Mayfield,Tampa Bay Buccaneers,0,,,Denver Broncos,0,0,Pre-ETR
+7,6,67,Sam Darnold,QB,Seattle Seahawks,LEE121503,Sam Darnold,Seattle Seahawks,1,1,1,Los Angeles Rams,1,1,Pre-ETR
+7,5,68,T.J. Hockenson,TE,Minnesota Vikings,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Chicago Bears,0,0,Pre-ETR
+7,4,69,C.J. Stroud,QB,Houston Texans,MIKEC6212,C.J. Stroud,Houston Texans,1,2,1,Tennessee Titans,0,0,Pre-ETR
+7,3,70,Xavier Worthy,WR,Kansas City Chiefs,JGFC,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+7,2,71,Kenneth Gainwell,RB,Pittsburgh Steelers,URBANIK,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+7,1,72,Mark Andrews,TE,Baltimore Ravens,KREAR72,Matthew Stafford,Los Angeles Rams,0,,,Cleveland Browns,0,0,Pre-ETR
+8,1,1,Christian McCaffrey,RB,San Francisco 49ers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Arizona Cardinals,0,0,Pre-ETR
+8,2,2,Ja'Marr Chase,WR,Cincinnati Bengals,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Pittsburgh Steelers,2,1,Pre-ETR
+8,3,3,Puka Nacua,WR,Los Angeles Rams,LEE121503,Brock Purdy,San Francisco 49ers,0,,,Seattle Seahawks,0,0,Pre-ETR
+8,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,INGELX,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Rams,1,1,Pre-ETR
+8,5,5,Bijan Robinson,RB,Atlanta Falcons,DMOZONE,Joe Flacco,Cincinnati Bengals,0,,,Carolina Panthers,0,0,Pre-ETR
+8,6,6,Lamar Jackson,QB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+8,7,7,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,New York Giants,0,0,Pre-ETR
+8,8,8,Jaylen Warren,RB,Pittsburgh Steelers,YUZENN,Jaxson Dart,New York Giants,0,,,Cincinnati Bengals,0,0,Pre-ETR
+8,9,9,James Cook,RB,Buffalo Bills,FFLINX,Caleb Williams,Chicago Bears,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+8,10,10,Rico Dowdle,RB,Carolina Panthers,MIKEC6212,J.J. McCarthy,Minnesota Vikings,0,,,Atlanta Falcons,0,0,Pre-ETR
+8,11,11,Josh Allen,QB,Buffalo Bills,MDERR,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+8,12,12,Justin Jefferson,WR,Minnesota Vikings,HOOHAMES,Justin Herbert,Los Angeles Chargers,0,,,Chicago Bears,1,1,Pre-ETR
+8,12,13,Trey McBride,TE,Arizona Cardinals,HOOHAMES,Justin Herbert,Los Angeles Chargers,0,,,San Francisco 49ers,0,0,Pre-ETR
+8,11,14,Rashee Rice,WR,Kansas City Chiefs,MDERR,Josh Allen,Buffalo Bills,0,,,Denver Broncos,0,0,Pre-ETR
+8,10,15,Emeka Egbuka,WR,Tampa Bay Buccaneers,MIKEC6212,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+8,9,16,Drake London,WR,Atlanta Falcons,FFLINX,Caleb Williams,Chicago Bears,0,,,Carolina Panthers,0,0,Pre-ETR
+8,8,17,Nico Collins,WR,Houston Texans,YUZENN,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR
+8,7,18,Davante Adams,WR,Los Angeles Rams,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Seattle Seahawks,0,0,Pre-ETR
+8,6,19,Derrick Henry,RB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+8,5,20,Kyren Williams,RB,Los Angeles Rams,DMOZONE,Joe Flacco,Cincinnati Bengals,0,,,Seattle Seahawks,0,0,Pre-ETR
+8,4,21,Ladd McConkey,WR,Los Angeles Chargers,INGELX,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+8,3,22,George Kittle,TE,San Francisco 49ers,LEE121503,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+8,2,23,Zay Flowers,WR,Baltimore Ravens,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Cleveland Browns,0,0,Pre-ETR
+8,1,24,Tee Higgins,WR,Cincinnati Bengals,D4VE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+8,1,25,Kimani Vidal,RB,Los Angeles Chargers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+8,2,26,DK Metcalf,WR,Pittsburgh Steelers,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+8,3,27,Chase Brown,RB,Cincinnati Bengals,LEE121503,Brock Purdy,San Francisco 49ers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+8,4,28,Woody Marks,RB,Houston Texans,INGELX,Matthew Stafford,Los Angeles Rams,0,,,Tennessee Titans,0,0,Pre-ETR
+8,5,29,Travis Kelce,TE,Kansas City Chiefs,DMOZONE,Joe Flacco,Cincinnati Bengals,0,,,Denver Broncos,0,0,Pre-ETR
+8,6,30,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,0,0,Pre-ETR
+8,7,31,Quinshon Judkins,RB,Cleveland Browns,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR
+8,8,32,Rome Odunze,WR,Chicago Bears,YUZENN,Jaxson Dart,New York Giants,0,,,Minnesota Vikings,0,0,Pre-ETR
+8,9,33,Marvin Harrison,WR,Arizona Cardinals,FFLINX,Caleb Williams,Chicago Bears,0,,,San Francisco 49ers,0,0,Pre-ETR
+8,10,34,Rachaad White,RB,Tampa Bay Buccaneers,MIKEC6212,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+8,11,35,Khalil Shakir,WR,Buffalo Bills,MDERR,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+8,12,36,Justin Herbert,QB,Los Angeles Chargers,HOOHAMES,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+8,12,37,D'Andre Swift,RB,Chicago Bears,HOOHAMES,Justin Herbert,Los Angeles Chargers,0,,,Minnesota Vikings,1,1,Pre-ETR
+8,11,38,Aaron Jones,RB,Minnesota Vikings,MDERR,Josh Allen,Buffalo Bills,0,,,Chicago Bears,0,0,Pre-ETR
+8,10,39,Jordan Addison,WR,Minnesota Vikings,MIKEC6212,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+8,9,40,Travis Etienne Jr.,RB,Jacksonville Jaguars,FFLINX,Caleb Williams,Chicago Bears,0,,,Los Angeles Chargers,0,0,Pre-ETR
+8,8,41,RJ Harvey,RB,Denver Broncos,YUZENN,Jaxson Dart,New York Giants,0,,,Kansas City Chiefs,0,0,Pre-ETR
+8,7,42,Patrick Mahomes,QB,Kansas City Chiefs,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+8,6,43,Tetairoa McMillan,WR,Carolina Panthers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Atlanta Falcons,0,0,Pre-ETR
+8,5,44,Keenan Allen,WR,Los Angeles Chargers,DMOZONE,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+8,4,45,Oronde Gadsden,TE,Los Angeles Chargers,INGELX,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+8,3,46,Jauan Jennings,WR,San Francisco 49ers,LEE121503,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+8,2,47,Dalton Schultz,TE,Houston Texans,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Tennessee Titans,0,0,Pre-ETR
+8,1,48,Baker Mayfield,QB,Tampa Bay Buccaneers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,0,0,Pre-ETR
+8,1,49,Cade Otton,TE,Tampa Bay Buccaneers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+8,2,50,RJ Harvey,RB,Denver Broncos,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+8,3,51,Romeo Doubs,WR,Green Bay Packers,LEE121503,Brock Purdy,San Francisco 49ers,0,,,New York Giants,0,0,Pre-ETR
+8,4,52,Matthew Stafford,QB,Los Angeles Rams,INGELX,Matthew Stafford,Los Angeles Rams,1,0,0,Seattle Seahawks,1,1,Pre-ETR
+8,5,53,Joe Flacco,QB,Cincinnati Bengals,DMOZONE,Joe Flacco,Cincinnati Bengals,1,0,0,Pittsburgh Steelers,0,0,Pre-ETR
+8,6,54,Courtland Sutton,WR,Denver Broncos,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+8,7,55,Kyle Pitts,TE,Atlanta Falcons,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,0,0,Pre-ETR
+8,8,56,Jaxson Dart,QB,New York Giants,YUZENN,Jaxson Dart,New York Giants,1,1,1,Green Bay Packers,0,0,Pre-ETR
+8,9,57,Colston Loveland,TE,Chicago Bears,FFLINX,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+8,10,58,Harold Fannin,TE,Cleveland Browns,MIKEC6212,J.J. McCarthy,Minnesota Vikings,0,,,Baltimore Ravens,0,0,Pre-ETR
+8,11,59,Kenneth Walker III,RB,Seattle Seahawks,MDERR,Josh Allen,Buffalo Bills,0,,,Los Angeles Rams,0,0,Pre-ETR
+8,12,60,Wan'Dale Robinson,WR,New York Giants,HOOHAMES,Justin Herbert,Los Angeles Chargers,0,,,Green Bay Packers,0,0,Pre-ETR
+8,12,61,Quentin Johnston,WR,Los Angeles Chargers,HOOHAMES,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+8,11,62,Mark Andrews,TE,Baltimore Ravens,MDERR,Josh Allen,Buffalo Bills,0,,,Cleveland Browns,0,0,Pre-ETR
+8,10,63,J.J. McCarthy,QB,Minnesota Vikings,MIKEC6212,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,0,0,Pre-ETR
+8,9,64,Caleb Williams,QB,Chicago Bears,FFLINX,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,0,0,Pre-ETR
+8,8,65,Theo Johnson,TE,New York Giants,YUZENN,Jaxson Dart,New York Giants,1,,,Green Bay Packers,0,0,Pre-ETR
+8,7,66,Xavier Worthy,WR,Kansas City Chiefs,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+8,6,67,T.J. Hockenson,TE,Minnesota Vikings,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,0,0,Pre-ETR
+8,5,68,D.J. Moore,WR,Chicago Bears,DMOZONE,Joe Flacco,Cincinnati Bengals,0,,,Minnesota Vikings,0,0,Pre-ETR
+8,4,69,Emari Demercado,RB,Arizona Cardinals,INGELX,Matthew Stafford,Los Angeles Rams,0,,,San Francisco 49ers,0,0,Pre-ETR
+8,3,70,Brock Purdy,QB,San Francisco 49ers,LEE121503,Brock Purdy,San Francisco 49ers,1,2,1,Arizona Cardinals,0,0,Pre-ETR
+8,2,71,Aaron Rodgers,QB,Pittsburgh Steelers,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,1,1,Pre-ETR
+8,1,72,Tez Johnson,WR,Tampa Bay Buccaneers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+9,1,1,Puka Nacua,WR,Los Angeles Rams,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Seattle Seahawks,0,0,Pre-ETR
+9,2,2,Christian McCaffrey,RB,San Francisco 49ers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Arizona Cardinals,0,0,Pre-ETR
+9,3,3,Bijan Robinson,RB,Atlanta Falcons,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,Carolina Panthers,0,0,Pre-ETR
+9,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+9,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,MATHOLOGY,Josh Allen,Buffalo Bills,0,,,Los Angeles Rams,0,0,Pre-ETR
+9,6,6,Josh Jacobs,RB,Green Bay Packers,FFLINX,Aaron Rodgers,Pittsburgh Steelers,0,,,New York Giants,0,0,Pre-ETR
+9,7,7,Trey McBride,TE,Arizona Cardinals,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,San Francisco 49ers,0,0,Pre-ETR
+9,8,8,Lamar Jackson,QB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+9,9,9,Jaylen Warren,RB,Pittsburgh Steelers,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Cincinnati Bengals,0,0,Pre-ETR
+9,10,10,Rico Dowdle,RB,Carolina Panthers,GPNGC,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR
+9,11,11,James Cook,RB,Buffalo Bills,UNDERDOGKEV,Jordan Love,Green Bay Packers,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+9,12,12,Rashee Rice,WR,Kansas City Chiefs,TEDDYONFETTI,Bo Nix,Denver Broncos,0,,,Denver Broncos,2,1,Pre-ETR
+9,12,13,Nico Collins,WR,Houston Texans,TEDDYONFETTI,Bo Nix,Denver Broncos,0,,,Tennessee Titans,0,0,Pre-ETR
+9,11,14,Drake London,WR,Atlanta Falcons,UNDERDOGKEV,Jordan Love,Green Bay Packers,0,,,Carolina Panthers,0,0,Pre-ETR
+9,10,15,Justin Jefferson,WR,Minnesota Vikings,GPNGC,Patrick Mahomes,Kansas City Chiefs,0,,,Chicago Bears,0,0,Pre-ETR
+9,9,16,Emeka Egbuka,WR,Tampa Bay Buccaneers,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Buffalo Bills,0,0,Pre-ETR
+9,8,17,Derrick Henry,RB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+9,7,18,Ladd McConkey,WR,Los Angeles Chargers,KURUC711,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+9,6,19,George Kittle,TE,San Francisco 49ers,FFLINX,Aaron Rodgers,Pittsburgh Steelers,0,,,Arizona Cardinals,0,0,Pre-ETR
+9,5,20,Josh Allen,QB,Buffalo Bills,MATHOLOGY,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,0,0,Pre-ETR
+9,4,21,Davante Adams,WR,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+9,3,22,Kyren Williams,RB,Los Angeles Rams,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,Seattle Seahawks,0,0,Pre-ETR
+9,2,23,Quinshon Judkins,RB,Cleveland Browns,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Baltimore Ravens,0,0,Pre-ETR
+9,1,24,Chase Brown,RB,Cincinnati Bengals,INGELX,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+9,1,25,Woody Marks,RB,Houston Texans,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+9,2,26,DK Metcalf,WR,Pittsburgh Steelers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+9,3,27,Rome Odunze,WR,Chicago Bears,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,Minnesota Vikings,0,0,Pre-ETR
+9,4,28,Kimani Vidal,RB,Los Angeles Chargers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+9,5,29,D'Andre Swift,RB,Chicago Bears,MATHOLOGY,Josh Allen,Buffalo Bills,0,,,Minnesota Vikings,0,0,Pre-ETR
+9,6,30,Tee Higgins,WR,Cincinnati Bengals,FFLINX,Aaron Rodgers,Pittsburgh Steelers,0,,,Pittsburgh Steelers,1,1,Pre-ETR
+9,7,31,Justin Herbert,QB,Los Angeles Chargers,KURUC711,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,1,1,Pre-ETR
+9,8,32,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,1,1,Pre-ETR
+9,9,33,Zay Flowers,WR,Baltimore Ravens,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR
+9,10,34,Patrick Mahomes,QB,Kansas City Chiefs,GPNGC,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+9,11,35,Marvin Harrison,WR,Arizona Cardinals,UNDERDOGKEV,Jordan Love,Green Bay Packers,0,,,San Francisco 49ers,0,0,Pre-ETR
+9,12,36,Courtland Sutton,WR,Denver Broncos,TEDDYONFETTI,Bo Nix,Denver Broncos,1,,,Kansas City Chiefs,1,1,Pre-ETR
+9,12,37,Rachaad White,RB,Tampa Bay Buccaneers,TEDDYONFETTI,Bo Nix,Denver Broncos,0,,,Buffalo Bills,0,0,Pre-ETR
+9,11,38,Travis Kelce,TE,Kansas City Chiefs,UNDERDOGKEV,Jordan Love,Green Bay Packers,0,,,Denver Broncos,0,0,Pre-ETR
+9,10,39,Travis Etienne Jr.,RB,Jacksonville Jaguars,GPNGC,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Chargers,0,0,Pre-ETR
+9,9,40,Aaron Jones,RB,Minnesota Vikings,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR
+9,8,41,Tetairoa McMillan,WR,Carolina Panthers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Atlanta Falcons,0,0,Pre-ETR
+9,7,42,Khalil Shakir,WR,Buffalo Bills,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+9,6,43,Jordan Addison,WR,Minnesota Vikings,FFLINX,Aaron Rodgers,Pittsburgh Steelers,0,,,Chicago Bears,0,0,Pre-ETR
+9,5,44,RJ Harvey,RB,Denver Broncos,MATHOLOGY,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+9,4,45,Dalton Schultz,TE,Houston Texans,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Tennessee Titans,0,0,Pre-ETR
+9,3,46,Oronde Gadsden,TE,Los Angeles Chargers,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+9,2,47,Baker Mayfield,QB,Tampa Bay Buccaneers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,0,0,Pre-ETR
+9,1,48,Romeo Doubs,WR,Green Bay Packers,INGELX,Joe Flacco,Cincinnati Bengals,0,,,New York Giants,0,0,Pre-ETR
+9,1,49,Kyle Pitts,TE,Atlanta Falcons,INGELX,Joe Flacco,Cincinnati Bengals,0,,,Carolina Panthers,0,0,Pre-ETR
+9,2,50,Cade Otton,TE,Tampa Bay Buccaneers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+9,3,51,Jauan Jennings,WR,San Francisco 49ers,KRUTCHES93,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+9,4,52,Matthew Stafford,QB,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+9,5,53,Quentin Johnston,WR,Los Angeles Chargers,MATHOLOGY,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+9,6,54,Aaron Rodgers,QB,Pittsburgh Steelers,FFLINX,Aaron Rodgers,Pittsburgh Steelers,1,0,0,Cincinnati Bengals,1,1,Pre-ETR
+9,7,55,Brian Thomas,WR,Jacksonville Jaguars,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,2,1,Pre-ETR
+9,8,56,Wan'Dale Robinson,WR,New York Giants,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Green Bay Packers,0,0,Pre-ETR
+9,9,57,Caleb Williams,QB,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,0,0,Minnesota Vikings,2,1,Pre-ETR
+9,10,58,Xavier Worthy,WR,Kansas City Chiefs,GPNGC,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+9,11,59,Jordan Love,QB,Green Bay Packers,UNDERDOGKEV,Jordan Love,Green Bay Packers,1,0,0,New York Giants,0,0,Pre-ETR
+9,12,60,Colston Loveland,TE,Chicago Bears,TEDDYONFETTI,Bo Nix,Denver Broncos,0,,,Minnesota Vikings,0,0,Pre-ETR
+9,12,61,Bo Nix,QB,Denver Broncos,TEDDYONFETTI,Bo Nix,Denver Broncos,1,1,1,Kansas City Chiefs,1,1,Pre-ETR
+9,11,62,Keenan Allen,WR,Los Angeles Chargers,UNDERDOGKEV,Jordan Love,Green Bay Packers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+9,10,63,Harold Fannin,TE,Cleveland Browns,GPNGC,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR
+9,9,64,T.J. Hockenson,TE,Minnesota Vikings,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR
+9,8,65,Dalton Kincaid,TE,Buffalo Bills,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+9,7,66,Emari Demercado,RB,Arizona Cardinals,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,San Francisco 49ers,0,0,Pre-ETR
+9,6,67,Tez Johnson,WR,Tampa Bay Buccaneers,FFLINX,Aaron Rodgers,Pittsburgh Steelers,0,,,Buffalo Bills,0,0,Pre-ETR
+9,5,68,David Njoku,TE,Cleveland Browns,MATHOLOGY,Josh Allen,Buffalo Bills,0,,,Baltimore Ravens,0,0,Pre-ETR
+9,4,69,Parker Washington,WR,Jacksonville Jaguars,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Chargers,1,1,Pre-ETR
+9,3,70,Brock Purdy,QB,San Francisco 49ers,KRUTCHES93,Brock Purdy,San Francisco 49ers,1,1,1,Arizona Cardinals,0,0,Pre-ETR
+9,2,71,Jakobi Meyers,WR,Jacksonville Jaguars,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+9,1,72,Joe Flacco,QB,Cincinnati Bengals,INGELX,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR
+10,1,1,Christian McCaffrey,RB,San Francisco 49ers,GPNGC,Aaron Rodgers,Pittsburgh Steelers,0,,,Arizona Cardinals,0,0,Pre-ETR
+10,2,2,Puka Nacua,WR,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+10,3,3,Bijan Robinson,RB,Atlanta Falcons,TEDDYONFETTI,Caleb Williams,Chicago Bears,0,,,Carolina Panthers,0,0,Pre-ETR
+10,4,4,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Sam Darnold,Seattle Seahawks,0,,,New York Giants,1,1,Pre-ETR
+10,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,ATRAYN460,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Rams,0,0,Pre-ETR
+10,6,6,Ja'Marr Chase,WR,Cincinnati Bengals,HETT711,Justin Herbert,Los Angeles Chargers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+10,7,7,Trey McBride,TE,Arizona Cardinals,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,San Francisco 49ers,0,0,Pre-ETR
+10,8,8,Jaylen Warren,RB,Pittsburgh Steelers,GUNNEROSS,Josh Allen,Buffalo Bills,0,,,Cincinnati Bengals,1,1,Pre-ETR
+10,9,9,Rashee Rice,WR,Kansas City Chiefs,D4VE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Denver Broncos,0,0,Pre-ETR
+10,10,10,Rico Dowdle,RB,Carolina Panthers,BUSTERSBOYS,Jaxson Dart,New York Giants,0,,,Atlanta Falcons,0,0,Pre-ETR
+10,11,11,Drake London,WR,Atlanta Falcons,JOOPY,J.J. McCarthy,Minnesota Vikings,0,,,Carolina Panthers,0,0,Pre-ETR
+10,12,12,James Cook,RB,Buffalo Bills,CHADCANDLES,Brock Purdy,San Francisco 49ers,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+10,12,13,Nico Collins,WR,Houston Texans,CHADCANDLES,Brock Purdy,San Francisco 49ers,0,,,Tennessee Titans,0,0,Pre-ETR
+10,11,14,Derrick Henry,RB,Baltimore Ravens,JOOPY,J.J. McCarthy,Minnesota Vikings,0,,,Cleveland Browns,0,0,Pre-ETR
+10,10,15,Justin Jefferson,WR,Minnesota Vikings,BUSTERSBOYS,Jaxson Dart,New York Giants,0,,,Chicago Bears,2,1,Pre-ETR
+10,9,16,Emeka Egbuka,WR,Tampa Bay Buccaneers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+10,8,17,Josh Allen,QB,Buffalo Bills,GUNNEROSS,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,1,1,Pre-ETR
+10,7,18,Lamar Jackson,QB,Baltimore Ravens,LEE121503,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,1,1,Pre-ETR
+10,6,19,Justin Herbert,QB,Los Angeles Chargers,HETT711,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+10,5,20,Patrick Mahomes,QB,Kansas City Chiefs,ATRAYN460,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,1,1,Pre-ETR
+10,4,21,Davante Adams,WR,Los Angeles Rams,KRUTCHES93,Sam Darnold,Seattle Seahawks,0,,,Seattle Seahawks,1,1,Pre-ETR
+10,3,22,Ladd McConkey,WR,Los Angeles Chargers,TEDDYONFETTI,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+10,2,23,Kyren Williams,RB,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+10,1,24,George Kittle,TE,San Francisco 49ers,GPNGC,Aaron Rodgers,Pittsburgh Steelers,0,,,Arizona Cardinals,0,0,Pre-ETR
+10,1,25,DK Metcalf,WR,Pittsburgh Steelers,GPNGC,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+10,2,26,Quinshon Judkins,RB,Cleveland Browns,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+10,3,27,Marvin Harrison,WR,Arizona Cardinals,TEDDYONFETTI,Caleb Williams,Chicago Bears,0,,,San Francisco 49ers,0,0,Pre-ETR
+10,4,28,Travis Kelce,TE,Kansas City Chiefs,KRUTCHES93,Sam Darnold,Seattle Seahawks,0,,,Denver Broncos,0,0,Pre-ETR
+10,5,29,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+10,6,30,D'Andre Swift,RB,Chicago Bears,HETT711,Justin Herbert,Los Angeles Chargers,0,,,Minnesota Vikings,0,0,Pre-ETR
+10,7,31,Zay Flowers,WR,Baltimore Ravens,LEE121503,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,1,1,Pre-ETR
+10,8,32,Tee Higgins,WR,Cincinnati Bengals,GUNNEROSS,Josh Allen,Buffalo Bills,0,,,Pittsburgh Steelers,1,1,Pre-ETR
+10,9,33,Kimani Vidal,RB,Los Angeles Chargers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+10,10,34,Rome Odunze,WR,Chicago Bears,BUSTERSBOYS,Jaxson Dart,New York Giants,0,,,Minnesota Vikings,1,1,Pre-ETR
+10,11,35,Jordan Addison,WR,Minnesota Vikings,JOOPY,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+10,12,36,Chase Brown,RB,Cincinnati Bengals,CHADCANDLES,Brock Purdy,San Francisco 49ers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+10,12,37,Oronde Gadsden,TE,Los Angeles Chargers,CHADCANDLES,Brock Purdy,San Francisco 49ers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+10,11,38,Woody Marks,RB,Houston Texans,JOOPY,J.J. McCarthy,Minnesota Vikings,0,,,Tennessee Titans,0,0,Pre-ETR
+10,10,39,Travis Etienne Jr.,RB,Jacksonville Jaguars,BUSTERSBOYS,Jaxson Dart,New York Giants,0,,,Los Angeles Chargers,0,0,Pre-ETR
+10,9,40,Baker Mayfield,QB,Tampa Bay Buccaneers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,0,0,Pre-ETR
+10,8,41,Aaron Jones,RB,Minnesota Vikings,GUNNEROSS,Josh Allen,Buffalo Bills,0,,,Chicago Bears,0,0,Pre-ETR
+10,7,42,Rachaad White,RB,Tampa Bay Buccaneers,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,0,0,Pre-ETR
+10,6,43,Quentin Johnston,WR,Los Angeles Chargers,HETT711,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+10,5,44,Tetairoa McMillan,WR,Carolina Panthers,ATRAYN460,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR
+10,4,45,Khalil Shakir,WR,Buffalo Bills,KRUTCHES93,Sam Darnold,Seattle Seahawks,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+10,3,46,Brian Thomas,WR,Jacksonville Jaguars,TEDDYONFETTI,Caleb Williams,Chicago Bears,0,,,Los Angeles Chargers,1,1,Pre-ETR
+10,2,47,Matthew Stafford,QB,Los Angeles Rams,MIKEC6212,Matthew Stafford,Los Angeles Rams,1,2,1,Seattle Seahawks,0,0,Pre-ETR
+10,1,48,Aaron Rodgers,QB,Pittsburgh Steelers,GPNGC,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,0,0,Pre-ETR
+10,1,49,RJ Harvey,RB,Denver Broncos,GPNGC,Aaron Rodgers,Pittsburgh Steelers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+10,2,50,Courtland Sutton,WR,Denver Broncos,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Kansas City Chiefs,0,0,Pre-ETR
+10,3,51,Caleb Williams,QB,Chicago Bears,TEDDYONFETTI,Caleb Williams,Chicago Bears,1,0,0,Minnesota Vikings,0,0,Pre-ETR
+10,4,52,Wan'Dale Robinson,WR,New York Giants,KRUTCHES93,Sam Darnold,Seattle Seahawks,0,,,Green Bay Packers,1,1,Pre-ETR
+10,5,53,Dalton Schultz,TE,Houston Texans,ATRAYN460,Patrick Mahomes,Kansas City Chiefs,0,,,Tennessee Titans,0,0,Pre-ETR
+10,6,54,Cade Otton,TE,Tampa Bay Buccaneers,HETT711,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+10,7,55,Jerry Jeudy,WR,Cleveland Browns,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Baltimore Ravens,2,1,Pre-ETR
+10,8,56,Dalton Kincaid,TE,Buffalo Bills,GUNNEROSS,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+10,9,57,Kyle Pitts,TE,Atlanta Falcons,D4VE,Baker Mayfield,Tampa Bay Buccaneers,0,,,Carolina Panthers,0,0,Pre-ETR
+10,10,58,Jaxson Dart,QB,New York Giants,BUSTERSBOYS,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,0,0,Pre-ETR
+10,11,59,T.J. Hockenson,TE,Minnesota Vikings,JOOPY,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+10,12,60,Jauan Jennings,WR,San Francisco 49ers,CHADCANDLES,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+10,12,61,Brock Purdy,QB,San Francisco 49ers,CHADCANDLES,Brock Purdy,San Francisco 49ers,1,1,1,Arizona Cardinals,0,0,Pre-ETR
+10,11,62,J.J. McCarthy,QB,Minnesota Vikings,JOOPY,J.J. McCarthy,Minnesota Vikings,1,2,1,Chicago Bears,0,0,Pre-ETR
+10,10,63,Colston Loveland,TE,Chicago Bears,BUSTERSBOYS,Jaxson Dart,New York Giants,0,,,Minnesota Vikings,1,1,Pre-ETR
+10,9,64,Chris Godwin,WR,Tampa Bay Buccaneers,D4VE,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+10,8,65,Tez Johnson,WR,Tampa Bay Buccaneers,GUNNEROSS,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,2,1,Pre-ETR
+10,7,66,Kenneth Walker III,RB,Seattle Seahawks,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Rams,0,0,Pre-ETR
+10,6,67,Sean Tucker,RB,Tampa Bay Buccaneers,HETT711,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+10,5,68,RJ Harvey,RB,Denver Broncos,ATRAYN460,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR
+10,4,69,Sam Darnold,QB,Seattle Seahawks,KRUTCHES93,Sam Darnold,Seattle Seahawks,1,0,0,Los Angeles Rams,1,1,Pre-ETR
+10,3,70,Theo Johnson,TE,New York Giants,TEDDYONFETTI,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR
+10,2,71,Harold Fannin,TE,Cleveland Browns,MIKEC6212,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+10,1,72,Keenan Allen,WR,Los Angeles Chargers,GPNGC,Aaron Rodgers,Pittsburgh Steelers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+11,1,1,Christian McCaffrey,RB,San Francisco 49ers,JOOPY,Patrick Mahomes,Kansas City Chiefs,0,,,Arizona Cardinals,0,0,Pre-ETR
+11,2,2,Puka Nacua,WR,Los Angeles Rams,CHADCANDLES,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+11,3,3,Bijan Robinson,RB,Atlanta Falcons,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+11,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,LEE121503,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+11,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,KURUC711,Caleb Williams,Chicago Bears,0,,,Los Angeles Rams,1,1,Pre-ETR
+11,6,6,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,New York Giants,0,0,Pre-ETR
+11,7,7,Jaylen Warren,RB,Pittsburgh Steelers,GUNNEROSS,J.J. McCarthy,Minnesota Vikings,0,,,Cincinnati Bengals,0,0,Pre-ETR
+11,8,8,Justin Jefferson,WR,Minnesota Vikings,ROTOHEATCRA,Baker Mayfield,Tampa Bay Buccaneers,0,,,Chicago Bears,1,1,Pre-ETR
+11,9,9,Trey McBride,TE,Arizona Cardinals,MATHOLOGY,Bo Nix,Denver Broncos,0,,,San Francisco 49ers,1,1,Pre-ETR
+11,10,10,Josh Allen,QB,Buffalo Bills,INGELX,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,0,0,Pre-ETR
+11,11,11,Drake London,WR,Atlanta Falcons,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Carolina Panthers,1,1,Pre-ETR
+11,12,12,Lamar Jackson,QB,Baltimore Ravens,TEDDYONFETTI,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+11,12,13,Rashee Rice,WR,Kansas City Chiefs,TEDDYONFETTI,Lamar Jackson,Baltimore Ravens,0,,,Denver Broncos,0,0,Pre-ETR
+11,11,14,Rico Dowdle,RB,Carolina Panthers,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Atlanta Falcons,2,1,Pre-ETR
+11,10,15,Nico Collins,WR,Houston Texans,INGELX,Josh Allen,Buffalo Bills,0,,,Tennessee Titans,0,0,Pre-ETR
+11,9,16,James Cook,RB,Buffalo Bills,MATHOLOGY,Bo Nix,Denver Broncos,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+11,8,17,Emeka Egbuka,WR,Tampa Bay Buccaneers,ROTOHEATCRA,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+11,7,18,Derrick Henry,RB,Baltimore Ravens,GUNNEROSS,J.J. McCarthy,Minnesota Vikings,0,,,Cleveland Browns,1,1,Pre-ETR
+11,6,19,George Kittle,TE,San Francisco 49ers,KRUTCHES93,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+11,5,20,Kyren Williams,RB,Los Angeles Rams,KURUC711,Caleb Williams,Chicago Bears,0,,,Seattle Seahawks,1,1,Pre-ETR
+11,4,21,Davante Adams,WR,Los Angeles Rams,LEE121503,Joe Flacco,Cincinnati Bengals,0,,,Seattle Seahawks,0,0,Pre-ETR
+11,3,22,Justin Herbert,QB,Los Angeles Chargers,ATRAYN460,Justin Herbert,Los Angeles Chargers,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR
+11,2,23,Chase Brown,RB,Cincinnati Bengals,CHADCANDLES,Matthew Stafford,Los Angeles Rams,0,,,Pittsburgh Steelers,1,1,Pre-ETR
+11,1,24,Patrick Mahomes,QB,Kansas City Chiefs,JOOPY,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,0,0,Pre-ETR
+11,1,25,Ladd McConkey,WR,Los Angeles Chargers,JOOPY,Patrick Mahomes,Kansas City Chiefs,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+11,2,26,DK Metcalf,WR,Pittsburgh Steelers,CHADCANDLES,Matthew Stafford,Los Angeles Rams,0,,,Cincinnati Bengals,1,1,Pre-ETR
+11,3,27,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+11,4,28,Quinshon Judkins,RB,Cleveland Browns,LEE121503,Joe Flacco,Cincinnati Bengals,0,,,Baltimore Ravens,0,0,Pre-ETR
+11,5,29,Tee Higgins,WR,Cincinnati Bengals,KURUC711,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+11,6,30,Travis Etienne Jr.,RB,Jacksonville Jaguars,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+11,7,31,Rome Odunze,WR,Chicago Bears,GUNNEROSS,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,2,1,Pre-ETR
+11,8,32,Baker Mayfield,QB,Tampa Bay Buccaneers,ROTOHEATCRA,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,1,1,Pre-ETR
+11,9,33,Kimani Vidal,RB,Los Angeles Chargers,MATHOLOGY,Bo Nix,Denver Broncos,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+11,10,34,Zay Flowers,WR,Baltimore Ravens,INGELX,Josh Allen,Buffalo Bills,0,,,Cleveland Browns,0,0,Pre-ETR
+11,11,35,Marvin Harrison,WR,Arizona Cardinals,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,San Francisco 49ers,0,0,Pre-ETR
+11,12,36,D'Andre Swift,RB,Chicago Bears,TEDDYONFETTI,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR
+11,12,37,Woody Marks,RB,Houston Texans,TEDDYONFETTI,Lamar Jackson,Baltimore Ravens,0,,,Tennessee Titans,0,0,Pre-ETR
+11,11,38,Aaron Jones,RB,Minnesota Vikings,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Chicago Bears,0,0,Pre-ETR
+11,10,39,Oronde Gadsden,TE,Los Angeles Chargers,INGELX,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+11,9,40,Jauan Jennings,WR,San Francisco 49ers,MATHOLOGY,Bo Nix,Denver Broncos,0,,,Arizona Cardinals,1,1,Pre-ETR
+11,8,41,Khalil Shakir,WR,Buffalo Bills,ROTOHEATCRA,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+11,7,42,Jordan Addison,WR,Minnesota Vikings,GUNNEROSS,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+11,6,43,Tetairoa McMillan,WR,Carolina Panthers,KRUTCHES93,Brock Purdy,San Francisco 49ers,0,,,Atlanta Falcons,0,0,Pre-ETR
+11,5,44,Travis Kelce,TE,Kansas City Chiefs,KURUC711,Caleb Williams,Chicago Bears,0,,,Denver Broncos,0,0,Pre-ETR
+11,4,45,RJ Harvey,RB,Denver Broncos,LEE121503,Joe Flacco,Cincinnati Bengals,0,,,Kansas City Chiefs,0,0,Pre-ETR
+11,3,46,Courtland Sutton,WR,Denver Broncos,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+11,2,47,Dalton Schultz,TE,Houston Texans,CHADCANDLES,Matthew Stafford,Los Angeles Rams,0,,,Tennessee Titans,0,0,Pre-ETR
+11,1,48,Romeo Doubs,WR,Green Bay Packers,JOOPY,Patrick Mahomes,Kansas City Chiefs,0,,,New York Giants,1,1,Pre-ETR
+11,1,49,Rachaad White,RB,Tampa Bay Buccaneers,JOOPY,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+11,2,50,Matthew Stafford,QB,Los Angeles Rams,CHADCANDLES,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+11,3,51,Wan'Dale Robinson,WR,New York Giants,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Green Bay Packers,0,0,Pre-ETR
+11,4,52,Cade Otton,TE,Tampa Bay Buccaneers,LEE121503,Joe Flacco,Cincinnati Bengals,0,,,Buffalo Bills,0,0,Pre-ETR
+11,5,53,Caleb Williams,QB,Chicago Bears,KURUC711,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,0,0,Pre-ETR
+11,6,54,Brock Purdy,QB,San Francisco 49ers,KRUTCHES93,Brock Purdy,San Francisco 49ers,1,2,1,Arizona Cardinals,0,0,Pre-ETR
+11,7,55,J.J. McCarthy,QB,Minnesota Vikings,GUNNEROSS,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,1,1,Pre-ETR
+11,8,56,Colston Loveland,TE,Chicago Bears,ROTOHEATCRA,Baker Mayfield,Tampa Bay Buccaneers,0,,,Minnesota Vikings,1,1,Pre-ETR
+11,9,57,Tez Johnson,WR,Tampa Bay Buccaneers,MATHOLOGY,Bo Nix,Denver Broncos,0,,,Buffalo Bills,1,1,Pre-ETR
+11,10,58,Emari Demercado,RB,Arizona Cardinals,INGELX,Josh Allen,Buffalo Bills,0,,,San Francisco 49ers,0,0,Pre-ETR
+11,11,59,Kyle Pitts,TE,Atlanta Falcons,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Carolina Panthers,1,1,Pre-ETR
+11,12,60,Mark Andrews,TE,Baltimore Ravens,TEDDYONFETTI,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+11,12,61,Parker Washington,WR,Jacksonville Jaguars,TEDDYONFETTI,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Chargers,0,0,Pre-ETR
+11,11,62,Aaron Rodgers,QB,Pittsburgh Steelers,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,1,0,0,Cincinnati Bengals,0,0,Pre-ETR
+11,10,63,Tyrone Tracy,RB,New York Giants,INGELX,Josh Allen,Buffalo Bills,0,,,Green Bay Packers,0,0,Pre-ETR
+11,9,64,Bo Nix,QB,Denver Broncos,MATHOLOGY,Bo Nix,Denver Broncos,1,0,0,Kansas City Chiefs,0,0,Pre-ETR
+11,8,65,Tyler Allgeier,RB,Atlanta Falcons,ROTOHEATCRA,Baker Mayfield,Tampa Bay Buccaneers,0,,,Carolina Panthers,0,0,Pre-ETR
+11,7,66,Harold Fannin,TE,Cleveland Browns,GUNNEROSS,J.J. McCarthy,Minnesota Vikings,0,,,Baltimore Ravens,1,1,Pre-ETR
+11,6,67,Ricky Pearsall,WR,San Francisco 49ers,KRUTCHES93,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+11,5,68,D.J. Moore,WR,Chicago Bears,KURUC711,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+11,4,69,Joe Flacco,QB,Cincinnati Bengals,LEE121503,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR
+11,3,70,T.J. Hockenson,TE,Minnesota Vikings,ATRAYN460,Justin Herbert,Los Angeles Chargers,0,,,Chicago Bears,0,0,Pre-ETR
+11,2,71,Xavier Worthy,WR,Kansas City Chiefs,CHADCANDLES,Matthew Stafford,Los Angeles Rams,0,,,Denver Broncos,0,0,Pre-ETR
+11,1,72,Theo Johnson,TE,New York Giants,JOOPY,Patrick Mahomes,Kansas City Chiefs,0,,,Green Bay Packers,1,1,Pre-ETR
+12,1,1,Christian McCaffrey,RB,San Francisco 49ers,LEE121503,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR
+12,2,2,Puka Nacua,WR,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+12,3,3,Bijan Robinson,RB,Atlanta Falcons,DABK,Lamar Jackson,Baltimore Ravens,0,,,Carolina Panthers,0,0,Pre-ETR
+12,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,0,0,Pre-ETR
+12,5,5,Ja'Marr Chase,WR,Cincinnati Bengals,KREAR72,Baker Mayfield,Tampa Bay Buccaneers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+12,6,6,Josh Jacobs,RB,Green Bay Packers,PATMOORE967,Bo Nix,Denver Broncos,0,,,New York Giants,0,0,Pre-ETR
+12,7,7,Justin Jefferson,WR,Minnesota Vikings,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Chicago Bears,0,0,Pre-ETR
+12,8,8,Drake London,WR,Atlanta Falcons,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+12,9,9,Trey McBride,TE,Arizona Cardinals,ECOXER10,Joe Flacco,Cincinnati Bengals,0,,,San Francisco 49ers,0,0,Pre-ETR
+12,10,10,Jaylen Warren,RB,Pittsburgh Steelers,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Cincinnati Bengals,0,0,Pre-ETR
+12,11,11,Josh Allen,QB,Buffalo Bills,RAZOR33,Josh Allen,Buffalo Bills,1,0,0,Tampa Bay Buccaneers,0,0,Pre-ETR
+12,12,12,Rico Dowdle,RB,Carolina Panthers,MIKEC6212,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,1,1,Pre-ETR
+12,12,13,Rashee Rice,WR,Kansas City Chiefs,MIKEC6212,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+12,11,14,Nico Collins,WR,Houston Texans,RAZOR33,Josh Allen,Buffalo Bills,0,,,Tennessee Titans,0,0,Pre-ETR
+12,10,15,Emeka Egbuka,WR,Tampa Bay Buccaneers,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+12,9,16,DK Metcalf,WR,Pittsburgh Steelers,ECOXER10,Joe Flacco,Cincinnati Bengals,0,,,Cincinnati Bengals,1,1,Pre-ETR
+12,8,17,Kyren Williams,RB,Los Angeles Rams,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,Seattle Seahawks,0,0,Pre-ETR
+12,7,18,George Kittle,TE,San Francisco 49ers,PATRICKBARN,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+12,6,19,James Cook,RB,Buffalo Bills,PATMOORE967,Bo Nix,Denver Broncos,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+12,5,20,Davante Adams,WR,Los Angeles Rams,KREAR72,Baker Mayfield,Tampa Bay Buccaneers,0,,,Seattle Seahawks,0,0,Pre-ETR
+12,4,21,Derrick Henry,RB,Baltimore Ravens,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Cleveland Browns,0,0,Pre-ETR
+12,3,22,Lamar Jackson,QB,Baltimore Ravens,DABK,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+12,2,23,Ladd McConkey,WR,Los Angeles Chargers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+12,1,24,Chase Brown,RB,Cincinnati Bengals,LEE121503,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+12,1,25,Rome Odunze,WR,Chicago Bears,LEE121503,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+12,2,26,Quinshon Judkins,RB,Cleveland Browns,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+12,3,27,Zay Flowers,WR,Baltimore Ravens,DABK,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+12,4,28,Tee Higgins,WR,Cincinnati Bengals,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+12,5,29,Travis Etienne Jr.,RB,Jacksonville Jaguars,KREAR72,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+12,6,30,Jordan Addison,WR,Minnesota Vikings,PATMOORE967,Bo Nix,Denver Broncos,0,,,Chicago Bears,0,0,Pre-ETR
+12,7,31,Kimani Vidal,RB,Los Angeles Chargers,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+12,8,32,Marvin Harrison,WR,Arizona Cardinals,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,San Francisco 49ers,0,0,Pre-ETR
+12,9,33,Aaron Jones,RB,Minnesota Vikings,ECOXER10,Joe Flacco,Cincinnati Bengals,0,,,Chicago Bears,0,0,Pre-ETR
+12,10,34,Tetairoa McMillan,WR,Carolina Panthers,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Atlanta Falcons,0,0,Pre-ETR
+12,11,35,Quentin Johnston,WR,Los Angeles Chargers,RAZOR33,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+12,12,36,Rachaad White,RB,Tampa Bay Buccaneers,MIKEC6212,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+12,12,37,Patrick Mahomes,QB,Kansas City Chiefs,MIKEC6212,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,1,1,Pre-ETR
+12,11,38,Woody Marks,RB,Houston Texans,RAZOR33,Josh Allen,Buffalo Bills,0,,,Tennessee Titans,0,0,Pre-ETR
+12,10,39,D'Andre Swift,RB,Chicago Bears,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,2,1,Pre-ETR
+12,9,40,RJ Harvey,RB,Denver Broncos,ECOXER10,Joe Flacco,Cincinnati Bengals,0,,,Kansas City Chiefs,0,0,Pre-ETR
+12,8,41,Justin Herbert,QB,Los Angeles Chargers,KURUC711,Justin Herbert,Los Angeles Chargers,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR
+12,7,42,Khalil Shakir,WR,Buffalo Bills,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+12,6,43,Courtland Sutton,WR,Denver Broncos,PATMOORE967,Bo Nix,Denver Broncos,1,,,Kansas City Chiefs,0,0,Pre-ETR
+12,5,44,Bucky Irving,RB,Tampa Bay Buccaneers,KREAR72,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+12,4,45,Travis Kelce,TE,Kansas City Chiefs,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Denver Broncos,0,0,Pre-ETR
+12,3,46,Keenan Allen,WR,Los Angeles Chargers,DABK,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+12,2,47,Matthew Stafford,QB,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+12,1,48,Jauan Jennings,WR,San Francisco 49ers,LEE121503,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR
+12,1,49,Caleb Williams,QB,Chicago Bears,LEE121503,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,0,0,Pre-ETR
+12,2,50,Romeo Doubs,WR,Green Bay Packers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,New York Giants,0,0,Pre-ETR
+12,3,51,Xavier Worthy,WR,Kansas City Chiefs,DABK,Lamar Jackson,Baltimore Ravens,0,,,Denver Broncos,0,0,Pre-ETR
+12,4,52,Wan'Dale Robinson,WR,New York Giants,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Green Bay Packers,0,0,Pre-ETR
+12,5,53,Baker Mayfield,QB,Tampa Bay Buccaneers,KREAR72,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,1,1,Pre-ETR
+12,6,54,Cade Otton,TE,Tampa Bay Buccaneers,PATMOORE967,Bo Nix,Denver Broncos,0,,,Buffalo Bills,1,1,Pre-ETR
+12,7,55,Tyrone Tracy,RB,New York Giants,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Green Bay Packers,0,0,Pre-ETR
+12,8,56,Dalton Schultz,TE,Houston Texans,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,Tennessee Titans,0,0,Pre-ETR
+12,9,57,Joe Flacco,QB,Cincinnati Bengals,ECOXER10,Joe Flacco,Cincinnati Bengals,1,0,0,Pittsburgh Steelers,1,1,Pre-ETR
+12,10,58,T.J. Hockenson,TE,Minnesota Vikings,SCHWEC03,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+12,11,59,Kenneth Walker III,RB,Seattle Seahawks,RAZOR33,Josh Allen,Buffalo Bills,0,,,Los Angeles Rams,0,0,Pre-ETR
+12,12,60,Kyle Pitts,TE,Atlanta Falcons,MIKEC6212,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,1,1,Pre-ETR
+12,12,61,Troy Franklin,WR,Denver Broncos,MIKEC6212,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,2,1,Pre-ETR
+12,11,62,Evan Engram,TE,Denver Broncos,RAZOR33,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+12,10,63,J.J. McCarthy,QB,Minnesota Vikings,SCHWEC03,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,1,1,Pre-ETR
+12,9,64,Brian Thomas,WR,Jacksonville Jaguars,ECOXER10,Joe Flacco,Cincinnati Bengals,0,,,Los Angeles Chargers,0,0,Pre-ETR
+12,8,65,Tez Johnson,WR,Tampa Bay Buccaneers,KURUC711,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+12,7,66,Brock Purdy,QB,San Francisco 49ers,PATRICKBARN,Brock Purdy,San Francisco 49ers,1,1,1,Arizona Cardinals,0,0,Pre-ETR
+12,6,67,Bo Nix,QB,Denver Broncos,PATMOORE967,Bo Nix,Denver Broncos,1,1,1,Kansas City Chiefs,0,0,Pre-ETR
+12,5,68,Dalton Kincaid,TE,Buffalo Bills,KREAR72,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+12,4,69,Sam Darnold,QB,Seattle Seahawks,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,1,1,1,Los Angeles Rams,0,0,Pre-ETR
+12,3,70,Colston Loveland,TE,Chicago Bears,DABK,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR
+12,2,71,Harold Fannin,TE,Cleveland Browns,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+12,1,72,Oronde Gadsden,TE,Los Angeles Chargers,LEE121503,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+13,1,1,Christian McCaffrey,RB,San Francisco 49ers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Arizona Cardinals,0,0,Pre-ETR
+13,2,2,Bijan Robinson,RB,Atlanta Falcons,ROTOHEATCRA,Bo Nix,Denver Broncos,0,,,Carolina Panthers,0,0,Pre-ETR
+13,3,3,Ja'Marr Chase,WR,Cincinnati Bengals,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+13,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,TMONEYTTIME1,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Rams,0,0,Pre-ETR
+13,5,5,Puka Nacua,WR,Los Angeles Rams,AD5,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+13,6,6,Josh Jacobs,RB,Green Bay Packers,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,New York Giants,1,1,Pre-ETR
+13,7,7,Trey McBride,TE,Arizona Cardinals,HOTSIZAUCE,Josh Allen,Buffalo Bills,0,,,San Francisco 49ers,0,0,Pre-ETR
+13,8,8,Justin Jefferson,WR,Minnesota Vikings,SHAGNASTYB,Caleb Williams,Chicago Bears,0,,,Chicago Bears,3,1,Pre-ETR
+13,9,9,Lamar Jackson,QB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,0,0,Cleveland Browns,0,0,Pre-ETR
+13,10,10,Jaylen Warren,RB,Pittsburgh Steelers,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+13,11,11,Rico Dowdle,RB,Carolina Panthers,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Atlanta Falcons,1,1,Pre-ETR
+13,12,12,Derrick Henry,RB,Baltimore Ravens,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Cleveland Browns,0,0,Pre-ETR
+13,12,13,Emeka Egbuka,WR,Tampa Bay Buccaneers,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Buffalo Bills,0,0,Pre-ETR
+13,11,14,Drake London,WR,Atlanta Falcons,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Carolina Panthers,1,1,Pre-ETR
+13,10,15,Rashee Rice,WR,Kansas City Chiefs,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Denver Broncos,0,0,Pre-ETR
+13,9,16,James Cook,RB,Buffalo Bills,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+13,8,17,Nico Collins,WR,Houston Texans,SHAGNASTYB,Caleb Williams,Chicago Bears,0,,,Tennessee Titans,0,0,Pre-ETR
+13,7,18,Josh Allen,QB,Buffalo Bills,HOTSIZAUCE,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,1,1,Pre-ETR
+13,6,19,George Kittle,TE,San Francisco 49ers,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Arizona Cardinals,0,0,Pre-ETR
+13,5,20,Davante Adams,WR,Los Angeles Rams,AD5,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+13,4,21,Ladd McConkey,WR,Los Angeles Chargers,TMONEYTTIME1,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+13,3,22,Kyren Williams,RB,Los Angeles Rams,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Seattle Seahawks,0,0,Pre-ETR
+13,2,23,Quinshon Judkins,RB,Cleveland Browns,ROTOHEATCRA,Bo Nix,Denver Broncos,0,,,Baltimore Ravens,0,0,Pre-ETR
+13,1,24,Zay Flowers,WR,Baltimore Ravens,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Cleveland Browns,0,0,Pre-ETR
+13,1,25,DK Metcalf,WR,Pittsburgh Steelers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+13,2,26,Rome Odunze,WR,Chicago Bears,ROTOHEATCRA,Bo Nix,Denver Broncos,0,,,Minnesota Vikings,1,1,Pre-ETR
+13,3,27,Jordan Addison,WR,Minnesota Vikings,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+13,4,28,Chase Brown,RB,Cincinnati Bengals,TMONEYTTIME1,Justin Herbert,Los Angeles Chargers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+13,5,29,Tee Higgins,WR,Cincinnati Bengals,AD5,Matthew Stafford,Los Angeles Rams,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+13,6,30,Patrick Mahomes,QB,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,1,1,Pre-ETR
+13,7,31,Kimani Vidal,RB,Los Angeles Chargers,HOTSIZAUCE,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+13,8,32,D'Andre Swift,RB,Chicago Bears,SHAGNASTYB,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+13,9,33,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,2,1,Pre-ETR
+13,10,34,Travis Etienne Jr.,RB,Jacksonville Jaguars,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+13,11,35,Aaron Jones,RB,Minnesota Vikings,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Chicago Bears,0,0,Pre-ETR
+13,12,36,Tetairoa McMillan,WR,Carolina Panthers,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Atlanta Falcons,1,1,Pre-ETR
+13,12,37,Woody Marks,RB,Houston Texans,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Tennessee Titans,0,0,Pre-ETR
+13,11,38,Travis Kelce,TE,Kansas City Chiefs,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Denver Broncos,0,0,Pre-ETR
+13,10,39,Marvin Harrison,WR,Arizona Cardinals,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,San Francisco 49ers,0,0,Pre-ETR
+13,9,40,Courtland Sutton,WR,Denver Broncos,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+13,8,41,Rachaad White,RB,Tampa Bay Buccaneers,SHAGNASTYB,Caleb Williams,Chicago Bears,0,,,Buffalo Bills,0,0,Pre-ETR
+13,7,42,Khalil Shakir,WR,Buffalo Bills,HOTSIZAUCE,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+13,6,43,J.K. Dobbins,RB,Denver Broncos,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR
+13,5,44,Oronde Gadsden,TE,Los Angeles Chargers,AD5,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+13,4,45,Justin Herbert,QB,Los Angeles Chargers,TMONEYTTIME1,Justin Herbert,Los Angeles Chargers,1,2,1,Jacksonville Jaguars,0,0,Pre-ETR
+13,3,46,Jauan Jennings,WR,San Francisco 49ers,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Arizona Cardinals,0,0,Pre-ETR
+13,2,47,Xavier Worthy,WR,Kansas City Chiefs,ROTOHEATCRA,Bo Nix,Denver Broncos,0,,,Denver Broncos,1,1,Pre-ETR
+13,1,48,Dalton Schultz,TE,Houston Texans,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tennessee Titans,0,0,Pre-ETR
+13,1,49,Baker Mayfield,QB,Tampa Bay Buccaneers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,1,0,0,Buffalo Bills,0,0,Pre-ETR
+13,2,50,T.J. Hockenson,TE,Minnesota Vikings,ROTOHEATCRA,Bo Nix,Denver Broncos,0,,,Chicago Bears,1,1,Pre-ETR
+13,3,51,J.J. McCarthy,QB,Minnesota Vikings,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,0,0,Pre-ETR
+13,4,52,Quentin Johnston,WR,Los Angeles Chargers,TMONEYTTIME1,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+13,5,53,Matthew Stafford,QB,Los Angeles Rams,AD5,Matthew Stafford,Los Angeles Rams,1,2,1,Seattle Seahawks,0,0,Pre-ETR
+13,6,54,Wan'Dale Robinson,WR,New York Giants,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Green Bay Packers,1,1,Pre-ETR
+13,7,55,Tez Johnson,WR,Tampa Bay Buccaneers,HOTSIZAUCE,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,2,1,Pre-ETR
+13,8,56,Caleb Williams,QB,Chicago Bears,SHAGNASTYB,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,1,1,Pre-ETR
+13,9,57,Keenan Allen,WR,Los Angeles Chargers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+13,10,58,Aaron Rodgers,QB,Pittsburgh Steelers,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,0,0,Pre-ETR
+13,11,59,Parker Washington,WR,Jacksonville Jaguars,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Los Angeles Chargers,0,0,Pre-ETR
+13,12,60,Jordan Love,QB,Green Bay Packers,PATRICKBARN,Jordan Love,Green Bay Packers,1,0,0,New York Giants,0,0,Pre-ETR
+13,12,61,Kyle Pitts,TE,Atlanta Falcons,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Carolina Panthers,1,1,Pre-ETR
+13,11,62,Jacoby Brissett,QB,Arizona Cardinals,FFLINX,Jacoby Brissett,Arizona Cardinals,1,0,0,San Francisco 49ers,0,0,Pre-ETR
+13,10,63,Cade Otton,TE,Tampa Bay Buccaneers,BUSTERSBOYS,Aaron Rodgers,Pittsburgh Steelers,0,,,Buffalo Bills,0,0,Pre-ETR
+13,9,64,Dalton Kincaid,TE,Buffalo Bills,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+13,8,65,Colston Loveland,TE,Chicago Bears,SHAGNASTYB,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+13,7,66,RJ Harvey,RB,Denver Broncos,HOTSIZAUCE,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+13,6,67,Jerry Jeudy,WR,Cleveland Browns,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR
+13,5,68,Kareem Hunt,RB,Kansas City Chiefs,AD5,Matthew Stafford,Los Angeles Rams,0,,,Denver Broncos,0,0,Pre-ETR
+13,4,69,Theo Johnson,TE,New York Giants,TMONEYTTIME1,Justin Herbert,Los Angeles Chargers,0,,,Green Bay Packers,0,0,Pre-ETR
+13,3,70,Harold Fannin,TE,Cleveland Browns,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Baltimore Ravens,0,0,Pre-ETR
+13,2,71,Bo Nix,QB,Denver Broncos,ROTOHEATCRA,Bo Nix,Denver Broncos,1,0,0,Kansas City Chiefs,1,1,Pre-ETR
+13,1,72,Zach Charbonnet,RB,Seattle Seahawks,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Rams,0,0,Pre-ETR
+14,1,1,Christian McCaffrey,RB,San Francisco 49ers,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR
+14,2,2,Bijan Robinson,RB,Atlanta Falcons,NEZ,Baker Mayfield,Tampa Bay Buccaneers,0,,,Carolina Panthers,0,0,Pre-ETR
+14,3,3,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,New York Giants,0,0,Pre-ETR
+14,4,4,Puka Nacua,WR,Los Angeles Rams,LENKEITH,Brock Purdy,San Francisco 49ers,0,,,Seattle Seahawks,1,1,Pre-ETR
+14,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,STEPHON828,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,0,0,Pre-ETR
+14,6,6,Ja'Marr Chase,WR,Cincinnati Bengals,TEDDYONFETTI,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+14,7,7,Trey McBride,TE,Arizona Cardinals,FFLINX,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,0,0,Pre-ETR
+14,8,8,Lamar Jackson,QB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+14,9,9,Jaylen Warren,RB,Pittsburgh Steelers,CHRISTIAN,Justin Herbert,Los Angeles Chargers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+14,10,10,Justin Jefferson,WR,Minnesota Vikings,MCCAFFREY,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+14,11,11,Rico Dowdle,RB,Carolina Panthers,BIJAN,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR
+14,12,12,Drake London,WR,Atlanta Falcons,ROBINSON,Josh Allen,Buffalo Bills,0,,,Carolina Panthers,1,1,Pre-ETR
+14,12,13,Josh Allen,QB,Buffalo Bills,ROBINSON,Josh Allen,Buffalo Bills,1,2,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+14,11,14,Rashee Rice,WR,Kansas City Chiefs,BIJAN,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+14,10,15,James Cook,RB,Buffalo Bills,MCCAFFREY,J.J. McCarthy,Minnesota Vikings,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+14,9,16,Emeka Egbuka,WR,Tampa Bay Buccaneers,CHRISTIAN,Justin Herbert,Los Angeles Chargers,0,,,Buffalo Bills,0,0,Pre-ETR
+14,8,17,Derrick Henry,RB,Baltimore Ravens,ATRAYN460,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+14,7,18,Ladd McConkey,WR,Los Angeles Chargers,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+14,6,19,Kyren Williams,RB,Los Angeles Rams,TEDDYONFETTI,Joe Flacco,Cincinnati Bengals,0,,,Seattle Seahawks,0,0,Pre-ETR
+14,5,20,Nico Collins,WR,Houston Texans,STEPHON828,Sam Darnold,Seattle Seahawks,0,,,Tennessee Titans,0,0,Pre-ETR
+14,4,21,George Kittle,TE,San Francisco 49ers,LENKEITH,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+14,3,22,Davante Adams,WR,Los Angeles Rams,KRUTCHES93,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+14,2,23,Quinshon Judkins,RB,Cleveland Browns,NEZ,Baker Mayfield,Tampa Bay Buccaneers,0,,,Baltimore Ravens,0,0,Pre-ETR
+14,1,24,Chase Brown,RB,Cincinnati Bengals,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+14,1,25,Rome Odunze,WR,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+14,2,26,DK Metcalf,WR,Pittsburgh Steelers,NEZ,Baker Mayfield,Tampa Bay Buccaneers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+14,3,27,Travis Etienne Jr.,RB,Jacksonville Jaguars,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Chargers,1,1,Pre-ETR
+14,4,28,Tee Higgins,WR,Cincinnati Bengals,LENKEITH,Brock Purdy,San Francisco 49ers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+14,5,29,Kimani Vidal,RB,Los Angeles Chargers,STEPHON828,Sam Darnold,Seattle Seahawks,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+14,6,30,Marvin Harrison,WR,Arizona Cardinals,TEDDYONFETTI,Joe Flacco,Cincinnati Bengals,0,,,San Francisco 49ers,0,0,Pre-ETR
+14,7,31,D'Andre Swift,RB,Chicago Bears,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Minnesota Vikings,0,0,Pre-ETR
+14,8,32,Bucky Irving,RB,Tampa Bay Buccaneers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,0,0,Pre-ETR
+14,9,33,Woody Marks,RB,Houston Texans,CHRISTIAN,Justin Herbert,Los Angeles Chargers,0,,,Tennessee Titans,0,0,Pre-ETR
+14,10,34,Zay Flowers,WR,Baltimore Ravens,MCCAFFREY,J.J. McCarthy,Minnesota Vikings,0,,,Cleveland Browns,0,0,Pre-ETR
+14,11,35,Travis Kelce,TE,Kansas City Chiefs,BIJAN,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+14,12,36,Tetairoa McMillan,WR,Carolina Panthers,ROBINSON,Josh Allen,Buffalo Bills,0,,,Atlanta Falcons,1,1,Pre-ETR
+14,12,37,Aaron Jones,RB,Minnesota Vikings,ROBINSON,Josh Allen,Buffalo Bills,0,,,Chicago Bears,0,0,Pre-ETR
+14,11,38,Patrick Mahomes,QB,Kansas City Chiefs,BIJAN,Patrick Mahomes,Kansas City Chiefs,1,2,1,Denver Broncos,1,1,Pre-ETR
+14,10,39,Rachaad White,RB,Tampa Bay Buccaneers,MCCAFFREY,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,1,1,Pre-ETR
+14,9,40,Justin Herbert,QB,Los Angeles Chargers,CHRISTIAN,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+14,8,41,Jordan Addison,WR,Minnesota Vikings,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,0,0,Pre-ETR
+14,7,42,RJ Harvey,RB,Denver Broncos,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR
+14,6,43,Courtland Sutton,WR,Denver Broncos,TEDDYONFETTI,Joe Flacco,Cincinnati Bengals,0,,,Kansas City Chiefs,0,0,Pre-ETR
+14,5,44,Khalil Shakir,WR,Buffalo Bills,STEPHON828,Sam Darnold,Seattle Seahawks,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+14,4,45,Jauan Jennings,WR,San Francisco 49ers,LENKEITH,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+14,3,46,Oronde Gadsden,TE,Los Angeles Chargers,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+14,2,47,Cade Otton,TE,Tampa Bay Buccaneers,NEZ,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+14,1,48,Caleb Williams,QB,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,0,0,Pre-ETR
+14,1,49,Xavier Worthy,WR,Kansas City Chiefs,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Denver Broncos,0,0,Pre-ETR
+14,2,50,Baker Mayfield,QB,Tampa Bay Buccaneers,NEZ,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,0,0,Pre-ETR
+14,3,51,Matthew Stafford,QB,Los Angeles Rams,KRUTCHES93,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+14,4,52,Kenneth Walker III,RB,Seattle Seahawks,LENKEITH,Brock Purdy,San Francisco 49ers,0,,,Los Angeles Rams,1,1,Pre-ETR
+14,5,53,Sam Darnold,QB,Seattle Seahawks,STEPHON828,Sam Darnold,Seattle Seahawks,1,2,1,Los Angeles Rams,0,0,Pre-ETR
+14,6,54,Dalton Schultz,TE,Houston Texans,TEDDYONFETTI,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+14,7,55,Wan'Dale Robinson,WR,New York Giants,FFLINX,Jacoby Brissett,Arizona Cardinals,0,,,Green Bay Packers,0,0,Pre-ETR
+14,8,56,Keenan Allen,WR,Los Angeles Chargers,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+14,9,57,Quentin Johnston,WR,Los Angeles Chargers,CHRISTIAN,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+14,10,58,T.J. Hockenson,TE,Minnesota Vikings,MCCAFFREY,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+14,11,59,Troy Franklin,WR,Denver Broncos,BIJAN,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,3,1,Pre-ETR
+14,12,60,Dalton Kincaid,TE,Buffalo Bills,ROBINSON,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+14,12,61,Keon Coleman,WR,Buffalo Bills,ROBINSON,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+14,11,62,Tyrone Tracy,RB,New York Giants,BIJAN,Patrick Mahomes,Kansas City Chiefs,0,,,Green Bay Packers,0,0,Pre-ETR
+14,10,63,J.J. McCarthy,QB,Minnesota Vikings,MCCAFFREY,J.J. McCarthy,Minnesota Vikings,1,2,1,Chicago Bears,0,0,Pre-ETR
+14,9,64,Harold Fannin,TE,Cleveland Browns,CHRISTIAN,Justin Herbert,Los Angeles Chargers,0,,,Baltimore Ravens,0,0,Pre-ETR
+14,8,65,Kyle Pitts,TE,Atlanta Falcons,ATRAYN460,Lamar Jackson,Baltimore Ravens,0,,,Carolina Panthers,0,0,Pre-ETR
+14,7,66,Jacoby Brissett,QB,Arizona Cardinals,FFLINX,Jacoby Brissett,Arizona Cardinals,1,1,1,San Francisco 49ers,0,0,Pre-ETR
+14,6,67,Joe Flacco,QB,Cincinnati Bengals,TEDDYONFETTI,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR
+14,5,68,AJ Barner,TE,Seattle Seahawks,STEPHON828,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,0,0,Pre-ETR
+14,4,69,Brock Purdy,QB,San Francisco 49ers,LENKEITH,Brock Purdy,San Francisco 49ers,1,2,1,Arizona Cardinals,0,0,Pre-ETR
+14,3,70,Tez Johnson,WR,Tampa Bay Buccaneers,KRUTCHES93,Matthew Stafford,Los Angeles Rams,0,,,Buffalo Bills,0,0,Pre-ETR
+14,2,71,Brian Thomas,WR,Jacksonville Jaguars,NEZ,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+14,1,72,Colston Loveland,TE,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+15,1,1,Christian McCaffrey,RB,San Francisco 49ers,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Arizona Cardinals,0,0,Pre-ETR
+15,2,2,Puka Nacua,WR,Los Angeles Rams,LEE121503,Josh Allen,Buffalo Bills,0,,,Seattle Seahawks,0,0,Pre-ETR
+15,3,3,Bijan Robinson,RB,Atlanta Falcons,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Carolina Panthers,0,0,Pre-ETR
+15,4,4,Lamar Jackson,QB,Baltimore Ravens,TUBINIS2121,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+15,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,HOTSIZAUCE,Bo Nix,Denver Broncos,0,,,Los Angeles Rams,1,1,Pre-ETR
+15,6,6,Josh Jacobs,RB,Green Bay Packers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,New York Giants,0,0,Pre-ETR
+15,7,7,Ja'Marr Chase,WR,Cincinnati Bengals,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+15,8,8,Justin Jefferson,WR,Minnesota Vikings,SCHWEC03,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+15,9,9,Drake London,WR,Atlanta Falcons,RAZOR33,Sam Darnold,Seattle Seahawks,0,,,Carolina Panthers,0,0,Pre-ETR
+15,10,10,Rico Dowdle,RB,Carolina Panthers,FFLINX,Jaxson Dart,New York Giants,0,,,Atlanta Falcons,0,0,Pre-ETR
+15,11,11,Trey McBride,TE,Arizona Cardinals,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,San Francisco 49ers,0,0,Pre-ETR
+15,12,12,Rashee Rice,WR,Kansas City Chiefs,MIKEC6212,Baker Mayfield,Tampa Bay Buccaneers,0,,,Denver Broncos,0,0,Pre-ETR
+15,12,13,Emeka Egbuka,WR,Tampa Bay Buccaneers,MIKEC6212,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+15,11,14,Ladd McConkey,WR,Los Angeles Chargers,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+15,10,15,James Cook,RB,Buffalo Bills,FFLINX,Jaxson Dart,New York Giants,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+15,9,16,Derrick Henry,RB,Baltimore Ravens,RAZOR33,Sam Darnold,Seattle Seahawks,0,,,Cleveland Browns,0,0,Pre-ETR
+15,8,17,Jaylen Warren,RB,Pittsburgh Steelers,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Cincinnati Bengals,0,0,Pre-ETR
+15,7,18,Davante Adams,WR,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+15,6,19,Nico Collins,WR,Houston Texans,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,Tennessee Titans,0,0,Pre-ETR
+15,5,20,Kyren Williams,RB,Los Angeles Rams,HOTSIZAUCE,Bo Nix,Denver Broncos,0,,,Seattle Seahawks,1,1,Pre-ETR
+15,4,21,George Kittle,TE,San Francisco 49ers,TUBINIS2121,Lamar Jackson,Baltimore Ravens,0,,,Arizona Cardinals,0,0,Pre-ETR
+15,3,22,Quinshon Judkins,RB,Cleveland Browns,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Baltimore Ravens,0,0,Pre-ETR
+15,2,23,Josh Allen,QB,Buffalo Bills,LEE121503,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+15,1,24,Patrick Mahomes,QB,Kansas City Chiefs,D4VE,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+15,1,25,Tee Higgins,WR,Cincinnati Bengals,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+15,2,26,Chase Brown,RB,Cincinnati Bengals,LEE121503,Josh Allen,Buffalo Bills,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+15,3,27,Marvin Harrison,WR,Arizona Cardinals,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,San Francisco 49ers,0,0,Pre-ETR
+15,4,28,Zay Flowers,WR,Baltimore Ravens,TUBINIS2121,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+15,5,29,DK Metcalf,WR,Pittsburgh Steelers,HOTSIZAUCE,Bo Nix,Denver Broncos,0,,,Cincinnati Bengals,0,0,Pre-ETR
+15,6,30,Justin Herbert,QB,Los Angeles Chargers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR
+15,7,31,Kimani Vidal,RB,Los Angeles Chargers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+15,8,32,Rome Odunze,WR,Chicago Bears,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,3,1,Pre-ETR
+15,9,33,Jordan Addison,WR,Minnesota Vikings,RAZOR33,Sam Darnold,Seattle Seahawks,0,,,Chicago Bears,0,0,Pre-ETR
+15,10,34,Jauan Jennings,WR,San Francisco 49ers,FFLINX,Jaxson Dart,New York Giants,0,,,Arizona Cardinals,0,0,Pre-ETR
+15,11,35,D'Andre Swift,RB,Chicago Bears,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Minnesota Vikings,0,0,Pre-ETR
+15,12,36,Rachaad White,RB,Tampa Bay Buccaneers,MIKEC6212,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,0,0,Pre-ETR
+15,12,37,Baker Mayfield,QB,Tampa Bay Buccaneers,MIKEC6212,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,0,0,Pre-ETR
+15,11,38,Travis Etienne Jr.,RB,Jacksonville Jaguars,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Los Angeles Chargers,1,1,Pre-ETR
+15,10,39,Travis Kelce,TE,Kansas City Chiefs,FFLINX,Jaxson Dart,New York Giants,0,,,Denver Broncos,0,0,Pre-ETR
+15,9,40,Sam Darnold,QB,Seattle Seahawks,RAZOR33,Sam Darnold,Seattle Seahawks,1,1,1,Los Angeles Rams,0,0,Pre-ETR
+15,8,41,Aaron Jones,RB,Minnesota Vikings,SCHWEC03,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+15,7,42,Woody Marks,RB,Houston Texans,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Tennessee Titans,0,0,Pre-ETR
+15,6,43,Tetairoa McMillan,WR,Carolina Panthers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,Atlanta Falcons,0,0,Pre-ETR
+15,5,44,Courtland Sutton,WR,Denver Broncos,HOTSIZAUCE,Bo Nix,Denver Broncos,1,,,Kansas City Chiefs,0,0,Pre-ETR
+15,4,45,RJ Harvey,RB,Denver Broncos,TUBINIS2121,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+15,3,46,Khalil Shakir,WR,Buffalo Bills,MATHOLOGY,Caleb Williams,Chicago Bears,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+15,2,47,Romeo Doubs,WR,Green Bay Packers,LEE121503,Josh Allen,Buffalo Bills,0,,,New York Giants,0,0,Pre-ETR
+15,1,48,Xavier Worthy,WR,Kansas City Chiefs,D4VE,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+15,1,49,Dalton Schultz,TE,Houston Texans,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Tennessee Titans,0,0,Pre-ETR
+15,2,50,RJ Harvey,RB,Denver Broncos,LEE121503,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+15,3,51,Caleb Williams,QB,Chicago Bears,MATHOLOGY,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,0,0,Pre-ETR
+15,4,52,Keenan Allen,WR,Los Angeles Chargers,TUBINIS2121,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+15,5,53,Oronde Gadsden,TE,Los Angeles Chargers,HOTSIZAUCE,Bo Nix,Denver Broncos,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+15,6,54,Quentin Johnston,WR,Los Angeles Chargers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,0,0,Pre-ETR
+15,7,55,Matthew Stafford,QB,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+15,8,56,Cade Otton,TE,Tampa Bay Buccaneers,SCHWEC03,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+15,9,57,Kenneth Walker III,RB,Seattle Seahawks,RAZOR33,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,0,0,Pre-ETR
+15,10,58,Tez Johnson,WR,Tampa Bay Buccaneers,FFLINX,Jaxson Dart,New York Giants,0,,,Buffalo Bills,1,1,Pre-ETR
+15,11,59,Aaron Rodgers,QB,Pittsburgh Steelers,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,1,0,0,Cincinnati Bengals,0,0,Pre-ETR
+15,12,60,Kyle Pitts,TE,Atlanta Falcons,MIKEC6212,Baker Mayfield,Tampa Bay Buccaneers,0,,,Carolina Panthers,0,0,Pre-ETR
+15,12,61,Tyjae Spears,RB,Tennessee Titans,MIKEC6212,Baker Mayfield,Tampa Bay Buccaneers,0,,,Houston Texans,0,0,Pre-ETR
+15,11,62,Troy Franklin,WR,Denver Broncos,BOOMERWINS,Aaron Rodgers,Pittsburgh Steelers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+15,10,63,Jaxson Dart,QB,New York Giants,FFLINX,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,0,0,Pre-ETR
+15,9,64,Evan Engram,TE,Denver Broncos,RAZOR33,Sam Darnold,Seattle Seahawks,0,,,Kansas City Chiefs,0,0,Pre-ETR
+15,8,65,J.J. McCarthy,QB,Minnesota Vikings,SCHWEC03,J.J. McCarthy,Minnesota Vikings,1,2,1,Chicago Bears,1,1,Pre-ETR
+15,7,66,Harold Fannin,TE,Cleveland Browns,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+15,6,67,Jonnu Smith,TE,Pittsburgh Steelers,PATRICKBARN,Justin Herbert,Los Angeles Chargers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+15,5,68,Bo Nix,QB,Denver Broncos,HOTSIZAUCE,Bo Nix,Denver Broncos,1,1,1,Kansas City Chiefs,0,0,Pre-ETR
+15,4,69,Brian Thomas,WR,Jacksonville Jaguars,TUBINIS2121,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Chargers,1,1,Pre-ETR
+15,3,70,Colston Loveland,TE,Chicago Bears,MATHOLOGY,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+15,2,71,Dalton Kincaid,TE,Buffalo Bills,LEE121503,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+15,1,72,Bucky Irving,RB,Tampa Bay Buccaneers,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+16,1,1,Christian McCaffrey,RB,San Francisco 49ers,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Arizona Cardinals,0,0,Pre-ETR
+16,2,2,Bijan Robinson,RB,Atlanta Falcons,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Carolina Panthers,0,0,Pre-ETR
+16,3,3,Ja'Marr Chase,WR,Cincinnati Bengals,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+16,4,4,Puka Nacua,WR,Los Angeles Rams,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Seattle Seahawks,0,0,Pre-ETR
+16,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,1,1,Pre-ETR
+16,6,6,Josh Jacobs,RB,Green Bay Packers,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR
+16,7,7,Trey McBride,TE,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+16,8,8,Jaylen Warren,RB,Pittsburgh Steelers,ECOXER10,Caleb Williams,Chicago Bears,0,,,Cincinnati Bengals,0,0,Pre-ETR
+16,9,9,Drake London,WR,Atlanta Falcons,NF42,Joe Flacco,Cincinnati Bengals,0,,,Carolina Panthers,0,0,Pre-ETR
+16,10,10,James Cook,RB,Buffalo Bills,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+16,11,11,Rashee Rice,WR,Kansas City Chiefs,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Denver Broncos,1,1,Pre-ETR
+16,12,12,Derrick Henry,RB,Baltimore Ravens,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Cleveland Browns,0,0,Pre-ETR
+16,12,13,Rico Dowdle,RB,Carolina Panthers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Atlanta Falcons,0,0,Pre-ETR
+16,11,14,Josh Allen,QB,Buffalo Bills,TUBINIS2121,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,1,1,Pre-ETR
+16,10,15,Emeka Egbuka,WR,Tampa Bay Buccaneers,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+16,9,16,Justin Jefferson,WR,Minnesota Vikings,NF42,Joe Flacco,Cincinnati Bengals,0,,,Chicago Bears,1,1,Pre-ETR
+16,8,17,Travis Etienne Jr.,RB,Jacksonville Jaguars,ECOXER10,Caleb Williams,Chicago Bears,0,,,Los Angeles Chargers,0,0,Pre-ETR
+16,7,18,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,3,1,Pre-ETR
+16,6,19,Lamar Jackson,QB,Baltimore Ravens,LEE121503,Lamar Jackson,Baltimore Ravens,1,0,0,Cleveland Browns,1,1,Pre-ETR
+16,5,20,Davante Adams,WR,Los Angeles Rams,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Seattle Seahawks,2,1,Pre-ETR
+16,4,21,Ladd McConkey,WR,Los Angeles Chargers,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+16,3,22,Nico Collins,WR,Houston Texans,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Tennessee Titans,0,0,Pre-ETR
+16,2,23,Kyren Williams,RB,Los Angeles Rams,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Seattle Seahawks,0,0,Pre-ETR
+16,1,24,Quinshon Judkins,RB,Cleveland Browns,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Baltimore Ravens,0,0,Pre-ETR
+16,1,25,Tee Higgins,WR,Cincinnati Bengals,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Pittsburgh Steelers,2,1,Pre-ETR
+16,2,26,Zay Flowers,WR,Baltimore Ravens,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Cleveland Browns,0,0,Pre-ETR
+16,3,27,Justin Herbert,QB,Los Angeles Chargers,RAZOR33,Justin Herbert,Los Angeles Chargers,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR
+16,4,28,Patrick Mahomes,QB,Kansas City Chiefs,D4VE,Patrick Mahomes,Kansas City Chiefs,1,1,1,Denver Broncos,0,0,Pre-ETR
+16,5,29,Chase Brown,RB,Cincinnati Bengals,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+16,6,30,DK Metcalf,WR,Pittsburgh Steelers,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR
+16,7,31,Marvin Harrison,WR,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+16,8,32,Rome Odunze,WR,Chicago Bears,ECOXER10,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+16,9,33,D'Andre Swift,RB,Chicago Bears,NF42,Joe Flacco,Cincinnati Bengals,0,,,Minnesota Vikings,1,1,Pre-ETR
+16,10,34,Baker Mayfield,QB,Tampa Bay Buccaneers,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,1,1,Pre-ETR
+16,11,35,Kimani Vidal,RB,Los Angeles Chargers,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+16,12,36,Travis Kelce,TE,Kansas City Chiefs,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Denver Broncos,0,0,Pre-ETR
+16,12,37,Matthew Stafford,QB,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,0,0,Seattle Seahawks,0,0,Pre-ETR
+16,11,38,Rachaad White,RB,Tampa Bay Buccaneers,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,2,1,Pre-ETR
+16,10,39,Woody Marks,RB,Houston Texans,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tennessee Titans,0,0,Pre-ETR
+16,9,40,Dalton Schultz,TE,Houston Texans,NF42,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+16,8,41,Jordan Addison,WR,Minnesota Vikings,ECOXER10,Caleb Williams,Chicago Bears,0,,,Chicago Bears,3,1,Pre-ETR
+16,7,42,Quentin Johnston,WR,Los Angeles Chargers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+16,6,43,RJ Harvey,RB,Denver Broncos,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+16,5,44,Tetairoa McMillan,WR,Carolina Panthers,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Atlanta Falcons,0,0,Pre-ETR
+16,4,45,Aaron Jones,RB,Minnesota Vikings,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Chicago Bears,0,0,Pre-ETR
+16,3,46,Kenneth Walker III,RB,Seattle Seahawks,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Rams,0,0,Pre-ETR
+16,2,47,Khalil Shakir,WR,Buffalo Bills,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+16,1,48,Aaron Rodgers,QB,Pittsburgh Steelers,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,1,1,Pre-ETR
+16,1,49,Courtland Sutton,WR,Denver Broncos,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+16,2,50,Cade Otton,TE,Tampa Bay Buccaneers,PATRICKBARN,Jordan Love,Green Bay Packers,0,,,Buffalo Bills,1,1,Pre-ETR
+16,3,51,Kyle Pitts,TE,Atlanta Falcons,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+16,4,52,Mark Andrews,TE,Baltimore Ravens,D4VE,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,0,0,Pre-ETR
+16,5,53,Sam Darnold,QB,Seattle Seahawks,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,1,1,1,Los Angeles Rams,1,1,Pre-ETR
+16,6,54,Jauan Jennings,WR,San Francisco 49ers,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Arizona Cardinals,0,0,Pre-ETR
+16,7,55,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,2,1,San Francisco 49ers,1,1,Pre-ETR
+16,8,56,Caleb Williams,QB,Chicago Bears,ECOXER10,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,1,1,Pre-ETR
+16,9,57,Xavier Worthy,WR,Kansas City Chiefs,NF42,Joe Flacco,Cincinnati Bengals,0,,,Denver Broncos,0,0,Pre-ETR
+16,10,58,Wan'Dale Robinson,WR,New York Giants,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,Green Bay Packers,1,1,Pre-ETR
+16,11,59,Troy Franklin,WR,Denver Broncos,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,1,1,Pre-ETR
+16,12,60,Romeo Doubs,WR,Green Bay Packers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,New York Giants,0,0,Pre-ETR
+16,12,61,Keenan Allen,WR,Los Angeles Chargers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+16,11,62,Dalton Kincaid,TE,Buffalo Bills,TUBINIS2121,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+16,10,63,Luke Musgrave,TE,Green Bay Packers,CHADCANDLES,Baker Mayfield,Tampa Bay Buccaneers,0,,,New York Giants,1,1,Pre-ETR
+16,9,64,Joe Flacco,QB,Cincinnati Bengals,NF42,Joe Flacco,Cincinnati Bengals,1,0,0,Pittsburgh Steelers,0,0,Pre-ETR
+16,8,65,Colston Loveland,TE,Chicago Bears,ECOXER10,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,1,1,Pre-ETR
+16,7,66,Zach Charbonnet,RB,Seattle Seahawks,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Los Angeles Rams,0,0,Pre-ETR
+16,6,67,Harold Fannin,TE,Cleveland Browns,LEE121503,Lamar Jackson,Baltimore Ravens,0,,,Baltimore Ravens,1,1,Pre-ETR
+16,5,68,Oronde Gadsden,TE,Los Angeles Chargers,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+16,4,69,Kareem Hunt,RB,Kansas City Chiefs,D4VE,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,0,0,Pre-ETR
+16,3,70,Jordan Mason,RB,Minnesota Vikings,RAZOR33,Justin Herbert,Los Angeles Chargers,0,,,Chicago Bears,0,0,Pre-ETR
+16,2,71,Jordan Love,QB,Green Bay Packers,PATRICKBARN,Jordan Love,Green Bay Packers,1,0,0,New York Giants,0,0,Pre-ETR
+16,1,72,Jonnu Smith,TE,Pittsburgh Steelers,MIKEC6212,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+17,1,1,Christian McCaffrey,RB,San Francisco 49ers,FRIARBETS,Aaron Rodgers,Pittsburgh Steelers,0,,,Arizona Cardinals,0,0,Pre-ETR
+17,2,2,Puka Nacua,WR,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+17,3,3,Jaxon Smith-Njigba,WR,Seattle Seahawks,TUBINIS2121,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Rams,0,0,Pre-ETR
+17,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,NF42,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+17,5,5,Bijan Robinson,RB,Atlanta Falcons,D4VE,Caleb Williams,Chicago Bears,0,,,Carolina Panthers,1,1,Pre-ETR
+17,6,6,Josh Jacobs,RB,Green Bay Packers,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,New York Giants,0,0,Pre-ETR
+17,7,7,James Cook,RB,Buffalo Bills,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+17,8,8,Trey McBride,TE,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+17,9,9,Jaylen Warren,RB,Pittsburgh Steelers,HOTSIZAUCE,Justin Herbert,Los Angeles Chargers,0,,,Cincinnati Bengals,0,0,Pre-ETR
+17,10,10,Rico Dowdle,RB,Carolina Panthers,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Atlanta Falcons,0,0,Pre-ETR
+17,11,11,Derrick Henry,RB,Baltimore Ravens,PLAY2W1N,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+17,12,12,Rashee Rice,WR,Kansas City Chiefs,LEE121503,Jaxson Dart,New York Giants,0,,,Denver Broncos,1,1,Pre-ETR
+17,12,13,Drake London,WR,Atlanta Falcons,LEE121503,Jaxson Dart,New York Giants,0,,,Carolina Panthers,0,0,Pre-ETR
+17,11,14,Lamar Jackson,QB,Baltimore Ravens,PLAY2W1N,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+17,10,15,Josh Allen,QB,Buffalo Bills,KRUTCHES93,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+17,9,16,Justin Jefferson,WR,Minnesota Vikings,HOTSIZAUCE,Justin Herbert,Los Angeles Chargers,0,,,Chicago Bears,0,0,Pre-ETR
+17,8,17,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,3,1,Pre-ETR
+17,7,18,Kyren Williams,RB,Los Angeles Rams,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Seattle Seahawks,0,0,Pre-ETR
+17,6,19,Emeka Egbuka,WR,Tampa Bay Buccaneers,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Buffalo Bills,0,0,Pre-ETR
+17,5,20,Davante Adams,WR,Los Angeles Rams,D4VE,Caleb Williams,Chicago Bears,0,,,Seattle Seahawks,0,0,Pre-ETR
+17,4,21,Nico Collins,WR,Houston Texans,NF42,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+17,3,22,Ladd McConkey,WR,Los Angeles Chargers,TUBINIS2121,Patrick Mahomes,Kansas City Chiefs,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+17,2,23,Chase Brown,RB,Cincinnati Bengals,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+17,1,24,DK Metcalf,WR,Pittsburgh Steelers,FRIARBETS,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+17,1,25,Aaron Rodgers,QB,Pittsburgh Steelers,FRIARBETS,Aaron Rodgers,Pittsburgh Steelers,1,2,1,Cincinnati Bengals,0,0,Pre-ETR
+17,2,26,Quinshon Judkins,RB,Cleveland Browns,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+17,3,27,Patrick Mahomes,QB,Kansas City Chiefs,TUBINIS2121,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,0,0,Pre-ETR
+17,4,28,Kimani Vidal,RB,Los Angeles Chargers,NF42,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+17,5,29,Tee Higgins,WR,Cincinnati Bengals,D4VE,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+17,6,30,Zay Flowers,WR,Baltimore Ravens,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Cleveland Browns,0,0,Pre-ETR
+17,7,31,Rome Odunze,WR,Chicago Bears,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Minnesota Vikings,0,0,Pre-ETR
+17,8,32,Marvin Harrison,WR,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+17,9,33,Travis Etienne Jr.,RB,Jacksonville Jaguars,HOTSIZAUCE,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,2,1,Pre-ETR
+17,10,34,Jordan Addison,WR,Minnesota Vikings,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Chicago Bears,0,0,Pre-ETR
+17,11,35,Travis Kelce,TE,Kansas City Chiefs,PLAY2W1N,Lamar Jackson,Baltimore Ravens,0,,,Denver Broncos,1,1,Pre-ETR
+17,12,36,RJ Harvey,RB,Denver Broncos,LEE121503,Jaxson Dart,New York Giants,0,,,Kansas City Chiefs,1,1,Pre-ETR
+17,12,37,Aaron Jones,RB,Minnesota Vikings,LEE121503,Jaxson Dart,New York Giants,0,,,Chicago Bears,0,0,Pre-ETR
+17,11,38,Khalil Shakir,WR,Buffalo Bills,PLAY2W1N,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+17,10,39,Courtland Sutton,WR,Denver Broncos,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Kansas City Chiefs,0,0,Pre-ETR
+17,9,40,Justin Herbert,QB,Los Angeles Chargers,HOTSIZAUCE,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,1,1,Pre-ETR
+17,8,41,Woody Marks,RB,Houston Texans,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+17,7,42,Baker Mayfield,QB,Tampa Bay Buccaneers,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,1,1,Pre-ETR
+17,6,43,D'Andre Swift,RB,Chicago Bears,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Minnesota Vikings,0,0,Pre-ETR
+17,5,44,Tetairoa McMillan,WR,Carolina Panthers,D4VE,Caleb Williams,Chicago Bears,0,,,Atlanta Falcons,1,1,Pre-ETR
+17,4,45,Dalton Schultz,TE,Houston Texans,NF42,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+17,3,46,Rachaad White,RB,Tampa Bay Buccaneers,TUBINIS2121,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+17,2,47,Quentin Johnston,WR,Los Angeles Chargers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+17,1,48,Xavier Worthy,WR,Kansas City Chiefs,FRIARBETS,Aaron Rodgers,Pittsburgh Steelers,0,,,Denver Broncos,0,0,Pre-ETR
+17,1,49,Romeo Doubs,WR,Green Bay Packers,FRIARBETS,Aaron Rodgers,Pittsburgh Steelers,0,,,New York Giants,0,0,Pre-ETR
+17,2,50,Matthew Stafford,QB,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+17,3,51,Jauan Jennings,WR,San Francisco 49ers,TUBINIS2121,Patrick Mahomes,Kansas City Chiefs,0,,,Arizona Cardinals,0,0,Pre-ETR
+17,4,52,Kenneth Walker III,RB,Seattle Seahawks,NF42,Joe Flacco,Cincinnati Bengals,0,,,Los Angeles Rams,0,0,Pre-ETR
+17,5,53,Caleb Williams,QB,Chicago Bears,D4VE,Caleb Williams,Chicago Bears,1,0,0,Minnesota Vikings,0,0,Pre-ETR
+17,6,54,Kyle Pitts,TE,Atlanta Falcons,PATRICKBARN,Brock Purdy,San Francisco 49ers,0,,,Carolina Panthers,0,0,Pre-ETR
+17,7,55,Cade Otton,TE,Tampa Bay Buccaneers,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+17,8,56,Keon Coleman,WR,Buffalo Bills,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+17,9,57,Keenan Allen,WR,Los Angeles Chargers,HOTSIZAUCE,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+17,10,58,Dalton Kincaid,TE,Buffalo Bills,KRUTCHES93,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+17,11,59,Zach Charbonnet,RB,Seattle Seahawks,PLAY2W1N,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Rams,0,0,Pre-ETR
+17,12,60,Jaxson Dart,QB,New York Giants,LEE121503,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,0,0,Pre-ETR
+17,12,61,Oronde Gadsden,TE,Los Angeles Chargers,LEE121503,Jaxson Dart,New York Giants,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+17,11,62,Troy Franklin,WR,Denver Broncos,PLAY2W1N,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,1,1,Pre-ETR
+17,10,63,Wan'Dale Robinson,WR,New York Giants,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Green Bay Packers,0,0,Pre-ETR
+17,9,64,Theo Johnson,TE,New York Giants,HOTSIZAUCE,Justin Herbert,Los Angeles Chargers,0,,,Green Bay Packers,0,0,Pre-ETR
+17,8,65,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,2,1,San Francisco 49ers,1,1,Pre-ETR
+17,7,66,Brian Thomas,WR,Jacksonville Jaguars,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+17,6,67,Brock Purdy,QB,San Francisco 49ers,PATRICKBARN,Brock Purdy,San Francisco 49ers,1,0,0,Arizona Cardinals,0,0,Pre-ETR
+17,5,68,Mark Andrews,TE,Baltimore Ravens,D4VE,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR
+17,4,69,Joe Flacco,QB,Cincinnati Bengals,NF42,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR
+17,3,70,Brenton Strange,TE,Jacksonville Jaguars,TUBINIS2121,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Chargers,1,1,Pre-ETR
+17,2,71,Harold Fannin,TE,Cleveland Browns,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+17,1,72,Jonnu Smith,TE,Pittsburgh Steelers,FRIARBETS,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+18,1,1,Christian McCaffrey,RB,San Francisco 49ers,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Arizona Cardinals,0,0,Pre-ETR
+18,2,2,Puka Nacua,WR,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+18,3,3,Bijan Robinson,RB,Atlanta Falcons,JASPER121,Joe Flacco,Cincinnati Bengals,0,,,Carolina Panthers,0,0,Pre-ETR
+18,4,4,Ja'Marr Chase,WR,Cincinnati Bengals,RAZOR33,Patrick Mahomes,Kansas City Chiefs,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+18,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Rams,0,0,Pre-ETR
+18,6,6,Josh Jacobs,RB,Green Bay Packers,LEE121503,Jaxson Dart,New York Giants,0,,,New York Giants,2,1,Pre-ETR
+18,7,7,James Cook,RB,Buffalo Bills,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,3,1,Pre-ETR
+18,8,8,Jaylen Warren,RB,Pittsburgh Steelers,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Cincinnati Bengals,0,0,Pre-ETR
+18,9,9,Justin Jefferson,WR,Minnesota Vikings,PATRICKBARN,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+18,10,10,Trey McBride,TE,Arizona Cardinals,HOTSIZAUCE,Aaron Rodgers,Pittsburgh Steelers,0,,,San Francisco 49ers,0,0,Pre-ETR
+18,11,11,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR
+18,12,12,Rico Dowdle,RB,Carolina Panthers,GUNNEROSS,Brock Purdy,San Francisco 49ers,0,,,Atlanta Falcons,0,0,Pre-ETR
+18,12,13,Derrick Henry,RB,Baltimore Ravens,GUNNEROSS,Brock Purdy,San Francisco 49ers,0,,,Cleveland Browns,1,1,Pre-ETR
+18,11,14,Chase Brown,RB,Cincinnati Bengals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+18,10,15,Drake London,WR,Atlanta Falcons,HOTSIZAUCE,Aaron Rodgers,Pittsburgh Steelers,0,,,Carolina Panthers,0,0,Pre-ETR
+18,9,16,Rashee Rice,WR,Kansas City Chiefs,PATRICKBARN,J.J. McCarthy,Minnesota Vikings,0,,,Denver Broncos,1,1,Pre-ETR
+18,8,17,Josh Allen,QB,Buffalo Bills,KRUTCHES93,Josh Allen,Buffalo Bills,1,2,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+18,7,18,Emeka Egbuka,WR,Tampa Bay Buccaneers,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+18,6,19,Nico Collins,WR,Houston Texans,LEE121503,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR
+18,5,20,Lamar Jackson,QB,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,0,0,Cleveland Browns,0,0,Pre-ETR
+18,4,21,Quinshon Judkins,RB,Cleveland Browns,RAZOR33,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR
+18,3,22,Tee Higgins,WR,Cincinnati Bengals,JASPER121,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+18,2,23,Davante Adams,WR,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+18,1,24,Justin Herbert,QB,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,2,1,Jacksonville Jaguars,1,1,Pre-ETR
+18,1,25,Ladd McConkey,WR,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+18,2,26,Kyren Williams,RB,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+18,3,27,Kimani Vidal,RB,Los Angeles Chargers,JASPER121,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+18,4,28,Patrick Mahomes,QB,Kansas City Chiefs,RAZOR33,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,1,1,Pre-ETR
+18,5,29,Rome Odunze,WR,Chicago Bears,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,1,1,Pre-ETR
+18,6,30,Bucky Irving,RB,Tampa Bay Buccaneers,LEE121503,Jaxson Dart,New York Giants,0,,,Buffalo Bills,0,0,Pre-ETR
+18,7,31,Zay Flowers,WR,Baltimore Ravens,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Cleveland Browns,0,0,Pre-ETR
+18,8,32,Travis Etienne Jr.,RB,Jacksonville Jaguars,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Los Angeles Chargers,0,0,Pre-ETR
+18,9,33,RJ Harvey,RB,Denver Broncos,PATRICKBARN,J.J. McCarthy,Minnesota Vikings,0,,,Kansas City Chiefs,1,1,Pre-ETR
+18,10,34,DK Metcalf,WR,Pittsburgh Steelers,HOTSIZAUCE,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,0,0,Pre-ETR
+18,11,35,Marvin Harrison,WR,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+18,12,36,Parker Washington,WR,Jacksonville Jaguars,GUNNEROSS,Brock Purdy,San Francisco 49ers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+18,12,37,Jauan Jennings,WR,San Francisco 49ers,GUNNEROSS,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,0,0,Pre-ETR
+18,11,38,Woody Marks,RB,Houston Texans,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+18,10,39,D'Andre Swift,RB,Chicago Bears,HOTSIZAUCE,Aaron Rodgers,Pittsburgh Steelers,0,,,Minnesota Vikings,0,0,Pre-ETR
+18,9,40,Rachaad White,RB,Tampa Bay Buccaneers,PATRICKBARN,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+18,8,41,Khalil Shakir,WR,Buffalo Bills,KRUTCHES93,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+18,7,42,Baker Mayfield,QB,Tampa Bay Buccaneers,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,1,2,1,Buffalo Bills,1,1,Pre-ETR
+18,6,43,Travis Kelce,TE,Kansas City Chiefs,LEE121503,Jaxson Dart,New York Giants,0,,,Denver Broncos,0,0,Pre-ETR
+18,5,44,Aaron Jones,RB,Minnesota Vikings,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,2,1,Pre-ETR
+18,4,45,Jordan Addison,WR,Minnesota Vikings,RAZOR33,Patrick Mahomes,Kansas City Chiefs,0,,,Chicago Bears,0,0,Pre-ETR
+18,3,46,Quentin Johnston,WR,Los Angeles Chargers,JASPER121,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+18,2,47,Tetairoa McMillan,WR,Carolina Panthers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Atlanta Falcons,0,0,Pre-ETR
+18,1,48,Keenan Allen,WR,Los Angeles Chargers,WONDERKID12,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+18,1,49,Kyle Pitts,TE,Atlanta Falcons,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,0,0,Pre-ETR
+18,2,50,Matthew Stafford,QB,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,3,1,Seattle Seahawks,0,0,Pre-ETR
+18,3,51,Joe Flacco,QB,Cincinnati Bengals,JASPER121,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR
+18,4,52,Kenneth Walker III,RB,Seattle Seahawks,RAZOR33,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Rams,0,0,Pre-ETR
+18,5,53,Romeo Doubs,WR,Green Bay Packers,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR
+18,6,54,Wan'Dale Robinson,WR,New York Giants,LEE121503,Jaxson Dart,New York Giants,1,,,Green Bay Packers,1,1,Pre-ETR
+18,7,55,Courtland Sutton,WR,Denver Broncos,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+18,8,56,Dalton Schultz,TE,Houston Texans,KRUTCHES93,Josh Allen,Buffalo Bills,0,,,Tennessee Titans,0,0,Pre-ETR
+18,9,57,J.J. McCarthy,QB,Minnesota Vikings,PATRICKBARN,J.J. McCarthy,Minnesota Vikings,1,2,1,Chicago Bears,0,0,Pre-ETR
+18,10,58,Xavier Worthy,WR,Kansas City Chiefs,HOTSIZAUCE,Aaron Rodgers,Pittsburgh Steelers,0,,,Denver Broncos,0,0,Pre-ETR
+18,11,59,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,1,1,San Francisco 49ers,1,1,Pre-ETR
+18,12,60,Brock Purdy,QB,San Francisco 49ers,GUNNEROSS,Brock Purdy,San Francisco 49ers,1,1,1,Arizona Cardinals,0,0,Pre-ETR
+18,12,61,Harold Fannin,TE,Cleveland Browns,GUNNEROSS,Brock Purdy,San Francisco 49ers,0,,,Baltimore Ravens,1,1,Pre-ETR
+18,11,62,Jerry Jeudy,WR,Cleveland Browns,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Baltimore Ravens,0,0,Pre-ETR
+18,10,63,Aaron Rodgers,QB,Pittsburgh Steelers,HOTSIZAUCE,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,0,0,Pre-ETR
+18,9,64,T.J. Hockenson,TE,Minnesota Vikings,PATRICKBARN,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,0,0,Pre-ETR
+18,8,65,Keon Coleman,WR,Buffalo Bills,KRUTCHES93,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+18,7,66,Cade Otton,TE,Tampa Bay Buccaneers,DRAPP,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+18,6,67,Jaxson Dart,QB,New York Giants,LEE121503,Jaxson Dart,New York Giants,1,1,1,Green Bay Packers,1,1,Pre-ETR
+18,5,68,Colston Loveland,TE,Chicago Bears,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,1,1,Pre-ETR
+18,4,69,Evan Engram,TE,Denver Broncos,RAZOR33,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR
+18,3,70,Mark Andrews,TE,Baltimore Ravens,JASPER121,Joe Flacco,Cincinnati Bengals,0,,,Cleveland Browns,0,0,Pre-ETR
+18,2,71,Oronde Gadsden,TE,Los Angeles Chargers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+18,1,72,Jakobi Meyers,WR,Jacksonville Jaguars,WONDERKID12,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,3,1,Pre-ETR
+19,1,1,Christian McCaffrey,RB,San Francisco 49ers,DRAPP,Jaxson Dart,New York Giants,0,,,Arizona Cardinals,0,0,Pre-ETR
+19,2,2,Ja'Marr Chase,WR,Cincinnati Bengals,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+19,3,3,Bijan Robinson,RB,Atlanta Falcons,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Carolina Panthers,1,1,Pre-ETR
+19,4,4,Puka Nacua,WR,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,1,1,Pre-ETR
+19,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,NF42,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Rams,0,0,Pre-ETR
+19,6,6,Josh Jacobs,RB,Green Bay Packers,FFLINX,Caleb Williams,Chicago Bears,0,,,New York Giants,0,0,Pre-ETR
+19,7,7,Jaylen Warren,RB,Pittsburgh Steelers,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Cincinnati Bengals,0,0,Pre-ETR
+19,8,8,Trey McBride,TE,Arizona Cardinals,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,San Francisco 49ers,0,0,Pre-ETR
+19,9,9,Lamar Jackson,QB,Baltimore Ravens,NONOTBAXTER,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+19,10,10,Rashee Rice,WR,Kansas City Chiefs,TUBINIS2121,Justin Herbert,Los Angeles Chargers,0,,,Denver Broncos,0,0,Pre-ETR
+19,11,11,James Cook,RB,Buffalo Bills,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+19,12,12,Derrick Henry,RB,Baltimore Ravens,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Cleveland Browns,0,0,Pre-ETR
+19,12,13,Josh Allen,QB,Buffalo Bills,PATRICKBARN,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+19,11,14,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,1,1,Pre-ETR
+19,10,15,Rico Dowdle,RB,Carolina Panthers,TUBINIS2121,Justin Herbert,Los Angeles Chargers,0,,,Atlanta Falcons,0,0,Pre-ETR
+19,9,16,Justin Jefferson,WR,Minnesota Vikings,NONOTBAXTER,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,1,1,Pre-ETR
+19,8,17,Drake London,WR,Atlanta Falcons,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Carolina Panthers,0,0,Pre-ETR
+19,7,18,Emeka Egbuka,WR,Tampa Bay Buccaneers,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+19,6,19,Kyren Williams,RB,Los Angeles Rams,FFLINX,Caleb Williams,Chicago Bears,0,,,Seattle Seahawks,0,0,Pre-ETR
+19,5,20,Nico Collins,WR,Houston Texans,NF42,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tennessee Titans,0,0,Pre-ETR
+19,4,21,Davante Adams,WR,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,1,1,Pre-ETR
+19,3,22,Quinshon Judkins,RB,Cleveland Browns,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Baltimore Ravens,0,0,Pre-ETR
+19,2,23,Ladd McConkey,WR,Los Angeles Chargers,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+19,1,24,DK Metcalf,WR,Pittsburgh Steelers,DRAPP,Jaxson Dart,New York Giants,0,,,Cincinnati Bengals,1,1,Pre-ETR
+19,1,25,Tee Higgins,WR,Cincinnati Bengals,DRAPP,Jaxson Dart,New York Giants,0,,,Pittsburgh Steelers,1,1,Pre-ETR
+19,2,26,Chase Brown,RB,Cincinnati Bengals,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+19,3,27,Rome Odunze,WR,Chicago Bears,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,2,1,Pre-ETR
+19,4,28,Marvin Harrison,WR,Arizona Cardinals,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,San Francisco 49ers,0,0,Pre-ETR
+19,5,29,Kimani Vidal,RB,Los Angeles Chargers,NF42,Baker Mayfield,Tampa Bay Buccaneers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+19,6,30,Zay Flowers,WR,Baltimore Ravens,FFLINX,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR
+19,7,31,Patrick Mahomes,QB,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,2,1,Denver Broncos,1,1,Pre-ETR
+19,8,32,Rachaad White,RB,Tampa Bay Buccaneers,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Buffalo Bills,0,0,Pre-ETR
+19,9,33,Khalil Shakir,WR,Buffalo Bills,NONOTBAXTER,Lamar Jackson,Baltimore Ravens,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+19,10,34,Justin Herbert,QB,Los Angeles Chargers,TUBINIS2121,Justin Herbert,Los Angeles Chargers,1,2,1,Jacksonville Jaguars,1,1,Pre-ETR
+19,11,35,Woody Marks,RB,Houston Texans,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+19,12,36,Jordan Addison,WR,Minnesota Vikings,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Chicago Bears,1,1,Pre-ETR
+19,12,37,Aaron Jones,RB,Minnesota Vikings,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Chicago Bears,1,1,Pre-ETR
+19,11,38,Quentin Johnston,WR,Los Angeles Chargers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+19,10,39,Travis Etienne Jr.,RB,Jacksonville Jaguars,TUBINIS2121,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,3,1,Pre-ETR
+19,9,40,D'Andre Swift,RB,Chicago Bears,NONOTBAXTER,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,1,1,Pre-ETR
+19,8,41,RJ Harvey,RB,Denver Broncos,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Kansas City Chiefs,0,0,Pre-ETR
+19,7,42,Travis Kelce,TE,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+19,6,43,Dalton Schultz,TE,Houston Texans,FFLINX,Caleb Williams,Chicago Bears,0,,,Tennessee Titans,0,0,Pre-ETR
+19,5,44,Baker Mayfield,QB,Tampa Bay Buccaneers,NF42,Baker Mayfield,Tampa Bay Buccaneers,1,0,0,Buffalo Bills,0,0,Pre-ETR
+19,4,45,Matthew Stafford,QB,Los Angeles Rams,CGEEEEEE,Matthew Stafford,Los Angeles Rams,1,2,1,Seattle Seahawks,1,1,Pre-ETR
+19,3,46,Tetairoa McMillan,WR,Carolina Panthers,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,0,,,Atlanta Falcons,1,1,Pre-ETR
+19,2,47,Wan'Dale Robinson,WR,New York Giants,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Green Bay Packers,0,0,Pre-ETR
+19,1,48,Romeo Doubs,WR,Green Bay Packers,DRAPP,Jaxson Dart,New York Giants,0,,,New York Giants,1,1,Pre-ETR
+19,1,49,Kyle Pitts,TE,Atlanta Falcons,DRAPP,Jaxson Dart,New York Giants,0,,,Carolina Panthers,0,0,Pre-ETR
+19,2,50,Joe Flacco,QB,Cincinnati Bengals,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR
+19,3,51,J.J. McCarthy,QB,Minnesota Vikings,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,1,1,Pre-ETR
+19,4,52,Cade Otton,TE,Tampa Bay Buccaneers,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Buffalo Bills,0,0,Pre-ETR
+19,5,53,Courtland Sutton,WR,Denver Broncos,NF42,Baker Mayfield,Tampa Bay Buccaneers,0,,,Kansas City Chiefs,0,0,Pre-ETR
+19,6,54,Caleb Williams,QB,Chicago Bears,FFLINX,Caleb Williams,Chicago Bears,1,0,0,Minnesota Vikings,0,0,Pre-ETR
+19,7,55,Xavier Worthy,WR,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+19,8,56,Sam Darnold,QB,Seattle Seahawks,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,1,0,0,Los Angeles Rams,0,0,Pre-ETR
+19,9,57,Mark Andrews,TE,Baltimore Ravens,NONOTBAXTER,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+19,10,58,Keenan Allen,WR,Los Angeles Chargers,TUBINIS2121,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+19,11,59,Jauan Jennings,WR,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,1,1,Pre-ETR
+19,12,60,Colston Loveland,TE,Chicago Bears,PATRICKBARN,Josh Allen,Buffalo Bills,0,,,Minnesota Vikings,2,1,Pre-ETR
+19,12,61,Keon Coleman,WR,Buffalo Bills,PATRICKBARN,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+19,11,62,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,0,0,San Francisco 49ers,2,1,Pre-ETR
+19,10,63,Oronde Gadsden,TE,Los Angeles Chargers,TUBINIS2121,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+19,9,64,Kenneth Walker III,RB,Seattle Seahawks,NONOTBAXTER,Lamar Jackson,Baltimore Ravens,0,,,Los Angeles Rams,0,0,Pre-ETR
+19,8,65,Parker Washington,WR,Jacksonville Jaguars,HOTSIZAUCE,Sam Darnold,Seattle Seahawks,0,,,Los Angeles Chargers,0,0,Pre-ETR
+19,7,66,J.K. Dobbins,RB,Denver Broncos,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,3,1,Pre-ETR
+19,6,67,Tez Johnson,WR,Tampa Bay Buccaneers,FFLINX,Caleb Williams,Chicago Bears,0,,,Buffalo Bills,0,0,Pre-ETR
+19,5,68,Harold Fannin,TE,Cleveland Browns,NF42,Baker Mayfield,Tampa Bay Buccaneers,0,,,Baltimore Ravens,0,0,Pre-ETR
+19,4,69,Zach Charbonnet,RB,Seattle Seahawks,CGEEEEEE,Matthew Stafford,Los Angeles Rams,0,,,Los Angeles Rams,3,1,Pre-ETR
+19,3,70,T.J. Hockenson,TE,Minnesota Vikings,KRUTCHES93,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,1,1,Pre-ETR
+19,2,71,Dalton Kincaid,TE,Buffalo Bills,BUSTERSBOYS,Joe Flacco,Cincinnati Bengals,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+19,1,72,Jaxson Dart,QB,New York Giants,DRAPP,Jaxson Dart,New York Giants,1,0,0,Green Bay Packers,1,1,Pre-ETR
+20,1,1,Christian McCaffrey,RB,San Francisco 49ers,KRUTCHES93,Justin Herbert,Los Angeles Chargers,0,,,Arizona Cardinals,0,0,Pre-ETR
+20,2,2,Puka Nacua,WR,Los Angeles Rams,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Seattle Seahawks,0,0,Pre-ETR
+20,3,3,Bijan Robinson,RB,Atlanta Falcons,PATRICKBARN,Matthew Stafford,Los Angeles Rams,0,,,Carolina Panthers,0,0,Pre-ETR
+20,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Los Angeles Rams,1,1,Pre-ETR
+20,5,5,Ja'Marr Chase,WR,Cincinnati Bengals,DRAPP,Caleb Williams,Chicago Bears,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+20,6,6,Josh Jacobs,RB,Green Bay Packers,D4VE,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR
+20,7,7,Trey McBride,TE,Arizona Cardinals,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,San Francisco 49ers,2,1,Pre-ETR
+20,8,8,Justin Jefferson,WR,Minnesota Vikings,ECOXER10,J.J. McCarthy,Minnesota Vikings,1,,,Chicago Bears,2,1,Pre-ETR
+20,9,9,James Cook,RB,Buffalo Bills,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+20,10,10,Jaylen Warren,RB,Pittsburgh Steelers,NF42,Jacoby Brissett,Arizona Cardinals,0,,,Cincinnati Bengals,0,0,Pre-ETR
+20,11,11,Rashee Rice,WR,Kansas City Chiefs,CGEEEEEE,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+20,12,12,Josh Allen,QB,Buffalo Bills,WOODOGGY15,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,0,0,Pre-ETR
+20,12,13,George Kittle,TE,San Francisco 49ers,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Arizona Cardinals,0,0,Pre-ETR
+20,11,14,Drake London,WR,Atlanta Falcons,CGEEEEEE,Patrick Mahomes,Kansas City Chiefs,0,,,Carolina Panthers,0,0,Pre-ETR
+20,10,15,Rico Dowdle,RB,Carolina Panthers,NF42,Jacoby Brissett,Arizona Cardinals,0,,,Atlanta Falcons,0,0,Pre-ETR
+20,9,16,Nico Collins,WR,Houston Texans,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tennessee Titans,0,0,Pre-ETR
+20,8,17,Emeka Egbuka,WR,Tampa Bay Buccaneers,ECOXER10,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+20,7,18,Ladd McConkey,WR,Los Angeles Chargers,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+20,6,19,Lamar Jackson,QB,Baltimore Ravens,D4VE,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+20,5,20,Derrick Henry,RB,Baltimore Ravens,DRAPP,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,1,1,Pre-ETR
+20,4,21,Kyren Williams,RB,Los Angeles Rams,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Seattle Seahawks,1,1,Pre-ETR
+20,3,22,Davante Adams,WR,Los Angeles Rams,PATRICKBARN,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+20,2,23,Chase Brown,RB,Cincinnati Bengals,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Pittsburgh Steelers,2,1,Pre-ETR
+20,1,24,Quinshon Judkins,RB,Cleveland Browns,KRUTCHES93,Justin Herbert,Los Angeles Chargers,0,,,Baltimore Ravens,0,0,Pre-ETR
+20,1,25,Justin Herbert,QB,Los Angeles Chargers,KRUTCHES93,Justin Herbert,Los Angeles Chargers,1,1,1,Jacksonville Jaguars,1,1,Pre-ETR
+20,2,26,DK Metcalf,WR,Pittsburgh Steelers,LEE121503,Aaron Rodgers,Pittsburgh Steelers,1,,,Cincinnati Bengals,1,1,Pre-ETR
+20,3,27,Kimani Vidal,RB,Los Angeles Chargers,PATRICKBARN,Matthew Stafford,Los Angeles Rams,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+20,4,28,Tee Higgins,WR,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,,,Pittsburgh Steelers,0,0,Pre-ETR
+20,5,29,Rome Odunze,WR,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+20,6,30,Zay Flowers,WR,Baltimore Ravens,D4VE,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+20,7,31,Travis Etienne Jr.,RB,Jacksonville Jaguars,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,Los Angeles Chargers,1,1,Pre-ETR
+20,8,32,Rachaad White,RB,Tampa Bay Buccaneers,ECOXER10,J.J. McCarthy,Minnesota Vikings,0,,,Buffalo Bills,0,0,Pre-ETR
+20,9,33,Tetairoa McMillan,WR,Carolina Panthers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Atlanta Falcons,0,0,Pre-ETR
+20,10,34,Marvin Harrison,WR,Arizona Cardinals,NF42,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,0,0,Pre-ETR
+20,11,35,Travis Kelce,TE,Kansas City Chiefs,CGEEEEEE,Patrick Mahomes,Kansas City Chiefs,1,,,Denver Broncos,1,1,Pre-ETR
+20,12,36,Khalil Shakir,WR,Buffalo Bills,WOODOGGY15,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+20,12,37,Jordan Addison,WR,Minnesota Vikings,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Chicago Bears,1,1,Pre-ETR
+20,11,38,Patrick Mahomes,QB,Kansas City Chiefs,CGEEEEEE,Patrick Mahomes,Kansas City Chiefs,1,2,1,Denver Broncos,1,1,Pre-ETR
+20,10,39,Dalton Schultz,TE,Houston Texans,NF42,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR
+20,9,40,Baker Mayfield,QB,Tampa Bay Buccaneers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,1,0,0,Buffalo Bills,1,1,Pre-ETR
+20,8,41,D'Andre Swift,RB,Chicago Bears,ECOXER10,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,2,1,Pre-ETR
+20,7,42,Aaron Jones,RB,Minnesota Vikings,KCPOLACK,Brock Purdy,San Francisco 49ers,0,,,Chicago Bears,0,0,Pre-ETR
+20,6,43,RJ Harvey,RB,Denver Broncos,D4VE,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+20,5,44,Wan'Dale Robinson,WR,New York Giants,DRAPP,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR
+20,4,45,Woody Marks,RB,Houston Texans,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Tennessee Titans,0,0,Pre-ETR
+20,3,46,Matthew Stafford,QB,Los Angeles Rams,PATRICKBARN,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+20,2,47,Cade Otton,TE,Tampa Bay Buccaneers,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Buffalo Bills,0,0,Pre-ETR
+20,1,48,Oronde Gadsden,TE,Los Angeles Chargers,KRUTCHES93,Justin Herbert,Los Angeles Chargers,1,,,Jacksonville Jaguars,1,1,Pre-ETR
+20,1,49,Romeo Doubs,WR,Green Bay Packers,KRUTCHES93,Justin Herbert,Los Angeles Chargers,0,,,New York Giants,0,0,Pre-ETR
+20,2,50,Aaron Rodgers,QB,Pittsburgh Steelers,LEE121503,Aaron Rodgers,Pittsburgh Steelers,1,1,1,Cincinnati Bengals,1,1,Pre-ETR
+20,3,51,Xavier Worthy,WR,Kansas City Chiefs,PATRICKBARN,Matthew Stafford,Los Angeles Rams,0,,,Denver Broncos,0,0,Pre-ETR
+20,4,52,Joe Flacco,QB,Cincinnati Bengals,FFLINX,Joe Flacco,Cincinnati Bengals,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR
+20,5,53,Caleb Williams,QB,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,1,1,Minnesota Vikings,0,0,Pre-ETR
+20,6,54,Courtland Sutton,WR,Denver Broncos,D4VE,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR
+20,7,55,Jauan Jennings,WR,San Francisco 49ers,KCPOLACK,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,1,1,Pre-ETR
+20,8,56,J.J. McCarthy,QB,Minnesota Vikings,ECOXER10,J.J. McCarthy,Minnesota Vikings,1,1,1,Chicago Bears,2,1,Pre-ETR
+20,9,57,Kenneth Walker III,RB,Seattle Seahawks,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,Los Angeles Rams,0,0,Pre-ETR
+20,10,58,Quentin Johnston,WR,Los Angeles Chargers,NF42,Jacoby Brissett,Arizona Cardinals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+20,11,59,Zach Charbonnet,RB,Seattle Seahawks,CGEEEEEE,Patrick Mahomes,Kansas City Chiefs,0,,,Los Angeles Rams,0,0,Pre-ETR
+20,12,60,Tyrone Tracy,RB,New York Giants,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Green Bay Packers,0,0,Pre-ETR
+20,12,61,D.J. Moore,WR,Chicago Bears,WOODOGGY15,Josh Allen,Buffalo Bills,0,,,Minnesota Vikings,1,1,Pre-ETR
+20,11,62,J.K. Dobbins,RB,Denver Broncos,CGEEEEEE,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,3,1,Pre-ETR
+20,10,63,Jacoby Brissett,QB,Arizona Cardinals,NF42,Jacoby Brissett,Arizona Cardinals,1,1,1,San Francisco 49ers,0,0,Pre-ETR
+20,9,64,Luke Musgrave,TE,Green Bay Packers,GUNNEROSS,Baker Mayfield,Tampa Bay Buccaneers,0,,,New York Giants,0,0,Pre-ETR
+20,8,65,Colston Loveland,TE,Chicago Bears,ECOXER10,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,2,1,Pre-ETR
+20,7,66,Brock Purdy,QB,San Francisco 49ers,KCPOLACK,Brock Purdy,San Francisco 49ers,1,1,1,Arizona Cardinals,1,1,Pre-ETR
+20,6,67,Kyle Pitts,TE,Atlanta Falcons,D4VE,Lamar Jackson,Baltimore Ravens,0,,,Carolina Panthers,0,0,Pre-ETR
+20,5,68,Harold Fannin,TE,Cleveland Browns,DRAPP,Caleb Williams,Chicago Bears,0,,,Baltimore Ravens,1,1,Pre-ETR
+20,4,69,Theo Johnson,TE,New York Giants,FFLINX,Joe Flacco,Cincinnati Bengals,0,,,Green Bay Packers,0,0,Pre-ETR
+20,3,70,Jonnu Smith,TE,Pittsburgh Steelers,PATRICKBARN,Matthew Stafford,Los Angeles Rams,0,,,Cincinnati Bengals,0,0,Pre-ETR
+20,2,71,Brian Thomas,WR,Jacksonville Jaguars,LEE121503,Aaron Rodgers,Pittsburgh Steelers,0,,,Los Angeles Chargers,0,0,Pre-ETR
+20,1,72,Jakobi Meyers,WR,Jacksonville Jaguars,KRUTCHES93,Justin Herbert,Los Angeles Chargers,0,,,Los Angeles Chargers,2,1,Pre-ETR
+21,1,1,Puka Nacua,WR,Los Angeles Rams,MWOLF,Bo Nix,Denver Broncos,0,,,Seattle Seahawks,1,1,Pre-ETR
+21,2,2,Christian McCaffrey,RB,San Francisco 49ers,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Arizona Cardinals,0,0,Pre-ETR
+21,3,3,Bijan Robinson,RB,Atlanta Falcons,SHAGNASTYB,Justin Herbert,Los Angeles Chargers,0,,,Carolina Panthers,1,1,Pre-ETR
+21,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,GPNGC,Sam Darnold,Seattle Seahawks,1,,,Los Angeles Rams,0,0,Pre-ETR
+21,5,5,Ja'Marr Chase,WR,Cincinnati Bengals,KURUC711,Patrick Mahomes,Kansas City Chiefs,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+21,6,6,Josh Jacobs,RB,Green Bay Packers,MATHOLOGY,Brock Purdy,San Francisco 49ers,0,,,New York Giants,0,0,Pre-ETR
+21,7,7,Trey McBride,TE,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,,,San Francisco 49ers,1,1,Pre-ETR
+21,8,8,Jaylen Warren,RB,Pittsburgh Steelers,DRAPP,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR
+21,9,9,Rashee Rice,WR,Kansas City Chiefs,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Denver Broncos,1,1,Pre-ETR
+21,10,10,Rico Dowdle,RB,Carolina Panthers,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Atlanta Falcons,1,1,Pre-ETR
+21,11,11,Drake London,WR,Atlanta Falcons,HOTSIZAUCE,Joe Flacco,Cincinnati Bengals,0,,,Carolina Panthers,0,0,Pre-ETR
+21,12,12,James Cook,RB,Buffalo Bills,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Tampa Bay Buccaneers,2,1,Pre-ETR
+21,12,13,Justin Jefferson,WR,Minnesota Vikings,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Chicago Bears,1,1,Pre-ETR
+21,11,14,Emeka Egbuka,WR,Tampa Bay Buccaneers,HOTSIZAUCE,Joe Flacco,Cincinnati Bengals,0,,,Buffalo Bills,0,0,Pre-ETR
+21,10,15,Josh Allen,QB,Buffalo Bills,TUBINIS2121,Josh Allen,Buffalo Bills,1,1,1,Tampa Bay Buccaneers,1,1,Pre-ETR
+21,9,16,Ladd McConkey,WR,Los Angeles Chargers,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+21,8,17,Lamar Jackson,QB,Baltimore Ravens,DRAPP,Lamar Jackson,Baltimore Ravens,1,1,1,Cleveland Browns,0,0,Pre-ETR
+21,7,18,George Kittle,TE,San Francisco 49ers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR
+21,6,19,Derrick Henry,RB,Baltimore Ravens,MATHOLOGY,Brock Purdy,San Francisco 49ers,0,,,Cleveland Browns,0,0,Pre-ETR
+21,5,20,Kyren Williams,RB,Los Angeles Rams,KURUC711,Patrick Mahomes,Kansas City Chiefs,0,,,Seattle Seahawks,0,0,Pre-ETR
+21,4,21,Nico Collins,WR,Houston Texans,GPNGC,Sam Darnold,Seattle Seahawks,0,,,Tennessee Titans,0,0,Pre-ETR
+21,3,22,Justin Herbert,QB,Los Angeles Chargers,SHAGNASTYB,Justin Herbert,Los Angeles Chargers,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR
+21,2,23,Davante Adams,WR,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,,,Seattle Seahawks,0,0,Pre-ETR
+21,1,24,Tee Higgins,WR,Cincinnati Bengals,MWOLF,Bo Nix,Denver Broncos,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+21,1,25,Zay Flowers,WR,Baltimore Ravens,MWOLF,Bo Nix,Denver Broncos,0,,,Cleveland Browns,1,1,Pre-ETR
+21,2,26,Quinshon Judkins,RB,Cleveland Browns,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Baltimore Ravens,0,0,Pre-ETR
+21,3,27,D'Andre Swift,RB,Chicago Bears,SHAGNASTYB,Justin Herbert,Los Angeles Chargers,0,,,Minnesota Vikings,0,0,Pre-ETR
+21,4,28,Kimani Vidal,RB,Los Angeles Chargers,GPNGC,Sam Darnold,Seattle Seahawks,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+21,5,29,Patrick Mahomes,QB,Kansas City Chiefs,KURUC711,Patrick Mahomes,Kansas City Chiefs,1,0,0,Denver Broncos,0,0,Pre-ETR
+21,6,30,Marvin Harrison,WR,Arizona Cardinals,MATHOLOGY,Brock Purdy,San Francisco 49ers,0,,,San Francisco 49ers,2,1,Pre-ETR
+21,7,31,Chase Brown,RB,Cincinnati Bengals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Pittsburgh Steelers,0,0,Pre-ETR
+21,8,32,DK Metcalf,WR,Pittsburgh Steelers,DRAPP,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR
+21,9,33,Rome Odunze,WR,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+21,10,34,Rachaad White,RB,Tampa Bay Buccaneers,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Buffalo Bills,2,1,Pre-ETR
+21,11,35,Travis Etienne Jr.,RB,Jacksonville Jaguars,HOTSIZAUCE,Joe Flacco,Cincinnati Bengals,0,,,Los Angeles Chargers,1,1,Pre-ETR
+21,12,36,Aaron Jones,RB,Minnesota Vikings,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Chicago Bears,1,1,Pre-ETR
+21,12,37,Baker Mayfield,QB,Tampa Bay Buccaneers,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,1,1,1,Buffalo Bills,1,1,Pre-ETR
+21,11,38,Travis Kelce,TE,Kansas City Chiefs,HOTSIZAUCE,Joe Flacco,Cincinnati Bengals,0,,,Denver Broncos,0,0,Pre-ETR
+21,10,39,Khalil Shakir,WR,Buffalo Bills,TUBINIS2121,Josh Allen,Buffalo Bills,1,,,Tampa Bay Buccaneers,1,1,Pre-ETR
+21,9,40,RJ Harvey,RB,Denver Broncos,BUSTERSBOYS,Caleb Williams,Chicago Bears,0,,,Kansas City Chiefs,1,1,Pre-ETR
+21,8,41,Jordan Addison,WR,Minnesota Vikings,DRAPP,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,0,0,Pre-ETR
+21,7,42,Quentin Johnston,WR,Los Angeles Chargers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+21,6,43,Jauan Jennings,WR,San Francisco 49ers,MATHOLOGY,Brock Purdy,San Francisco 49ers,1,,,Arizona Cardinals,1,1,Pre-ETR
+21,5,44,Dalton Schultz,TE,Houston Texans,KURUC711,Patrick Mahomes,Kansas City Chiefs,0,,,Tennessee Titans,0,0,Pre-ETR
+21,4,45,Woody Marks,RB,Houston Texans,GPNGC,Sam Darnold,Seattle Seahawks,0,,,Tennessee Titans,0,0,Pre-ETR
+21,3,46,Tetairoa McMillan,WR,Carolina Panthers,SHAGNASTYB,Justin Herbert,Los Angeles Chargers,0,,,Atlanta Falcons,1,1,Pre-ETR
+21,2,47,Matthew Stafford,QB,Los Angeles Rams,D4VE,Matthew Stafford,Los Angeles Rams,1,1,1,Seattle Seahawks,0,0,Pre-ETR
+21,1,48,Kenneth Walker III,RB,Seattle Seahawks,MWOLF,Bo Nix,Denver Broncos,0,,,Los Angeles Rams,1,1,Pre-ETR
+21,1,49,Harold Fannin,TE,Cleveland Browns,MWOLF,Bo Nix,Denver Broncos,0,,,Baltimore Ravens,1,1,Pre-ETR
+21,2,50,Courtland Sutton,WR,Denver Broncos,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Kansas City Chiefs,0,0,Pre-ETR
+21,3,51,Wan'Dale Robinson,WR,New York Giants,SHAGNASTYB,Justin Herbert,Los Angeles Chargers,0,,,Green Bay Packers,1,1,Pre-ETR
+21,4,52,Sam Darnold,QB,Seattle Seahawks,GPNGC,Sam Darnold,Seattle Seahawks,1,1,1,Los Angeles Rams,0,0,Pre-ETR
+21,5,53,Tez Johnson,WR,Tampa Bay Buccaneers,KURUC711,Patrick Mahomes,Kansas City Chiefs,0,,,Buffalo Bills,0,0,Pre-ETR
+21,6,54,Oronde Gadsden,TE,Los Angeles Chargers,MATHOLOGY,Brock Purdy,San Francisco 49ers,0,,,Jacksonville Jaguars,0,0,Pre-ETR
+21,7,55,Romeo Doubs,WR,Green Bay Packers,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,0,,,New York Giants,0,0,Pre-ETR
+21,8,56,Bucky Irving,RB,Tampa Bay Buccaneers,DRAPP,Lamar Jackson,Baltimore Ravens,0,,,Buffalo Bills,0,0,Pre-ETR
+21,9,57,Caleb Williams,QB,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,2,1,Minnesota Vikings,0,0,Pre-ETR
+21,10,58,Kyle Pitts,TE,Atlanta Falcons,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Carolina Panthers,1,1,Pre-ETR
+21,11,59,Keenan Allen,WR,Los Angeles Chargers,HOTSIZAUCE,Joe Flacco,Cincinnati Bengals,0,,,Jacksonville Jaguars,1,1,Pre-ETR
+21,12,60,D.J. Moore,WR,Chicago Bears,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,0,,,Minnesota Vikings,2,1,Pre-ETR
+21,12,61,Cade Otton,TE,Tampa Bay Buccaneers,KRUTCHES93,Baker Mayfield,Tampa Bay Buccaneers,1,,,Buffalo Bills,1,1,Pre-ETR
+21,11,62,Joe Flacco,QB,Cincinnati Bengals,HOTSIZAUCE,Joe Flacco,Cincinnati Bengals,1,0,0,Pittsburgh Steelers,0,0,Pre-ETR
+21,10,63,Xavier Worthy,WR,Kansas City Chiefs,TUBINIS2121,Josh Allen,Buffalo Bills,0,,,Denver Broncos,0,0,Pre-ETR
+21,9,64,Colston Loveland,TE,Chicago Bears,BUSTERSBOYS,Caleb Williams,Chicago Bears,1,,,Minnesota Vikings,0,0,Pre-ETR
+21,8,65,Mark Andrews,TE,Baltimore Ravens,DRAPP,Lamar Jackson,Baltimore Ravens,1,,,Cleveland Browns,0,0,Pre-ETR
+21,7,66,Jacoby Brissett,QB,Arizona Cardinals,DYLANCASH22,Jacoby Brissett,Arizona Cardinals,1,1,1,San Francisco 49ers,1,1,Pre-ETR
+21,6,67,Brock Purdy,QB,San Francisco 49ers,MATHOLOGY,Brock Purdy,San Francisco 49ers,1,1,1,Arizona Cardinals,1,1,Pre-ETR
+21,5,68,Jerry Jeudy,WR,Cleveland Browns,KURUC711,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR
+21,4,69,Theo Johnson,TE,New York Giants,GPNGC,Sam Darnold,Seattle Seahawks,0,,,Green Bay Packers,0,0,Pre-ETR
+21,3,70,Luke Musgrave,TE,Green Bay Packers,SHAGNASTYB,Justin Herbert,Los Angeles Chargers,0,,,New York Giants,1,1,Pre-ETR
+21,2,71,Dalton Kincaid,TE,Buffalo Bills,D4VE,Matthew Stafford,Los Angeles Rams,0,,,Tampa Bay Buccaneers,0,0,Pre-ETR
+21,1,72,Bo Nix,QB,Denver Broncos,MWOLF,Bo Nix,Denver Broncos,1,0,0,Kansas City Chiefs,0,0,Pre-ETR
