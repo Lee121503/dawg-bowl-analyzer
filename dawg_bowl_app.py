@@ -924,7 +924,8 @@ if auth_status:
         summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
     
         # Calculate differences
-        summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+        if "ADP_Post" in summary.columns and "ADP_Pre" in summary.columns:        
+            summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
         summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
     
         # Add original player name
