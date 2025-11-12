@@ -854,14 +854,24 @@ if auth_status:
         st.subheader("📋 User Draft Teams")
     
         all_users = sorted(df["User"].dropna().unique())
-        selected_user = st.selectbox("Select a User", all_users, key="tab11_user")
+        selected_user = st.selectbox("Select a User", all_users, key="tab11_user_select")
     
+        # Get all unique (Draft, Team) combos for the selected user
         user_teams_df = df[df["User"] == selected_user][["Draft", "Team"]].drop_duplicates()
         user_teams_df = user_teams_df.sort_values("Draft", ascending=False).reset_index(drop=True)
     
-        st.write(f"Total teams drafted by `{selected_user}`: {len(user_teams_df)}")
+        # Get player lists for each team
+        team_players = df[df["User"] == selected_user].groupby(["Draft", "Team"])["Player"].apply(list).reset_index()
+        team_players["Players"] = team_players["Player"].apply(lambda x: ", ".join(sorted(x)))
+        team_players = team_players.drop(columns=["Player"])
     
-        st.dataframe(user_teams_df, use_container_width=True)
+        # Merge player lists into team table
+        full_team_df = pd.merge(user_teams_df, team_players, on=["Draft", "Team"], how="left")
+    
+        st.write(f"Total teams drafted by `{selected_user}`: {len(full_team_df)}")
+    
+        st.dataframe(full_team_df, use_container_width=True)
+
 
 
 else:
