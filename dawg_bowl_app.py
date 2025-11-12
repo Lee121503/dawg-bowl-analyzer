@@ -727,10 +727,12 @@ if auth_status:
     
         min_velocity = st.slider("Minimum ADP Velocity", 0.0, 5.0, 0.5, step=0.1, key="tab10_velocity")
         min_draft_rate_velocity = st.slider("Minimum Draft Rate Velocity", 0.0, 10.0, 0.0, step=0.5, key="tab10_draft_velocity")
+        min_recent_drafted_pct = st.slider("Minimum % of Recent Drafts", 0.0, 100.0, 0.0, step=1.0, key="tab10_recent_drafted_pct")
     
         filtered_df = merged[
-            (merged["Velocity"].abs() >= min_velocity) |
-            (merged["Draft Rate Velocity"].abs() >= min_draft_rate_velocity)
+            ((merged["Velocity"].abs() >= min_velocity) |
+             (merged["Draft Rate Velocity"].abs() >= min_draft_rate_velocity)) &
+            (merged["Recent % Drafted"] >= min_recent_drafted_pct)
         ]
     
         # --- Player search ---
