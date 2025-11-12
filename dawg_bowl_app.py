@@ -427,6 +427,51 @@ if auth_status:
                 })
     
                 st.dataframe(styled_df, use_container_width=True)
+    
+                # --- Matching Team Rosters ---
+                st.markdown("### 🧠 Matching Teams with Anchor Combo")
+    
+                for _, row in matching_teams.iterrows():
+                    draft_id = row["Draft"]
+                    team_players = row["Player"]
+                    team_df = df[(df["Draft"] == draft_id) & (df["Player"].isin(team_players))].copy()
+                    team_df = team_df.sort_values("Pick")
+    
+                    used_players = set()
+    
+                    def get_first(pos):
+                        for _, r in team_df.iterrows():
+                            if r["Position"] == pos and r["Player"] not in used_players:
+                                used_players.add(r["Player"])
+                                return f"{r['Player']} (Pick {r['Pick']})"
+                        return ""
+    
+                    def get_next_flex():
+                        for _, r in team_df.iterrows():
+                            if r["Position"] in ["RB", "WR", "TE"] and r["Player"] not in used_players:
+                                used_players.add(r["Player"])
+                                return f"{r['Player']} (Pick {r['Pick']})"
+                        return ""
+    
+                    qb = get_first("QB")
+                    rb = get_first("RB")
+                    wr1 = get_first("WR")
+                    wr2 = get_first("WR")
+                    te = get_first("TE")
+                    flex = get_next_flex()
+    
+                    user = team_df["User"].iloc[0]
+                    team_id = team_df["Team"].iloc[0]
+    
+                    st.markdown(f"#### 🏈 Draft {draft_id} — Team {team_id} — User: `{user}`")
+                    st.table(pd.DataFrame([{
+                        "QB": qb,
+                        "RB": rb,
+                        "WR1": wr1,
+                        "WR2": wr2,
+                        "TE": te,
+                        "Flex": flex
+                    }]))
             else:
                 st.info("No teams drafted all selected players together.")
 
