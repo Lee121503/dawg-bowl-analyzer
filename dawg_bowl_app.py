@@ -256,7 +256,6 @@ if auth_status:
         else:
             st.warning("No players match the current filters.")
  
-    # --- Tab 3: Combo Finder ---
     with tab3:
         st.subheader("🔍 Combo Finder")
     
@@ -321,8 +320,18 @@ if auth_status:
         st.markdown("### 🧩 All Combos")
         if not filtered.empty:
             all_combo_df = filtered.sort_values("Times Drafted Together", ascending=False)
+    
             if view_mode == "Table":
-                st.dataframe(all_combo_df, use_container_width=True)
+                styled_all = all_combo_df.style.background_gradient(
+                    subset=["Times Drafted Together", "Exposure %", "ADP A", "ADP B"],
+                    cmap="Blues"
+                ).format({
+                    "Times Drafted Together": "{:.0f}",
+                    "Exposure %": "{:.2f}",
+                    "ADP A": "{:.2f}",
+                    "ADP B": "{:.2f}"
+                })
+                st.dataframe(styled_all, use_container_width=True)
             else:
                 st.data_editor(
                     all_combo_df,
@@ -342,8 +351,18 @@ if auth_status:
         non_teammates = filtered[filtered["Is_Teammate"] == False]
         if not non_teammates.empty:
             non_teammates_df = non_teammates.sort_values("Times Drafted Together", ascending=False)
+    
             if view_mode == "Table":
-                st.dataframe(non_teammates_df, use_container_width=True)
+                styled_non = non_teammates_df.style.background_gradient(
+                    subset=["Times Drafted Together", "Exposure %", "ADP A", "ADP B"],
+                    cmap="Oranges"
+                ).format({
+                    "Times Drafted Together": "{:.0f}",
+                    "Exposure %": "{:.2f}",
+                    "ADP A": "{:.2f}",
+                    "ADP B": "{:.2f}"
+                })
+                st.dataframe(styled_non, use_container_width=True)
             else:
                 st.data_editor(
                     non_teammates_df,
@@ -358,6 +377,7 @@ if auth_status:
                 )
         else:
             st.info("No non-teammate combos found at this frequency.")
+    
  
     # --- Tab 4: Co-Drafted Dashboard ---
     with tab4:
