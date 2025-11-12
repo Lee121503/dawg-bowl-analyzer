@@ -658,12 +658,20 @@ if auth_status:
     
         # --- Draft windows ---
         total_drafts = df["Draft"].nunique()
-        max_range = min(20, total_drafts)
+        max_range = min(50, total_drafts - 2)
         draft_window = st.slider("Number of Recent Drafts to Compare", 2, max_range, 5, key="tab10_window")
+    
+        earlier_window = st.slider(
+            "Number of Earlier Drafts to Compare Against",
+            min_value=draft_window,
+            max_value=min(50, total_drafts - draft_window),
+            value=draft_window,
+            key="tab10_earlier_window"
+        )
     
         sorted_drafts = sorted(df["Draft"].unique())
         recent_drafts = sorted_drafts[-draft_window:]
-        earlier_drafts = sorted_drafts[-(2 * draft_window):-draft_window] if len(sorted_drafts) >= 2 * draft_window else []
+        earlier_drafts = sorted_drafts[-(draft_window + earlier_window):-draft_window]
     
         all_players = pd.DataFrame(df["Player"].unique(), columns=["Player"])
     
@@ -689,7 +697,7 @@ if auth_status:
         earlier_draft_counts.columns = ["Player", "Earlier Drafts"]
         earlier_draft_counts = all_players.merge(earlier_draft_counts, on="Player", how="left")
         earlier_draft_counts["Earlier Drafts"] = earlier_draft_counts["Earlier Drafts"].fillna(0)
-        earlier_draft_counts["Earlier % Drafted"] = (earlier_draft_counts["Earlier Drafts"] / draft_window * 100).round(2)
+        earlier_draft_counts["Earlier % Drafted"] = (earlier_draft_counts["Earlier Drafts"] / earlier_window * 100).round(2)
     
         # --- Merge all metrics ---
         merged = all_players.merge(adp_recent, on="Player")
