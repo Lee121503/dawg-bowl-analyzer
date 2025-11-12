@@ -854,7 +854,7 @@ if auth_status:
         st.subheader("📋 User Draft Teams")
     
         all_users = sorted(df["User"].dropna().unique())
-        selected_user = st.selectbox("Select a User", all_users, key="tab7_user")
+        selected_user = st.selectbox("Select a User", all_users, key="tab11_user")
     
         user_teams_df = df[df["User"] == selected_user][["Draft", "Team"]].drop_duplicates()
         user_teams_df = user_teams_df.sort_values("Draft", ascending=False).reset_index(drop=True)
