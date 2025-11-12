@@ -773,7 +773,7 @@ if auth_status:
         
                 replacement = available[0] if available else "None Available"
                 used_replacements.add(replacement)
-        
+                
                 swap_rows.append({
                     "Player": row["Player"],
                     "Position": pos,
@@ -781,7 +781,18 @@ if auth_status:
                     "Round": row["Round"],
                     "Pick": row["Pick"],
                     "Swap Priority": f"{row['Round']}-{13 - row['PickInRound']}",
-                    "Suggested Replacement": clean_to
+                    "Suggested Replacement": clean_to_original.get(replacement, replacement)
+                })
+                
+                # ✅ OUTSIDE the loop — after all rows are collected
+                swap_df = pd.DataFrame(swap_rows)
+                styled_swap_df = swap_df.style.format({
+                    "Pick": "{:.2f}"
+                }).background_gradient(subset=["Pick"], cmap="Oranges")
+                st.dataframe(styled_swap_df, use_container_width=True)
+
+
+    
 
  
     # --- Tab 8: ETR Leaderboard ---
