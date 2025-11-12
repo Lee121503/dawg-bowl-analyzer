@@ -856,21 +856,53 @@ if auth_status:
         all_users = sorted(df["User"].dropna().unique())
         selected_user = st.selectbox("Select a User", all_users, key="tab11_user_select")
     
-        # Get all unique (Draft, Team) combos for the selected user
-        user_teams_df = df[df["User"] == selected_user][["Draft", "Team"]].drop_duplicates()
-        user_teams_df = user_teams_df.sort_values("Draft", ascending=False).reset_index(drop=True)
+        user_df = df[df["User"] == selected_user].copy()
+        user_df = user_df.sort_values(["Draft", "Team", "Pick"])
     
-        # Get player lists for each team
-        team_players = df[df["User"] == selected_user].groupby(["Draft", "Team"])["Player"].apply(list).reset_index()
-        team_players["Players"] = team_players["Player"].apply(lambda x: ", ".join(sorted(x)))
-        team_players = team_players.drop(columns=["Player"])
+        # Group by Draft and Team
+        grouped = user_df.groupby(["Draft", "Team"])
     
-        # Merge player lists into team table
-        full_team_df = pd.merge(user_teams_df, team_players, on=["Draft", "Team"], how="left")
+        roster_rows = []
+        for (draft_id, team_id), group in grouped:
+            group = group.sort_values("Pick")
+            used_players = set()
     
-        st.write(f"Total teams drafted by `{selected_user}`: {len(full_team_df)}")
+            def get_first(pos):
+                for _, row in group.iterrows():
+                    if row["Position"] == pos and row["Player"] not in used_players:
+                        used_players.add(row["Player"])
+                        return row["Player"]
+                return ""
     
-        st.dataframe(full_team_df, use_container_width=True)
+            def get_next_flex():
+                for _, row in group.iterrows():
+                    if row["Position"] in ["RB", "WR", "TE"] and row["Player"] not in used_players:
+                        used_players.add(row["Player"])
+                        return row["Player"]
+                return ""
+    
+            qb = get_first("QB")
+            rb = get_first("RB")
+            wr1 = get_first("WR")
+            wr2 = get_first("WR")
+            te = get_first("TE")
+            flex = get_next_flex()
+    
+            roster_rows.append({
+                "Draft": draft_id,
+                "Team": team_id,
+                "QB": qb,
+                "RB": rb,
+                "WR1": wr1,
+                "WR2": wr2,
+                "TE": te,
+                "Flex": flex
+            })
+    
+        roster_df = pd.DataFrame(roster_rows).sort_values("Draft", ascending=False)
+    
+        st.write(f"Total teams drafted by `{selected_user}`: {len(roster_df)}")
+        st.dataframe(roster_df, use_container_width=True)
 
 
 
