@@ -646,13 +646,17 @@ if auth_status:
     
         with st.expander("ℹ️ What do these terms mean?"):
             st.markdown("""
-            - **Recent ADP**: The average draft position of a player over the most recent set of drafts you selected.
-            - **Earlier ADP**: The average draft position of the same player from the previous set of drafts (same size window).
-            - **ADP Change**: The difference between Earlier ADP and Recent ADP. A **positive** value means the player is being drafted **later** (falling), while a **negative** value means the player is being drafted **earlier** (rising).
-            - **Velocity**: The rate of ADP change per draft. It helps identify how quickly a player's draft position is shifting.
+            - **Recent ADP**: Average draft position over the most recent set of drafts.
+            - **Earlier ADP**: Average draft position from the previous set of drafts.
+            - **ADP Change**: Earlier ADP − Recent ADP. Positive = falling, Negative = rising.
+            - **Velocity**: ADP change per draft.
+            - **Recent % Drafted**: % of recent drafts where the player was selected.
+            - **Earlier % Drafted**: % of earlier drafts where the player was selected.
+            - **Draft Rate Change**: Earlier % − Recent %. Positive = less drafted, Negative = more drafted.
+            - **Draft Rate Velocity**: Draft rate change per draft.
             """)
     
-        # --- Draft window selection ---
+        # --- Draft windows ---
         total_drafts = df["Draft"].nunique()
         max_range = min(20, total_drafts)
         draft_window = st.slider("Number of Recent Drafts to Compare", 2, max_range, 5, key="tab10_window")
@@ -661,31 +665,48 @@ if auth_status:
         recent_drafts = sorted_drafts[-draft_window:]
         earlier_drafts = sorted_drafts[-(2 * draft_window):-draft_window] if len(sorted_drafts) >= 2 * draft_window else []
     
-        # --- Full player pool ---
         all_players = pd.DataFrame(df["Player"].unique(), columns=["Player"])
     
-        # --- Recent ADP ---
+        # --- ADP calculations ---
         adp_recent = df[df["Draft"].isin(recent_drafts)].groupby("Player")["Pick"].mean().reset_index()
         adp_recent.columns = ["Player", "Recent ADP"]
         adp_recent = all_players.merge(adp_recent, on="Player", how="left")
         adp_recent["Recent ADP"] = adp_recent["Recent ADP"].fillna(72)
     
-        # --- Earlier ADP ---
         adp_earlier = df[df["Draft"].isin(earlier_drafts)].groupby("Player")["Pick"].mean().reset_index()
         adp_earlier.columns = ["Player", "Earlier ADP"]
         adp_earlier = all_players.merge(adp_earlier, on="Player", how="left")
         adp_earlier["Earlier ADP"] = adp_earlier["Earlier ADP"].fillna(72)
     
-        # --- Merge and calculate change ---
-        adp_change = pd.merge(adp_recent, adp_earlier, on="Player", how="inner")
-        adp_change["ADP Change"] = (adp_change["Earlier ADP"] - adp_change["Recent ADP"]).round(2)
-        adp_change["Velocity"] = (adp_change["ADP Change"] / draft_window).round(2)
+        # --- % Drafted calculations ---
+        recent_draft_counts = df[df["Draft"].isin(recent_drafts)].groupby("Player")["Draft"].nunique().reset_index()
+        recent_draft_counts.columns = ["Player", "Recent Drafts"]
+        recent_draft_counts = all_players.merge(recent_draft_counts, on="Player", how="left")
+        recent_draft_counts["Recent Drafts"] = recent_draft_counts["Recent Drafts"].fillna(0)
+        recent_draft_counts["Recent % Drafted"] = (recent_draft_counts["Recent Drafts"] / draft_window * 100).round(2)
     
-        # --- Merge position and team info ---
+        earlier_draft_counts = df[df["Draft"].isin(earlier_drafts)].groupby("Player")["Draft"].nunique().reset_index()
+        earlier_draft_counts.columns = ["Player", "Earlier Drafts"]
+        earlier_draft_counts = all_players.merge(earlier_draft_counts, on="Player", how="left")
+        earlier_draft_counts["Earlier Drafts"] = earlier_draft_counts["Earlier Drafts"].fillna(0)
+        earlier_draft_counts["Earlier % Drafted"] = (earlier_draft_counts["Earlier Drafts"] / draft_window * 100).round(2)
+    
+        # --- Merge all metrics ---
+        merged = all_players.merge(adp_recent, on="Player")
+        merged = merged.merge(adp_earlier, on="Player")
+        merged = merged.merge(recent_draft_counts[["Player", "Recent % Drafted"]], on="Player")
+        merged = merged.merge(earlier_draft_counts[["Player", "Earlier % Drafted"]], on="Player")
+    
+        merged["ADP Change"] = (merged["Earlier ADP"] - merged["Recent ADP"]).round(2)
+        merged["Velocity"] = (merged["ADP Change"] / draft_window).round(2)
+        merged["Draft Rate Change"] = (merged["Earlier % Drafted"] - merged["Recent % Drafted"]).round(2)
+        merged["Draft Rate Velocity"] = (merged["Draft Rate Change"] / draft_window).round(2)
+    
+        # --- Add position and team ---
         position_map = df[["Player", "Position"]].drop_duplicates()
         team_map = df[["Player", "NFL_Team"]].drop_duplicates()
-        adp_change = adp_change.merge(position_map, on="Player", how="left")
-        adp_change = adp_change.merge(team_map, on="Player", how="left")
+        merged = merged.merge(position_map, on="Player", how="left")
+        merged = merged.merge(team_map, on="Player", how="left")
     
         # --- Filters ---
         selected_positions = st.multiselect(
@@ -694,10 +715,15 @@ if auth_status:
             default=sorted(df["Position"].dropna().unique()),
             key="tab10_position"
         )
-        adp_change = adp_change[adp_change["Position"].isin(selected_positions)]
+        merged = merged[merged["Position"].isin(selected_positions)]
     
-        min_velocity = st.slider("Minimum Velocity of Change", 0.0, 5.0, 0.5, step=0.1, key="tab10_velocity")
-        filtered_df = adp_change[adp_change["Velocity"].abs() >= min_velocity]
+        min_velocity = st.slider("Minimum ADP Velocity", 0.0, 5.0, 0.5, step=0.1, key="tab10_velocity")
+        min_draft_rate_velocity = st.slider("Minimum Draft Rate Velocity", 0.0, 10.0, 1.0, step=0.5, key="tab10_draft_velocity")
+    
+        filtered_df = merged[
+            (merged["Velocity"].abs() >= min_velocity) |
+            (merged["Draft Rate Velocity"].abs() >= min_draft_rate_velocity)
+        ]
     
         st.write(f"Filtered players: {len(filtered_df)}")
     
@@ -716,7 +742,11 @@ if auth_status:
                         "Recent ADP": st.column_config.NumberColumn(format="%.2f"),
                         "Earlier ADP": st.column_config.NumberColumn(format="%.2f"),
                         "ADP Change": st.column_config.NumberColumn(format="%.2f"),
-                        "Velocity": st.column_config.NumberColumn(format="%.2f")
+                        "Velocity": st.column_config.NumberColumn(format="%.2f"),
+                        "Recent % Drafted": st.column_config.NumberColumn(format="%.2f"),
+                        "Earlier % Drafted": st.column_config.NumberColumn(format="%.2f"),
+                        "Draft Rate Change": st.column_config.NumberColumn(format="%.2f"),
+                        "Draft Rate Velocity": st.column_config.NumberColumn(format="%.2f")
                     }
                 )
         else:
