@@ -261,7 +261,8 @@ if auth_status:
     # --- Tab 3: Combo Finder ---
     elif selected_tab == "🔍 Combo Finder":
         st.subheader("🔍 Combo Finder")
-    
+
+        all_users = sorted(df["User"].dropna().unique())
         selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="tab3_user")
     
         if selected_user != "All Users":
