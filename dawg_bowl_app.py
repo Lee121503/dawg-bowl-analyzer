@@ -381,7 +381,7 @@ if auth_status:
  
     # --- Tab 4: Co-Drafted Dashboard ---
     with tab4:
-        st.subheader("Co-Drafted Player Dashboard")
+        st.subheader("🤝 Co-Drafted Player Dashboard")
     
         all_players = sorted(df["Player"].dropna().unique())
         selected_players = st.multiselect("Select 1–3 Anchor Players", all_players, max_selections=3, key="tab4_anchors")
@@ -413,10 +413,19 @@ if auth_status:
                     "Player", "Position", "NFL_Team", "Average Draft Position", "Times Co-Drafted"
                 ]].sort_values("Times Co-Drafted", ascending=False)
     
-                st.dataframe(coplayer_summary, use_container_width=True)
+                styled_df = coplayer_summary.style.background_gradient(
+                    subset=["Times Co-Drafted", "Average Draft Position"],
+                    cmap="Blues"
+                ).format({
+                    "Average Draft Position": "{:.2f}",
+                    "Times Co-Drafted": "{:.0f}"
+                })
+    
+                st.dataframe(styled_df, use_container_width=True)
             else:
                 st.info("No teams drafted all selected players together.")
 
+    
     # --- Tab 5: User Exposure Dashboard ---
     with tab5:
         st.subheader("📊 User Exposure Dashboard")
@@ -443,7 +452,12 @@ if auth_status:
         exposure_summary["User Exposure %"] = (exposure_summary["Player Drafts"] / exposure_summary["User Drafts"] * 100).round(2)
     
         min_exposure = st.slider("Minimum Exposure %", 0.0, 100.0, 5.0, key="tab5_min_exposure")
-        filtered_df = exposure_summary[exposure_summary["User Exposure %"] >= min_exposure]
+        min_user_drafts = st.slider("Minimum Number of User Drafts", 1, 50, 3, key="tab5_min_user_drafts")
+    
+        filtered_df = exposure_summary[
+            (exposure_summary["User Exposure %"] >= min_exposure) &
+            (exposure_summary["User Drafts"] >= min_user_drafts)
+        ]
     
         st.write(f"Filtered rows: {len(filtered_df)}")
     
@@ -475,6 +489,7 @@ if auth_status:
                 )
         else:
             st.warning("No exposure data matches the current filters.")
+    
     
  
     # --- Tab 6: User Similarity Dashboard ---
