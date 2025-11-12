@@ -648,7 +648,7 @@ if auth_status:
             st.markdown("""
             - **Recent ADP**: Average draft position over the most recent set of drafts.
             - **Earlier ADP**: Average draft position from the previous set of drafts.
-            - **ADP Change**: Earlier ADP − Recent ADP. Positive = falling, Negative = rising.
+            - **ADP Change**: Earlier ADP − Recent ADP. Positive = rising, Negative = falling.
             - **Velocity**: ADP change per draft.
             - **Recent % Drafted**: % of recent drafts where the player was selected.
             - **Earlier % Drafted**: % of earlier drafts where the player was selected.
