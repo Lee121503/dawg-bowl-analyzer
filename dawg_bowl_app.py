@@ -384,51 +384,52 @@ if auth_status:
         
  
 
-    # Tab 4: Co-Drafted Dashboard
+    # --- Tab 4: Co-Drafted Dashboard ---
     elif selected_tab == "🤝 Co-Drafted Dashboard":
         st.subheader("🤝 Co-Drafted Dashboard")
-        
-            all_players = sorted(df["Player"].dropna().unique())
-            selected_players = st.multiselect("Select 1–3 Anchor Players", all_players, max_selections=3, key="tab4_anchors")
-        
-            if selected_players:
-                team_picks = df.groupby(["Draft", "Team"])["Player"].apply(list).reset_index()
-                team_picks["Has Combo"] = team_picks["Player"].apply(lambda picks: all(p in picks for p in selected_players))
-                matching_teams = team_picks[team_picks["Has Combo"]]
-        
-                if not matching_teams.empty:
-                    all_coplayers = []
-                    for picks in matching_teams["Player"]:
-                        all_coplayers.extend(picks)
-                    coplayer_counts = pd.Series(all_coplayers)
-                    coplayer_counts = coplayer_counts[~coplayer_counts.isin(selected_players)]
-                    coplayer_summary = coplayer_counts.value_counts().reset_index()
-                    coplayer_summary.columns = ["Player", "Times Co-Drafted"]
-        
-                    position_map = df[["Player", "Position"]].drop_duplicates()
-                    team_map = df[["Player", "NFL_Team"]].drop_duplicates()
-                    adp_df = calculate_adp(df).round(2)
-        
-                    coplayer_summary = coplayer_summary.merge(position_map, on="Player", how="left")
-                    coplayer_summary = coplayer_summary.merge(team_map, on="Player", how="left")
-                    coplayer_summary = coplayer_summary.merge(adp_df, on="Player", how="left")
-        
-                    coplayer_summary = coplayer_summary[coplayer_summary["Position"].isin(shared_positions)]
-                    coplayer_summary = coplayer_summary[[
-                        "Player", "Position", "NFL_Team", "Average Draft Position", "Times Co-Drafted"
-                    ]].sort_values("Times Co-Drafted", ascending=False)
-        
-                    styled_df = coplayer_summary.style.background_gradient(
-                        subset=["Times Co-Drafted", "Average Draft Position"],
-                        cmap="Blues"
-                    ).format({
-                        "Average Draft Position": "{:.2f}",
-                        "Times Co-Drafted": "{:.0f}"
-                    })
-        
-                    st.dataframe(styled_df, use_container_width=True)
-                else:
-                    st.info("No teams drafted all selected players together.")
+    
+        all_players = sorted(df["Player"].dropna().unique())
+        selected_players = st.multiselect("Select 1–3 Anchor Players", all_players, max_selections=3, key="tab4_anchors")
+    
+        if selected_players:
+            team_picks = df.groupby(["Draft", "Team"])["Player"].apply(list).reset_index()
+            team_picks["Has Combo"] = team_picks["Player"].apply(lambda picks: all(p in picks for p in selected_players))
+            matching_teams = team_picks[team_picks["Has Combo"]]
+    
+            if not matching_teams.empty:
+                all_coplayers = []
+                for picks in matching_teams["Player"]:
+                    all_coplayers.extend(picks)
+                coplayer_counts = pd.Series(all_coplayers)
+                coplayer_counts = coplayer_counts[~coplayer_counts.isin(selected_players)]
+                coplayer_summary = coplayer_counts.value_counts().reset_index()
+                coplayer_summary.columns = ["Player", "Times Co-Drafted"]
+    
+                position_map = df[["Player", "Position"]].drop_duplicates()
+                team_map = df[["Player", "NFL_Team"]].drop_duplicates()
+                adp_df = calculate_adp(df).round(2)
+    
+                coplayer_summary = coplayer_summary.merge(position_map, on="Player", how="left")
+                coplayer_summary = coplayer_summary.merge(team_map, on="Player", how="left")
+                coplayer_summary = coplayer_summary.merge(adp_df, on="Player", how="left")
+    
+                coplayer_summary = coplayer_summary[coplayer_summary["Position"].isin(shared_positions)]
+                coplayer_summary = coplayer_summary[[
+                    "Player", "Position", "NFL_Team", "Average Draft Position", "Times Co-Drafted"
+                ]].sort_values("Times Co-Drafted", ascending=False)
+    
+                styled_df = coplayer_summary.style.background_gradient(
+                    subset=["Times Co-Drafted", "Average Draft Position"],
+                    cmap="Blues"
+                ).format({
+                    "Average Draft Position": "{:.2f}",
+                    "Times Co-Drafted": "{:.0f}"
+                })
+    
+                st.dataframe(styled_df, use_container_width=True)
+            else:
+                st.info("No teams drafted all selected players together.")
+
 
     
     # --- Tab 5: User Exposure Dashboard ---
