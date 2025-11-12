@@ -103,7 +103,7 @@ if auth_status:
         st.experimental_rerun()
 
     # --- Tab Layout ---
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
         "📋 Draft Viewer",
         "📋 Player Dashboard",
         "🔍 Combo Finder",
@@ -113,7 +113,8 @@ if auth_status:
         "🩹 Injury Swap",
         "📈 ETR Leaderboard",
         "📊 ETR Impact Dashboard",
-        "📉 ADP Change Tracker"
+        "📉 ADP Change Tracker",
+        "📋 User Draft Teams"
     ])
 
     # --- Tab 1: Draft Viewer ---
@@ -848,6 +849,20 @@ if auth_status:
                 )
         else:
             st.warning("No players meet the current filters.")
+    
+    with tab11:
+        st.subheader("📋 User Draft Teams")
+    
+        all_users = sorted(df["User"].dropna().unique())
+        selected_user = st.selectbox("Select a User", all_users, key="tab7_user")
+    
+        user_teams_df = df[df["User"] == selected_user][["Draft", "Team"]].drop_duplicates()
+        user_teams_df = user_teams_df.sort_values("Draft", ascending=False).reset_index(drop=True)
+    
+        st.write(f"Total teams drafted by `{selected_user}`: {len(user_teams_df)}")
+    
+        st.dataframe(user_teams_df, use_container_width=True)
+
 
 else:
     st.warning("Please log in to access the dashboard.")
