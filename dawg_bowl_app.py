@@ -648,12 +648,12 @@ if auth_status:
             st.markdown("""
             - **Recent ADP**: Average draft position over the most recent set of drafts.
             - **Earlier ADP**: Average draft position from the previous set of drafts.
-            - **ADP Change**: Earlier ADP − Recent ADP. Positive = rising, Negative = falling.
-            - **Velocity**: ADP change per draft.
+            - **ADP Change**: Earlier ADP − Recent ADP. A **positive** value means the player is being drafted **earlier** (rising), while a **negative** value means they’re being drafted **later** (falling).
+            - **Velocity**: ADP change per draft — how fast the player's position is shifting.
             - **Recent % Drafted**: % of recent drafts where the player was selected.
             - **Earlier % Drafted**: % of earlier drafts where the player was selected.
-            - **Draft Rate Change**: Earlier % − Recent %. Positive = less drafted, Negative = more drafted.
-            - **Draft Rate Velocity**: Draft rate change per draft.
+            - **Draft Rate Change**: Earlier % − Recent %. A **positive** value means the player is being drafted **less often**, while a **negative** value means they’re being drafted **more often**.
+            - **Draft Rate Velocity**: Draft rate change per draft — how fast selection frequency is changing.
             """)
     
         # --- Draft windows ---
@@ -731,8 +731,23 @@ if auth_status:
     
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("Velocity", ascending=False)
+    
             if view_mode == "Table":
-                st.dataframe(sorted_df, use_container_width=True)
+                styled_df = sorted_df.style.background_gradient(
+                    subset=["Velocity"], cmap="coolwarm"
+                ).background_gradient(
+                    subset=["Draft Rate Velocity"], cmap="YlOrBr"
+                ).format({
+                    "Recent ADP": "{:.2f}",
+                    "Earlier ADP": "{:.2f}",
+                    "ADP Change": "{:.2f}",
+                    "Velocity": "{:.2f}",
+                    "Recent % Drafted": "{:.2f}",
+                    "Earlier % Drafted": "{:.2f}",
+                    "Draft Rate Change": "{:.2f}",
+                    "Draft Rate Velocity": "{:.2f}"
+                })
+                st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
                     sorted_df,
