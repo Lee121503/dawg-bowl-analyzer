@@ -229,7 +229,21 @@ if auth_status:
     
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("Average Draft Position")
-            st.dataframe(sorted_df[display_cols_for_table], use_container_width=True)
+    
+            gradient_cols = ["Average Draft Position", "Exposure", "Stack Rate"]
+            if "User Exposure %" in sorted_df.columns:
+                gradient_cols.append("User Exposure %")
+    
+            styled_df = sorted_df[display_cols_for_table].style.background_gradient(
+                subset=gradient_cols, cmap="Blues"
+            ).format({
+                "Average Draft Position": "{:.2f}",
+                "Exposure": "{:.2f}",
+                "Stack Rate": "{:.2f}",
+                "User Exposure %": "{:.2f}" if "User Exposure %" in sorted_df.columns else None
+            })
+    
+            st.dataframe(styled_df, use_container_width=True)
     
             csv_bytes = sorted_df.to_csv(index=False).encode("utf-8")
             st.download_button(
