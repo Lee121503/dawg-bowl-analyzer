@@ -113,7 +113,7 @@ if auth_status:
         "🩹 Injury Swap",
         "📈 ETR Leaderboard",
         "📊 ETR Impact Dashboard",
-        "📊 Visual Insights Dashboard"
+        "📉 ADP Change Tracker"
     ])
 
     # --- Tab 1: Draft Viewer ---
@@ -642,40 +642,59 @@ if auth_status:
 
     # --- Tab 10: Visual Insights Dashboard ---
     with tab10:
-        st.subheader("📊 Visual Insights Dashboard")
+        st.subheader("📉 ADP Change Tracker")
     
-        draft_counts = df.groupby("User")["Draft"].nunique().reset_index()
-        draft_counts.columns = ["User", "Drafts Entered"]
+        total_drafts = df["Draft"].nunique()
+        max_range = min(20, total_drafts)
+        draft_window = st.slider("Number of Recent Drafts to Compare", 2, max_range, 5, key="tab10_window")
     
-        player_counts = df.groupby("Player")["Draft"].nunique().reset_index()
-        player_counts.columns = ["Player", "Drafts Appeared"]
-        player_counts["Exposure %"] = (player_counts["Drafts Appeared"] / df["Draft"].nunique() * 100).round(2)
+        sorted_drafts = sorted(df["Draft"].unique())
+        recent_drafts = sorted_drafts[-draft_window:]
+        earlier_drafts = sorted_drafts[-(2 * draft_window):-draft_window] if len(sorted_drafts) >= 2 * draft_window else []
+    
+        adp_recent = df[df["Draft"].isin(recent_drafts)].groupby("Player")["Pick"].mean().reset_index()
+        adp_recent.columns = ["Player", "Recent ADP"]
+    
+        adp_earlier = df[df["Draft"].isin(earlier_drafts)].groupby("Player")["Pick"].mean().reset_index()
+        adp_earlier.columns = ["Player", "Earlier ADP"]
+    
+        adp_change = pd.merge(adp_recent, adp_earlier, on="Player", how="inner")
+        adp_change["ADP Change"] = (adp_change["Earlier ADP"] - adp_change["Recent ADP"]).round(2)
+        adp_change["Velocity"] = (adp_change["ADP Change"] / draft_window).round(2)
     
         position_map = df[["Player", "Position"]].drop_duplicates()
         team_map = df[["Player", "NFL_Team"]].drop_duplicates()
-        player_counts = player_counts.merge(position_map, on="Player", how="left")
-        player_counts = player_counts.merge(team_map, on="Player", how="left")
+        adp_change = adp_change.merge(position_map, on="Player", how="left")
+        adp_change = adp_change.merge(team_map, on="Player", how="left")
     
-        selected_positions = st.multiselect(
-            "Filter by Position",
-            sorted(df["Position"].dropna().unique()),
-            default=sorted(df["Position"].dropna().unique()),
-            key="tab10_position"
-        )
-        filtered_df = player_counts[player_counts["Position"].isin(selected_positions)]
+        selected_positions = st.multiselect("Filter by Position", sorted(df["Position"].dropna().unique()), default=sorted(df["Position"].dropna().unique()), key="tab10_position")
+        adp_change = adp_change[adp_change["Position"].isin(selected_positions)]
     
-        min_exposure = st.slider("Minimum Exposure %", 0.0, 100.0, 5.0, key="tab10_min_exposure")
-        filtered_df = filtered_df[filtered_df["Exposure %"] >= min_exposure]
+        min_velocity = st.slider("Minimum Velocity of Change", 0.0, 5.0, 0.5, step=0.1, key="tab10_velocity")
+        filtered_df = adp_change[adp_change["Velocity"].abs() >= min_velocity]
     
         st.write(f"Filtered players: {len(filtered_df)}")
     
+        view_mode = st.radio("View mode", ["Table", "Editor"], horizontal=True, key="tab10_view_mode")
+    
         if not filtered_df.empty:
-            sorted_df = filtered_df.sort_values("Exposure %", ascending=False)
-            st.dataframe(sorted_df, use_container_width=True)
+            sorted_df = filtered_df.sort_values("Velocity", ascending=False)
+            if view_mode == "Table":
+                st.dataframe(sorted_df, use_container_width=True)
+            else:
+                st.data_editor(
+                    sorted_df,
+                    use_container_width=True,
+                    height=900,
+                    column_config={
+                        "Recent ADP": st.column_config.NumberColumn(format="%.2f"),
+                        "Earlier ADP": st.column_config.NumberColumn(format="%.2f"),
+                        "ADP Change": st.column_config.NumberColumn(format="%.2f"),
+                        "Velocity": st.column_config.NumberColumn(format="%.2f")
+                    }
+                )
         else:
-            st.warning("No players match the current filters.")
-
-
+            st.warning("No players meet the current filters.")
 
 else:
     st.warning("Please log in to access the dashboard.")
