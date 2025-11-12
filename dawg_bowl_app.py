@@ -451,8 +451,17 @@ if auth_status:
     
         if not filtered_df.empty:
             sorted_df = filtered_df.sort_values("User Exposure %", ascending=False)
+    
             if view_mode == "Table":
-                st.dataframe(sorted_df, use_container_width=True)
+                styled_df = sorted_df.style.background_gradient(
+                    subset=["User Exposure %", "Player Drafts", "User Drafts"],
+                    cmap="Blues"
+                ).format({
+                    "User Exposure %": "{:.2f}",
+                    "Player Drafts": "{:.0f}",
+                    "User Drafts": "{:.0f}"
+                })
+                st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
                     sorted_df,
@@ -466,6 +475,7 @@ if auth_status:
                 )
         else:
             st.warning("No exposure data matches the current filters.")
+    
  
     # --- Tab 6: User Similarity Dashboard ---
     with tab6:
@@ -495,7 +505,12 @@ if auth_status:
     
         if not filtered_scores.empty:
             if view_mode == "Table":
-                st.dataframe(filtered_scores, use_container_width=True)
+                styled_df = filtered_scores.style.background_gradient(
+                    subset=["Similarity Score"], cmap="Blues"
+                ).format({
+                    "Similarity Score": "{:.3f}"
+                })
+                st.dataframe(styled_df, use_container_width=True)
             else:
                 st.data_editor(
                     filtered_scores,
@@ -507,8 +522,8 @@ if auth_status:
                 )
         else:
             st.info("No users meet the similarity threshold.")
-  
-    # --- Tab 7: Injury Swap Dashboard ---
+    
+      # --- Tab 7: Injury Swap Dashboard ---
     with tab7:
         st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
     
