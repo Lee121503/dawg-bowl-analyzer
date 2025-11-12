@@ -643,7 +643,15 @@ if auth_status:
     # --- Tab 10: Visual Insights Dashboard ---
     with tab10:
         st.subheader("📉 ADP Change Tracker")
-    
+
+        with st.expander("ℹ️ What do these terms mean?"):
+            st.markdown("""
+            - **Recent ADP**: The average draft position of a player over the most recent set of drafts you selected.
+            - **Earlier ADP**: The average draft position of the same player from the previous set of drafts (same size window).
+            - **ADP Change**: The difference between Earlier ADP and Recent ADP. A **positive** value means the player is being drafted **later** (falling), while a **negative** value means the player is being drafted **earlier** (rising).
+            - **Velocity**: The rate of ADP change per draft. It helps identify how quickly a player's draft position is shifting.
+            """)
+       
         total_drafts = df["Draft"].nunique()
         max_range = min(20, total_drafts)
         draft_window = st.slider("Number of Recent Drafts to Compare", 2, max_range, 5, key="tab10_window")
