@@ -718,7 +718,7 @@ if auth_status:
         merged = merged[merged["Position"].isin(selected_positions)]
     
         min_velocity = st.slider("Minimum ADP Velocity", 0.0, 5.0, 0.5, step=0.1, key="tab10_velocity")
-        min_draft_rate_velocity = st.slider("Minimum Draft Rate Velocity", 0.0, 10.0, 1.0, step=0.5, key="tab10_draft_velocity")
+        min_draft_rate_velocity = st.slider("Minimum Draft Rate Velocity", 0.0, 10.0, 0.0, step=0.5, key="tab10_draft_velocity")
     
         filtered_df = merged[
             (merged["Velocity"].abs() >= min_velocity) |
