@@ -121,9 +121,7 @@ if auth_status:
     # --- Tab 1: Draft Viewer ---
     if selected_tab == "📋 Draft Viewer":
         st.subheader("📋 Draft Viewer")
-        with tab1:
-            st.subheader("📋 Draft Viewer")
-        
+              
             all_users = sorted(df["User"].dropna().unique())
             selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="tab1_user")
         
@@ -148,8 +146,6 @@ if auth_status:
     # --- Tab 2: Player Dashboard ---
     elif selected_tab == "📋 Player Dashboard":
         st.subheader("📋 Player Dashboard")
-        with tab2:
-            st.subheader("📋 Player Dashboard")
         
             adp_df = calculate_adp(df).round(2)
             total_drafts = df["Draft"].nunique()
@@ -264,8 +260,6 @@ if auth_status:
 
     elif selected_tab == "🔍 Combo Finder":
         st.subheader("🔍 Combo Finder")
-        with tab3:
-            st.subheader("🔍 Combo Finder")
         
             selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="tab3_user")
         
@@ -391,8 +385,6 @@ if auth_status:
     # Tab 4: Co-Drafted Dashboard
     elif selected_tab == "🤝 Co-Drafted Dashboard":
         st.subheader("🤝 Co-Drafted Dashboard")
-        with tab4:
-            st.subheader("🤝 Co-Drafted Player Dashboard")
         
             all_players = sorted(df["Player"].dropna().unique())
             selected_players = st.multiselect("Select 1–3 Anchor Players", all_players, max_selections=3, key="tab4_anchors")
@@ -440,8 +432,6 @@ if auth_status:
     # Tab 5: User Exposure Dashboard
     elif selected_tab == "📊 User Exposure Dashboard":
         st.subheader("📊 User Exposure Dashboard")
-        with tab5:
-            st.subheader("📊 User Exposure Dashboard")
         
             selected_users = st.multiselect(
                 "Select Users",
@@ -507,8 +497,6 @@ if auth_status:
     # Tab 6: User Similarity Dashboard
     elif selected_tab == "🧠 User Similarity Dashboard":
         st.subheader("🧠 User Similarity Dashboard")
-        with tab6:
-            st.subheader("🧠 User Similarity Dashboard")
         
             user_player_counts = df.groupby(["User", "Player"])["Draft"].nunique().unstack(fill_value=0)
             user_draft_totals = df.groupby("User")["Draft"].nunique()
@@ -555,8 +543,6 @@ if auth_status:
     # Tab 7: Injury Swap
     elif selected_tab == "🩹 Injury Swap":
         st.subheader("🩹 Injury Swap")      
-        with tab7:
-            st.subheader(f"🩹 Injury Swap Tool — {selected_week_label}")
         
             injury_file_map = {
                 "Week 9": "Week9UD.csv",
@@ -673,9 +659,7 @@ if auth_status:
     # Tab 8: ETR Leaderboard
     elif selected_tab == "📈 ETR Leaderboard":
         st.subheader("📈 ETR Leaderboard")
-        with tab8:
-            st.subheader("📈 ETR Leaderboard")
-        
+       
             try:
                 etr_df = pd.read_csv("data/ETR Projections.csv")
             except FileNotFoundError:
@@ -697,8 +681,6 @@ if auth_status:
     # Tab 9: ETR Impact Dashboard
     elif selected_tab == "📊 ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
-        with tab9:
-            st.subheader("📊 ETR Impact Dashboard")
         
             try:
                 etr_df = pd.read_csv("data/ETR Projections.csv")
@@ -727,8 +709,6 @@ if auth_status:
     # Tab 10: ADP Change Tracker
     elif selected_tab == "📉 ADP Change Tracker":
         st.subheader("📉 ADP Change Tracker")
-        with tab10:
-            st.subheader("📉 ADP Change Tracker")
         
             with st.expander("ℹ️ What do these terms mean?"):
                 st.markdown("""
