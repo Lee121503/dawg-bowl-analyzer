@@ -19,11 +19,17 @@ def is_fuzzy_match(name, name_list, threshold=90):
     return any(fuzz.ratio(name, target) >= threshold for target in name_list)
 
 def safe_gradient_style(df, gradient_cols, cmap="Blues"):
+    # Ensure all requested gradient columns exist in the DataFrame
     valid_cols = [col for col in gradient_cols if col in df.columns]
+
     try:
+        # Apply formatting only to valid columns
         styled = df.style.format({col: "{:.2f}" for col in valid_cols})
+
+        # Apply gradient only if valid columns exist
         if valid_cols:
             styled = styled.background_gradient(subset=valid_cols, cmap=cmap)
+
         return styled
     except Exception as e:
         st.warning(f"Styling failed: {e}. Showing unstyled table.")
