@@ -1082,7 +1082,6 @@ if auth_status:
         ax.set_title("Exposure Shift: Pre vs Post")
         st.pyplot(fig)
     
-    # --- Tab 11: ADP Trend Tracker ---
     with tab11:
         st.subheader("📈 ADP Trend Tracker")
     
@@ -1136,16 +1135,20 @@ if auth_status:
     
         st.write(f"Players tracked: {len(filtered)}")
     
-        # --- Gradient styling with patch ---
-        gradient_cols = [col for col in ["Smoothed_ADP", "Velocity", "Acceleration"] if col in filtered.columns]
+        # --- Display with safe styling ---
+        gradient_candidates = ["Smoothed_ADP", "Velocity", "Acceleration"]
+        gradient_cols = [col for col in gradient_candidates if col in filtered.columns]
         display_cols = ["Player", "Position"] + gradient_cols
     
         if not filtered.empty:
-            styled_df = safe_gradient_style(filtered[display_cols], gradient_cols, cmap="coolwarm")
-            st.dataframe(styled_df, use_container_width=True)
+            try:
+                styled_df = safe_gradient_style(filtered[display_cols], gradient_cols, cmap="coolwarm")
+                st.dataframe(styled_df, use_container_width=True)
+            except Exception as e:
+                st.warning(f"Gradient styling failed: {e}. Showing raw table.")
+                st.dataframe(filtered[display_cols], use_container_width=True)
         else:
             st.warning("No players match the current filters.")
-
 
 
 elif auth_status is False:
