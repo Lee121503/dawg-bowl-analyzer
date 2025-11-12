@@ -116,7 +116,7 @@ if auth_status:
     if st.button("🔄 Reset Filters"):
         st.experimental_rerun()
     
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
         "📋 Draft Viewer",
         "📋 Player Dashboard",
         "🔍 Combo Finder",
@@ -126,7 +126,8 @@ if auth_status:
         "🩹 Injury Swap",
         "📈 ETR Leaderboard",
         "📊 ETR Impact Dashboard",
-        "📊 Visual Insights Dashboard"
+        "📊 Visual Insights Dashboard",
+        "📈 ADP Trend Tracker"
     ])
 
 
@@ -1080,6 +1081,63 @@ if auth_status:
         ax.set_ylabel("Post-ETR % Drafted")
         ax.set_title("Exposure Shift: Pre vs Post")
         st.pyplot(fig)
+    with tab11:
+        st.subheader("📈 ADP Trend Tracker")
+    
+        # --- Select number of recent drafts to analyze ---
+        max_drafts = df["Draft"].nunique()
+        recent_n = st.slider("Number of Recent Drafts", 5, max_drafts, 10)
+    
+        recent_drafts = sorted(df["Draft"].unique())[-recent_n:]
+        recent_df = df[df["Draft"].isin(recent_drafts)]
+    
+        # --- Compute ADP per draft ---
+        adp_by_draft = (
+            recent_df.groupby(["Draft", "Player"])["Pick"]
+            .mean()
+            .reset_index()
+            .sort_values(["Player", "Draft"])
+        )
+    
+        # --- Smooth ADP and compute velocity/acceleration ---
+        adp_by_draft["Smoothed_ADP"] = (
+            adp_by_draft.groupby("Player")["Pick"]
+            .transform(lambda x: x.rolling(window=3, min_periods=1).mean())
+        )
+    
+        adp_by_draft["Velocity"] = (
+            adp_by_draft.groupby("Player")["Smoothed_ADP"]
+            .transform(lambda x: x.diff())
+        )
+    
+        adp_by_draft["Acceleration"] = (
+            adp_by_draft.groupby("Player")["Velocity"]
+            .transform(lambda x: x.diff())
+        )
+    
+        # --- Latest snapshot per player ---
+        latest_snapshot = (
+            adp_by_draft.groupby("Player")
+            .tail(1)
+            .sort_values("Acceleration")
+            .reset_index(drop=True)
+        )
+    
+        # --- Filter by position ---
+        positions = sorted(df["Position"].dropna().unique())
+        selected_positions = st.multiselect("Filter by Position", positions, default=positions)
+    
+        latest_snapshot = latest_snapshot.merge(
+            df[["Player", "Position"]].drop_duplicates(), on="Player", how="left"
+        )
+        filtered = latest_snapshot[latest_snapshot["Position"].isin(selected_positions)]
+    
+        st.write(f"Players tracked: {len(filtered)}")
+    
+        # --- Display ---
+        gradient_cols = ["Smoothed_ADP", "Velocity", "Acceleration"]
+        styled_df = safe_gradient_style(filtered[["Player", "Position"] + gradient_cols], gradient_cols, cmap="coolwarm")
+        st.dataframe(styled_df, use_container_width=True)
 
 
 elif auth_status is False:
