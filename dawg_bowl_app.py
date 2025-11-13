@@ -794,7 +794,7 @@ if auth_status:
 
     
     elif selected_tab == "📈 ETR Leaderboard":
-        st.header("📈 ETR Drafted Team Viewer + Top User Leaderboard")
+        st.header("📈 Unified ETR Team Leaderboard")
         
         # --- Load ETR projections ---
         try:
@@ -815,62 +815,44 @@ if auth_status:
             # --- Merge into draft data ---
             df["CleanPlayer"] = df["Player"].apply(clean_name)
             merged = df.merge(etr_main, on="CleanPlayer", how="left")
+            merged["Round"] = merged["Pick"].astype(int)
         
-            # --- Build team tabs ---
+            # --- Build leaderboard rows ---
             team_groups = merged.groupby(["Draft", "Team"])
-            tabs = st.tabs([f"Draft {d} — Team {t}" for (d, t) in team_groups.groups.keys()])
+            leaderboard_rows = []
         
-            team_scores = []
+            for (draft_id, team_id), group in team_groups:
+                group = group.sort_values("Pick").copy()
+                user = group["User"].iloc[0]
+                total_proj = group["Half PPR Proj"].sum()
         
-            for tab, ((draft_id, team_id), group) in zip(tabs, team_groups):
-                with tab:
-                    group = group.sort_values("Pick").copy()
-                    group["Round"] = group["Pick"].astype(int)
-                    user = group["User"].iloc[0]
-                    total_proj = group["Half PPR Proj"].sum()
+                row = {
+                    "Draft": draft_id,
+                    "Team": team_id,
+                    "User": user,
+                    "Total Projection": round(total_proj, 2)
+                }
         
-                    st.markdown(f"**User:** `{user}`")
-                    st.markdown(f"**Total Projection:** `{total_proj:.2f}`")
+                for r in range(1, 13):
+                    pick = group[group["Round"] == r]
+                    if not pick.empty:
+                        player = pick["Player"].iloc[0]
+                        proj = pick["Half PPR Proj"].iloc[0]
+                        row[f"Round {r}"] = f"{player} ({proj:.1f})"
+                    else:
+                        row[f"Round {r}"] = ""
         
-                    # --- Pivot to round columns ---
-                    round_df = group.pivot(index=None, columns="Round", values="Player")
-                    round_proj = group.pivot(index=None, columns="Round", values="Half PPR Proj")
+                leaderboard_rows.append(row)
         
-                    display_df = pd.DataFrame()
-                    for r in range(1, 13):
-                        if r in round_df.columns:
-                            display_df[f"Round {r}"] = round_df[r] + " (" + round_proj[r].round(1).astype(str) + ")"
-                        else:
-                            display_df[f"Round {r}"] = ""
+            # --- Display leaderboard ---
+            leaderboard_df = pd.DataFrame(leaderboard_rows)
+            leaderboard_df = leaderboard_df.sort_values("Total Projection", ascending=False)
         
-                    st.dataframe(display_df, use_container_width=True)
+            styled = leaderboard_df.style.format({
+                "Total Projection": "{:.2f}"
+            }).background_gradient(subset=["Total Projection"], cmap="Greens")
         
-                    team_scores.append({
-                        "Draft": draft_id,
-                        "Team": team_id,
-                        "User": user,
-                        "Total Projection": total_proj
-                    })
-        
-            # --- Build leaderboard of top users ---
-            st.markdown("### 🧠 Top User Leaderboard")
-        
-            percentile = st.selectbox("Select Top % Threshold", ["0.1%", "0.5%", "1%"])
-            threshold_map = {"0.1%": 0.001, "0.5%": 0.005, "1%": 0.01}
-            threshold = threshold_map[percentile]
-        
-            score_df = pd.DataFrame(team_scores)
-            cutoff = score_df["Total Projection"].quantile(1 - threshold)
-            top_teams = score_df[score_df["Total Projection"] >= cutoff]
-        
-            user_counts = top_teams["User"].value_counts().reset_index()
-            user_counts.columns = ["User", "Top Teams"]
-        
-            styled_leaderboard = user_counts.style.format({
-                "Top Teams": "{:.0f}"
-            }).background_gradient(subset=["Top Teams"], cmap="Greens")
-        
-            st.dataframe(styled_leaderboard, use_container_width=True)
+            st.dataframe(styled, use_container_width=True)
 
     # --- Tab 9: ETR Impact Dashboard ---
     elif selected_tab == "📊 ETR Impact Dashboard":
