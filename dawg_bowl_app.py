@@ -1252,12 +1252,22 @@ if auth_status:
         user_df = df[df["User"] == selected_user].copy()
         user_df = user_df.sort_values(["Draft", "Team", "Pick"])
     
+        # Optional player filter
+        all_players = sorted(user_df["Player"].dropna().unique())
+        selected_players = st.multiselect("Filter by Player(s)", all_players, key="tab11_player_filter")
+    
         # Group by Draft and Team
         grouped = user_df.groupby(["Draft", "Team"])
     
         roster_rows = []
         for (draft_id, team_id), group in grouped:
             group = group.sort_values("Pick")
+            team_players = set(group["Player"])
+    
+            # Apply player filter: skip teams that don't include all selected players
+            if selected_players and not all(p in team_players for p in selected_players):
+                continue
+    
             used_players = set()
     
             def get_first(pos):
@@ -1294,7 +1304,7 @@ if auth_status:
     
         roster_df = pd.DataFrame(roster_rows).sort_values("Draft", ascending=False)
     
-        st.write(f"Total teams drafted by `{selected_user}`: {len(roster_df)}")
+        st.write(f"Total teams drafted by `{selected_user}` matching filter: {len(roster_df)}")
         st.dataframe(roster_df, use_container_width=True)
 
     
