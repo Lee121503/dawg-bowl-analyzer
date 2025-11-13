@@ -1246,25 +1246,31 @@ if auth_status:
     elif selected_tab == "📋 User Draft Teams":
         st.subheader("📋 User Draft Teams")
     
+        # --- Load ETR projections and normalize ---
+        etr_main = etr_df[etr_df["Slate"].str.upper() == "MAIN"].copy()
+        etr_main["CleanPlayer"] = etr_main["Player"].apply(clean_name)
+        proj_lookup = dict(zip(etr_main["CleanPlayer"], etr_main["Half PPR Proj"]))
+    
+        # --- User selection ---
         all_users = sorted(df["User"].dropna().unique())
         selected_user = st.selectbox("Select a User", all_users, key="tab11_user_select")
     
         user_df = df[df["User"] == selected_user].copy()
         user_df = user_df.sort_values(["Draft", "Team", "Pick"])
     
-        # Optional player filter
+        # --- Optional player filter ---
         all_players = sorted(user_df["Player"].dropna().unique())
         selected_players = st.multiselect("Filter by Player(s)", all_players, key="tab11_player_filter")
     
-        # Group by Draft and Team
+        # --- Group by Draft and Team ---
         grouped = user_df.groupby(["Draft", "Team"])
-    
         roster_rows = []
+    
         for (draft_id, team_id), group in grouped:
             group = group.sort_values("Pick")
             team_players = set(group["Player"])
     
-            # Apply player filter: skip teams that don't include all selected players
+            # Filter: skip teams that don't include all selected players
             if selected_players and not all(p in team_players for p in selected_players):
                 continue
     
@@ -1291,6 +1297,10 @@ if auth_status:
             te = get_first("TE")
             flex = get_next_flex()
     
+            # Calculate team ETR projection
+            team_players_list = [qb, rb, wr1, wr2, te, flex]
+            team_proj = sum(proj_lookup.get(clean_name(p), 0) for p in team_players_list if p)
+    
             roster_rows.append({
                 "Draft": draft_id,
                 "Team": team_id,
@@ -1299,14 +1309,21 @@ if auth_status:
                 "WR1": wr1,
                 "WR2": wr2,
                 "TE": te,
-                "Flex": flex
+                "Flex": flex,
+                "ETR Projection": round(team_proj, 2)
             })
     
         roster_df = pd.DataFrame(roster_rows).sort_values("Draft", ascending=False)
     
         st.write(f"Total teams drafted by `{selected_user}` matching filter: {len(roster_df)}")
-        st.dataframe(roster_df, use_container_width=True)
-
+    
+        if not roster_df.empty:
+            styled = roster_df.style.background_gradient(
+                subset=["ETR Projection"], cmap="Greens"
+            ).format({"ETR Projection": "{:.2f}"})
+            st.dataframe(styled, use_container_width=True)
+        else:
+            st.info("No teams match the selected filters.")
     
 else:
     st.warning("Please log in to access the dashboard.")
