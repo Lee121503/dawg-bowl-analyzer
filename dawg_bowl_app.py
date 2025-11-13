@@ -594,9 +594,9 @@ if auth_status:
             "Week 10": "week10UD.csv",
             "Week 11": "week11UD.csv"
         }
-        injury_file = injury_file_map.get(selected_week_label, "week10UD.csv")
+        injury_file = injury_file_map.get(selected_week_label, "week11UD.csv")
         injury_df = pd.read_csv(f"data/{injury_file}")
-        etr_df = pd.read_csv("data/ETR Projections.csv")
+        etr_df = pd.read_csv("data/ETR Projections.csv", sep="\t")
         
         # --- Normalize injury data ---
         injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
@@ -626,11 +626,13 @@ if auth_status:
             team_df = team_df.sort_values("Pick").copy()
             pos_counts = {"RB": 0, "WR": 0, "TE": 0}
             flex_flags = []
+        
             for _, row in team_df.iterrows():
                 pos = row["Position"]
                 if pos not in pos_counts:
                     flex_flags.append(False)
                     continue
+        
                 pos_counts[pos] += 1
                 if (pos == "RB" and pos_counts[pos] == 2) or \
                    (pos == "WR" and pos_counts[pos] == 3) or \
@@ -638,6 +640,7 @@ if auth_status:
                     flex_flags.append(True)
                 else:
                     flex_flags.append(False)
+        
             team_df["IsFlex"] = flex_flags
             return team_df
         
@@ -694,103 +697,89 @@ if auth_status:
         # --- Match mode toggle ---
         match_mode = st.radio("Replacement Match Mode", ["Fuzzy", "Exact"], horizontal=True)
         
-        # --- Display flagged drafts for selected user ---
-        out_names = set(sum(out_players.values(), []) + list(st.session_state.manual_out))
+        # --- Identify flagged drafts ---
         flagged_drafts = []
-        
+        out_names = sum(out_players.values(), []) + list(st.session_state.manual_out)
         for draft_id in user_drafts["Draft"].unique():
             full_draft = df[df["Draft"] == draft_id]
-            team_id = user_drafts[user_drafts["Draft"] == draft_id]["Team"].iloc[0]
-            team_df = full_draft[full_draft["Team"] == team_id].copy()
-            team_df = team_df.sort_values("Pick")
+            user_picks = user_drafts[user_drafts["Draft"] == draft_id]
+            user_out_picks = user_picks[user_picks["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))]
+            if not user_out_picks.empty:
+                flagged_drafts.append((draft_id, full_draft, user_out_picks))
         
-            out_picks = team_df[team_df["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))]
-            if not out_picks.empty:
-                flagged_drafts.append((draft_id, team_id, team_df, out_picks))
+        # --- Display flagged drafts ---
+        if flagged_drafts:
+            st.subheader(f"Flagged Drafts for {user}")
+            for draft_id, full_draft, user_out_picks in flagged_drafts:
+                st.markdown(f"### Draft {draft_id}")
+                st.dataframe(full_draft)
+                st.markdown("**Out Players for This User:**")
+                st.dataframe(user_out_picks)
         
-        st.subheader(f"Flagged Drafts for {user}")
-        st.write(f"Total flagged drafts: {len(flagged_drafts)}")
-        
-        for draft_id, team_id, team_df, out_picks in flagged_drafts:
-            st.markdown(f"### 🏈 Draft {draft_id} — Team {team_id} — User: `{user}`")
-        
-            styled_team = team_df[["Pick", "Player", "Position", "NFL_Team", "CleanPlayer"]].style.applymap(
-                lambda v: "background-color: #ffcccc" if v in set(out_picks["CleanPlayer"]) else "",
-                subset=["CleanPlayer"]
-            )
-            st.dataframe(styled_team, use_container_width=True)
-        
-            st.markdown("#### 🩹 Suggested Replacements")
-            drafted_names = set(team_df["CleanPlayer"])
-        
-            for _, row in out_picks.iterrows():
-                name = row["CleanPlayer"]
-                pos = row["Position"]
-                st.write(f"- `{name}` ({pos}) is OUT")
-        
-                if pos in rankings:
+                # --- Replacement suggestions for affected positions ---
+                affected_positions = user_out_picks["Position"].unique()
+                for pos in affected_positions:
+                    drafted = set(full_draft[full_draft["Position"] == pos]["CleanPlayer"])
                     if match_mode == "Fuzzy":
-                        replacements = [p for p in rankings[pos] if not is_fuzzy_match(p, drafted_names)]
+                        available = [p for p in rankings.get(pos, []) if not is_fuzzy_match(p, drafted)]
                     else:
-                        replacements = [p for p in rankings[pos] if p not in drafted_names]
+                        available = [p for p in rankings.get(pos, []) if p not in drafted]
         
-                    if replacements:
-                        top = replacements[0]
-                        original = clean_to_original.get(top, top)
-                        proj = proj_lookup.get(top, "N/A")
-                        ceiling = ceiling_lookup.get(top, "N/A")
-                        st.markdown(f"**Recommended:** `{original}` — Proj: `{proj}` — Ceiling: `{ceiling}`")
-                    else:
-                        st.markdown("_No available replacements on slate_")
-                else:
-                    st.markdown("_No rankings available for this position_")
+                    st.markdown(f"**Top {pos} replacements:**")
+                    for p in available[:5]:
+                        name = clean_to_original.get(p, p)
+                        proj = proj_lookup.get(p, "N/A")
+                        ceiling = ceiling_lookup.get(p, "N/A")
+                        st.write(f"{name} — Proj: {proj}, FD Ceiling: {ceiling}")
         
-            # --- Swap Priority Table ---
-            st.markdown("#### 🔄 Swap Priority Table")
-            injured_sorted = out_picks.copy()
-            injured_sorted["Round"] = injured_sorted["Pick"].astype(int)
-            injured_sorted["PickInRound"] = injured_sorted["Pick"].astype(int)
-            injured_sorted["Swap Priority"] = injured_sorted.apply(
-                lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
-            )
-            injured_sorted = injured_sorted.sort_values("Swap Priority")
+                # --- Swap Priority Table ---
+                st.markdown("**Swap Priority for Injured Picks in This Draft (Underdog Logic):**")
+                injured_in_draft = full_draft[full_draft["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))].copy()
+                injured_in_draft["Round"] = injured_in_draft["Pick"].astype(int)
+                injured_in_draft["PickInRound"] = injured_in_draft["Pick"].astype(int)
+                injured_in_draft["Swap Priority"] = injured_in_draft.apply(
+                    lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
+                )
+                injured_sorted = injured_in_draft.sort_values("Swap Priority")
         
-            swap_rows = []
-            used_replacements = set()
-            for _, row in injured_sorted.iterrows():
-                pos = row["Position"]
-                is_flex = row.get("IsFlex", False)
-                eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
-                drafted = set(team_df["CleanPlayer"])
+                swap_rows = []
+                used_replacements = set()
+                for _, row in injured_sorted.iterrows():
+                    pos = row["Position"]
+                    team_id = row["Team"]
+                    user_name = row["User"]
+                    is_flex = row.get("IsFlex", False)
+                    drafted = set(full_draft["CleanPlayer"])
         
-                available = []
-                for ep in eligible_positions:
-                    pool = rankings.get(ep, [])
-                    for p in pool:
-                        if p not in drafted and p not in used_replacements:
-                            available.append(p)
-                            break
+                    eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
+                    available = []
+                    for ep in eligible_positions:
+                        pool = rankings.get(ep, [])
+                        for p in pool:
+                            if p not in drafted and p not in used_replacements:
+                                available.append(p)
+                                break
         
-                replacement = available[0] if available else "None Available"
-                used_replacements.add(replacement)
-                
-                swap_rows.append({
-                    "Player": row["Player"],
-                    "Position": pos,
-                    "Is Flex": is_flex,
-                    "Round": row["Round"],
-                    "Pick": row["Pick"],
-                    "Swap Priority": f"{row['Round']}-{13 - row['PickInRound']}",
-                    "Suggested Replacement": clean_to_original.get(replacement, replacement)
-                })
-                
-                # ✅ OUTSIDE the loop — after all rows are collected
+                    replacement = available[0] if available else "None Available"
+                    used_replacements.add(replacement)
+        
+                    swap_rows.append({
+                        "Team": team_id,
+                        "User": user_name,
+                        "Player": row["Player"],
+                        "Position": pos,
+                        "Is Flex": is_flex,
+                        "Round": row["Round"],
+                        "Pick": row["Pick"],
+                        "Swap Priority": f"{row['Round']}-{13 - row['PickInRound']}",
+                        "Suggested Replacement": clean_to_original.get(replacement, replacement)
+                    })
+        
                 swap_df = pd.DataFrame(swap_rows)
                 styled_swap_df = swap_df.style.format({
                     "Pick": "{:.2f}"
                 }).background_gradient(subset=["Pick"], cmap="Oranges")
                 st.dataframe(styled_swap_df, use_container_width=True)
-
 
     elif selected_tab == "📈 ETR Leaderboard":
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
