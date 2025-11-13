@@ -1025,6 +1025,13 @@ if auth_status:
     elif selected_tab == "ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
     
+        # --- Confirm data is loaded ---
+        st.write("DF shape:", df.shape)
+        st.write("DF columns:", df.columns.tolist())
+        st.write("First few rows of DF:")
+        st.dataframe(df.head())
+
+    
         # --- Validate required columns ---
         required_cols = ["Player", "Draft", "Pick", "ETR Timing"]
         missing_cols = [col for col in required_cols if col not in df.columns]
