@@ -1075,18 +1075,14 @@ if auth_status:
             pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
             pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
     
-            # Rename safely
-            rename_map = {}
-            for col in pivot.columns:
-                if "ADP_Pre" in col or "ADP_Pre-ETR" in col:
-                    rename_map[col] = "ADP_Pre"
-                elif "ADP_Post" in col or "ADP_Post-ETR" in col:
-                    rename_map[col] = "ADP_Post"
-                elif "Drafted_Pre" in col or "% Drafted_Pre-ETR" in col:
-                    rename_map[col] = "Pct_Pre"
-                elif "Drafted_Post" in col or "% Drafted_Post-ETR" in col:
-                    rename_map[col] = "Pct_Post"
-            pivot = pivot.rename(columns=rename_map)
+            # Rename safely for Pre-ETR and Post-ETR
+            rename_map = {
+                "ADP_Pre-ETR": "ADP_Pre",
+                "ADP_Post-ETR": "ADP_Post",
+                "% Drafted_Pre-ETR": "Pct_Pre",
+                "% Drafted_Post-ETR": "Pct_Post"
+            }
+            pivot = pivot.rename(columns={k: v for k, v in rename_map.items() if k in pivot.columns})
     
             # Merge with overall stats
             summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
@@ -1112,6 +1108,7 @@ if auth_status:
                 "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
             }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
             st.dataframe(styled, use_container_width=True)
+
 
 
     # --- Tab 10: ADP Change Tracker ---
