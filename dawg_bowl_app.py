@@ -880,9 +880,12 @@ if auth_status:
     
         st.dataframe(styled_swap_df, use_container_width=True)
 
-        # --- Export CSV: UD ID and Player Name ---
+        # --- Build lookup from CleanName to Underdog ID ---
+        injury_id_lookup = dict(zip(injury_df["CleanName"], injury_df["id"]))
+        
+        # --- Export CSV: id and Player Name ---
         export_df = pd.DataFrame({
-            "UD_ID": [p for p in unique_suggestions],
+            "id": [injury_id_lookup.get(p, "") for p in unique_suggestions],
             "Player": [clean_to_original.get(p, p) for p in unique_suggestions]
         })
         
@@ -893,7 +896,6 @@ if auth_status:
             file_name="global_swap_list.csv",
             mime="text/csv"
         )
-
 
     
 
