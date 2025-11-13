@@ -1246,10 +1246,15 @@ if auth_status:
     elif selected_tab == "📋 User Draft Teams":
         st.subheader("📋 User Draft Teams")
     
-        # --- Load ETR projections and normalize ---
-        etr_main = etr_df[etr_df["Slate"].str.upper() == "MAIN"].copy()
-        etr_main["CleanPlayer"] = etr_main["Player"].apply(clean_name)
-        proj_lookup = dict(zip(etr_main["CleanPlayer"], etr_main["Half PPR Proj"]))
+        # --- Load ETR projections ---
+        try:
+            etr_df = pd.read_csv("data/ETR Projections.csv", sep="\t")
+            etr_main = etr_df[etr_df["Slate"].str.upper() == "MAIN"].copy()
+            etr_main["CleanPlayer"] = etr_main["Player"].apply(clean_name)
+            proj_lookup = dict(zip(etr_main["CleanPlayer"], etr_main["Half PPR Proj"]))
+        except Exception:
+            st.warning("ETR projections file not found or malformed.")
+            proj_lookup = {}
     
         # --- User selection ---
         all_users = sorted(df["User"].dropna().unique())
@@ -1324,6 +1329,7 @@ if auth_status:
             st.dataframe(styled, use_container_width=True)
         else:
             st.info("No teams match the selected filters.")
+
     
 else:
     st.warning("Please log in to access the dashboard.")
