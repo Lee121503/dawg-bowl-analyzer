@@ -1031,8 +1031,8 @@ if auth_status:
         if missing_cols:
             st.error(f"Missing columns in contest data: {missing_cols}")
         else:
-            # Normalize ETR Timing labels
-            df["ETR Timing"] = df["ETR Timing"].str.strip().str.replace("-ETR", "").str.title()
+            # Normalize ETR Timing labels BEFORE grouping
+            df["ETR Timing"] = df["ETR Timing"].astype(str).str.strip().str.replace("-ETR", "").str.title()
     
             # Clean player names
             df["CleanPlayer"] = df["Player"].apply(clean_name)
@@ -1090,28 +1090,39 @@ if auth_status:
             # Merge with overall stats
             summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
     
-            # Calculate differences
-            summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
-            summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+            # Check if required columns exist before calculating diffs
+            if "ADP_Pre" in summary.columns and "ADP_Post" in summary.columns:
+                summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+            else:
+                summary["ADP_Diff"] = None
+    
+            if "Pct_Pre" in summary.columns and "Pct_Post" in summary.columns:
+                summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+            else:
+                summary["Pct_Diff"] = None
     
             # Add original player name
             name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
             summary = summary.merge(name_map, on="CleanPlayer", how="left")
     
-            # Reorder columns
-            summary = summary[[
+            # Reorder columns safely
+            display_cols = [
                 "Player", "ADP_Pre", "ADP_Post", "ADP_All", "ADP_Diff",
                 "Pct_Pre", "Pct_Post", "% Drafted_All", "Pct_Diff"
-            ]].sort_values("ADP_Diff", ascending=False)
+            ]
+            existing_cols = [col for col in display_cols if col in summary.columns]
+            summary = summary[existing_cols].sort_values("ADP_Diff", ascending=False)
     
-            # Display diagnostics if empty
+            # Final diagnostics
+            st.write("Summary shape:", summary.shape)
+            st.write("Summary preview:", summary.head())
+            st.write("Pivot columns:", pivot.columns.tolist())
+            st.write("ETR Timing values:", df["ETR Timing"].unique())
+    
+            # Display styled table
             if summary.empty:
                 st.warning("No data available to render ETR Impact Dashboard.")
-                st.write("Pivot columns:", pivot.columns.tolist())
-                st.write("Grouped preview:", grouped.head())
-                st.write("All grouped preview:", all_grouped.head())
             else:
-                st.write(f"Players compared: {len(summary)}")
                 styled = summary.style.format({
                     "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
                     "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
