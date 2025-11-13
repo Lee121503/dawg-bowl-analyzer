@@ -1031,6 +1031,9 @@ if auth_status:
         if missing_cols:
             st.error(f"Missing columns in contest data: {missing_cols}")
         else:
+            # Normalize ETR Timing labels
+            df["ETR Timing"] = df["ETR Timing"].str.strip().str.replace("-ETR", "").str.title()
+    
             # Clean player names
             df["CleanPlayer"] = df["Player"].apply(clean_name)
     
@@ -1075,12 +1078,12 @@ if auth_status:
             pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
             pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
     
-            # Rename safely for Pre-ETR and Post-ETR
+            # Rename safely for normalized timing labels
             rename_map = {
-                "ADP_Pre-ETR": "ADP_Pre",
-                "ADP_Post-ETR": "ADP_Post",
-                "% Drafted_Pre-ETR": "Pct_Pre",
-                "% Drafted_Post-ETR": "Pct_Post"
+                "ADP_Pre": "ADP_Pre",
+                "ADP_Post": "ADP_Post",
+                "% Drafted_Pre": "Pct_Pre",
+                "% Drafted_Post": "Pct_Post"
             }
             pivot = pivot.rename(columns={k: v for k, v in rename_map.items() if k in pivot.columns})
     
@@ -1101,14 +1104,19 @@ if auth_status:
                 "Pct_Pre", "Pct_Post", "% Drafted_All", "Pct_Diff"
             ]].sort_values("ADP_Diff", ascending=False)
     
-            # Display
-            st.write(f"Players compared: {len(summary)}")
-            styled = summary.style.format({
-                "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
-                "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
-            }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
-            st.dataframe(styled, use_container_width=True)
-
+            # Display diagnostics if empty
+            if summary.empty:
+                st.warning("No data available to render ETR Impact Dashboard.")
+                st.write("Pivot columns:", pivot.columns.tolist())
+                st.write("Grouped preview:", grouped.head())
+                st.write("All grouped preview:", all_grouped.head())
+            else:
+                st.write(f"Players compared: {len(summary)}")
+                styled = summary.style.format({
+                    "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
+                    "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
+                }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
+                st.dataframe(styled, use_container_width=True)
 
 
     # --- Tab 10: ADP Change Tracker ---
