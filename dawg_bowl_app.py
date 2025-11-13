@@ -796,10 +796,21 @@ if auth_status:
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
     
         # --- Load and normalize ETR projections ---
-        etr_df = pd.read_csv("data/ETR Projections.csv")
-        main_slate = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
-        main_slate = main_slate[["Player", "Half PPR Proj"]].dropna()
-        main_slate["CleanPlayer"] = main_slate["Player"].apply(clean_name)
+        try:
+            etr_df = pd.read_csv("data/ETR Projections.csv", sep="\t")
+        except FileNotFoundError:
+            st.error("ETR projections file not found.")
+            st.stop()
+    
+        required_cols = {"Player", "Half PPR Proj", "Slate"}
+        if not required_cols.issubset(set(etr_df.columns)):
+            st.error("ETR file is missing required columns. Please check formatting.")
+            st.stop()
+    
+        etr_df["CleanPlayer"] = etr_df["Player"].apply(clean_name)
+        etr_df["Slate"] = etr_df["Slate"].str.upper().str.strip()
+        main_slate = etr_df[etr_df["Slate"] == "MAIN"]
+        main_slate = main_slate[["Player", "Half PPR Proj", "CleanPlayer"]].dropna()
         proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
     
         # --- Normalize draft data ---
@@ -848,17 +859,23 @@ if auth_status:
         # --- Dashboard 1: Top 100 Team Frequency ---
         st.markdown("### 📊 Top 100 Team Frequency by User")
     
+        # Get top 100 teams from full leaderboard (not filtered)
         top_100_df = leaderboard_df.sort_values("Projected Points", ascending=False).head(100)
+    
+        # Count top 100 appearances per user
         top_counts = top_100_df["User"].value_counts().reset_index()
         top_counts.columns = ["User", "Top 100 Teams"]
     
+        # Count total teams per user
         total_counts = leaderboard_df["User"].value_counts().reset_index()
         total_counts.columns = ["User", "Total Teams"]
     
+        # Merge and calculate percentage
         user_summary = pd.merge(total_counts, top_counts, on="User", how="left").fillna(0)
         user_summary["Top 100 Teams"] = user_summary["Top 100 Teams"].astype(int)
         user_summary["% in Top 100"] = (user_summary["Top 100 Teams"] / user_summary["Total Teams"] * 100).round(2)
     
+        # Display
         styled_summary = user_summary.sort_values("Top 100 Teams", ascending=False).style.format({
             "% in Top 100": "{:.2f}"
         }).background_gradient(subset=["Top 100 Teams", "% in Top 100"], cmap="Blues")
@@ -867,20 +884,27 @@ if auth_status:
         # --- Dashboard 2: Top 30 Player Frequency + ADP Comparison ---
         st.markdown("### 📊 Top 30 Player Frequency and ADP Comparison")
     
+        # Get top 30 teams from full leaderboard
         top_30_df = leaderboard_df.sort_values("Projected Points", ascending=False).head(30)
+    
+        # Get all players from those teams
         top_30_teams = df.merge(top_30_df[["Draft", "Team"]], on=["Draft", "Team"])
     
+        # Count appearances and average ADP in top 30 teams
         top_player_counts = top_30_teams.groupby("Player")["Pick"].agg([
             ("Top 30 Appearances", "count"),
             ("Top 30 ADP", "mean")
         ]).reset_index()
     
+        # Get overall ADP across all teams
         overall_adp = df.groupby("Player")["Pick"].mean().reset_index()
         overall_adp.columns = ["Player", "Overall ADP"]
     
+        # Merge and calculate ADP delta
         player_summary = pd.merge(top_player_counts, overall_adp, on="Player", how="left")
         player_summary["ADP Delta"] = (player_summary["Overall ADP"] - player_summary["Top 30 ADP"]).round(2)
     
+        # Display
         player_summary = player_summary.sort_values("Top 30 Appearances", ascending=False)
         styled_players = player_summary.style.format({
             "Top 30 ADP": "{:.2f}",
@@ -888,7 +912,6 @@ if auth_status:
             "ADP Delta": "{:.2f}"
         }).background_gradient(subset=["Top 30 Appearances", "ADP Delta"], cmap="Purples")
         st.dataframe(styled_players, use_container_width=True)
-    
 
     
     # --- Tab 9: ETR Impact Dashboard ---
