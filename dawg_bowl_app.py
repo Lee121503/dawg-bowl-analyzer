@@ -1025,47 +1025,99 @@ if auth_status:
     elif selected_tab == "ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
     
-        # Step 1: Clean and normalize
-        df["ETR Timing"] = df["ETR Timing"].astype(str).str.strip()
-        df["CleanPlayer"] = df["Player"].apply(clean_name)
+        # --- Validate required columns ---
+        required_cols = ["Player", "Draft", "Pick", "ETR Timing"]
+        missing_cols = [col for col in required_cols if col not in df.columns]
+        if missing_cols:
+            st.error(f"Missing columns in contest data: {missing_cols}")
+        else:
+            # --- Normalize timing labels ---
+            df["ETR Timing"] = df["ETR Timing"].astype(str).str.strip().str.replace("-ETR", "").str.title()
+            df["CleanPlayer"] = df["Player"].apply(clean_name)
     
-        # Step 2: Basic draft counts
-        total_drafts = df["Draft"].nunique()
-        draft_counts = df.groupby("ETR Timing")["Draft"].nunique().to_dict()
+            # --- Draft counts ---
+            total_drafts = df["Draft"].nunique()
+            draft_counts = df.groupby("ETR Timing")["Draft"].nunique().to_dict()
     
-        # Step 3: Full player × draft grid
-        all_players = df["CleanPlayer"].unique()
-        all_drafts = df[["Draft", "ETR Timing"]].drop_duplicates()
-        full_grid = pd.MultiIndex.from_product(
-            [all_players, all_drafts["Draft"]],
-            names=["CleanPlayer", "Draft"]
-        ).to_frame(index=False)
-        full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
+            # --- Full player × draft grid ---
+            all_players = df["CleanPlayer"].unique()
+            all_drafts = df[["Draft", "ETR Timing"]].drop_duplicates()
+            full_grid = pd.MultiIndex.from_product(
+                [all_players, all_drafts["Draft"]],
+                names=["CleanPlayer", "Draft"]
+            ).to_frame(index=False)
+            full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
     
-        # Step 4: Merge picks
-        merged = full_grid.merge(
-            df[["Draft", "CleanPlayer", "Pick"]],
-            on=["Draft", "CleanPlayer"],
-            how="left"
-        )
-        merged["Pick"] = merged["Pick"].fillna(72)
+            # --- Merge picks ---
+            merged = full_grid.merge(
+                df[["Draft", "CleanPlayer", "Pick"]],
+                on=["Draft", "CleanPlayer"],
+                how="left"
+            )
+            merged["Pick"] = merged["Pick"].fillna(72)
     
-        # Step 5: Group by player and timing
-        grouped = merged.groupby(["CleanPlayer", "ETR Timing"]).agg(
-            ADP=("Pick", "mean"),
-            Drafted=("Pick", lambda x: (x < 72).sum())
-        ).reset_index()
-        grouped["Pct Drafted"] = grouped.apply(
-            lambda row: row["Drafted"] / draft_counts.get(row["ETR Timing"], 1), axis=1
-        )
+            # --- Group by player and timing ---
+            grouped = merged.groupby(["CleanPlayer", "ETR Timing"]).agg(
+                ADP=("Pick", "mean"),
+                Drafted=("Pick", lambda x: (x < 72).sum())
+            ).reset_index()
+            grouped["Pct Drafted"] = grouped.apply(
+                lambda row: row["Drafted"] / draft_counts.get(row["ETR Timing"], 1), axis=1
+            )
     
-        # Step 6: Add player names back
-        name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
-        grouped = grouped.merge(name_map, on="CleanPlayer", how="left")
+            # --- Group across all drafts ---
+            all_grouped = merged.groupby("CleanPlayer").agg(
+                ADP_All=("Pick", "mean"),
+                Drafted_All=("Pick", lambda x: (x < 72).sum())
+            ).reset_index()
+            all_grouped["Pct Drafted_All"] = all_grouped["Drafted_All"] / total_drafts
     
-        # Step 7: Display raw table
-        st.write("Grouped shape:", grouped.shape)
-        st.dataframe(grouped.sort_values(["ETR Timing", "ADP"]), use_container_width=True)
+            # --- Pivot Pre/Post ---
+            pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "Pct Drafted"])
+            pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
+    
+            # --- Rename columns ---
+            rename_map = {
+                "ADP_Pre": "ADP_Pre",
+                "ADP_Post": "ADP_Post",
+                "Pct Drafted_Pre": "Pct_Pre",
+                "Pct Drafted_Post": "Pct_Post"
+            }
+            pivot = pivot.rename(columns={k: v for k, v in rename_map.items() if k in pivot.columns})
+    
+            # --- Merge with overall stats ---
+            summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
+    
+            # --- Calculate differences ---
+            summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+            summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+    
+            # --- Add original player name ---
+            name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
+            summary = summary.merge(name_map, on="CleanPlayer", how="left")
+    
+            # --- Reorder columns ---
+            display_cols = [
+                "Player", "ADP_Pre", "ADP_Post", "ADP_All", "ADP_Diff",
+                "Pct_Pre", "Pct_Post", "Pct Drafted_All", "Pct_Diff"
+            ]
+            existing_cols = [col for col in display_cols if col in summary.columns]
+            summary = summary[existing_cols].sort_values("ADP_Diff", ascending=False)
+    
+            # --- Display diagnostics ---
+            st.write("Summary shape:", summary.shape)
+            st.write("ETR Timing values:", df["ETR Timing"].unique())
+            st.write("Pivot columns:", pivot.columns.tolist())
+    
+            # --- Display styled table ---
+            if summary.empty:
+                st.warning("No data available to render ETR Impact Dashboard.")
+            else:
+                styled = summary.style.format({
+                    "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
+                    "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "Pct Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
+                }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
+                st.dataframe(styled, use_container_width=True)
 
     # --- Tab 10: ADP Change Tracker ---
     elif selected_tab == "📉 ADP Change Tracker":
