@@ -794,7 +794,7 @@ if auth_status:
 
     
     elif selected_tab == "📈 ETR Leaderboard":
-        st.header("📈 ETR Leaderboard")
+        st.header("📈 ETR Team Leaderboard")
         
         # --- Load ETR projections ---
         try:
@@ -804,7 +804,7 @@ if auth_status:
             etr_df = pd.DataFrame()
         
         # --- Validate and clean ---
-        required_cols = {"Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"}
+        required_cols = {"Player", "Pos", "Half PPR Proj", "Slate"}
         if not required_cols.issubset(set(etr_df.columns)):
             st.error("ETR file is missing required columns. Please check formatting.")
         else:
@@ -812,32 +812,44 @@ if auth_status:
             etr_df["Pos"] = etr_df["Pos"].str.upper().str.strip()
             etr_df["Slate"] = etr_df["Slate"].str.upper().str.strip()
         
-            # --- Filters ---
-            all_positions = sorted(etr_df["Pos"].dropna().unique())
-            selected_positions = st.multiselect("Filter by Position", all_positions, default=all_positions)
+            # --- Filter to MAIN slate only ---
+            etr_main = etr_df[etr_df["Slate"] == "MAIN"].copy()
+            etr_main = etr_main[["CleanPlayer", "Half PPR Proj"]].dropna()
         
-            all_slates = sorted(etr_df["Slate"].dropna().unique())
-            selected_slates = st.multiselect("Filter by Slate", all_slates, default=["MAIN"])
+            # --- Merge ETR projections into draft data ---
+            df["CleanPlayer"] = df["Player"].apply(clean_name)
+            merged = df.merge(etr_main, on="CleanPlayer", how="left")
         
-            metric = st.radio("Sort by", ["Half PPR Proj", "FD Ceiling"], horizontal=True)
+            # --- Group by Draft + Team ---
+            team_groups = merged.groupby(["Draft", "Team"])
+            leaderboard_rows = []
         
-            filtered_df = etr_df[
-                (etr_df["Pos"].isin(selected_positions)) &
-                (etr_df["Slate"].isin(selected_slates))
-            ].copy()
+            for (draft_id, team_id), group in team_groups:
+                group = group.sort_values("Pick")
+                total_proj = group["Half PPR Proj"].sum()
+                user = group["User"].iloc[0]
         
-            if not filtered_df.empty:
-                filtered_df = filtered_df.sort_values(metric, ascending=False)
-                display_df = filtered_df[["Player", "Pos", "Team", "Opp", "Half PPR Proj", "FD Ceiling", "Slate"]]
+                picks = [
+                    f"{row['Player']} ({row['Pick']:.1f})"
+                    for _, row in group.iterrows()
+                ]
         
-                styled = display_df.style.format({
-                    "Half PPR Proj": "{:.2f}",
-                    "FD Ceiling": "{:.2f}"
-                }).background_gradient(subset=["Half PPR Proj", "FD Ceiling"], cmap="Blues")
+                leaderboard_rows.append({
+                    "Draft": draft_id,
+                    "Team": team_id,
+                    "User": user,
+                    "Total Projection": round(total_proj, 2),
+                    "Picks (Round Order)": ", ".join(picks)
+                })
         
-                st.dataframe(styled, use_container_width=True)
-            else:
-                st.warning("No players match the current filters.")
+            leaderboard_df = pd.DataFrame(leaderboard_rows)
+            leaderboard_df = leaderboard_df.sort_values("Total Projection", ascending=False)
+        
+            styled = leaderboard_df.style.format({
+                "Total Projection": "{:.2f}"
+            }).background_gradient(subset=["Total Projection"], cmap="Greens")
+        
+            st.dataframe(styled, use_container_width=True)
 
     # --- Tab 9: ETR Impact Dashboard ---
     elif selected_tab == "📊 ETR Impact Dashboard":
