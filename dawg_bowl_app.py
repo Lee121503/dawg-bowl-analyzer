@@ -880,6 +880,20 @@ if auth_status:
     
         st.dataframe(styled_swap_df, use_container_width=True)
 
+        # --- Export CSV: UD ID and Player Name ---
+        export_df = pd.DataFrame({
+            "UD_ID": [p for p in unique_suggestions],
+            "Player": [clean_to_original.get(p, p) for p in unique_suggestions]
+        })
+        
+        csv_data = export_df.to_csv(index=False).encode("utf-8")
+        st.download_button(
+            label="📥 Download Global Swap List (CSV)",
+            data=csv_data,
+            file_name="global_swap_list.csv",
+            mime="text/csv"
+        )
+
 
     
 
