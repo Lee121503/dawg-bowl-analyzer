@@ -795,29 +795,51 @@ if auth_status:
     
 
  
-    # --- Tab 8: ETR Leaderboard ---
-    elif selected_tab == "📈 ETR Leaderboard":
-        st.subheader("📈 ETR Leaderboard")
+    st.header("📈 ETR Leaderboard")
     
-        try:
-            etr_df = pd.read_csv("data/ETR Projections.csv")
-        except FileNotFoundError:
-            st.warning("ETR projections file not found.")
-            etr_df = pd.DataFrame(columns=["Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"])
+    # --- Load ETR projections ---
+    try:
+        etr_df = pd.read_csv("data/ETR Projections.csv", sep="\t")
+    except FileNotFoundError:
+        st.error("ETR projections file not found.")
+        etr_df = pd.DataFrame()
     
-        if not etr_df.empty:
-            etr_df["CleanPlayer"] = etr_df["Player"].apply(clean_name)
-            etr_df["Pos"] = etr_df["Pos"].str.upper().str.strip()
-            etr_df = etr_df[["Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"]].dropna()
+    # --- Validate and clean ---
+    required_cols = {"Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"}
+    if not required_cols.issubset(set(etr_df.columns)):
+        st.error("ETR file is missing required columns. Please check formatting.")
+    else:
+        etr_df["CleanPlayer"] = etr_df["Player"].apply(clean_name)
+        etr_df["Pos"] = etr_df["Pos"].str.upper().str.strip()
+        etr_df["Slate"] = etr_df["Slate"].str.upper().str.strip()
     
-            main_slate_df = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
-            sorted_df = main_slate_df.sort_values("Half PPR Proj", ascending=False)
+        # --- Filters ---
+        all_positions = sorted(etr_df["Pos"].dropna().unique())
+        selected_positions = st.multiselect("Filter by Position", all_positions, default=all_positions)
     
-            st.dataframe(sorted_df, use_container_width=True)
+        all_slates = sorted(etr_df["Slate"].dropna().unique())
+        selected_slates = st.multiselect("Filter by Slate", all_slates, default=["MAIN"])
+    
+        metric = st.radio("Sort by", ["Half PPR Proj", "FD Ceiling"], horizontal=True)
+    
+        filtered_df = etr_df[
+            (etr_df["Pos"].isin(selected_positions)) &
+            (etr_df["Slate"].isin(selected_slates))
+        ].copy()
+    
+        if not filtered_df.empty:
+            filtered_df = filtered_df.sort_values(metric, ascending=False)
+            display_df = filtered_df[["Player", "Pos", "Team", "Opp", "Half PPR Proj", "FD Ceiling", "Slate"]]
+    
+            styled = display_df.style.format({
+                "Half PPR Proj": "{:.2f}",
+                "FD Ceiling": "{:.2f}"
+            }).background_gradient(subset=["Half PPR Proj", "FD Ceiling"], cmap="Blues")
+    
+            st.dataframe(styled, use_container_width=True)
         else:
-            st.info("No ETR projection data available.")
+            st.warning("No players match the current filters.")
 
-    
     # --- Tab 9: ETR Impact Dashboard ---
     elif selected_tab == "📊 ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
