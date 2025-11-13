@@ -904,7 +904,7 @@ if auth_status:
     
         # --- Load and normalize ETR projections ---
         try:
-            etr_df = pd.read_csv("data/ETR Projections.csv", sep="\t")
+            etr_df = pd.read_csv("data/ETR Projections.csv")  # <-- fixed separator
             etr_df["Slate"] = etr_df["Slate"].astype(str).str.strip().str.upper()
             etr_df["CleanPlayer"] = etr_df["Player"].apply(clean_name)
             main_slate = etr_df[etr_df["Slate"] == "MAIN"]
@@ -915,6 +915,7 @@ if auth_status:
         except Exception:
             st.error("ETR projections file not found or malformed.")
             proj_lookup = {}
+
     
         # --- Normalize draft data ---
         df["CleanPlayer"] = df["Player"].apply(clean_name)
