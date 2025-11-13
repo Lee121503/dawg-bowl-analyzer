@@ -813,6 +813,79 @@ if auth_status:
                 }).background_gradient(subset=["Pick"], cmap="Oranges")
                 st.dataframe(styled_swap_df, use_container_width=True)
 
+    st.header("📋 Global Swap List — Suggested Replacements Only")
+
+        # --- Collect all suggested replacements from swap logic ---
+        all_suggested = []
+        
+        for draft_id, full_draft, user_out_picks in flagged_drafts:
+            drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
+            drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
+            drafted = set(full_draft["CleanPlayer"])
+            used_replacements = set()
+        
+            injured_sorted = user_out_picks.copy()
+            injured_sorted["Round"] = injured_sorted["Pick"].astype(int)
+            injured_sorted["PickInRound"] = injured_sorted["Pick"].astype(int)
+            injured_sorted["Swap Priority"] = injured_sorted.apply(
+                lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
+            )
+            injured_sorted = injured_sorted.sort_values("Swap Priority")
+        
+            for _, row in injured_sorted.iterrows():
+                pos = row["Position"]
+                is_flex = row.get("IsFlex", False)
+                eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
+                scored_candidates = []
+        
+                for ep in eligible_positions:
+                    for p in rankings.get(ep, []):
+                        if p in drafted or p in used_replacements:
+                            continue
+                        team = team_lookup.get(p, None)
+                        boost = 0
+                        if ep in ["WR", "TE"] and team in drafted_qbs:
+                            boost += 0.5
+                        elif ep == "QB" and team in drafted_passcatchers:
+                            boost += 0.5
+                        base_proj = proj_lookup.get(p, 0)
+                        scored_candidates.append((p, base_proj + boost))
+        
+                scored_candidates.sort(key=lambda x: x[1], reverse=True)
+                replacement = scored_candidates[0][0] if scored_candidates else None
+                if replacement:
+                    used_replacements.add(replacement)
+                    all_suggested.append(replacement)
+        
+        # --- Build final swap list ---
+        unique_suggestions = list(set(all_suggested))
+        swap_rows = []
+        
+        for p in unique_suggestions:
+            original = clean_to_original.get(p, p)
+            pos = main_slate.loc[main_slate["CleanPlayer"] == p, "Pos"].values[0]
+            team = team_lookup.get(p, "Unknown")
+            proj = proj_lookup.get(p, 0)
+            ceiling = ceiling_lookup.get(p, 0)
+        
+            swap_rows.append({
+                "Player": original,
+                "Position": pos,
+                "Team": team,
+                "Projection": round(proj, 2),
+                "Ceiling": round(ceiling, 2)
+            })
+        
+        swap_df = pd.DataFrame(swap_rows)
+        swap_df = swap_df.sort_values("Projection", ascending=False).reset_index(drop=True)
+        
+        styled_swap_df = swap_df.style.format({
+            "Projection": "{:.2f}",
+            "Ceiling": "{:.2f}"
+        }).background_gradient(subset=["Projection"], cmap="Greens")
+        
+        st.dataframe(styled_swap_df, use_container_width=True)
+
 
     elif selected_tab == "📈 ETR Leaderboard":
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
