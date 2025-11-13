@@ -1022,7 +1022,7 @@ if auth_status:
 
     
     # --- Tab 9: ETR Impact Dashboard ---
-    elif selected_tab == "ETR Impact Dashboard":
+    elif selected_tab == "📊 ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
     
         # --- Confirm data is loaded ---
