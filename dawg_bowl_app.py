@@ -898,7 +898,7 @@ if auth_status:
         )
 
     
-
+    # --- Tab8: ETR Leaderboard ---
     elif selected_tab == "📈 ETR Leaderboard":
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
     
@@ -1022,32 +1022,97 @@ if auth_status:
 
     
     # --- Tab 9: ETR Impact Dashboard ---
-    elif selected_tab == "📊 ETR Impact Dashboard":
+    elif selected_tab == "ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
     
-        try:
-            etr_df = pd.read_csv("data/ETR Projections.csv")
-        except FileNotFoundError:
-            st.warning("ETR projections file not found.")
-            etr_df = pd.DataFrame(columns=["Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"])
-    
-        if not etr_df.empty:
-            etr_df["CleanPlayer"] = etr_df["Player"].apply(clean_name)
-            etr_df["Pos"] = etr_df["Pos"].str.upper().str.strip()
-            etr_df = etr_df[["Player", "Pos", "Half PPR Proj", "FD Ceiling", "Slate"]].dropna()
-    
-            main_slate_df = etr_df[etr_df["Slate"].str.upper() == "MAIN"]
-            main_slate_df["CleanPlayer"] = main_slate_df["Player"].apply(clean_name)
-    
-            df["CleanPlayer"] = df["Player"].apply(clean_name)
-            merged_df = df.merge(main_slate_df[["CleanPlayer", "Half PPR Proj", "FD Ceiling"]], on="CleanPlayer", how="left")
-    
-            user_proj = merged_df.groupby("User")[["Half PPR Proj", "FD Ceiling"]].mean().reset_index()
-            user_proj = user_proj.round(2).sort_values("Half PPR Proj", ascending=False)
-    
-            st.dataframe(user_proj, use_container_width=True)
+        # Validate required columns
+        required_cols = ["Player", "Draft", "Pick", "ETR Timing"]
+        missing_cols = [col for col in required_cols if col not in df.columns]
+        if missing_cols:
+            st.error(f"Missing columns in contest data: {missing_cols}")
         else:
-            st.info("No ETR projection data available.")
+            # Clean player names
+            df["CleanPlayer"] = df["Player"].apply(clean_name)
+    
+            # Total drafts
+            total_drafts = df["Draft"].nunique()
+            draft_counts = df.groupby("ETR Timing")["Draft"].nunique().to_dict()
+    
+            # Build full player × draft grid
+            all_players = df["CleanPlayer"].unique()
+            all_drafts = df[["Draft", "ETR Timing"]].drop_duplicates()
+            full_grid = pd.MultiIndex.from_product(
+                [all_players, all_drafts["Draft"]],
+                names=["CleanPlayer", "Draft"]
+            ).to_frame(index=False)
+            full_grid = full_grid.merge(all_drafts, on="Draft", how="left")
+    
+            # Merge actual picks
+            merged = full_grid.merge(
+                df[["Draft", "CleanPlayer", "Pick"]],
+                on=["Draft", "CleanPlayer"],
+                how="left"
+            )
+            merged["Pick"] = merged["Pick"].fillna(72)
+    
+            # Group by player and timing
+            grouped = merged.groupby(["CleanPlayer", "ETR Timing"]).agg(
+                ADP=("Pick", "mean"),
+                Drafted=("Pick", lambda x: (x < 72).sum())
+            ).reset_index()
+            grouped["% Drafted"] = grouped.apply(
+                lambda row: row["Drafted"] / draft_counts.get(row["ETR Timing"], 1), axis=1
+            )
+    
+            # Group across all drafts
+            all_grouped = merged.groupby("CleanPlayer").agg(
+                ADP_All=("Pick", "mean"),
+                Drafted_All=("Pick", lambda x: (x < 72).sum())
+            ).reset_index()
+            all_grouped["% Drafted_All"] = all_grouped["Drafted_All"] / total_drafts
+    
+            # Pivot Pre/Post
+            pivot = grouped.pivot(index="CleanPlayer", columns="ETR Timing", values=["ADP", "% Drafted"])
+            pivot.columns = ["_".join(col).strip() for col in pivot.columns.values]
+    
+            # Rename safely
+            rename_map = {}
+            for col in pivot.columns:
+                if "ADP_Pre" in col or "ADP_Pre-ETR" in col:
+                    rename_map[col] = "ADP_Pre"
+                elif "ADP_Post" in col or "ADP_Post-ETR" in col:
+                    rename_map[col] = "ADP_Post"
+                elif "Drafted_Pre" in col or "% Drafted_Pre-ETR" in col:
+                    rename_map[col] = "Pct_Pre"
+                elif "Drafted_Post" in col or "% Drafted_Post-ETR" in col:
+                    rename_map[col] = "Pct_Post"
+            pivot = pivot.rename(columns=rename_map)
+    
+            # Merge with overall stats
+            summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
+    
+            # Calculate differences
+            summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+            summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+    
+            # Add original player name
+            name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
+            summary = summary.merge(name_map, on="CleanPlayer", how="left")
+    
+            # Reorder columns
+            summary = summary[[
+                "Player", "ADP_Pre", "ADP_Post", "ADP_All", "ADP_Diff",
+                "Pct_Pre", "Pct_Post", "% Drafted_All", "Pct_Diff"
+            ]].sort_values("ADP_Diff", ascending=False)
+    
+            # Display
+            st.write(f"Players compared: {len(summary)}")
+            styled = summary.style.format({
+                "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
+                "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "% Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
+            }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
+            st.dataframe(styled, use_container_width=True)
+
 
     # --- Tab 10: ADP Change Tracker ---
     elif selected_tab == "📉 ADP Change Tracker":
