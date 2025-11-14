@@ -147,6 +147,7 @@ if auth_status:
     elif selected_tab == "📋 Player Dashboard":
         st.subheader("📋 Player Dashboard")
     
+        # Base ADP across all drafts
         adp_df = calculate_adp(df).round(2)
         total_drafts = df["Draft"].nunique()
     
@@ -191,13 +192,33 @@ if auth_status:
             st.warning("UD ID file not found. Player IDs will be missing.")
             dashboard_df["id"] = None
     
-        # --- NEW: Add ETR Timing column only if Post-ETR exists ---
-        show_etr_timing = False
+        # --- NEW: Post-ETR ADP (numeric) only if Post-ETR rows exist ---
+        show_post_etr_adp = False
         if "ETR Timing" in df.columns:
-            if (df["ETR Timing"].str.upper() == "POST-ETR").any():
-                show_etr_timing = True
-                etr_map = df[["Player", "ETR Timing"]].drop_duplicates()
-                dashboard_df = dashboard_df.merge(etr_map, on="Player", how="left")
+            df["ETR Timing"] = df["ETR Timing"].astype(str).str.strip()
+            post_etr_df = df[df["ETR Timing"].str.upper() == "POST-ETR"].copy()
+            post_etr_draft_ids = sorted(post_etr_df["Draft"].unique())
+            if len(post_etr_draft_ids) > 0:
+                show_post_etr_adp = True
+    
+                # Build full grid of Player x Post-ETR Draft, fill missing with 72, then mean
+                all_players = pd.DataFrame(df["Player"].unique(), columns=["Player"])
+                grid = pd.MultiIndex.from_product(
+                    [all_players["Player"], post_etr_draft_ids],
+                    names=["Player", "Draft"]
+                ).to_frame(index=False)
+    
+                post_etr_picks = post_etr_df[["Player", "Draft", "Pick"]].copy()
+                post_etr_grid = grid.merge(post_etr_picks, on=["Player", "Draft"], how="left")
+                post_etr_grid["Pick"] = post_etr_grid["Pick"].fillna(72)
+    
+                post_etr_adp = (
+                    post_etr_grid.groupby("Player")["Pick"].mean().reset_index()
+                    .rename(columns={"Pick": "Post-ETR ADP"})
+                )
+                post_etr_adp["Post-ETR ADP"] = post_etr_adp["Post-ETR ADP"].round(2)
+    
+                dashboard_df = dashboard_df.merge(post_etr_adp, on="Player", how="left")
     
         # Filters
         positions = sorted(dashboard_df["Position"].dropna().unique())
@@ -225,19 +246,15 @@ if auth_status:
             user_exposure_df = user_exposure_df[user_exposure_df["User"] == selected_user]
             filtered_df = pd.merge(filtered_df, user_exposure_df[["Player", "User Exposure %"]], on="Player", how="inner")
     
-        # Display columns
+        # Display columns (insert Post-ETR ADP right after ADP if present)
         display_cols = [
             "id", "Player", "Position", "NFL_Team", "Average Draft Position"
         ]
-    
-        # Insert ETR Timing column right after ADP if flagged
-        if show_etr_timing and "ETR Timing" in filtered_df.columns:
-            display_cols.append("ETR Timing")
-    
+        if show_post_etr_adp and "Post-ETR ADP" in filtered_df.columns:
+            display_cols.append("Post-ETR ADP")
         display_cols += [
             "Earliest Pick", "Latest Pick", "Exposure", "Stack Rate"
         ]
-    
         if "User Exposure %" in filtered_df.columns:
             display_cols.insert(display_cols.index("Stack Rate"), "User Exposure %")
     
@@ -250,9 +267,8 @@ if auth_status:
             sorted_df = filtered_df.sort_values("Average Draft Position")
     
             gradient_cols = ["Average Draft Position", "Exposure", "Stack Rate"]
-            if show_etr_timing and "ETR Timing" in sorted_df.columns:
-                # categorical column, no gradient formatting needed
-                pass
+            if show_post_etr_adp and "Post-ETR ADP" in sorted_df.columns:
+                gradient_cols.append("Post-ETR ADP")
             if "User Exposure %" in sorted_df.columns:
                 gradient_cols.append("User Exposure %")
     
@@ -262,7 +278,8 @@ if auth_status:
                 "Average Draft Position": "{:.2f}",
                 "Exposure": "{:.2f}",
                 "Stack Rate": "{:.2f}",
-                "User Exposure %": "{:.2f}" if "User Exposure %" in sorted_df.columns else None
+                "Post-ETR ADP": "{:.2f}" if ("Post-ETR ADP" in sorted_df.columns) else None,
+                "User Exposure %": "{:.2f}" if ("User Exposure %" in sorted_df.columns) else None
             })
     
             st.dataframe(styled_df, use_container_width=True)
@@ -277,6 +294,7 @@ if auth_status:
             )
         else:
             st.warning("No players match the current filters.")
+
 
     
     # --- Tab 3: Combo Finder ---
