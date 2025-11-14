@@ -518,7 +518,7 @@ if auth_status:
 
     
     # --- Tab 5: User Exposure Dashboard ---
-    with tab5:
+elif selected_tab == "📊 User Exposure Dashboard":
         st.subheader("📊 User Exposure Dashboard")
     
         # Multi-user selector
