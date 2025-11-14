@@ -937,111 +937,66 @@ if auth_status:
         )
 
     
-    # --- Tab8: ETR Leaderboard ---
+    # --- Tab 8: ETR Leaderboard ---
     elif selected_tab == "📈 ETR Leaderboard":
-        st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
+        st.subheader("📈 ETR Leaderboard")
     
-        # --- Load and normalize ETR projections ---
-        try:
-            etr_df = pd.read_csv("data/ETR Projections.csv")  # <-- fixed separator
-            etr_df["Slate"] = etr_df["Slate"].astype(str).str.strip().str.upper()
-            etr_df["CleanPlayer"] = etr_df["Player"].apply(clean_name)
-            main_slate = etr_df[etr_df["Slate"] == "MAIN"]
-            if main_slate.empty:
-                st.warning("No MAIN slate rows found in ETR projections.")
-            main_slate = main_slate[["Player", "Half PPR Proj", "CleanPlayer"]].dropna()
-            proj_lookup = dict(zip(main_slate["CleanPlayer"], main_slate["Half PPR Proj"]))
-        except Exception:
-            st.error("ETR projections file not found or malformed.")
-            proj_lookup = {}
-
+        # --- User filter (only affects personal leaderboard) ---
+        all_users = sorted(df["User"].dropna().unique())
+        selected_user = st.selectbox("Filter by User (optional)", ["All Users"] + all_users, key="tab8_user")
     
-        # --- Normalize draft data ---
-        df["CleanPlayer"] = df["Player"].apply(clean_name)
-    
-        # --- Aggregate projected points and picks per team ---
-        team_rows = []
-        for (draft_id, team_id), group in df.groupby(["Draft", "Team"]):
-            group_sorted = group.sort_values("Pick")
-            clean_names = group_sorted["CleanPlayer"]
-            original_names = group_sorted["Player"].tolist()
-            total_proj = sum(proj_lookup.get(name, 0) for name in clean_names)
-    
-            row = {
-                "Draft": draft_id,
-                "Team": team_id,
-                "User": group_sorted["User"].iloc[0],
-                "Projected Points": round(total_proj, 2)
-            }
-    
-            for i, player in enumerate(original_names):
-                row[f"Round {i+1}"] = player
-    
-            team_rows.append(row)
-    
-        leaderboard_df = pd.DataFrame(team_rows)
-        leaderboard_df = leaderboard_df.sort_values("Projected Points", ascending=False).reset_index(drop=True)
-        leaderboard_df.index += 1
-        leaderboard_df.insert(0, "Rank", leaderboard_df.index)
-    
-        # --- User filter (after rank is assigned) ---
-        all_users = sorted(leaderboard_df["User"].dropna().unique())
-        selected_user = st.selectbox("Filter by User", ["All Users"] + all_users, key="etr_user_filter")
-    
+        # --- User-specific leaderboard ---
         if selected_user != "All Users":
-            leaderboard_df = leaderboard_df[leaderboard_df["User"] == selected_user]
+            user_df = df[df["User"] == selected_user].copy()
+            st.markdown(f"### 📊 Leaderboard for `{selected_user}`")
     
-        # --- Display leaderboard ---
-        st.markdown("### 🏆 ETR Leaderboard")
-        st.write(f"Teams shown: {len(leaderboard_df)}")
-        styled_df = leaderboard_df.style.format({
-            "Projected Points": "{:.2f}"
-        }).background_gradient(subset=["Projected Points"], cmap="Greens")
-        st.dataframe(styled_df, use_container_width=True)
+            user_summary = (
+                user_df.groupby("Player")["Draft"].nunique()
+                .reset_index()
+                .rename(columns={"Draft": "Times Drafted"})
+                .sort_values("Times Drafted", ascending=False)
+            )
     
-        # --- Dashboard 1: Top 100 Team Frequency ---
-        st.markdown("### 📊 Top 100 Team Frequency by User")
+            styled_user = user_summary.style.background_gradient(
+                subset=["Times Drafted"], cmap="Blues"
+            ).format({"Times Drafted": "{:.0f}"})
     
-        top_100_df = leaderboard_df.sort_values("Projected Points", ascending=False).head(100)
-        top_counts = top_100_df["User"].value_counts().reset_index()
-        top_counts.columns = ["User", "Top 100 Teams"]
+            st.dataframe(styled_user, use_container_width=True)
+        else:
+            st.info("Select a user above to view their personal leaderboard.")
     
-        total_counts = leaderboard_df["User"].value_counts().reset_index()
-        total_counts.columns = ["User", "Total Teams"]
+        # --- Global Top 100 Team Frequency (always use full df) ---
+        st.markdown("### 🏆 Top 100 Team Frequency (Global)")
+        team_freq = (
+            df.groupby(["Draft", "Team"])["Player"].apply(list).reset_index()
+        )
+        team_freq["Roster"] = team_freq["Player"].apply(lambda players: ", ".join(players))
+        roster_counts = team_freq["Roster"].value_counts().reset_index()
+        roster_counts.columns = ["Roster", "Frequency"]
+        top_100_rosters = roster_counts.head(100)
     
-        user_summary = pd.merge(total_counts, top_counts, on="User", how="left").fillna(0)
-        user_summary["Top 100 Teams"] = user_summary["Top 100 Teams"].astype(int)
-        user_summary["% in Top 100"] = (user_summary["Top 100 Teams"] / user_summary["Total Teams"] * 100).round(2)
+        styled_rosters = top_100_rosters.style.background_gradient(
+            subset=["Frequency"], cmap="Blues"
+        ).format({"Frequency": "{:.0f}"})
     
-        styled_summary = user_summary.sort_values("Top 100 Teams", ascending=False).style.format({
-            "% in Top 100": "{:.2f}"
-        }).background_gradient(subset=["Top 100 Teams", "% in Top 100"], cmap="Blues")
-        st.dataframe(styled_summary, use_container_width=True)
+        st.dataframe(styled_rosters, use_container_width=True)
     
-        # --- Dashboard 2: Top 30 Player Frequency + ADP Comparison ---
-        st.markdown("### 📊 Top 30 Player Frequency and ADP Comparison")
+        # --- Global Top 30 Player Frequency (always use full df) ---
+        st.markdown("### ⭐ Top 30 Player Frequency (Global)")
+        player_freq = (
+            df.groupby("Player")["Draft"].nunique()
+            .reset_index()
+            .rename(columns={"Draft": "Times Drafted"})
+            .sort_values("Times Drafted", ascending=False)
+            .head(30)
+        )
     
-        top_30_df = leaderboard_df.sort_values("Projected Points", ascending=False).head(30)
-        top_30_teams = df.merge(top_30_df[["Draft", "Team"]], on=["Draft", "Team"])
+        styled_players = player_freq.style.background_gradient(
+            subset=["Times Drafted"], cmap="Blues"
+        ).format({"Times Drafted": "{:.0f}"})
     
-        top_player_counts = top_30_teams.groupby("Player")["Pick"].agg([
-            ("Top 30 Appearances", "count"),
-            ("Top 30 ADP", "mean")
-        ]).reset_index()
-    
-        overall_adp = df.groupby("Player")["Pick"].mean().reset_index()
-        overall_adp.columns = ["Player", "Overall ADP"]
-    
-        player_summary = pd.merge(top_player_counts, overall_adp, on="Player", how="left")
-        player_summary["ADP Delta"] = (player_summary["Overall ADP"] - player_summary["Top 30 ADP"]).round(2)
-    
-        player_summary = player_summary.sort_values("Top 30 Appearances", ascending=False)
-        styled_players = player_summary.style.format({
-            "Top 30 ADP": "{:.2f}",
-            "Overall ADP": "{:.2f}",
-            "ADP Delta": "{:.2f}"
-        }).background_gradient(subset=["Top 30 Appearances", "ADP Delta"], cmap="Purples")
         st.dataframe(styled_players, use_container_width=True)
+
         
     # --- Tab 9: ETR Impact Dashboard ---
     elif selected_tab == "📊 ETR Impact Dashboard":
