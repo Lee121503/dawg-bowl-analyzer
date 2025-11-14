@@ -191,6 +191,14 @@ if auth_status:
             st.warning("UD ID file not found. Player IDs will be missing.")
             dashboard_df["id"] = None
     
+        # --- NEW: Add ETR Timing column only if Post-ETR exists ---
+        show_etr_timing = False
+        if "ETR Timing" in df.columns:
+            if (df["ETR Timing"].str.upper() == "POST-ETR").any():
+                show_etr_timing = True
+                etr_map = df[["Player", "ETR Timing"]].drop_duplicates()
+                dashboard_df = dashboard_df.merge(etr_map, on="Player", how="left")
+    
         # Filters
         positions = sorted(dashboard_df["Position"].dropna().unique())
         selected_positions = st.multiselect("Filter by Position", positions, default=positions, key="tab2_position")
@@ -217,10 +225,19 @@ if auth_status:
             user_exposure_df = user_exposure_df[user_exposure_df["User"] == selected_user]
             filtered_df = pd.merge(filtered_df, user_exposure_df[["Player", "User Exposure %"]], on="Player", how="inner")
     
+        # Display columns
         display_cols = [
-            "id", "Player", "Position", "NFL_Team", "Average Draft Position",
+            "id", "Player", "Position", "NFL_Team", "Average Draft Position"
+        ]
+    
+        # Insert ETR Timing column right after ADP if flagged
+        if show_etr_timing and "ETR Timing" in filtered_df.columns:
+            display_cols.append("ETR Timing")
+    
+        display_cols += [
             "Earliest Pick", "Latest Pick", "Exposure", "Stack Rate"
         ]
+    
         if "User Exposure %" in filtered_df.columns:
             display_cols.insert(display_cols.index("Stack Rate"), "User Exposure %")
     
@@ -233,6 +250,9 @@ if auth_status:
             sorted_df = filtered_df.sort_values("Average Draft Position")
     
             gradient_cols = ["Average Draft Position", "Exposure", "Stack Rate"]
+            if show_etr_timing and "ETR Timing" in sorted_df.columns:
+                # categorical column, no gradient formatting needed
+                pass
             if "User Exposure %" in sorted_df.columns:
                 gradient_cols.append("User Exposure %")
     
@@ -257,6 +277,7 @@ if auth_status:
             )
         else:
             st.warning("No players match the current filters.")
+
     
     # --- Tab 3: Combo Finder ---
     elif selected_tab == "🔍 Combo Finder":
