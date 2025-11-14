@@ -678,6 +678,29 @@ if auth_status:
             key="injury_swap_boost"
         )
         
+        # --- Build drafted team sets ---
+        drafted_qb_teams = set(
+            full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna()
+        )
+        drafted_passcatcher_teams = set(
+            full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna()
+        )
+        
+        # --- Candidate scoring loop ---
+        for ep in eligible_positions:
+            for p in rankings.get(ep, []):
+                if p in drafted or p in used_replacements:
+                    continue
+                team = team_lookup.get(p, None)
+                boost = 0
+                if ep in ["WR", "TE"] and team in drafted_qb_teams:
+                    boost += correlation_boost
+                elif ep == "QB" and team in drafted_passcatcher_teams:
+                    boost += correlation_boost
+                base_proj = proj_lookup.get(p, 0)
+                scored_candidates.append((p, base_proj + boost))
+
+        
         # --- Week-specific injury file mapping ---
         injury_file_map = {
             "Week 9": "Week9UD.csv",
