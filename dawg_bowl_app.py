@@ -801,13 +801,8 @@ if auth_status:
     
                 # --- Replacement suggestions with stack-aware boost ---
                 affected_positions = user_out_picks["Position"].unique()
-    
-                drafted_qb_teams = set(
-                    full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna()
-                )
-                drafted_passcatcher_teams = set(
-                    full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna()
-                )
+                drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
+                drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
     
                 for pos in affected_positions:
                     drafted = set(full_draft[full_draft["Position"] == pos]["CleanPlayer"])
@@ -817,9 +812,9 @@ if auth_status:
                             continue
                         team = team_lookup.get(p, None)
                         boost = 0
-                        if pos in ["WR", "TE"] and team in drafted_qb_teams:
+                        if pos in ["WR", "TE"] and team in drafted_qbs:
                             boost += correlation_boost
-                        elif pos == "QB" and team in drafted_passcatcher_teams:
+                        elif pos == "QB" and team in drafted_passcatchers:
                             boost += correlation_boost
                         base_proj = proj_lookup.get(p, 0)
                         scored_candidates.append((p, base_proj + boost))
@@ -845,7 +840,6 @@ if auth_status:
                 injured_sorted = injured_in_draft.sort_values("Swap Priority")
     
                 swap_rows = []
-                swap_rows = []
                 used_replacements = set()
     
                 for _, row in injured_sorted.iterrows():
@@ -857,13 +851,8 @@ if auth_status:
                     eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
                     scored_candidates = []
     
-                    # --- Build drafted team sets for correlation ---
-                    drafted_qb_teams = set(
-                        full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna()
-                    )
-                    drafted_passcatcher_teams = set(
-                        full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna()
-                    )
+                    drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
+                    drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
     
                     for ep in eligible_positions:
                         for p in rankings.get(ep, []):
@@ -871,9 +860,9 @@ if auth_status:
                                 continue
                             team = team_lookup.get(p, None)
                             boost = 0
-                            if ep in ["WR", "TE"] and team in drafted_qb_teams:
+                            if ep in ["WR", "TE"] and team in drafted_qbs:
                                 boost += correlation_boost
-                            elif ep == "QB" and team in drafted_passcatcher_teams:
+                            elif ep == "QB" and team in drafted_passcatchers:
                                 boost += correlation_boost
                             base_proj = proj_lookup.get(p, 0)
                             scored_candidates.append((p, base_proj + boost))
@@ -906,12 +895,8 @@ if auth_status:
         all_suggested = []
     
         for draft_id, full_draft, user_out_picks in flagged_drafts:
-            drafted_qb_teams = set(
-                full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna()
-            )
-            drafted_passcatcher_teams = set(
-                full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna()
-            )
+            drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
+            drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
             drafted = set(full_draft["CleanPlayer"])
             used_replacements = set()
     
@@ -935,16 +920,16 @@ if auth_status:
                             continue
                         team = team_lookup.get(p, None)
                         boost = 0
-                        if ep in ["WR", "TE"] and team in drafted_qb_teams:
+                        if ep in ["WR", "TE"] and team in drafted_qbs:
                             boost += correlation_boost
-                        elif ep == "QB" and team in drafted_passcatcher_teams:
+                        elif ep == "QB" and team in drafted_passcatchers:
                             boost += correlation_boost
                         base_proj = proj_lookup.get(p, 0)
                         scored_candidates.append((p, base_proj + boost))
     
                 scored_candidates.sort(key=lambda x: x[1], reverse=True)
     
-                # --- NEW: capture multiple candidates, not just the top one ---
+                # --- Expanded: capture multiple candidates, not just the top one ---
                 for cand, _ in scored_candidates[:5]:
                     if cand not in used_replacements:
                         all_suggested.append(cand)
@@ -978,95 +963,6 @@ if auth_status:
     
         st.dataframe(styled_swap_df, use_container_width=True)
     
-        # --- Export CSV ---
-        injury_id_lookup = dict(zip(injury_df["CleanName"], injury_df["id"]))
-        export_df = pd.DataFrame({
-            "id": [injury_id_lookup.get(p, "") for p in unique_suggestions],
-            "Player": [clean_to_original.get(p, p) for p in unique_suggestions]
-        })
-        csv_data = export_df.to_csv(index=False).encode("utf-8")
-        st.download_button(
-            label="📥 Download Global Swap List (CSV)",
-            data=csv_data,
-            file_name="global_swap_list.csv",
-            mime="text/csv"
-        )
-
-        # --- Global Swap List from Suggested Replacements ---
-        st.header("📝 Global Swap List — Suggested Replacements (Extended)")
-        
-        all_suggested = []
-        
-        for draft_id, full_draft, user_out_picks in flagged_drafts:
-            drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
-            drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
-            drafted = set(full_draft["CleanPlayer"])
-            used_replacements = set()
-        
-            injured_sorted = user_out_picks.copy()
-            injured_sorted["Round"] = injured_sorted["Pick"].astype(int)
-            injured_sorted["PickInRound"] = injured_sorted["Pick"].astype(int)
-            injured_sorted["Swap Priority"] = injured_sorted.apply(
-                lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
-            )
-            injured_sorted = injured_sorted.sort_values("Swap Priority")
-        
-            for _, row in injured_sorted.iterrows():
-                pos = row["Position"]
-                is_flex = row.get("IsFlex", False)
-                eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
-                scored_candidates = []
-        
-                for ep in eligible_positions:
-                    for p in rankings.get(ep, []):
-                        if p in drafted:
-                            continue
-                        team = team_lookup.get(p, None)
-                        boost = 0
-                        if ep in ["WR", "TE"] and team in drafted_qbs:
-                            boost += correlation_boost
-                        elif ep == "QB" and team in drafted_passcatchers:
-                            boost += correlation_boost
-                        base_proj = proj_lookup.get(p, 0)
-                        scored_candidates.append((p, base_proj + boost))
-        
-                scored_candidates.sort(key=lambda x: x[1], reverse=True)
-        
-                # --- NEW: add multiple candidates, not just the top one ---
-                for cand, _ in scored_candidates[:5]:  # capture top 5 options
-                    if cand not in used_replacements:
-                        all_suggested.append(cand)
-                        used_replacements.add(cand)
-        
-        # Build extended swap list
-        unique_suggestions = list(set(all_suggested))
-        swap_rows = []
-        
-        for p in unique_suggestions:
-            original = clean_to_original.get(p, p)
-            pos = main_slate.loc[main_slate["CleanPlayer"] == p, "Pos"].values[0]
-            team = team_lookup.get(p, "Unknown")
-            proj = proj_lookup.get(p, 0)
-            ceiling = ceiling_lookup.get(p, 0)
-        
-            swap_rows.append({
-                "Player": original,
-                "Position": pos,
-                "Team": team,
-                "Projection": round(proj, 2),
-                "Ceiling": round(ceiling, 2)
-            })
-        
-        swap_df = pd.DataFrame(swap_rows)
-        swap_df = swap_df.sort_values("Projection", ascending=False).reset_index(drop=True)
-        
-        styled_swap_df = swap_df.style.format({
-            "Projection": "{:.2f}",
-            "Ceiling": "{:.2f}"
-        }).background_gradient(subset=["Projection"], cmap="Greens")
-        
-        st.dataframe(styled_swap_df, use_container_width=True)
-        
         # --- Export CSV ---
         injury_id_lookup = dict(zip(injury_df["CleanName"], injury_df["id"]))
         export_df = pd.DataFrame({
