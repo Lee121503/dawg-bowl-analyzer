@@ -518,92 +518,97 @@ if auth_status:
 
     
     # --- Tab 5: User Exposure Dashboard ---
-    elif selected_tab == "📊 User Exposure Dashboard":
+    with tab5:
         st.subheader("📊 User Exposure Dashboard")
     
-        all_users = sorted(df["User"].dropna().unique())
-        selected_users = st.multiselect("Select Users", all_users, default=all_users[:1], key="tab5_users")
+        # Multi-user selector
+        selected_users = st.multiselect(
+            "Select Users",
+            sorted(df["User"].dropna().unique()),
+            default=[]
+        )
     
+        # Filter by selected users
         if selected_users:
-            exposure_data = []
-    
-            for user in selected_users:
-                user_df = df[df["User"] == user]
-                total_drafts = user_df["Draft"].nunique()
-                player_counts = user_df.groupby("Player")["Draft"].nunique().reset_index()
-                player_counts.columns = ["Player", "User Drafts"]
-                player_counts["User"] = user
-                player_counts["Total Drafts"] = total_drafts
-                player_counts["Exposure %"] = (player_counts["User Drafts"] / total_drafts * 100).round(2)
-                exposure_data.append(player_counts)
-    
-            exposure_df = pd.concat(exposure_data, ignore_index=True)
-    
-            position_map = df[["Player", "Position"]].drop_duplicates()
-            team_map = df[["Player", "NFL_Team"]].drop_duplicates()
-            adp_df = calculate_adp(df).round(2)
-    
-            exposure_df = exposure_df.merge(position_map, on="Player", how="left")
-            exposure_df = exposure_df.merge(team_map, on="Player", how="left")
-            exposure_df = exposure_df.merge(adp_df, on="Player", how="left")
-    
-            exposure_df = exposure_df[[
-                "User", "Player", "Position", "NFL_Team", "Average Draft Position",
-                "User Drafts", "Total Drafts", "Exposure %"
-            ]].sort_values(["User", "Exposure %"], ascending=[True, False])
-    
-            st.write(f"Total rows: {len(exposure_df)}")
-    
-            styled = exposure_df.style.background_gradient(
-                subset=["Exposure %", "Average Draft Position"],
-                cmap="Blues"
-            ).format({
-                "Average Draft Position": "{:.2f}",
-                "Exposure %": "{:.2f}"
-            })
-    
-            st.dataframe(styled, use_container_width=True)
-    
-            csv_bytes = exposure_df.to_csv(index=False).encode("utf-8")
-            st.download_button(
-                label="📥 Download CSV",
-                data=csv_bytes,
-                file_name="UserExposureDashboard.csv",
-                mime="text/csv",
-                key="tab5_download"
-            )
-    
-            # --- NEW: Pick Frequency Table ---
-            st.markdown("### 🎯 Pick Frequency by User")
-    
-            pick_number = st.slider("Select Pick Number", 1, 12, 1, key="tab5_pick_number")
-    
-            # Count how many times each user had that pick
-            pick_counts = df[df["Pick"] == pick_number].groupby("User")["Draft"].nunique().reset_index()
-            pick_counts.columns = ["User", "Pick Count"]
-    
-            # Total drafts per user
-            total_counts = df.groupby("User")["Draft"].nunique().reset_index()
-            total_counts.columns = ["User", "Total Drafts"]
-    
-            pick_summary = pd.merge(total_counts, pick_counts, on="User", how="left").fillna(0)
-            pick_summary["Pick Count"] = pick_summary["Pick Count"].astype(int)
-            pick_summary["Pick %"] = (pick_summary["Pick Count"] / pick_summary["Total Drafts"] * 100).round(2)
-    
-            expected_pct = 100 / 12  # ~8.33%
-            pick_summary["Over Expected %"] = (pick_summary["Pick %"] - expected_pct).round(2)
-    
-            pick_summary = pick_summary.sort_values("Pick Count", ascending=False)
-    
-            styled_pick_summary = pick_summary.style.format({
-                "Pick %": "{:.2f}",
-                "Over Expected %": "{:.2f}"
-            }).background_gradient(subset=["Pick Count", "Pick %", "Over Expected %"], cmap="Oranges")
-    
-            st.dataframe(styled_pick_summary, use_container_width=True)
-    
+            exposure_df = df[df["User"].isin(selected_users)]
         else:
-            st.info("Please select at least one user to view exposure.")
+            exposure_df = df.copy()
+    
+        # Calculate exposure
+        user_draft_counts = exposure_df.groupby("User")["Draft"].nunique().reset_index()
+        user_draft_counts.columns = ["User", "User Drafts"]
+    
+        user_player_counts = exposure_df.groupby(["User", "Player"])["Draft"].nunique().reset_index()
+        user_player_counts.columns = ["User", "Player", "Player Drafts"]
+    
+        exposure_summary = pd.merge(user_player_counts, user_draft_counts, on="User")
+        exposure_summary["User Exposure %"] = (
+            exposure_summary["Player Drafts"] / exposure_summary["User Drafts"] * 100
+        ).round(2)
+    
+        # --- NEW: Minimum drafts filter ---
+        min_drafts = st.slider("Minimum Number of Drafts", 0, int(user_draft_counts["User Drafts"].max()), 1)
+        exposure_summary = exposure_summary[exposure_summary["User Drafts"] >= min_drafts]
+    
+        # Optional filters
+        min_exposure = st.slider("Minimum Exposure %", 0.0, 100.0, 5.0)
+        filtered_df = exposure_summary[exposure_summary["User Exposure %"] >= min_exposure]
+    
+        st.write(f"Filtered rows: {len(filtered_df)}")
+    
+        view_mode = st.radio("View mode", ["Gradient", "Editor"], horizontal=True, key="user_exposure_view_mode")
+    
+        if not filtered_df.empty:
+            sorted_df = filtered_df.sort_values("User Exposure %", ascending=False)
+            if view_mode == "Gradient":
+                styled_df = sorted_df.style.format({
+                    "User Exposure %": "{:.2f}",
+                    "Player Drafts": "{:.0f}",
+                    "User Drafts": "{:.0f}"
+                }).background_gradient(subset=["User Exposure %"], cmap="Blues")
+                st.dataframe(styled_df, use_container_width=True)
+            else:
+                st.data_editor(
+                    sorted_df,
+                    use_container_width=True,
+                    height=900,
+                    column_config={
+                        "User Exposure %": st.column_config.NumberColumn(format="%.2f"),
+                        "Player Drafts": st.column_config.NumberColumn(format="%d"),
+                        "User Drafts": st.column_config.NumberColumn(format="%d")
+                    }
+                )
+        else:
+            st.warning("No exposure data matches the current filters.")
+    
+        # --- 🎯 Pick Frequency by User (from earlier addition) ---
+        st.markdown("### 🎯 Pick Frequency by User")
+    
+        pick_number = st.slider("Select Pick Number", 1, 12, 1, key="tab5_pick_number")
+    
+        pick_counts = df[df["Pick"] == pick_number].groupby("User")["Draft"].nunique().reset_index()
+        pick_counts.columns = ["User", "Pick Count"]
+    
+        total_counts = df.groupby("User")["Draft"].nunique().reset_index()
+        total_counts.columns = ["User", "Total Drafts"]
+    
+        pick_summary = pd.merge(total_counts, pick_counts, on="User", how="left").fillna(0)
+        pick_summary["Pick Count"] = pick_summary["Pick Count"].astype(int)
+        pick_summary["Pick %"] = (pick_summary["Pick Count"] / pick_summary["Total Drafts"] * 100).round(2)
+    
+        expected_pct = 100 / 12
+        pick_summary["Over Expected %"] = (pick_summary["Pick %"] - expected_pct).round(2)
+    
+        pick_summary = pick_summary[pick_summary["Total Drafts"] >= min_drafts]  # <-- apply min drafts filter here too
+        pick_summary = pick_summary.sort_values("Pick Count", ascending=False)
+    
+        styled_pick_summary = pick_summary.style.format({
+            "Pick %": "{:.2f}",
+            "Over Expected %": "{:.2f}"
+        }).background_gradient(subset=["Pick Count", "Pick %", "Over Expected %"], cmap="Oranges")
+    
+        st.dataframe(styled_pick_summary, use_container_width=True)
+
 
   
     # --- Tab 6: User Similarity Dashboard ---
