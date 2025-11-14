@@ -518,7 +518,7 @@ if auth_status:
 
     
     # --- Tab 5: User Exposure Dashboard ---
-elif selected_tab == "📊 User Exposure Dashboard":
+    elif selected_tab == "📊 User Exposure Dashboard":
         st.subheader("📊 User Exposure Dashboard")
     
         # Multi-user selector
@@ -547,11 +547,17 @@ elif selected_tab == "📊 User Exposure Dashboard":
         ).round(2)
     
         # --- NEW: Minimum drafts filter ---
-        min_drafts = st.slider("Minimum Number of Drafts", 0, int(user_draft_counts["User Drafts"].max()), 1)
+        min_drafts = st.slider(
+            "Minimum Number of Drafts",
+            0,
+            int(user_draft_counts["User Drafts"].max()),
+            1,
+            key="tab5_min_drafts"
+        )
         exposure_summary = exposure_summary[exposure_summary["User Drafts"] >= min_drafts]
     
         # Optional filters
-        min_exposure = st.slider("Minimum Exposure %", 0.0, 100.0, 5.0)
+        min_exposure = st.slider("Minimum Exposure %", 0.0, 100.0, 5.0, key="tab5_min_exposure")
         filtered_df = exposure_summary[exposure_summary["User Exposure %"] >= min_exposure]
     
         st.write(f"Filtered rows: {len(filtered_df)}")
@@ -581,7 +587,7 @@ elif selected_tab == "📊 User Exposure Dashboard":
         else:
             st.warning("No exposure data matches the current filters.")
     
-        # --- 🎯 Pick Frequency by User (from earlier addition) ---
+        # --- 🎯 Pick Frequency by User ---
         st.markdown("### 🎯 Pick Frequency by User")
     
         pick_number = st.slider("Select Pick Number", 1, 12, 1, key="tab5_pick_number")
@@ -599,7 +605,8 @@ elif selected_tab == "📊 User Exposure Dashboard":
         expected_pct = 100 / 12
         pick_summary["Over Expected %"] = (pick_summary["Pick %"] - expected_pct).round(2)
     
-        pick_summary = pick_summary[pick_summary["Total Drafts"] >= min_drafts]  # <-- apply min drafts filter here too
+        # Apply min drafts filter here too
+        pick_summary = pick_summary[pick_summary["Total Drafts"] >= min_drafts]
         pick_summary = pick_summary.sort_values("Pick Count", ascending=False)
     
         styled_pick_summary = pick_summary.style.format({
@@ -608,7 +615,6 @@ elif selected_tab == "📊 User Exposure Dashboard":
         }).background_gradient(subset=["Pick Count", "Pick %", "Over Expected %"], cmap="Oranges")
     
         st.dataframe(styled_pick_summary, use_container_width=True)
-
 
   
     # --- Tab 6: User Similarity Dashboard ---
