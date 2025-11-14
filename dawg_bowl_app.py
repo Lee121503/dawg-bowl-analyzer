@@ -572,9 +572,39 @@ if auth_status:
                 mime="text/csv",
                 key="tab5_download"
             )
+    
+            # --- NEW: Pick Frequency Table ---
+            st.markdown("### 🎯 Pick Frequency by User")
+    
+            pick_number = st.slider("Select Pick Number", 1, 12, 1, key="tab5_pick_number")
+    
+            # Count how many times each user had that pick
+            pick_counts = df[df["Pick"] == pick_number].groupby("User")["Draft"].nunique().reset_index()
+            pick_counts.columns = ["User", "Pick Count"]
+    
+            # Total drafts per user
+            total_counts = df.groupby("User")["Draft"].nunique().reset_index()
+            total_counts.columns = ["User", "Total Drafts"]
+    
+            pick_summary = pd.merge(total_counts, pick_counts, on="User", how="left").fillna(0)
+            pick_summary["Pick Count"] = pick_summary["Pick Count"].astype(int)
+            pick_summary["Pick %"] = (pick_summary["Pick Count"] / pick_summary["Total Drafts"] * 100).round(2)
+    
+            expected_pct = 100 / 12  # ~8.33%
+            pick_summary["Over Expected %"] = (pick_summary["Pick %"] - expected_pct).round(2)
+    
+            pick_summary = pick_summary.sort_values("Pick Count", ascending=False)
+    
+            styled_pick_summary = pick_summary.style.format({
+                "Pick %": "{:.2f}",
+                "Over Expected %": "{:.2f}"
+            }).background_gradient(subset=["Pick Count", "Pick %", "Over Expected %"], cmap="Oranges")
+    
+            st.dataframe(styled_pick_summary, use_container_width=True)
+    
         else:
             st.info("Please select at least one user to view exposure.")
- 
+
   
     # --- Tab 6: User Similarity Dashboard ---
     elif selected_tab == "🧠 User Similarity Dashboard":
