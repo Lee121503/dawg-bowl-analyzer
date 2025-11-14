@@ -667,7 +667,17 @@ if auth_status:
     # --- Tab 7: Injury Swap ---
     elif selected_tab == "🩹 Injury Swap":
         st.header(f"🩹 Injury Swap Tool — {selected_week_label}")
-    
+
+        # --- Correlation Boost Slider ---
+        correlation_boost = st.slider(
+            "Correlation Boost",
+            0.0,   # minimum
+            2.0,   # maximum
+            1.0,   # default
+            0.1,   # step size
+            key="injury_swap_boost"
+        )
+        
         # --- Week-specific injury file mapping ---
         injury_file_map = {
             "Week 9": "Week9UD.csv",
@@ -859,9 +869,10 @@ if auth_status:
                             team = team_lookup.get(p, None)
                             boost = 0
                             if ep in ["WR", "TE"] and team in drafted_qbs:
-                                boost += 0.5
+                                boost += correlation_boost
                             elif ep == "QB" and team in drafted_passcatchers:
-                                boost += 0.5
+                                boost += correlation_boost
+
     
                             base_proj = proj_lookup.get(p, 0)
                             scored_candidates.append((p, base_proj + boost))
@@ -920,9 +931,9 @@ if auth_status:
                         team = team_lookup.get(p, None)
                         boost = 0
                         if ep in ["WR", "TE"] and team in drafted_qbs:
-                            boost += 0.5
+                            boost += correlation_boost
                         elif ep == "QB" and team in drafted_passcatchers:
-                            boost += 0.5
+                            boost += correlation_boost
                         base_proj = proj_lookup.get(p, 0)
                         scored_candidates.append((p, base_proj + boost))
         
