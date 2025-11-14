@@ -596,7 +596,7 @@ if auth_status:
         }
         injury_file = injury_file_map.get(selected_week_label, "week11UD.csv")
         injury_df = pd.read_csv(f"data/{injury_file}")
-        etr_df = pd.read_csv("data/ETR Projections.csv", sep="\t")
+        etr_df = pd.read_csv("data/ETR Projections.csv", sep=",")
     
         # --- Normalize injury data ---
         injury_df["CleanStatus"] = injury_df["lineupStatus"].fillna("").str.upper().str.strip()
