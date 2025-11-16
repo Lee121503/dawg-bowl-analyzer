@@ -663,7 +663,6 @@ if auth_status:
         else:
             st.info("No users meet the similarity threshold.")
 
-        
     # --- Tab 7: Injury Swap ---
     elif selected_tab == "🩹 Injury Swap":
         st.header(f"🩹 Injury Swap Tool — {selected_week_label}")
@@ -848,6 +847,8 @@ if auth_status:
                     user_name = row["User"]
                     is_flex = row.get("IsFlex", False)
                     drafted = set(full_draft["CleanPlayer"])
+    
+                    # ✅ Flex handling: allow RB/WR/TE pool
                     eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
                     scored_candidates = []
     
@@ -890,7 +891,7 @@ if auth_status:
                 st.dataframe(styled_swap_df, use_container_width=True)
     
         # --- Global Swap List from Suggested Replacements ---
-        st.header("📝 Global Swap List — Suggested Replacements (Extended)")
+        st.header("🩹 Global Swap List — Suggested Replacements (Extended)")
     
         all_suggested = []
     
@@ -911,6 +912,8 @@ if auth_status:
             for _, row in injured_sorted.iterrows():
                 pos = row["Position"]
                 is_flex = row.get("IsFlex", False)
+    
+                # ✅ Flex handling here too
                 eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
                 scored_candidates = []
     
