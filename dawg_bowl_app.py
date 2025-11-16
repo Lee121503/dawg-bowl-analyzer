@@ -963,12 +963,15 @@ if auth_status:
     
         st.dataframe(styled_swap_df, use_container_width=True)
     
-        # --- Export CSV ---
-        injury_id_lookup = dict(zip(injury_df["CleanName"], injury_df["id"]))
+        # --- Export CSV aligned with table ---
+        injury_df["CleanPlayer"] = (injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()).apply(clean_name)
+        injury_id_lookup = dict(zip(injury_df["CleanPlayer"], injury_df["id"]))
+        
         export_df = pd.DataFrame({
-            "id": [injury_id_lookup.get(p, "") for p in unique_suggestions],
+            "id": [injury_id_lookup.get(clean_name(p), "") for p in unique_suggestions],
             "Player": [clean_to_original.get(p, p) for p in unique_suggestions]
         })
+        
         csv_data = export_df.to_csv(index=False).encode("utf-8")
         st.download_button(
             label="📥 Download Global Swap List (CSV)",
