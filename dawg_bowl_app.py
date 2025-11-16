@@ -963,16 +963,19 @@ if auth_status:
     
         st.dataframe(styled_swap_df, use_container_width=True)
     
-        # --- Export CSV aligned with table ---
-        injury_df["CleanPlayer"] = (injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()).apply(clean_name)
+        # --- Export CSV aligned with table order ---
+        injury_df["CleanPlayer"] = (
+            injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()
+        ).apply(clean_name)
+        
         injury_id_lookup = dict(zip(injury_df["CleanPlayer"], injury_df["id"]))
         
-        export_df = pd.DataFrame({
-            "id": [injury_id_lookup.get(clean_name(p), "") for p in unique_suggestions],
-            "Player": [clean_to_original.get(p, p) for p in unique_suggestions]
-        })
+        # Use the sorted swap_df (same as table)
+        export_df = swap_df.copy()
+        export_df["id"] = export_df["Player"].apply(lambda p: injury_id_lookup.get(clean_name(p), ""))
         
-        csv_data = export_df.to_csv(index=False).encode("utf-8")
+        csv_data = export_df[["id", "Player"]].to_csv(index=False).encode("utf-8")
+        
         st.download_button(
             label="📥 Download Global Swap List (CSV)",
             data=csv_data,
@@ -980,7 +983,6 @@ if auth_status:
             mime="text/csv"
         )
 
-    
     # --- Tab8: ETR Leaderboard ---
     elif selected_tab == "📈 ETR Leaderboard":
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
