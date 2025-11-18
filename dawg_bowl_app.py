@@ -687,7 +687,7 @@ if auth_status:
         
     # --- Tab 7: Injury Swap ---
     elif selected_tab == "🩹 Injury Swap":
-        st.header(f"🩹 Injury Swap Tool — {selected_week_label}")
+        st.header(f"🩹 Injury Swap Tool — Week {DEFAULT_WEEK}")
     
         # --- Correlation Boost Slider ---
         correlation_boost = st.slider(
