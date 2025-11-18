@@ -96,9 +96,10 @@ if auth_status:
 
 
     # --- Normalize draft data ---
-    if "Team" in drafts_df.columns and "NFL_Team" not in drafts_df.columns:
-        drafts_df = drafts_df.rename(columns={"Team": "NFL_Team"})
-    drafts_df["CleanPlayer"] = drafts_df["Player"].apply(clean_name)
+    if "Team" in df.columns and "NFL_Team" not in df.columns:
+        df = df.rename(columns={"Team": "NFL_Team"})
+    df["CleanPlayer"] = df["Player"].apply(clean_name)
+
 
     # --- Shared Filters ---
     all_positions = sorted(drafts_df["Position"].dropna().unique())
