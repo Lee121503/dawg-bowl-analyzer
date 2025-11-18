@@ -92,6 +92,13 @@ if auth_status:
     # --- Load Week 12 by default ---
     ud_df, df = load_week_data()
     
+    # Define a reusable label for downstream tabs
+    selected_week_label = f"Week {DEFAULT_WEEK}"
+    
+    # Use it in your title
+    st.title(f"Dawg Bowl Contest Dashboard — {selected_week_label}")
+
+    
     st.title(f"Dawg Bowl Contest Dashboard — Week {DEFAULT_WEEK}")
 
 
