@@ -70,34 +70,52 @@ authenticator.logout('Logout', location='sidebar')
 if auth_status:
     st.success(f"Welcome {name} 👋")
 
-    # --- Week selector ---
-    week_options = {
-        "Week 9": "week9_drafts.csv",
-        "Week 10": "week10_drafts.csv",
-        "Week 11": "week11_drafts.csv"
+    # --- Week Defaults ---
+    DEFAULT_WEEK = 12
+    DATA_FILES = {
+        12: {
+            "ud": "week12UD.csv",
+            "drafts": "week12_drafts.csv"
+        },
+        # Add later weeks here if needed
+        # 13: {"ud": "week13UD.csv", "drafts": "week13_drafts.csv"},
     }
 
-    selected_week_label = st.selectbox(
-        "Select Week",
-        list(week_options.keys()),
-        index=list(week_options.keys()).index("Week 11")
-    )
-    selected_week_file = week_options[selected_week_label]
+    def load_week_data(week: int = DEFAULT_WEEK):
+        files = DATA_FILES.get(week)
+        if not files:
+            raise ValueError(f"No data files configured for week {week}")
+        ud_df = pd.read_csv(files["ud"])
+        drafts_df = pd.read_csv(files["drafts"])
+        return ud_df, drafts_df
 
-    st.title(f"Dawg Bowl Contest Dashboard — {selected_week_label}")
+    # --- Load Week 12 by default ---
+    ud_df, drafts_df = load_week_data()
 
-    # --- Load and normalize draft data ---
-    df = pd.read_csv(f"data/{selected_week_file}", sep=None, engine="python")
-    if "Team" in df.columns and "NFL_Team" not in df.columns:
-        df = df.rename(columns={"Team": "NFL_Team"})
-    df["CleanPlayer"] = df["Player"].apply(clean_name)
+    st.title(f"Dawg Bowl Contest Dashboard — Week {DEFAULT_WEEK}")
+
+    # --- Normalize draft data ---
+    if "Team" in drafts_df.columns and "NFL_Team" not in drafts_df.columns:
+        drafts_df = drafts_df.rename(columns={"Team": "NFL_Team"})
+    drafts_df["CleanPlayer"] = drafts_df["Player"].apply(clean_name)
 
     # --- Shared Filters ---
-    all_positions = sorted(df["Position"].dropna().unique())
-    shared_positions = st.multiselect("Filter by Position (shared)", all_positions, default=all_positions, key="shared_position_filter")
+    all_positions = sorted(drafts_df["Position"].dropna().unique())
+    shared_positions = st.multiselect(
+        "Filter by Position (shared)",
+        all_positions,
+        default=all_positions,
+        key="shared_position_filter"
+    )
 
-    adp_min, adp_max = df["Pick"].min(), df["Pick"].max()
-    shared_adp_range = st.slider("Filter by ADP Range (shared)", float(adp_min), float(adp_max), (float(adp_min), float(adp_max)), key="shared_adp_filter")
+    adp_min, adp_max = drafts_df["Pick"].min(), drafts_df["Pick"].max()
+    shared_adp_range = st.slider(
+        "Filter by ADP Range (shared)",
+        float(adp_min),
+        float(adp_max),
+        (float(adp_min), float(adp_max)),
+        key="shared_adp_filter"
+    )
 
     if st.button("🔄 Reset Filters"):
         st.experimental_rerun()
@@ -116,7 +134,6 @@ if auth_status:
         "📉 ADP Change Tracker",
         "📋 User Draft Teams"
     ])
-
 
     # --- Tab 1: Draft Viewer ---
     if selected_tab == "📋 Draft Viewer":
