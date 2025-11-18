@@ -208,15 +208,23 @@ if auth_status:
         stack_rate["Stack Rate"] = (stack_rate["Is_Stacked"] * 100).round(2)
         dashboard_df = dashboard_df.merge(stack_rate[["Player", "Stack Rate"]], on="Player", how="left")
     
-        # Load UD IDs
+        # Load UD IDs for current week (use DEFAULT_WEEK)
         try:
-            ud_df = pd.read_csv("data/week11UD.csv", usecols=[0, 1, 2], names=["id", "First", "Last"], header=0)
+            ud_df = pd.read_csv(
+                f"data/week{DEFAULT_WEEK}UD.csv",
+                usecols=[0, 1, 2],
+                names=["id", "First", "Last"],
+                header=0
+            )
             ud_df["FullName"] = (ud_df["First"].str.strip() + " " + ud_df["Last"].str.strip()).str.strip()
             ud_df["CleanPlayer"] = ud_df["FullName"].apply(clean_name)
             dashboard_df["CleanPlayer"] = dashboard_df["Player"].apply(clean_name)
             dashboard_df = dashboard_df.merge(ud_df[["CleanPlayer", "id"]], on="CleanPlayer", how="left")
         except FileNotFoundError:
-            st.warning("UD ID file not found. Player IDs will be missing.")
+            st.warning(f"UD ID file for Week {DEFAULT_WEEK} not found. Player IDs will be missing.")
+            dashboard_df["id"] = None
+        except Exception as e:
+            st.warning(f"UD ID file for Week {DEFAULT_WEEK} could not be parsed: {e}")
             dashboard_df["id"] = None
     
         # --- NEW: Post-ETR ADP (numeric) only if Post-ETR rows exist ---
@@ -252,7 +260,12 @@ if auth_status:
         selected_positions = st.multiselect("Filter by Position", positions, default=positions, key="tab2_position")
     
         adp_min, adp_max = dashboard_df["Average Draft Position"].min(), dashboard_df["Average Draft Position"].max()
-        adp_range = st.slider("Filter by ADP Range", float(adp_min), float(adp_max), (float(adp_min), float(adp_max)), key="tab2_adp")
+        adp_range = st.slider(
+            "Filter by ADP Range",
+            float(adp_min), float(adp_max),
+            (float(adp_min), float(adp_max)),
+            key="tab2_adp"
+        )
     
         all_users = sorted(df["User"].dropna().unique())
         selected_user = st.selectbox("Filter by User (optional)", ["All Users"] + all_users, key="tab2_user")
@@ -319,9 +332,9 @@ if auth_status:
                 mime="text/csv",
                 key="tab2_download"
             )
-
         else:
             st.warning("No players match the current filters.")
+
 
 
     
