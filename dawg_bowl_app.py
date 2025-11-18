@@ -102,15 +102,15 @@ if auth_status:
 
 
     # --- Shared Filters ---
-    all_positions = sorted(drafts_df["Position"].dropna().unique())
+    all_positions = sorted(df["Position"].dropna().unique())
     shared_positions = st.multiselect(
         "Filter by Position (shared)",
         all_positions,
         default=all_positions,
         key="shared_position_filter"
     )
-
-    adp_min, adp_max = drafts_df["Pick"].min(), drafts_df["Pick"].max()
+    
+    adp_min, adp_max = df["Pick"].min(), df["Pick"].max()
     shared_adp_range = st.slider(
         "Filter by ADP Range (shared)",
         float(adp_min),
@@ -118,6 +118,7 @@ if auth_status:
         (float(adp_min), float(adp_max)),
         key="shared_adp_filter"
     )
+
 
     if st.button("🔄 Reset Filters"):
         st.experimental_rerun()
