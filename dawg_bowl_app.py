@@ -80,20 +80,20 @@ if auth_status:
         # Add later weeks here if needed
         # 13: {"ud": "data/week13UD.csv", "drafts": "data/week13_drafts.csv"},
     }
-
-
+    
     def load_week_data(week: int = DEFAULT_WEEK):
         files = DATA_FILES.get(week)
         if not files:
             raise ValueError(f"No data files configured for week {week}")
         ud_df = pd.read_csv(files["ud"])
-        drafts_df = pd.read_csv(files["drafts"])
-        return ud_df, drafts_df
-
+        df = pd.read_csv(files["drafts"])   # <-- keep drafts as df
+        return ud_df, df
+    
     # --- Load Week 12 by default ---
-    ud_df, drafts_df = load_week_data()
-
+    ud_df, df = load_week_data()
+    
     st.title(f"Dawg Bowl Contest Dashboard — Week {DEFAULT_WEEK}")
+
 
     # --- Normalize draft data ---
     if "Team" in drafts_df.columns and "NFL_Team" not in drafts_df.columns:
