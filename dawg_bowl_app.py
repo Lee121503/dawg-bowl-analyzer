@@ -74,12 +74,13 @@ if auth_status:
     DEFAULT_WEEK = 12
     DATA_FILES = {
         12: {
-            "ud": "week12UD.csv",
-            "drafts": "week12_drafts.csv"
+            "ud": "data/week12UD.csv",
+            "drafts": "data/week12_drafts.csv"
         },
         # Add later weeks here if needed
-        # 13: {"ud": "week13UD.csv", "drafts": "week13_drafts.csv"},
+        # 13: {"ud": "data/week13UD.csv", "drafts": "data/week13_drafts.csv"},
     }
+
 
     def load_week_data(week: int = DEFAULT_WEEK):
         files = DATA_FILES.get(week)
