@@ -308,10 +308,11 @@ if auth_status:
             st.download_button(
                 label="📥 Download CSV (with id)",
                 data=csv_bytes,
-                file_name=f"{selected_week_label.replace(' ', '_')}_PlayerDashboard.csv",
+                file_name=f"Week{DEFAULT_WEEK}_PlayerDashboard.csv",
                 mime="text/csv",
                 key="tab2_download"
             )
+
         else:
             st.warning("No players match the current filters.")
 
