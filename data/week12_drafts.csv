@@ -3455,3 +3455,939 @@ Draft,Team,Pick,Player,Position,NFL_Team,User,Fantasy QB,QB Team,Stacked,DBL Sta
 48,3,70,Brian Thomas,WR,Jacksonville Jaguars,GFORGUMBY,Dak Prescott,Dallas Cowboys,0,,,Arizona Cardinals,0,0,Pre-ETR,49.png
 48,2,71,Theo Johnson,TE,New York Giants,CRBLAKE2,Daniel Jones,Indianapolis Colts,0,,,Detroit Lions,0,0,Pre-ETR,49.png
 48,1,72,Tyler Shough,QB,New Orleans Saints,SHAGNASTYB,Tyler Shough,New Orleans Saints,1,2,1,Atlanta Falcons,0,0,Pre-ETR,49.png
+49,1,1,Jonathan Taylor,RB,Indianapolis Colts,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,2,1,Pre-ETR,50.png
+49,2,2,Jahmyr Gibbs,RB,Detroit Lions,KRUTCHES93,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR,50.png
+49,3,3,Bijan Robinson,RB,Atlanta Falcons,TUBINIS2121,Drake Maye,New England Patriots,0,,,New Orleans Saints,0,0,Pre-ETR,50.png
+49,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,COPPERPRICES,Jordan Love,Green Bay Packers,0,,,Tennessee Titans,0,0,Pre-ETR,50.png
+49,5,5,Saquon Barkley,RB,Philadelphia Eagles,MATHOLOGY,Jared Goff,Detroit Lions,0,,,Dallas Cowboys,1,1,Pre-ETR,50.png
+49,6,6,Amon-Ra St. Brown,WR,Detroit Lions,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,New York Giants,0,0,Pre-ETR,50.png
+49,7,7,Trey McBride,TE,Arizona Cardinals,KINGCOS88,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,0,0,Pre-ETR,50.png
+49,8,8,TreVeyon Henderson,RB,New England Patriots,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Cincinnati Bengals,0,0,Pre-ETR,50.png
+49,9,9,CeeDee Lamb,WR,Dallas Cowboys,TEDDYONFETTI,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,1,1,Pre-ETR,50.png
+49,10,10,Derrick Henry,RB,Baltimore Ravens,NEZ,Daniel Jones,Indianapolis Colts,0,,,New York Jets,0,0,Pre-ETR,50.png
+49,11,11,Travis Etienne Jr.,RB,Jacksonville Jaguars,GABRAINOS,Sam Darnold,Seattle Seahawks,0,,,Arizona Cardinals,0,0,Pre-ETR,50.png
+49,12,12,Jalen Hurts,QB,Philadelphia Eagles,PLAYERQ,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,50.png
+49,12,13,Rashee Rice,WR,Kansas City Chiefs,PLAYERQ,Jalen Hurts,Philadelphia Eagles,0,,,Indianapolis Colts,0,0,Pre-ETR,50.png
+49,11,14,Brock Bowers,TE,Las Vegas Raiders,GABRAINOS,Sam Darnold,Seattle Seahawks,0,,,Cleveland Browns,0,0,Pre-ETR,50.png
+49,10,15,Tee Higgins,WR,Cincinnati Bengals,NEZ,Daniel Jones,Indianapolis Colts,0,,,New England Patriots,0,0,Pre-ETR,50.png
+49,9,16,A.J. Brown,WR,Philadelphia Eagles,TEDDYONFETTI,Dak Prescott,Dallas Cowboys,0,,,Dallas Cowboys,2,1,Pre-ETR,50.png
+49,8,17,Justin Jefferson,WR,Minnesota Vikings,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Green Bay Packers,0,0,Pre-ETR,50.png
+49,7,18,DeVonta Smith,WR,Philadelphia Eagles,KINGCOS88,Jacoby Brissett,Arizona Cardinals,0,,,Dallas Cowboys,0,0,Pre-ETR,50.png
+49,6,19,Javonte Williams,RB,Dallas Cowboys,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Philadelphia Eagles,0,0,Pre-ETR,50.png
+49,5,20,Jameson Williams,WR,Detroit Lions,MATHOLOGY,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,50.png
+49,4,21,Quinshon Judkins,RB,Cleveland Browns,COPPERPRICES,Jordan Love,Green Bay Packers,0,,,Las Vegas Raiders,0,0,Pre-ETR,50.png
+49,3,22,Drake Maye,QB,New England Patriots,TUBINIS2121,Drake Maye,New England Patriots,1,2,1,Cincinnati Bengals,0,0,Pre-ETR,50.png
+49,2,23,Lamar Jackson,QB,Baltimore Ravens,KRUTCHES93,Lamar Jackson,Baltimore Ravens,1,2,1,New York Jets,0,0,Pre-ETR,50.png
+49,1,24,Chris Olave,WR,New Orleans Saints,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR,50.png
+49,1,25,Patrick Mahomes,QB,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,1,1,Indianapolis Colts,1,1,Pre-ETR,50.png
+49,2,26,Zay Flowers,WR,Baltimore Ravens,KRUTCHES93,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,50.png
+49,3,27,Stefon Diggs,WR,New England Patriots,TUBINIS2121,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,50.png
+49,4,28,Tyler Warren,TE,Indianapolis Colts,COPPERPRICES,Jordan Love,Green Bay Packers,0,,,Kansas City Chiefs,0,0,Pre-ETR,50.png
+49,5,29,George Pickens,WR,Dallas Cowboys,MATHOLOGY,Jared Goff,Detroit Lions,0,,,Philadelphia Eagles,1,1,Pre-ETR,50.png
+49,6,30,Travis Kelce,TE,Kansas City Chiefs,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Indianapolis Colts,1,1,Pre-ETR,50.png
+49,7,31,Chase Brown,RB,Cincinnati Bengals,KINGCOS88,Jacoby Brissett,Arizona Cardinals,0,,,New England Patriots,0,0,Pre-ETR,50.png
+49,8,32,Kenneth Walker III,RB,Seattle Seahawks,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR,50.png
+49,9,33,Ashton Jeanty,RB,Las Vegas Raiders,TEDDYONFETTI,Dak Prescott,Dallas Cowboys,0,,,Cleveland Browns,0,0,Pre-ETR,50.png
+49,10,34,Jaylen Warren,RB,Pittsburgh Steelers,NEZ,Daniel Jones,Indianapolis Colts,0,,,Chicago Bears,0,0,Pre-ETR,50.png
+49,11,35,Breece Hall,RB,New York Jets,GABRAINOS,Sam Darnold,Seattle Seahawks,0,,,Baltimore Ravens,0,0,Pre-ETR,50.png
+49,12,36,Dallas Goedert,TE,Philadelphia Eagles,PLAYERQ,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,50.png
+49,12,37,Rhamondre Stevenson,RB,New England Patriots,PLAYERQ,Jalen Hurts,Philadelphia Eagles,0,,,Cincinnati Bengals,0,0,Pre-ETR,50.png
+49,11,38,Rome Odunze,WR,Chicago Bears,GABRAINOS,Sam Darnold,Seattle Seahawks,0,,,Pittsburgh Steelers,0,0,Pre-ETR,50.png
+49,10,39,Daniel Jones,QB,Indianapolis Colts,NEZ,Daniel Jones,Indianapolis Colts,1,0,0,Kansas City Chiefs,0,0,Pre-ETR,50.png
+49,9,40,Michael Wilson,WR,Arizona Cardinals,TEDDYONFETTI,Dak Prescott,Dallas Cowboys,0,,,Jacksonville Jaguars,0,0,Pre-ETR,50.png
+49,8,41,Jaxson Dart,QB,New York Giants,CRBLAKE2,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,50.png
+49,7,42,Alec Pierce,WR,Indianapolis Colts,KINGCOS88,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR,50.png
+49,6,43,D'Andre Swift,RB,Chicago Bears,JEWISHMCCAF,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,50.png
+49,5,44,David Montgomery,RB,Detroit Lions,MATHOLOGY,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,50.png
+49,4,45,DK Metcalf,WR,Pittsburgh Steelers,COPPERPRICES,Jordan Love,Green Bay Packers,0,,,Chicago Bears,0,0,Pre-ETR,50.png
+49,3,46,Hunter Henry,TE,New England Patriots,TUBINIS2121,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,50.png
+49,2,47,Mark Andrews,TE,Baltimore Ravens,KRUTCHES93,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,50.png
+49,1,48,Josh Jacobs,RB,Green Bay Packers,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Minnesota Vikings,0,0,Pre-ETR,50.png
+49,1,49,Xavier Worthy,WR,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,1,1,Pre-ETR,50.png
+49,2,50,Aaron Jones,RB,Minnesota Vikings,KRUTCHES93,Lamar Jackson,Baltimore Ravens,0,,,Green Bay Packers,1,1,Pre-ETR,50.png
+49,3,51,Emanuel Wilson,RB,Green Bay Packers,TUBINIS2121,Drake Maye,New England Patriots,0,,,Minnesota Vikings,0,0,Pre-ETR,50.png
+49,4,52,Alvin Kamara,RB,New Orleans Saints,COPPERPRICES,Jordan Love,Green Bay Packers,0,,,Atlanta Falcons,0,0,Pre-ETR,50.png
+49,5,53,Jared Goff,QB,Detroit Lions,MATHOLOGY,Jared Goff,Detroit Lions,1,2,1,New York Giants,0,0,Pre-ETR,50.png
+49,6,54,Michael Pittman Jr.,WR,Indianapolis Colts,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Kansas City Chiefs,1,1,Pre-ETR,50.png
+49,7,55,Jacoby Brissett,QB,Arizona Cardinals,KINGCOS88,Jacoby Brissett,Arizona Cardinals,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR,50.png
+49,8,56,Wan'Dale Robinson,WR,New York Giants,CRBLAKE2,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,50.png
+49,9,57,Dak Prescott,QB,Dallas Cowboys,TEDDYONFETTI,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,1,1,Pre-ETR,50.png
+49,10,58,Jake Ferguson,TE,Dallas Cowboys,NEZ,Daniel Jones,Indianapolis Colts,0,,,Philadelphia Eagles,0,0,Pre-ETR,50.png
+49,11,59,Rashid Shaheed,WR,Seattle Seahawks,GABRAINOS,Sam Darnold,Seattle Seahawks,1,,,Tennessee Titans,0,0,Pre-ETR,50.png
+49,12,60,Kayshon Boutte,WR,New England Patriots,PLAYERQ,Jalen Hurts,Philadelphia Eagles,0,,,Cincinnati Bengals,0,0,Pre-ETR,50.png
+49,12,61,Zach Charbonnet,RB,Seattle Seahawks,PLAYERQ,Jalen Hurts,Philadelphia Eagles,0,,,Tennessee Titans,0,0,Pre-ETR,50.png
+49,11,62,Sam Darnold,QB,Seattle Seahawks,GABRAINOS,Sam Darnold,Seattle Seahawks,1,1,1,Tennessee Titans,0,0,Pre-ETR,50.png
+49,10,63,Christian Watson,WR,Green Bay Packers,NEZ,Daniel Jones,Indianapolis Colts,0,,,Minnesota Vikings,0,0,Pre-ETR,50.png
+49,9,64,Juwan Johnson,TE,New Orleans Saints,TEDDYONFETTI,Dak Prescott,Dallas Cowboys,0,,,Atlanta Falcons,0,0,Pre-ETR,50.png
+49,8,65,Brenton Strange,TE,Jacksonville Jaguars,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Arizona Cardinals,0,0,Pre-ETR,50.png
+49,7,66,Kenneth Gainwell,RB,Pittsburgh Steelers,KINGCOS88,Jacoby Brissett,Arizona Cardinals,0,,,Chicago Bears,0,0,Pre-ETR,50.png
+49,6,67,Caleb Williams,QB,Chicago Bears,JEWISHMCCAF,Caleb Williams,Chicago Bears,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR,50.png
+49,5,68,Kyle Pitts,TE,Atlanta Falcons,MATHOLOGY,Jared Goff,Detroit Lions,0,,,New Orleans Saints,0,0,Pre-ETR,50.png
+49,4,69,Jordan Love,QB,Green Bay Packers,COPPERPRICES,Jordan Love,Green Bay Packers,1,0,0,Minnesota Vikings,0,0,Pre-ETR,50.png
+49,3,70,Marvin Harrison,WR,Arizona Cardinals,TUBINIS2121,Drake Maye,New England Patriots,0,,,Jacksonville Jaguars,0,0,Pre-ETR,50.png
+49,2,71,Romeo Doubs,WR,Green Bay Packers,KRUTCHES93,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,1,1,Pre-ETR,50.png
+49,1,72,Theo Johnson,TE,New York Giants,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Detroit Lions,0,0,Pre-ETR,50.png
+50,1,1,Jonathan Taylor,RB,Indianapolis Colts,COPPERPRICES,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR,51.png
+50,2,2,Jaxon Smith-Njigba,WR,Seattle Seahawks,DELUXESEVEN,Sam Darnold,Seattle Seahawks,1,,,Tennessee Titans,0,0,Pre-ETR,51.png
+50,3,3,Jahmyr Gibbs,RB,Detroit Lions,FFLINX,Dak Prescott,Dallas Cowboys,0,,,New York Giants,0,0,Pre-ETR,51.png
+50,4,4,Bijan Robinson,RB,Atlanta Falcons,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,New Orleans Saints,0,0,Pre-ETR,51.png
+50,5,5,Amon-Ra St. Brown,WR,Detroit Lions,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,New York Giants,0,0,Pre-ETR,51.png
+50,6,6,Trey McBride,TE,Arizona Cardinals,KRUTCHES93,Drake Maye,New England Patriots,0,,,Jacksonville Jaguars,0,0,Pre-ETR,51.png
+50,7,7,Derrick Henry,RB,Baltimore Ravens,NEZ,Jordan Love,Green Bay Packers,0,,,New York Jets,0,0,Pre-ETR,51.png
+50,8,8,Saquon Barkley,RB,Philadelphia Eagles,PIRI24,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,1,1,Pre-ETR,51.png
+50,9,9,Rashee Rice,WR,Kansas City Chiefs,SHAGNASTYB,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,0,0,Pre-ETR,51.png
+50,10,10,CeeDee Lamb,WR,Dallas Cowboys,LEE121503,Jalen Hurts,Philadelphia Eagles,0,,,Philadelphia Eagles,2,1,Pre-ETR,51.png
+50,11,11,TreVeyon Henderson,RB,New England Patriots,JGFC,Jared Goff,Detroit Lions,0,,,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,12,12,Tee Higgins,WR,Cincinnati Bengals,CRBLAKE2,Jaxson Dart,New York Giants,0,,,New England Patriots,0,0,Pre-ETR,51.png
+50,12,13,Travis Etienne Jr.,RB,Jacksonville Jaguars,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Arizona Cardinals,0,0,Pre-ETR,51.png
+50,11,14,Jameson Williams,WR,Detroit Lions,JGFC,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,51.png
+50,10,15,Jalen Hurts,QB,Philadelphia Eagles,LEE121503,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,1,1,Pre-ETR,51.png
+50,9,16,Patrick Mahomes,QB,Kansas City Chiefs,SHAGNASTYB,Patrick Mahomes,Kansas City Chiefs,1,2,1,Indianapolis Colts,0,0,Pre-ETR,51.png
+50,8,17,Javonte Williams,RB,Dallas Cowboys,PIRI24,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,1,1,Pre-ETR,51.png
+50,7,18,Brock Bowers,TE,Las Vegas Raiders,NEZ,Jordan Love,Green Bay Packers,0,,,Cleveland Browns,0,0,Pre-ETR,51.png
+50,6,19,Drake Maye,QB,New England Patriots,KRUTCHES93,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,5,20,A.J. Brown,WR,Philadelphia Eagles,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,Dallas Cowboys,0,0,Pre-ETR,51.png
+50,4,21,Justin Jefferson,WR,Minnesota Vikings,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,Green Bay Packers,0,0,Pre-ETR,51.png
+50,3,22,Tyler Warren,TE,Indianapolis Colts,FFLINX,Dak Prescott,Dallas Cowboys,0,,,Kansas City Chiefs,0,0,Pre-ETR,51.png
+50,2,23,Stefon Diggs,WR,New England Patriots,DELUXESEVEN,Sam Darnold,Seattle Seahawks,0,,,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,1,24,Lamar Jackson,QB,Baltimore Ravens,COPPERPRICES,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,0,0,Pre-ETR,51.png
+50,1,25,Chris Olave,WR,New Orleans Saints,COPPERPRICES,Lamar Jackson,Baltimore Ravens,0,,,Atlanta Falcons,0,0,Pre-ETR,51.png
+50,2,26,DeVonta Smith,WR,Philadelphia Eagles,DELUXESEVEN,Sam Darnold,Seattle Seahawks,0,,,Dallas Cowboys,0,0,Pre-ETR,51.png
+50,3,27,George Pickens,WR,Dallas Cowboys,FFLINX,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,51.png
+50,4,28,Chase Brown,RB,Cincinnati Bengals,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,New England Patriots,0,0,Pre-ETR,51.png
+50,5,29,Zay Flowers,WR,Baltimore Ravens,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,New York Jets,0,0,Pre-ETR,51.png
+50,6,30,Quinshon Judkins,RB,Cleveland Browns,KRUTCHES93,Drake Maye,New England Patriots,0,,,Las Vegas Raiders,0,0,Pre-ETR,51.png
+50,7,31,Kenneth Walker III,RB,Seattle Seahawks,NEZ,Jordan Love,Green Bay Packers,0,,,Tennessee Titans,0,0,Pre-ETR,51.png
+50,8,32,Rome Odunze,WR,Chicago Bears,PIRI24,Trevor Lawrence,Jacksonville Jaguars,0,,,Pittsburgh Steelers,1,1,Pre-ETR,51.png
+50,9,33,Ashton Jeanty,RB,Las Vegas Raiders,SHAGNASTYB,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,0,0,Pre-ETR,51.png
+50,10,34,Jaylen Warren,RB,Pittsburgh Steelers,LEE121503,Jalen Hurts,Philadelphia Eagles,0,,,Chicago Bears,0,0,Pre-ETR,51.png
+50,11,35,Travis Kelce,TE,Kansas City Chiefs,JGFC,Jared Goff,Detroit Lions,0,,,Indianapolis Colts,0,0,Pre-ETR,51.png
+50,12,36,Jaxson Dart,QB,New York Giants,CRBLAKE2,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,51.png
+50,12,37,Breece Hall,RB,New York Jets,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Baltimore Ravens,0,0,Pre-ETR,51.png
+50,11,38,Jared Goff,QB,Detroit Lions,JGFC,Jared Goff,Detroit Lions,1,1,1,New York Giants,0,0,Pre-ETR,51.png
+50,10,39,Dallas Goedert,TE,Philadelphia Eagles,LEE121503,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,1,1,Pre-ETR,51.png
+50,9,40,Xavier Worthy,WR,Kansas City Chiefs,SHAGNASTYB,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,0,0,Pre-ETR,51.png
+50,8,41,DK Metcalf,WR,Pittsburgh Steelers,PIRI24,Trevor Lawrence,Jacksonville Jaguars,0,,,Chicago Bears,1,1,Pre-ETR,51.png
+50,7,42,Alec Pierce,WR,Indianapolis Colts,NEZ,Jordan Love,Green Bay Packers,0,,,Kansas City Chiefs,0,0,Pre-ETR,51.png
+50,6,43,Aaron Jones,RB,Minnesota Vikings,KRUTCHES93,Drake Maye,New England Patriots,0,,,Green Bay Packers,0,0,Pre-ETR,51.png
+50,5,44,D'Andre Swift,RB,Chicago Bears,VOGEYBERRA8,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,51.png
+50,4,45,Michael Pittman Jr.,WR,Indianapolis Colts,CGEEEEEE,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,51.png
+50,3,46,Dak Prescott,QB,Dallas Cowboys,FFLINX,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,51.png
+50,2,47,David Montgomery,RB,Detroit Lions,DELUXESEVEN,Sam Darnold,Seattle Seahawks,0,,,New York Giants,0,0,Pre-ETR,51.png
+50,1,48,Michael Wilson,WR,Arizona Cardinals,COPPERPRICES,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR,51.png
+50,1,49,Emanuel Wilson,RB,Green Bay Packers,COPPERPRICES,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,51.png
+50,2,50,Sam Darnold,QB,Seattle Seahawks,DELUXESEVEN,Sam Darnold,Seattle Seahawks,1,1,1,Tennessee Titans,0,0,Pre-ETR,51.png
+50,3,51,Josh Jacobs,RB,Green Bay Packers,FFLINX,Dak Prescott,Dallas Cowboys,0,,,Minnesota Vikings,0,0,Pre-ETR,51.png
+50,4,52,Daniel Jones,QB,Indianapolis Colts,CGEEEEEE,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,0,0,Pre-ETR,51.png
+50,5,53,Caleb Williams,QB,Chicago Bears,VOGEYBERRA8,Caleb Williams,Chicago Bears,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR,51.png
+50,6,54,Wan'Dale Robinson,WR,New York Giants,KRUTCHES93,Drake Maye,New England Patriots,0,,,Detroit Lions,0,0,Pre-ETR,51.png
+50,7,55,Christian Watson,WR,Green Bay Packers,NEZ,Jordan Love,Green Bay Packers,1,,,Minnesota Vikings,0,0,Pre-ETR,51.png
+50,8,56,Kyle Pitts,TE,Atlanta Falcons,PIRI24,Trevor Lawrence,Jacksonville Jaguars,0,,,New Orleans Saints,0,0,Pre-ETR,51.png
+50,9,57,Hunter Henry,TE,New England Patriots,SHAGNASTYB,Patrick Mahomes,Kansas City Chiefs,0,,,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,10,58,Alvin Kamara,RB,New Orleans Saints,LEE121503,Jalen Hurts,Philadelphia Eagles,0,,,Atlanta Falcons,1,1,Pre-ETR,51.png
+50,11,59,Brian Thomas,WR,Jacksonville Jaguars,JGFC,Jared Goff,Detroit Lions,0,,,Arizona Cardinals,0,0,Pre-ETR,51.png
+50,12,60,Jordan Addison,WR,Minnesota Vikings,CRBLAKE2,Jaxson Dart,New York Giants,0,,,Green Bay Packers,0,0,Pre-ETR,51.png
+50,12,61,Theo Johnson,TE,New York Giants,CRBLAKE2,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,51.png
+50,11,62,Kenneth Gainwell,RB,Pittsburgh Steelers,JGFC,Jared Goff,Detroit Lions,0,,,Chicago Bears,0,0,Pre-ETR,51.png
+50,10,63,Darnell Mooney,WR,Atlanta Falcons,LEE121503,Jalen Hurts,Philadelphia Eagles,0,,,New Orleans Saints,1,1,Pre-ETR,51.png
+50,9,64,Rhamondre Stevenson,RB,New England Patriots,SHAGNASTYB,Patrick Mahomes,Kansas City Chiefs,0,,,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,8,65,Trevor Lawrence,QB,Jacksonville Jaguars,PIRI24,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,51.png
+50,7,66,Jordan Love,QB,Green Bay Packers,NEZ,Jordan Love,Green Bay Packers,1,1,1,Minnesota Vikings,0,0,Pre-ETR,51.png
+50,6,67,Kayshon Boutte,WR,New England Patriots,KRUTCHES93,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,5,68,Colston Loveland,TE,Chicago Bears,VOGEYBERRA8,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,51.png
+50,4,69,Jake Ferguson,TE,Dallas Cowboys,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,Philadelphia Eagles,0,0,Pre-ETR,51.png
+50,3,70,Mack Hollins,WR,New England Patriots,FFLINX,Dak Prescott,Dallas Cowboys,0,,,Cincinnati Bengals,0,0,Pre-ETR,51.png
+50,2,71,Mark Andrews,TE,Baltimore Ravens,DELUXESEVEN,Sam Darnold,Seattle Seahawks,0,,,New York Jets,0,0,Pre-ETR,51.png
+50,1,72,Brock Wright,TE,Detroit Lions,COPPERPRICES,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR,51.png
+51,1,1,Jahmyr Gibbs,RB,Detroit Lions,DABK,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,52.png
+51,2,2,Jonathan Taylor,RB,Indianapolis Colts,GFORGUMBY,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,52.png
+51,3,3,Bijan Robinson,RB,Atlanta Falcons,PLAYERQ,Dak Prescott,Dallas Cowboys,0,,,New Orleans Saints,0,0,Pre-ETR,52.png
+51,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,NEZ,Sam Darnold,Seattle Seahawks,1,,,Tennessee Titans,0,0,Pre-ETR,52.png
+51,5,5,Amon-Ra St. Brown,WR,Detroit Lions,KRUTCHES93,Jalen Hurts,Philadelphia Eagles,0,,,New York Giants,0,0,Pre-ETR,52.png
+51,6,6,Saquon Barkley,RB,Philadelphia Eagles,JYAKER23,Patrick Mahomes,Kansas City Chiefs,0,,,Dallas Cowboys,1,1,Pre-ETR,52.png
+51,7,7,Derrick Henry,RB,Baltimore Ravens,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,New York Jets,0,0,Pre-ETR,52.png
+51,8,8,Trey McBride,TE,Arizona Cardinals,LEE121503,Drake Maye,New England Patriots,0,,,Jacksonville Jaguars,0,0,Pre-ETR,52.png
+51,9,9,CeeDee Lamb,WR,Dallas Cowboys,NOAHPETRO23,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,0,0,Pre-ETR,52.png
+51,10,10,Rashee Rice,WR,Kansas City Chiefs,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Indianapolis Colts,0,0,Pre-ETR,52.png
+51,11,11,TreVeyon Henderson,RB,New England Patriots,LENKEITH,Jaxson Dart,New York Giants,0,,,Cincinnati Bengals,1,1,Pre-ETR,52.png
+51,12,12,Lamar Jackson,QB,Baltimore Ravens,PIRI24,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,0,0,Pre-ETR,52.png
+51,12,13,Brock Bowers,TE,Las Vegas Raiders,PIRI24,Lamar Jackson,Baltimore Ravens,0,,,Cleveland Browns,0,0,Pre-ETR,52.png
+51,11,14,Tee Higgins,WR,Cincinnati Bengals,LENKEITH,Jaxson Dart,New York Giants,0,,,New England Patriots,1,1,Pre-ETR,52.png
+51,10,15,Justin Jefferson,WR,Minnesota Vikings,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR,52.png
+51,9,16,George Pickens,WR,Dallas Cowboys,NOAHPETRO23,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,0,0,Pre-ETR,52.png
+51,8,17,Drake Maye,QB,New England Patriots,LEE121503,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,0,0,Pre-ETR,52.png
+51,7,18,Travis Etienne Jr.,RB,Jacksonville Jaguars,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR,52.png
+51,6,19,Javonte Williams,RB,Dallas Cowboys,JYAKER23,Patrick Mahomes,Kansas City Chiefs,0,,,Philadelphia Eagles,1,1,Pre-ETR,52.png
+51,5,20,Jalen Hurts,QB,Philadelphia Eagles,KRUTCHES93,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,52.png
+51,4,21,A.J. Brown,WR,Philadelphia Eagles,NEZ,Sam Darnold,Seattle Seahawks,0,,,Dallas Cowboys,0,0,Pre-ETR,52.png
+51,3,22,DeVonta Smith,WR,Philadelphia Eagles,PLAYERQ,Dak Prescott,Dallas Cowboys,0,,,Dallas Cowboys,2,1,Pre-ETR,52.png
+51,2,23,Chris Olave,WR,New Orleans Saints,GFORGUMBY,Daniel Jones,Indianapolis Colts,0,,,Atlanta Falcons,0,0,Pre-ETR,52.png
+51,1,24,Jameson Williams,WR,Detroit Lions,DABK,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,52.png
+51,1,25,Stefon Diggs,WR,New England Patriots,DABK,Jared Goff,Detroit Lions,0,,,Cincinnati Bengals,0,0,Pre-ETR,52.png
+51,2,26,Chase Brown,RB,Cincinnati Bengals,GFORGUMBY,Daniel Jones,Indianapolis Colts,0,,,New England Patriots,0,0,Pre-ETR,52.png
+51,3,27,Kenneth Walker III,RB,Seattle Seahawks,PLAYERQ,Dak Prescott,Dallas Cowboys,0,,,Tennessee Titans,0,0,Pre-ETR,52.png
+51,4,28,Jaylen Warren,RB,Pittsburgh Steelers,NEZ,Sam Darnold,Seattle Seahawks,0,,,Chicago Bears,0,0,Pre-ETR,52.png
+51,5,29,Quinshon Judkins,RB,Cleveland Browns,KRUTCHES93,Jalen Hurts,Philadelphia Eagles,0,,,Las Vegas Raiders,0,0,Pre-ETR,52.png
+51,6,30,Patrick Mahomes,QB,Kansas City Chiefs,JYAKER23,Patrick Mahomes,Kansas City Chiefs,1,1,1,Indianapolis Colts,0,0,Pre-ETR,52.png
+51,7,31,Tyler Warren,TE,Indianapolis Colts,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR,52.png
+51,8,32,Zay Flowers,WR,Baltimore Ravens,LEE121503,Drake Maye,New England Patriots,0,,,New York Jets,0,0,Pre-ETR,52.png
+51,9,33,Hunter Henry,TE,New England Patriots,NOAHPETRO23,Trevor Lawrence,Jacksonville Jaguars,0,,,Cincinnati Bengals,0,0,Pre-ETR,52.png
+51,10,34,Breece Hall,RB,New York Jets,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Baltimore Ravens,1,1,Pre-ETR,52.png
+51,11,35,Travis Kelce,TE,Kansas City Chiefs,LENKEITH,Jaxson Dart,New York Giants,0,,,Indianapolis Colts,0,0,Pre-ETR,52.png
+51,12,36,Rome Odunze,WR,Chicago Bears,PIRI24,Lamar Jackson,Baltimore Ravens,0,,,Pittsburgh Steelers,1,1,Pre-ETR,52.png
+51,12,37,DK Metcalf,WR,Pittsburgh Steelers,PIRI24,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,1,1,Pre-ETR,52.png
+51,11,38,Jaxson Dart,QB,New York Giants,LENKEITH,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,52.png
+51,10,39,Ashton Jeanty,RB,Las Vegas Raiders,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR,52.png
+51,9,40,D'Andre Swift,RB,Chicago Bears,NOAHPETRO23,Trevor Lawrence,Jacksonville Jaguars,0,,,Pittsburgh Steelers,0,0,Pre-ETR,52.png
+51,8,41,Emanuel Wilson,RB,Green Bay Packers,LEE121503,Drake Maye,New England Patriots,0,,,Minnesota Vikings,0,0,Pre-ETR,52.png
+51,7,42,Michael Wilson,WR,Arizona Cardinals,GABRAINOS,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,2,1,Pre-ETR,52.png
+51,6,43,Xavier Worthy,WR,Kansas City Chiefs,JYAKER23,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,0,0,Pre-ETR,52.png
+51,5,44,Dallas Goedert,TE,Philadelphia Eagles,KRUTCHES93,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,52.png
+51,4,45,Aaron Jones,RB,Minnesota Vikings,NEZ,Sam Darnold,Seattle Seahawks,0,,,Green Bay Packers,0,0,Pre-ETR,52.png
+51,3,46,Dak Prescott,QB,Dallas Cowboys,PLAYERQ,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,1,1,Pre-ETR,52.png
+51,2,47,Daniel Jones,QB,Indianapolis Colts,GFORGUMBY,Daniel Jones,Indianapolis Colts,1,2,1,Kansas City Chiefs,0,0,Pre-ETR,52.png
+51,1,48,Jared Goff,QB,Detroit Lions,DABK,Jared Goff,Detroit Lions,1,2,1,New York Giants,0,0,Pre-ETR,52.png
+51,1,49,Kyle Pitts,TE,Atlanta Falcons,DABK,Jared Goff,Detroit Lions,0,,,New Orleans Saints,0,0,Pre-ETR,52.png
+51,2,50,Michael Pittman Jr.,WR,Indianapolis Colts,GFORGUMBY,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,52.png
+51,3,51,Jake Ferguson,TE,Dallas Cowboys,PLAYERQ,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,1,1,Pre-ETR,52.png
+51,4,52,Sam Darnold,QB,Seattle Seahawks,NEZ,Sam Darnold,Seattle Seahawks,1,1,1,Tennessee Titans,0,0,Pre-ETR,52.png
+51,5,53,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,52.png
+51,6,54,Darnell Mooney,WR,Atlanta Falcons,JYAKER23,Patrick Mahomes,Kansas City Chiefs,0,,,New Orleans Saints,0,0,Pre-ETR,52.png
+51,7,55,Jakobi Meyers,WR,Jacksonville Jaguars,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR,52.png
+51,8,56,David Montgomery,RB,Detroit Lions,LEE121503,Drake Maye,New England Patriots,0,,,New York Giants,0,0,Pre-ETR,52.png
+51,9,57,Alec Pierce,WR,Indianapolis Colts,NOAHPETRO23,Trevor Lawrence,Jacksonville Jaguars,0,,,Kansas City Chiefs,0,0,Pre-ETR,52.png
+51,10,58,Mark Andrews,TE,Baltimore Ravens,JEWISHMCCAF,Caleb Williams,Chicago Bears,0,,,New York Jets,1,1,Pre-ETR,52.png
+51,11,59,Wan'Dale Robinson,WR,New York Giants,LENKEITH,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,52.png
+51,12,60,Alvin Kamara,RB,New Orleans Saints,PIRI24,Lamar Jackson,Baltimore Ravens,0,,,Atlanta Falcons,0,0,Pre-ETR,52.png
+51,12,61,Brian Thomas,WR,Jacksonville Jaguars,PIRI24,Lamar Jackson,Baltimore Ravens,0,,,Arizona Cardinals,0,0,Pre-ETR,52.png
+51,11,62,Kenneth Gainwell,RB,Pittsburgh Steelers,LENKEITH,Jaxson Dart,New York Giants,0,,,Chicago Bears,0,0,Pre-ETR,52.png
+51,10,63,Caleb Williams,QB,Chicago Bears,JEWISHMCCAF,Caleb Williams,Chicago Bears,1,0,0,Pittsburgh Steelers,0,0,Pre-ETR,52.png
+51,9,64,Trevor Lawrence,QB,Jacksonville Jaguars,NOAHPETRO23,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,52.png
+51,8,65,Kayshon Boutte,WR,New England Patriots,LEE121503,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,52.png
+51,7,66,Jacoby Brissett,QB,Arizona Cardinals,GABRAINOS,Jacoby Brissett,Arizona Cardinals,1,1,1,Jacksonville Jaguars,2,1,Pre-ETR,52.png
+51,6,67,Theo Johnson,TE,New York Giants,JYAKER23,Patrick Mahomes,Kansas City Chiefs,0,,,Detroit Lions,0,0,Pre-ETR,52.png
+51,5,68,Marvin Harrison,WR,Arizona Cardinals,KRUTCHES93,Jalen Hurts,Philadelphia Eagles,0,,,Jacksonville Jaguars,0,0,Pre-ETR,52.png
+51,4,69,Juwan Johnson,TE,New Orleans Saints,NEZ,Sam Darnold,Seattle Seahawks,0,,,Atlanta Falcons,0,0,Pre-ETR,52.png
+51,3,70,DeMario Douglas,WR,New England Patriots,PLAYERQ,Dak Prescott,Dallas Cowboys,0,,,Cincinnati Bengals,0,0,Pre-ETR,52.png
+51,2,71,Brenton Strange,TE,Jacksonville Jaguars,GFORGUMBY,Daniel Jones,Indianapolis Colts,0,,,Arizona Cardinals,0,0,Pre-ETR,52.png
+51,1,72,Rhamondre Stevenson,RB,New England Patriots,DABK,Jared Goff,Detroit Lions,0,,,Cincinnati Bengals,0,0,Pre-ETR,52.png
+52,1,1,Jahmyr Gibbs,RB,Detroit Lions,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Giants,0,0,Pre-ETR,53.png
+52,2,2,Jonathan Taylor,RB,Indianapolis Colts,HOCKEYHOOLI,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,53.png
+52,3,3,Bijan Robinson,RB,Atlanta Falcons,TUBINIS2121,Jared Goff,Detroit Lions,0,,,New Orleans Saints,0,0,Pre-ETR,53.png
+52,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR,53.png
+52,5,5,Amon-Ra St. Brown,WR,Detroit Lions,D4VE,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR,53.png
+52,6,6,Saquon Barkley,RB,Philadelphia Eagles,PRESTIGEFF,Sam Darnold,Seattle Seahawks,0,,,Dallas Cowboys,0,0,Pre-ETR,53.png
+52,7,7,Derrick Henry,RB,Baltimore Ravens,LEE121503,Jaxson Dart,New York Giants,0,,,New York Jets,0,0,Pre-ETR,53.png
+52,8,8,TreVeyon Henderson,RB,New England Patriots,NOAHPETRO23,Jalen Hurts,Philadelphia Eagles,0,,,Cincinnati Bengals,0,0,Pre-ETR,53.png
+52,9,9,CeeDee Lamb,WR,Dallas Cowboys,JYAKER23,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,53.png
+52,10,10,Trey McBride,TE,Arizona Cardinals,DABK,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR,53.png
+52,11,11,Rashee Rice,WR,Kansas City Chiefs,WILLMAKEWAR,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,0,0,Pre-ETR,53.png
+52,12,12,Drake Maye,QB,New England Patriots,PLAYERQ,Drake Maye,New England Patriots,1,2,1,Cincinnati Bengals,1,1,Pre-ETR,53.png
+52,12,13,Tee Higgins,WR,Cincinnati Bengals,PLAYERQ,Drake Maye,New England Patriots,0,,,New England Patriots,3,1,Pre-ETR,53.png
+52,11,14,Travis Etienne Jr.,RB,Jacksonville Jaguars,WILLMAKEWAR,Patrick Mahomes,Kansas City Chiefs,0,,,Arizona Cardinals,0,0,Pre-ETR,53.png
+52,10,15,Javonte Williams,RB,Dallas Cowboys,DABK,Caleb Williams,Chicago Bears,0,,,Philadelphia Eagles,0,0,Pre-ETR,53.png
+52,9,16,Justin Jefferson,WR,Minnesota Vikings,JYAKER23,Dak Prescott,Dallas Cowboys,0,,,Green Bay Packers,1,1,Pre-ETR,53.png
+52,8,17,Jalen Hurts,QB,Philadelphia Eagles,NOAHPETRO23,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,53.png
+52,7,18,Brock Bowers,TE,Las Vegas Raiders,LEE121503,Jaxson Dart,New York Giants,0,,,Cleveland Browns,1,1,Pre-ETR,53.png
+52,6,19,Jameson Williams,WR,Detroit Lions,PRESTIGEFF,Sam Darnold,Seattle Seahawks,0,,,New York Giants,0,0,Pre-ETR,53.png
+52,5,20,Lamar Jackson,QB,Baltimore Ravens,D4VE,Lamar Jackson,Baltimore Ravens,1,2,1,New York Jets,0,0,Pre-ETR,53.png
+52,4,21,George Pickens,WR,Dallas Cowboys,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Philadelphia Eagles,0,0,Pre-ETR,53.png
+52,3,22,A.J. Brown,WR,Philadelphia Eagles,TUBINIS2121,Jared Goff,Detroit Lions,0,,,Dallas Cowboys,0,0,Pre-ETR,53.png
+52,2,23,Tyler Warren,TE,Indianapolis Colts,HOCKEYHOOLI,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,53.png
+52,1,24,DeVonta Smith,WR,Philadelphia Eagles,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,1,1,Pre-ETR,53.png
+52,1,25,Stefon Diggs,WR,New England Patriots,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Cincinnati Bengals,0,0,Pre-ETR,53.png
+52,2,26,Chris Olave,WR,New Orleans Saints,HOCKEYHOOLI,Daniel Jones,Indianapolis Colts,0,,,Atlanta Falcons,0,0,Pre-ETR,53.png
+52,3,27,Chase Brown,RB,Cincinnati Bengals,TUBINIS2121,Jared Goff,Detroit Lions,0,,,New England Patriots,0,0,Pre-ETR,53.png
+52,4,28,Travis Kelce,TE,Kansas City Chiefs,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Indianapolis Colts,0,0,Pre-ETR,53.png
+52,5,29,Zay Flowers,WR,Baltimore Ravens,D4VE,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,53.png
+52,6,30,Rome Odunze,WR,Chicago Bears,PRESTIGEFF,Sam Darnold,Seattle Seahawks,0,,,Pittsburgh Steelers,1,1,Pre-ETR,53.png
+52,7,31,Quinshon Judkins,RB,Cleveland Browns,LEE121503,Jaxson Dart,New York Giants,0,,,Las Vegas Raiders,1,1,Pre-ETR,53.png
+52,8,32,Dallas Goedert,TE,Philadelphia Eagles,NOAHPETRO23,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,53.png
+52,9,33,Dak Prescott,QB,Dallas Cowboys,JYAKER23,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,53.png
+52,10,34,Kenneth Walker III,RB,Seattle Seahawks,DABK,Caleb Williams,Chicago Bears,0,,,Tennessee Titans,0,0,Pre-ETR,53.png
+52,11,35,Breece Hall,RB,New York Jets,WILLMAKEWAR,Patrick Mahomes,Kansas City Chiefs,0,,,Baltimore Ravens,0,0,Pre-ETR,53.png
+52,12,36,Hunter Henry,TE,New England Patriots,PLAYERQ,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,1,1,Pre-ETR,53.png
+52,12,37,Ashton Jeanty,RB,Las Vegas Raiders,PLAYERQ,Drake Maye,New England Patriots,0,,,Cleveland Browns,0,0,Pre-ETR,53.png
+52,11,38,Patrick Mahomes,QB,Kansas City Chiefs,WILLMAKEWAR,Patrick Mahomes,Kansas City Chiefs,1,1,1,Indianapolis Colts,0,0,Pre-ETR,53.png
+52,10,39,DK Metcalf,WR,Pittsburgh Steelers,DABK,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR,53.png
+52,9,40,Emanuel Wilson,RB,Green Bay Packers,JYAKER23,Dak Prescott,Dallas Cowboys,0,,,Minnesota Vikings,1,1,Pre-ETR,53.png
+52,8,41,Michael Pittman Jr.,WR,Indianapolis Colts,NOAHPETRO23,Jalen Hurts,Philadelphia Eagles,0,,,Kansas City Chiefs,0,0,Pre-ETR,53.png
+52,7,42,Jaxson Dart,QB,New York Giants,LEE121503,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,53.png
+52,6,43,Jaylen Warren,RB,Pittsburgh Steelers,PRESTIGEFF,Sam Darnold,Seattle Seahawks,0,,,Chicago Bears,1,1,Pre-ETR,53.png
+52,5,44,Aaron Jones,RB,Minnesota Vikings,D4VE,Lamar Jackson,Baltimore Ravens,0,,,Green Bay Packers,0,0,Pre-ETR,53.png
+52,4,45,D'Andre Swift,RB,Chicago Bears,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Pittsburgh Steelers,0,0,Pre-ETR,53.png
+52,3,46,Wan'Dale Robinson,WR,New York Giants,TUBINIS2121,Jared Goff,Detroit Lions,0,,,Detroit Lions,2,1,Pre-ETR,53.png
+52,2,47,Daniel Jones,QB,Indianapolis Colts,HOCKEYHOOLI,Daniel Jones,Indianapolis Colts,1,2,1,Kansas City Chiefs,0,0,Pre-ETR,53.png
+52,1,48,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Minnesota Vikings,0,0,Pre-ETR,53.png
+52,1,49,Jake Ferguson,TE,Dallas Cowboys,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,1,1,Pre-ETR,53.png
+52,2,50,Alvin Kamara,RB,New Orleans Saints,HOCKEYHOOLI,Daniel Jones,Indianapolis Colts,0,,,Atlanta Falcons,0,0,Pre-ETR,53.png
+52,3,51,Jared Goff,QB,Detroit Lions,TUBINIS2121,Jared Goff,Detroit Lions,1,1,1,New York Giants,1,1,Pre-ETR,53.png
+52,4,52,David Montgomery,RB,Detroit Lions,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,New York Giants,0,0,Pre-ETR,53.png
+52,5,53,Mark Andrews,TE,Baltimore Ravens,D4VE,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,53.png
+52,6,54,Juwan Johnson,TE,New Orleans Saints,PRESTIGEFF,Sam Darnold,Seattle Seahawks,0,,,Atlanta Falcons,0,0,Pre-ETR,53.png
+52,7,55,Michael Wilson,WR,Arizona Cardinals,LEE121503,Jaxson Dart,New York Giants,0,,,Jacksonville Jaguars,0,0,Pre-ETR,53.png
+52,8,56,Alec Pierce,WR,Indianapolis Colts,NOAHPETRO23,Jalen Hurts,Philadelphia Eagles,0,,,Kansas City Chiefs,0,0,Pre-ETR,53.png
+52,9,57,Darnell Mooney,WR,Atlanta Falcons,JYAKER23,Dak Prescott,Dallas Cowboys,0,,,New Orleans Saints,0,0,Pre-ETR,53.png
+52,10,58,Caleb Williams,QB,Chicago Bears,DABK,Caleb Williams,Chicago Bears,1,0,0,Pittsburgh Steelers,1,1,Pre-ETR,53.png
+52,11,59,Romeo Doubs,WR,Green Bay Packers,WILLMAKEWAR,Patrick Mahomes,Kansas City Chiefs,0,,,Minnesota Vikings,0,0,Pre-ETR,53.png
+52,12,60,DeMario Douglas,WR,New England Patriots,PLAYERQ,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,1,1,Pre-ETR,53.png
+52,12,61,Zach Charbonnet,RB,Seattle Seahawks,PLAYERQ,Drake Maye,New England Patriots,0,,,Tennessee Titans,0,0,Pre-ETR,53.png
+52,11,62,Kyle Pitts,TE,Atlanta Falcons,WILLMAKEWAR,Patrick Mahomes,Kansas City Chiefs,0,,,New Orleans Saints,0,0,Pre-ETR,53.png
+52,10,63,Xavier Worthy,WR,Kansas City Chiefs,DABK,Caleb Williams,Chicago Bears,0,,,Indianapolis Colts,0,0,Pre-ETR,53.png
+52,9,64,Theo Johnson,TE,New York Giants,JYAKER23,Dak Prescott,Dallas Cowboys,0,,,Detroit Lions,0,0,Pre-ETR,53.png
+52,8,65,Rashid Shaheed,WR,Seattle Seahawks,NOAHPETRO23,Jalen Hurts,Philadelphia Eagles,0,,,Tennessee Titans,0,0,Pre-ETR,53.png
+52,7,66,Darius Slayton,WR,New York Giants,LEE121503,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,53.png
+52,6,67,Sam Darnold,QB,Seattle Seahawks,PRESTIGEFF,Sam Darnold,Seattle Seahawks,1,0,0,Tennessee Titans,0,0,Pre-ETR,53.png
+52,5,68,Rhamondre Stevenson,RB,New England Patriots,D4VE,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR,53.png
+52,4,69,Jacoby Brissett,QB,Arizona Cardinals,LENKEITH,Jacoby Brissett,Arizona Cardinals,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR,53.png
+52,3,70,Brock Wright,TE,Detroit Lions,TUBINIS2121,Jared Goff,Detroit Lions,1,,,New York Giants,1,1,Pre-ETR,53.png
+52,2,71,Brian Thomas,WR,Jacksonville Jaguars,HOCKEYHOOLI,Daniel Jones,Indianapolis Colts,0,,,Arizona Cardinals,0,0,Pre-ETR,53.png
+52,1,72,Trevor Lawrence,QB,Jacksonville Jaguars,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,53.png
+53,1,1,Jonathan Taylor,RB,Indianapolis Colts,PIRI24,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,2,1,Pre-ETR,54.png
+53,2,2,Jahmyr Gibbs,RB,Detroit Lions,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Giants,0,0,Pre-ETR,54.png
+53,3,3,Amon-Ra St. Brown,WR,Detroit Lions,TEDDYONFETTI,Jared Goff,Detroit Lions,1,,,New York Giants,1,1,Pre-ETR,54.png
+53,4,4,Bijan Robinson,RB,Atlanta Falcons,BKNOTT,Daniel Jones,Indianapolis Colts,0,,,New Orleans Saints,0,0,Pre-ETR,54.png
+53,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,CHRIS,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR,54.png
+53,6,6,Saquon Barkley,RB,Philadelphia Eagles,RLOZAN12,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,1,1,Pre-ETR,54.png
+53,7,7,Trey McBride,TE,Arizona Cardinals,GABRAINOS,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,1,1,Pre-ETR,54.png
+53,8,8,Derrick Henry,RB,Baltimore Ravens,LEE121503,Drake Maye,New England Patriots,0,,,New York Jets,0,0,Pre-ETR,54.png
+53,9,9,TreVeyon Henderson,RB,New England Patriots,DABK,Caleb Williams,Chicago Bears,0,,,Cincinnati Bengals,1,1,Pre-ETR,54.png
+53,10,10,CeeDee Lamb,WR,Dallas Cowboys,____,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,54.png
+53,11,11,Rashee Rice,WR,Kansas City Chiefs,TUBINIS2121,Jordan Love,Green Bay Packers,0,,,Indianapolis Colts,0,0,Pre-ETR,54.png
+53,12,12,Travis Etienne Jr.,RB,Jacksonville Jaguars,WILLMAKEWAR,Lamar Jackson,Baltimore Ravens,0,,,Arizona Cardinals,0,0,Pre-ETR,54.png
+53,12,13,Lamar Jackson,QB,Baltimore Ravens,WILLMAKEWAR,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,1,1,Pre-ETR,54.png
+53,11,14,Tee Higgins,WR,Cincinnati Bengals,TUBINIS2121,Jordan Love,Green Bay Packers,0,,,New England Patriots,1,1,Pre-ETR,54.png
+53,10,15,Brock Bowers,TE,Las Vegas Raiders,____,Dak Prescott,Dallas Cowboys,0,,,Cleveland Browns,0,0,Pre-ETR,54.png
+53,9,16,Javonte Williams,RB,Dallas Cowboys,DABK,Caleb Williams,Chicago Bears,0,,,Philadelphia Eagles,0,0,Pre-ETR,54.png
+53,8,17,Drake Maye,QB,New England Patriots,LEE121503,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,0,0,Pre-ETR,54.png
+53,7,18,Chris Olave,WR,New Orleans Saints,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,Atlanta Falcons,0,0,Pre-ETR,54.png
+53,6,19,Jalen Hurts,QB,Philadelphia Eagles,RLOZAN12,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,1,1,Pre-ETR,54.png
+53,5,20,Justin Jefferson,WR,Minnesota Vikings,CHRIS,Jaxson Dart,New York Giants,0,,,Green Bay Packers,0,0,Pre-ETR,54.png
+53,4,21,A.J. Brown,WR,Philadelphia Eagles,BKNOTT,Daniel Jones,Indianapolis Colts,0,,,Dallas Cowboys,0,0,Pre-ETR,54.png
+53,3,22,George Pickens,WR,Dallas Cowboys,TEDDYONFETTI,Jared Goff,Detroit Lions,0,,,Philadelphia Eagles,0,0,Pre-ETR,54.png
+53,2,23,DeVonta Smith,WR,Philadelphia Eagles,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,0,0,Pre-ETR,54.png
+53,1,24,Patrick Mahomes,QB,Kansas City Chiefs,PIRI24,Patrick Mahomes,Kansas City Chiefs,1,1,1,Indianapolis Colts,1,1,Pre-ETR,54.png
+53,1,25,Chase Brown,RB,Cincinnati Bengals,PIRI24,Patrick Mahomes,Kansas City Chiefs,0,,,New England Patriots,0,0,Pre-ETR,54.png
+53,2,26,Tyler Warren,TE,Indianapolis Colts,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Kansas City Chiefs,0,0,Pre-ETR,54.png
+53,3,27,Quinshon Judkins,RB,Cleveland Browns,TEDDYONFETTI,Jared Goff,Detroit Lions,0,,,Las Vegas Raiders,0,0,Pre-ETR,54.png
+53,4,28,Travis Kelce,TE,Kansas City Chiefs,BKNOTT,Daniel Jones,Indianapolis Colts,0,,,Indianapolis Colts,1,1,Pre-ETR,54.png
+53,5,29,Ashton Jeanty,RB,Las Vegas Raiders,CHRIS,Jaxson Dart,New York Giants,0,,,Cleveland Browns,0,0,Pre-ETR,54.png
+53,6,30,Jameson Williams,WR,Detroit Lions,RLOZAN12,Jalen Hurts,Philadelphia Eagles,0,,,New York Giants,0,0,Pre-ETR,54.png
+53,7,31,Kenneth Walker III,RB,Seattle Seahawks,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR,54.png
+53,8,32,Stefon Diggs,WR,New England Patriots,LEE121503,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,54.png
+53,9,33,Zay Flowers,WR,Baltimore Ravens,DABK,Caleb Williams,Chicago Bears,0,,,New York Jets,0,0,Pre-ETR,54.png
+53,10,34,Jaylen Warren,RB,Pittsburgh Steelers,____,Dak Prescott,Dallas Cowboys,0,,,Chicago Bears,0,0,Pre-ETR,54.png
+53,11,35,Hunter Henry,TE,New England Patriots,TUBINIS2121,Jordan Love,Green Bay Packers,0,,,Cincinnati Bengals,1,1,Pre-ETR,54.png
+53,12,36,Breece Hall,RB,New York Jets,WILLMAKEWAR,Lamar Jackson,Baltimore Ravens,0,,,Baltimore Ravens,1,1,Pre-ETR,54.png
+53,12,37,Juwan Johnson,TE,New Orleans Saints,WILLMAKEWAR,Lamar Jackson,Baltimore Ravens,0,,,Atlanta Falcons,1,1,Pre-ETR,54.png
+53,11,38,David Montgomery,RB,Detroit Lions,TUBINIS2121,Jordan Love,Green Bay Packers,0,,,New York Giants,0,0,Pre-ETR,54.png
+53,10,39,Dak Prescott,QB,Dallas Cowboys,____,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,54.png
+53,9,40,Rome Odunze,WR,Chicago Bears,DABK,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,54.png
+53,8,41,DK Metcalf,WR,Pittsburgh Steelers,LEE121503,Drake Maye,New England Patriots,0,,,Chicago Bears,0,0,Pre-ETR,54.png
+53,7,42,Michael Wilson,WR,Arizona Cardinals,GABRAINOS,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,1,1,Pre-ETR,54.png
+53,6,43,D'Andre Swift,RB,Chicago Bears,RLOZAN12,Jalen Hurts,Philadelphia Eagles,0,,,Pittsburgh Steelers,0,0,Pre-ETR,54.png
+53,5,44,Jaxson Dart,QB,New York Giants,CHRIS,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,54.png
+53,4,45,Emanuel Wilson,RB,Green Bay Packers,BKNOTT,Daniel Jones,Indianapolis Colts,0,,,Minnesota Vikings,1,1,Pre-ETR,54.png
+53,3,46,Jared Goff,QB,Detroit Lions,TEDDYONFETTI,Jared Goff,Detroit Lions,1,1,1,New York Giants,1,1,Pre-ETR,54.png
+53,2,47,Michael Pittman Jr.,WR,Indianapolis Colts,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Kansas City Chiefs,0,0,Pre-ETR,54.png
+53,1,48,Xavier Worthy,WR,Kansas City Chiefs,PIRI24,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,1,1,Pre-ETR,54.png
+53,1,49,Kyle Pitts,TE,Atlanta Falcons,PIRI24,Patrick Mahomes,Kansas City Chiefs,0,,,New Orleans Saints,0,0,Pre-ETR,54.png
+53,2,50,Josh Jacobs,RB,Green Bay Packers,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Minnesota Vikings,0,0,Pre-ETR,54.png
+53,3,51,Wan'Dale Robinson,WR,New York Giants,TEDDYONFETTI,Jared Goff,Detroit Lions,0,,,Detroit Lions,2,1,Pre-ETR,54.png
+53,4,52,Daniel Jones,QB,Indianapolis Colts,BKNOTT,Daniel Jones,Indianapolis Colts,1,0,0,Kansas City Chiefs,1,1,Pre-ETR,54.png
+53,5,53,Dallas Goedert,TE,Philadelphia Eagles,CHRIS,Jaxson Dart,New York Giants,0,,,Dallas Cowboys,0,0,Pre-ETR,54.png
+53,6,54,Jake Ferguson,TE,Dallas Cowboys,RLOZAN12,Jalen Hurts,Philadelphia Eagles,0,,,Philadelphia Eagles,2,1,Pre-ETR,54.png
+53,7,55,Jacoby Brissett,QB,Arizona Cardinals,GABRAINOS,Jacoby Brissett,Arizona Cardinals,1,2,1,Jacksonville Jaguars,1,1,Pre-ETR,54.png
+53,8,56,Aaron Jones,RB,Minnesota Vikings,LEE121503,Drake Maye,New England Patriots,0,,,Green Bay Packers,0,0,Pre-ETR,54.png
+53,9,57,Caleb Williams,QB,Chicago Bears,DABK,Caleb Williams,Chicago Bears,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR,54.png
+53,10,58,Alvin Kamara,RB,New Orleans Saints,____,Dak Prescott,Dallas Cowboys,0,,,Atlanta Falcons,0,0,Pre-ETR,54.png
+53,11,59,Christian Watson,WR,Green Bay Packers,TUBINIS2121,Jordan Love,Green Bay Packers,1,,,Minnesota Vikings,0,0,Pre-ETR,54.png
+53,12,60,Darnell Mooney,WR,Atlanta Falcons,WILLMAKEWAR,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,1,1,Pre-ETR,54.png
+53,12,61,Romeo Doubs,WR,Green Bay Packers,WILLMAKEWAR,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,54.png
+53,11,62,Jordan Love,QB,Green Bay Packers,TUBINIS2121,Jordan Love,Green Bay Packers,1,1,1,Minnesota Vikings,0,0,Pre-ETR,54.png
+53,10,63,Brian Thomas,WR,Jacksonville Jaguars,____,Dak Prescott,Dallas Cowboys,0,,,Arizona Cardinals,0,0,Pre-ETR,54.png
+53,9,64,Noah Fant,TE,Cincinnati Bengals,DABK,Caleb Williams,Chicago Bears,0,,,New England Patriots,1,1,Pre-ETR,54.png
+53,8,65,AJ Barner,TE,Seattle Seahawks,LEE121503,Drake Maye,New England Patriots,0,,,Tennessee Titans,0,0,Pre-ETR,54.png
+53,7,66,Jakobi Meyers,WR,Jacksonville Jaguars,GABRAINOS,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,3,1,Pre-ETR,54.png
+53,6,67,Alec Pierce,WR,Indianapolis Colts,RLOZAN12,Jalen Hurts,Philadelphia Eagles,0,,,Kansas City Chiefs,0,0,Pre-ETR,54.png
+53,5,68,Tyrone Tracy,RB,New York Giants,CHRIS,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,54.png
+53,4,69,Jordan Addison,WR,Minnesota Vikings,BKNOTT,Daniel Jones,Indianapolis Colts,0,,,Green Bay Packers,1,1,Pre-ETR,54.png
+53,3,70,Mark Andrews,TE,Baltimore Ravens,TEDDYONFETTI,Jared Goff,Detroit Lions,0,,,New York Jets,0,0,Pre-ETR,54.png
+53,2,71,Trevor Lawrence,QB,Jacksonville Jaguars,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,54.png
+53,1,72,Marvin Harrison,WR,Arizona Cardinals,PIRI24,Patrick Mahomes,Kansas City Chiefs,0,,,Jacksonville Jaguars,0,0,Pre-ETR,54.png
+54,1,1,Jonathan Taylor,RB,Indianapolis Colts,CHESTEROU812,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR,55.jpg
+54,2,2,Jahmyr Gibbs,RB,Detroit Lions,BOOMERWINS,Joe Flacco,Cincinnati Bengals,0,,,New York Giants,0,0,Pre-ETR,55.jpg
+54,3,3,Bijan Robinson,RB,Atlanta Falcons,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,New Orleans Saints,0,0,Pre-ETR,55.jpg
+54,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,LEE121503,Drake Maye,New England Patriots,0,,,Tennessee Titans,0,0,Pre-ETR,55.jpg
+54,5,5,Amon-Ra St. Brown,WR,Detroit Lions,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,New York Giants,0,0,Pre-ETR,55.jpg
+54,6,6,Saquon Barkley,RB,Philadelphia Eagles,KOBEGOAT2424,Lamar Jackson,Baltimore Ravens,0,,,Dallas Cowboys,0,0,Pre-ETR,55.jpg
+54,7,7,Derrick Henry,RB,Baltimore Ravens,BUSTERSBOYS,Jared Goff,Detroit Lions,0,,,New York Jets,0,0,Pre-ETR,55.jpg
+54,8,8,Travis Kelce,TE,Kansas City Chiefs,LONELYGRIM,Dak Prescott,Dallas Cowboys,0,,,Indianapolis Colts,1,1,Pre-ETR,55.jpg
+54,9,9,TreVeyon Henderson,RB,New England Patriots,JOHNPOZEY,Jalen Hurts,Philadelphia Eagles,0,,,Cincinnati Bengals,0,0,Pre-ETR,55.jpg
+54,10,10,Trey McBride,TE,Arizona Cardinals,DRAPP,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,1,1,Pre-ETR,55.jpg
+54,11,11,Rashee Rice,WR,Kansas City Chiefs,INGELX,Jaxson Dart,New York Giants,0,,,Indianapolis Colts,0,0,Pre-ETR,55.jpg
+54,12,12,CeeDee Lamb,WR,Dallas Cowboys,GFORGUMBY,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,0,0,Pre-ETR,55.jpg
+54,12,13,Tee Higgins,WR,Cincinnati Bengals,GFORGUMBY,Trevor Lawrence,Jacksonville Jaguars,0,,,New England Patriots,0,0,Pre-ETR,55.jpg
+54,11,14,Brock Bowers,TE,Las Vegas Raiders,INGELX,Jaxson Dart,New York Giants,0,,,Cleveland Browns,0,0,Pre-ETR,55.jpg
+54,10,15,Javonte Williams,RB,Dallas Cowboys,DRAPP,Caleb Williams,Chicago Bears,0,,,Philadelphia Eagles,0,0,Pre-ETR,55.jpg
+54,9,16,Jalen Hurts,QB,Philadelphia Eagles,JOHNPOZEY,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,55.jpg
+54,8,17,Travis Etienne Jr.,RB,Jacksonville Jaguars,LONELYGRIM,Dak Prescott,Dallas Cowboys,0,,,Arizona Cardinals,0,0,Pre-ETR,55.jpg
+54,7,18,A.J. Brown,WR,Philadelphia Eagles,BUSTERSBOYS,Jared Goff,Detroit Lions,0,,,Dallas Cowboys,0,0,Pre-ETR,55.jpg
+54,6,19,Lamar Jackson,QB,Baltimore Ravens,KOBEGOAT2424,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,0,0,Pre-ETR,55.jpg
+54,5,20,Chris Olave,WR,New Orleans Saints,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR,55.jpg
+54,4,21,Drake Maye,QB,New England Patriots,LEE121503,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,1,1,Pre-ETR,55.jpg
+54,3,22,Justin Jefferson,WR,Minnesota Vikings,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,Green Bay Packers,1,1,Pre-ETR,55.jpg
+54,2,23,DeVonta Smith,WR,Philadelphia Eagles,BOOMERWINS,Joe Flacco,Cincinnati Bengals,0,,,Dallas Cowboys,0,0,Pre-ETR,55.jpg
+54,1,24,George Pickens,WR,Dallas Cowboys,CHESTEROU812,Jacoby Brissett,Arizona Cardinals,0,,,Philadelphia Eagles,0,0,Pre-ETR,55.jpg
+54,1,25,Jameson Williams,WR,Detroit Lions,CHESTEROU812,Jacoby Brissett,Arizona Cardinals,0,,,New York Giants,0,0,Pre-ETR,55.jpg
+54,2,26,Stefon Diggs,WR,New England Patriots,BOOMERWINS,Joe Flacco,Cincinnati Bengals,0,,,Cincinnati Bengals,1,1,Pre-ETR,55.jpg
+54,3,27,Tyler Warren,TE,Indianapolis Colts,CGEEEEEE,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,55.jpg
+54,4,28,Chase Brown,RB,Cincinnati Bengals,LEE121503,Drake Maye,New England Patriots,0,,,New England Patriots,2,1,Pre-ETR,55.jpg
+54,5,29,Patrick Mahomes,QB,Kansas City Chiefs,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,1,0,0,Indianapolis Colts,0,0,Pre-ETR,55.jpg
+54,6,30,Quinshon Judkins,RB,Cleveland Browns,KOBEGOAT2424,Lamar Jackson,Baltimore Ravens,0,,,Las Vegas Raiders,0,0,Pre-ETR,55.jpg
+54,7,31,Zay Flowers,WR,Baltimore Ravens,BUSTERSBOYS,Jared Goff,Detroit Lions,0,,,New York Jets,0,0,Pre-ETR,55.jpg
+54,8,32,Kenneth Walker III,RB,Seattle Seahawks,LONELYGRIM,Dak Prescott,Dallas Cowboys,0,,,Tennessee Titans,0,0,Pre-ETR,55.jpg
+54,9,33,Breece Hall,RB,New York Jets,JOHNPOZEY,Jalen Hurts,Philadelphia Eagles,0,,,Baltimore Ravens,0,0,Pre-ETR,55.jpg
+54,10,34,Rome Odunze,WR,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,1,1,Pre-ETR,55.jpg
+54,11,35,D'Andre Swift,RB,Chicago Bears,INGELX,Jaxson Dart,New York Giants,0,,,Pittsburgh Steelers,0,0,Pre-ETR,55.jpg
+54,12,36,Jaylen Warren,RB,Pittsburgh Steelers,GFORGUMBY,Trevor Lawrence,Jacksonville Jaguars,0,,,Chicago Bears,0,0,Pre-ETR,55.jpg
+54,12,37,Aaron Jones,RB,Minnesota Vikings,GFORGUMBY,Trevor Lawrence,Jacksonville Jaguars,0,,,Green Bay Packers,0,0,Pre-ETR,55.jpg
+54,11,38,Jaxson Dart,QB,New York Giants,INGELX,Jaxson Dart,New York Giants,1,0,0,Detroit Lions,0,0,Pre-ETR,55.jpg
+54,10,39,DK Metcalf,WR,Pittsburgh Steelers,DRAPP,Caleb Williams,Chicago Bears,0,,,Chicago Bears,2,1,Pre-ETR,55.jpg
+54,9,40,Dallas Goedert,TE,Philadelphia Eagles,JOHNPOZEY,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,55.jpg
+54,8,41,Dak Prescott,QB,Dallas Cowboys,LONELYGRIM,Dak Prescott,Dallas Cowboys,1,0,0,Philadelphia Eagles,0,0,Pre-ETR,55.jpg
+54,7,42,Jared Goff,QB,Detroit Lions,BUSTERSBOYS,Jared Goff,Detroit Lions,1,0,0,New York Giants,2,1,Pre-ETR,55.jpg
+54,6,43,Hunter Henry,TE,New England Patriots,KOBEGOAT2424,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR,55.jpg
+54,5,44,Ashton Jeanty,RB,Las Vegas Raiders,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,0,0,Pre-ETR,55.jpg
+54,4,45,Emanuel Wilson,RB,Green Bay Packers,LEE121503,Drake Maye,New England Patriots,0,,,Minnesota Vikings,0,0,Pre-ETR,55.jpg
+54,3,46,Daniel Jones,QB,Indianapolis Colts,CGEEEEEE,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,0,0,Pre-ETR,55.jpg
+54,2,47,David Montgomery,RB,Detroit Lions,BOOMERWINS,Joe Flacco,Cincinnati Bengals,0,,,New York Giants,0,0,Pre-ETR,55.jpg
+54,1,48,Michael Pittman Jr.,WR,Indianapolis Colts,CHESTEROU812,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR,55.jpg
+54,1,49,Jake Ferguson,TE,Dallas Cowboys,CHESTEROU812,Jacoby Brissett,Arizona Cardinals,0,,,Philadelphia Eagles,0,0,Pre-ETR,55.jpg
+54,2,50,Juwan Johnson,TE,New Orleans Saints,BOOMERWINS,Joe Flacco,Cincinnati Bengals,0,,,Atlanta Falcons,0,0,Pre-ETR,55.jpg
+54,3,51,Josh Jacobs,RB,Green Bay Packers,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,Minnesota Vikings,1,1,Pre-ETR,55.jpg
+54,4,52,Kyle Pitts,TE,Atlanta Falcons,LEE121503,Drake Maye,New England Patriots,0,,,New Orleans Saints,0,0,Pre-ETR,55.jpg
+54,5,53,Alvin Kamara,RB,New Orleans Saints,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR,55.jpg
+54,6,54,Michael Wilson,WR,Arizona Cardinals,KOBEGOAT2424,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR,55.jpg
+54,7,55,Wan'Dale Robinson,WR,New York Giants,BUSTERSBOYS,Jared Goff,Detroit Lions,0,,,Detroit Lions,1,1,Pre-ETR,55.jpg
+54,8,56,Xavier Worthy,WR,Kansas City Chiefs,LONELYGRIM,Dak Prescott,Dallas Cowboys,0,,,Indianapolis Colts,1,1,Pre-ETR,55.jpg
+54,9,57,Christian Watson,WR,Green Bay Packers,JOHNPOZEY,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,55.jpg
+54,10,58,Caleb Williams,QB,Chicago Bears,DRAPP,Caleb Williams,Chicago Bears,1,1,1,Pittsburgh Steelers,1,1,Pre-ETR,55.jpg
+54,11,59,Bhayshul Tuten,RB,Jacksonville Jaguars,INGELX,Jaxson Dart,New York Giants,0,,,Arizona Cardinals,1,1,Pre-ETR,55.jpg
+54,12,60,Mark Andrews,TE,Baltimore Ravens,GFORGUMBY,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Jets,0,0,Pre-ETR,55.jpg
+54,12,61,Trevor Lawrence,QB,Jacksonville Jaguars,GFORGUMBY,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,55.jpg
+54,11,62,Marvin Harrison,WR,Arizona Cardinals,INGELX,Jaxson Dart,New York Giants,0,,,Jacksonville Jaguars,1,1,Pre-ETR,55.jpg
+54,10,63,Brian Thomas,WR,Jacksonville Jaguars,DRAPP,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,1,1,Pre-ETR,55.jpg
+54,9,64,Jakobi Meyers,WR,Jacksonville Jaguars,JOHNPOZEY,Jalen Hurts,Philadelphia Eagles,0,,,Arizona Cardinals,0,0,Pre-ETR,55.jpg
+54,8,65,Alec Pierce,WR,Indianapolis Colts,LONELYGRIM,Dak Prescott,Dallas Cowboys,0,,,Kansas City Chiefs,2,1,Pre-ETR,55.jpg
+54,7,66,Theo Johnson,TE,New York Giants,BUSTERSBOYS,Jared Goff,Detroit Lions,0,,,Detroit Lions,1,1,Pre-ETR,55.jpg
+54,6,67,Darnell Mooney,WR,Atlanta Falcons,KOBEGOAT2424,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,55.jpg
+54,5,68,Colston Loveland,TE,Chicago Bears,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Pittsburgh Steelers,0,0,Pre-ETR,55.jpg
+54,4,69,Kayshon Boutte,WR,New England Patriots,LEE121503,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,1,1,Pre-ETR,55.jpg
+54,3,70,Rashid Shaheed,WR,Seattle Seahawks,CGEEEEEE,Daniel Jones,Indianapolis Colts,0,,,Tennessee Titans,0,0,Pre-ETR,55.jpg
+54,2,71,Joe Flacco,QB,Cincinnati Bengals,BOOMERWINS,Joe Flacco,Cincinnati Bengals,1,0,0,New England Patriots,1,1,Pre-ETR,55.jpg
+54,1,72,Jacoby Brissett,QB,Arizona Cardinals,CHESTEROU812,Jacoby Brissett,Arizona Cardinals,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR,55.jpg
+55,1,1,Bijan Robinson,RB,Atlanta Falcons,KRUTCHES93,Daniel Jones,Indianapolis Colts,0,,,New Orleans Saints,0,0,Pre-ETR,56.jpg
+55,2,2,Jahmyr Gibbs,RB,Detroit Lions,STEVIEBEAR,J.J. McCarthy,Minnesota Vikings,0,,,New York Giants,0,0,Pre-ETR,56.jpg
+55,3,3,Jonathan Taylor,RB,Indianapolis Colts,LEE121503,Dak Prescott,Dallas Cowboys,0,,,Kansas City Chiefs,0,0,Pre-ETR,56.jpg
+55,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR,56.jpg
+55,5,5,Amon-Ra St. Brown,WR,Detroit Lions,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,New York Giants,1,1,Pre-ETR,56.jpg
+55,6,6,Saquon Barkley,RB,Philadelphia Eagles,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Dallas Cowboys,0,0,Pre-ETR,56.jpg
+55,7,7,Rashee Rice,WR,Kansas City Chiefs,CUTCUTLER,Drake Maye,New England Patriots,0,,,Indianapolis Colts,0,0,Pre-ETR,56.jpg
+55,8,8,Trey McBride,TE,Arizona Cardinals,KREAR72,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR,56.jpg
+55,9,9,Derrick Henry,RB,Baltimore Ravens,KCPOLACK,Jacoby Brissett,Arizona Cardinals,0,,,New York Jets,0,0,Pre-ETR,56.jpg
+55,10,10,Brock Bowers,TE,Las Vegas Raiders,CHADCANDLES,Jared Goff,Detroit Lions,0,,,Cleveland Browns,0,0,Pre-ETR,56.jpg
+55,11,11,CeeDee Lamb,WR,Dallas Cowboys,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Philadelphia Eagles,1,1,Pre-ETR,56.jpg
+55,12,12,Tee Higgins,WR,Cincinnati Bengals,GOAZCARDS,Trevor Lawrence,Jacksonville Jaguars,0,,,New England Patriots,0,0,Pre-ETR,56.jpg
+55,12,13,George Pickens,WR,Dallas Cowboys,GOAZCARDS,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,0,0,Pre-ETR,56.jpg
+55,11,14,A.J. Brown,WR,Philadelphia Eagles,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Dallas Cowboys,1,1,Pre-ETR,56.jpg
+55,10,15,Jameson Williams,WR,Detroit Lions,CHADCANDLES,Jared Goff,Detroit Lions,1,,,New York Giants,1,1,Pre-ETR,56.jpg
+55,9,16,Travis Etienne Jr.,RB,Jacksonville Jaguars,KCPOLACK,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,1,1,Pre-ETR,56.jpg
+55,8,17,TreVeyon Henderson,RB,New England Patriots,KREAR72,Caleb Williams,Chicago Bears,0,,,Cincinnati Bengals,0,0,Pre-ETR,56.jpg
+55,7,18,Drake Maye,QB,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,0,0,Pre-ETR,56.jpg
+55,6,19,Lamar Jackson,QB,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,0,0,Pre-ETR,56.jpg
+55,5,20,Jalen Hurts,QB,Philadelphia Eagles,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,1,0,0,Dallas Cowboys,0,0,Pre-ETR,56.jpg
+55,4,21,Javonte Williams,RB,Dallas Cowboys,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Philadelphia Eagles,0,0,Pre-ETR,56.jpg
+55,3,22,Chris Olave,WR,New Orleans Saints,LEE121503,Dak Prescott,Dallas Cowboys,0,,,Atlanta Falcons,0,0,Pre-ETR,56.jpg
+55,2,23,Justin Jefferson,WR,Minnesota Vikings,STEVIEBEAR,J.J. McCarthy,Minnesota Vikings,1,,,Green Bay Packers,1,1,Pre-ETR,56.jpg
+55,1,24,Tyler Warren,TE,Indianapolis Colts,KRUTCHES93,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,56.jpg
+55,1,25,DeVonta Smith,WR,Philadelphia Eagles,KRUTCHES93,Daniel Jones,Indianapolis Colts,0,,,Dallas Cowboys,0,0,Pre-ETR,56.jpg
+55,2,26,Stefon Diggs,WR,New England Patriots,STEVIEBEAR,J.J. McCarthy,Minnesota Vikings,0,,,Cincinnati Bengals,0,0,Pre-ETR,56.jpg
+55,3,27,Kenneth Walker III,RB,Seattle Seahawks,LEE121503,Dak Prescott,Dallas Cowboys,0,,,Tennessee Titans,0,0,Pre-ETR,56.jpg
+55,4,28,Chase Brown,RB,Cincinnati Bengals,TUBINIS2121,Jaxson Dart,New York Giants,0,,,New England Patriots,0,0,Pre-ETR,56.jpg
+55,5,29,Zay Flowers,WR,Baltimore Ravens,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,New York Jets,0,0,Pre-ETR,56.jpg
+55,6,30,Quinshon Judkins,RB,Cleveland Browns,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Las Vegas Raiders,0,0,Pre-ETR,56.jpg
+55,7,31,Hunter Henry,TE,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,56.jpg
+55,8,32,DK Metcalf,WR,Pittsburgh Steelers,KREAR72,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR,56.jpg
+55,9,33,Travis Kelce,TE,Kansas City Chiefs,KCPOLACK,Jacoby Brissett,Arizona Cardinals,0,,,Indianapolis Colts,1,1,Pre-ETR,56.jpg
+55,10,34,Aaron Jones,RB,Minnesota Vikings,CHADCANDLES,Jared Goff,Detroit Lions,0,,,Green Bay Packers,0,0,Pre-ETR,56.jpg
+55,11,35,Patrick Mahomes,QB,Kansas City Chiefs,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,1,0,0,Indianapolis Colts,0,0,Pre-ETR,56.jpg
+55,12,36,Breece Hall,RB,New York Jets,GOAZCARDS,Trevor Lawrence,Jacksonville Jaguars,0,,,Baltimore Ravens,0,0,Pre-ETR,56.jpg
+55,12,37,D'Andre Swift,RB,Chicago Bears,GOAZCARDS,Trevor Lawrence,Jacksonville Jaguars,0,,,Pittsburgh Steelers,0,0,Pre-ETR,56.jpg
+55,11,38,Ashton Jeanty,RB,Las Vegas Raiders,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Cleveland Browns,0,0,Pre-ETR,56.jpg
+55,10,39,Jared Goff,QB,Detroit Lions,CHADCANDLES,Jared Goff,Detroit Lions,1,1,1,New York Giants,1,1,Pre-ETR,56.jpg
+55,9,40,Rome Odunze,WR,Chicago Bears,KCPOLACK,Jacoby Brissett,Arizona Cardinals,0,,,Pittsburgh Steelers,0,0,Pre-ETR,56.jpg
+55,8,41,David Montgomery,RB,Detroit Lions,KREAR72,Caleb Williams,Chicago Bears,0,,,New York Giants,0,0,Pre-ETR,56.jpg
+55,7,42,Michael Wilson,WR,Arizona Cardinals,CUTCUTLER,Drake Maye,New England Patriots,0,,,Jacksonville Jaguars,0,0,Pre-ETR,56.jpg
+55,6,43,Michael Pittman Jr.,WR,Indianapolis Colts,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR,56.jpg
+55,5,44,Jaylen Warren,RB,Pittsburgh Steelers,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,Chicago Bears,0,0,Pre-ETR,56.jpg
+55,4,45,Jaxson Dart,QB,New York Giants,TUBINIS2121,Jaxson Dart,New York Giants,1,0,0,Detroit Lions,0,0,Pre-ETR,56.jpg
+55,3,46,Dak Prescott,QB,Dallas Cowboys,LEE121503,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,56.jpg
+55,2,47,Josh Jacobs,RB,Green Bay Packers,STEVIEBEAR,J.J. McCarthy,Minnesota Vikings,0,,,Minnesota Vikings,2,1,Pre-ETR,56.jpg
+55,1,48,Daniel Jones,QB,Indianapolis Colts,KRUTCHES93,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,0,0,Pre-ETR,56.jpg
+55,1,49,Wan'Dale Robinson,WR,New York Giants,KRUTCHES93,Daniel Jones,Indianapolis Colts,0,,,Detroit Lions,0,0,Pre-ETR,56.jpg
+55,2,50,Dallas Goedert,TE,Philadelphia Eagles,STEVIEBEAR,J.J. McCarthy,Minnesota Vikings,0,,,Dallas Cowboys,0,0,Pre-ETR,56.jpg
+55,3,51,Jake Ferguson,TE,Dallas Cowboys,LEE121503,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,56.jpg
+55,4,52,Xavier Worthy,WR,Kansas City Chiefs,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Indianapolis Colts,0,0,Pre-ETR,56.jpg
+55,5,53,Emanuel Wilson,RB,Green Bay Packers,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,56.jpg
+55,6,54,Kyle Pitts,TE,Atlanta Falcons,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,56.jpg
+55,7,55,Alvin Kamara,RB,New Orleans Saints,CUTCUTLER,Drake Maye,New England Patriots,0,,,Atlanta Falcons,0,0,Pre-ETR,56.jpg
+55,8,56,Marvin Harrison,WR,Arizona Cardinals,KREAR72,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR,56.jpg
+55,9,57,Alec Pierce,WR,Indianapolis Colts,KCPOLACK,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,1,1,Pre-ETR,56.jpg
+55,10,58,Tyrone Tracy,RB,New York Giants,CHADCANDLES,Jared Goff,Detroit Lions,0,,,Detroit Lions,2,1,Pre-ETR,56.jpg
+55,11,59,Juwan Johnson,TE,New Orleans Saints,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR,56.jpg
+55,12,60,Brenton Strange,TE,Jacksonville Jaguars,GOAZCARDS,Trevor Lawrence,Jacksonville Jaguars,1,,,Arizona Cardinals,0,0,Pre-ETR,56.jpg
+55,12,61,Trevor Lawrence,QB,Jacksonville Jaguars,GOAZCARDS,Trevor Lawrence,Jacksonville Jaguars,1,1,1,Arizona Cardinals,0,0,Pre-ETR,56.jpg
+55,11,62,Zach Charbonnet,RB,Seattle Seahawks,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Tennessee Titans,0,0,Pre-ETR,56.jpg
+55,10,63,Rashid Shaheed,WR,Seattle Seahawks,CHADCANDLES,Jared Goff,Detroit Lions,0,,,Tennessee Titans,0,0,Pre-ETR,56.jpg
+55,9,64,Jacoby Brissett,QB,Arizona Cardinals,KCPOLACK,Jacoby Brissett,Arizona Cardinals,1,0,0,Jacksonville Jaguars,1,1,Pre-ETR,56.jpg
+55,8,65,Caleb Williams,QB,Chicago Bears,KREAR72,Caleb Williams,Chicago Bears,1,0,0,Pittsburgh Steelers,1,1,Pre-ETR,56.jpg
+55,7,66,Kenneth Gainwell,RB,Pittsburgh Steelers,CUTCUTLER,Drake Maye,New England Patriots,0,,,Chicago Bears,0,0,Pre-ETR,56.jpg
+55,6,67,Darnell Mooney,WR,Atlanta Falcons,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,56.jpg
+55,5,68,Theo Johnson,TE,New York Giants,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,Detroit Lions,1,1,Pre-ETR,56.jpg
+55,4,69,Taysom Hill,TE,New Orleans Saints,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Atlanta Falcons,0,0,Pre-ETR,56.jpg
+55,3,70,Christian Watson,WR,Green Bay Packers,LEE121503,Dak Prescott,Dallas Cowboys,0,,,Minnesota Vikings,0,0,Pre-ETR,56.jpg
+55,2,71,J.J. McCarthy,QB,Minnesota Vikings,STEVIEBEAR,J.J. McCarthy,Minnesota Vikings,1,1,1,Green Bay Packers,1,1,Pre-ETR,56.jpg
+55,1,72,Romeo Doubs,WR,Green Bay Packers,KRUTCHES93,Daniel Jones,Indianapolis Colts,0,,,Minnesota Vikings,0,0,Pre-ETR,56.jpg
+56,1,1,Jahmyr Gibbs,RB,Detroit Lions,D4VE,Daniel Jones,Indianapolis Colts,0,,,New York Giants,0,0,Pre-ETR,57.png
+56,2,2,Jonathan Taylor,RB,Indianapolis Colts,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR,57.png
+56,3,3,Bijan Robinson,RB,Atlanta Falcons,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,57.png
+56,4,4,Amon-Ra St. Brown,WR,Detroit Lions,CGEEEEEE,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,57.png
+56,5,5,Jaxon Smith-Njigba,WR,Seattle Seahawks,KREAR72,Sam Darnold,Seattle Seahawks,1,,,Tennessee Titans,0,0,Pre-ETR,57.png
+56,6,6,Trey McBride,TE,Arizona Cardinals,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Jacksonville Jaguars,1,1,Pre-ETR,57.png
+56,7,7,Derrick Henry,RB,Baltimore Ravens,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,New York Jets,0,0,Pre-ETR,57.png
+56,8,8,Saquon Barkley,RB,Philadelphia Eagles,MARIOSOLAR,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,57.png
+56,9,9,TreVeyon Henderson,RB,New England Patriots,BOOMERWINS,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,57.png
+56,10,10,CeeDee Lamb,WR,Dallas Cowboys,HDJDHDJDJSK,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,1,1,Pre-ETR,57.png
+56,11,11,Tee Higgins,WR,Cincinnati Bengals,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,New England Patriots,0,0,Pre-ETR,57.png
+56,12,12,Rashee Rice,WR,Kansas City Chiefs,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Indianapolis Colts,0,0,Pre-ETR,57.png
+56,12,13,Brock Bowers,TE,Las Vegas Raiders,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Cleveland Browns,0,0,Pre-ETR,57.png
+56,11,14,Travis Etienne Jr.,RB,Jacksonville Jaguars,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR,57.png
+56,10,15,A.J. Brown,WR,Philadelphia Eagles,HDJDHDJDJSK,Dak Prescott,Dallas Cowboys,0,,,Dallas Cowboys,2,1,Pre-ETR,57.png
+56,9,16,Drake Maye,QB,New England Patriots,BOOMERWINS,Drake Maye,New England Patriots,1,2,1,Cincinnati Bengals,0,0,Pre-ETR,57.png
+56,8,17,Jalen Hurts,QB,Philadelphia Eagles,MARIOSOLAR,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,57.png
+56,7,18,George Pickens,WR,Dallas Cowboys,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Philadelphia Eagles,0,0,Pre-ETR,57.png
+56,6,19,Javonte Williams,RB,Dallas Cowboys,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,0,0,Pre-ETR,57.png
+56,5,20,Jameson Williams,WR,Detroit Lions,KREAR72,Sam Darnold,Seattle Seahawks,0,,,New York Giants,0,0,Pre-ETR,57.png
+56,4,21,Justin Jefferson,WR,Minnesota Vikings,CGEEEEEE,Jared Goff,Detroit Lions,0,,,Green Bay Packers,1,1,Pre-ETR,57.png
+56,3,22,Lamar Jackson,QB,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,1,1,New York Jets,0,0,Pre-ETR,57.png
+56,2,23,Stefon Diggs,WR,New England Patriots,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Cincinnati Bengals,1,1,Pre-ETR,57.png
+56,1,24,Tyler Warren,TE,Indianapolis Colts,D4VE,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,57.png
+56,1,25,Chris Olave,WR,New Orleans Saints,D4VE,Daniel Jones,Indianapolis Colts,0,,,Atlanta Falcons,0,0,Pre-ETR,57.png
+56,2,26,Patrick Mahomes,QB,Kansas City Chiefs,LEE121503,Patrick Mahomes,Kansas City Chiefs,1,0,0,Indianapolis Colts,1,1,Pre-ETR,57.png
+56,3,27,Zay Flowers,WR,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,57.png
+56,4,28,DeVonta Smith,WR,Philadelphia Eagles,CGEEEEEE,Jared Goff,Detroit Lions,0,,,Dallas Cowboys,0,0,Pre-ETR,57.png
+56,5,29,Chase Brown,RB,Cincinnati Bengals,KREAR72,Sam Darnold,Seattle Seahawks,0,,,New England Patriots,0,0,Pre-ETR,57.png
+56,6,30,Ashton Jeanty,RB,Las Vegas Raiders,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Cleveland Browns,0,0,Pre-ETR,57.png
+56,7,31,Kenneth Walker III,RB,Seattle Seahawks,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR,57.png
+56,8,32,Travis Kelce,TE,Kansas City Chiefs,MARIOSOLAR,Jalen Hurts,Philadelphia Eagles,0,,,Indianapolis Colts,1,1,Pre-ETR,57.png
+56,9,33,Hunter Henry,TE,New England Patriots,BOOMERWINS,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,57.png
+56,10,34,Quinshon Judkins,RB,Cleveland Browns,HDJDHDJDJSK,Dak Prescott,Dallas Cowboys,0,,,Las Vegas Raiders,0,0,Pre-ETR,57.png
+56,11,35,Aaron Jones,RB,Minnesota Vikings,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR,57.png
+56,12,36,Jaxson Dart,QB,New York Giants,TUBINIS2121,Jaxson Dart,New York Giants,1,0,0,Detroit Lions,1,1,Pre-ETR,57.png
+56,12,37,David Montgomery,RB,Detroit Lions,TUBINIS2121,Jaxson Dart,New York Giants,0,,,New York Giants,1,1,Pre-ETR,57.png
+56,11,38,DK Metcalf,WR,Pittsburgh Steelers,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Chicago Bears,2,1,Pre-ETR,57.png
+56,10,39,Dak Prescott,QB,Dallas Cowboys,HDJDHDJDJSK,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,1,1,Pre-ETR,57.png
+56,9,40,Michael Pittman Jr.,WR,Indianapolis Colts,BOOMERWINS,Drake Maye,New England Patriots,0,,,Kansas City Chiefs,0,0,Pre-ETR,57.png
+56,8,41,Breece Hall,RB,New York Jets,MARIOSOLAR,Jalen Hurts,Philadelphia Eagles,0,,,Baltimore Ravens,0,0,Pre-ETR,57.png
+56,7,42,Rome Odunze,WR,Chicago Bears,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Pittsburgh Steelers,0,0,Pre-ETR,57.png
+56,6,43,Wan'Dale Robinson,WR,New York Giants,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Detroit Lions,0,0,Pre-ETR,57.png
+56,5,44,D'Andre Swift,RB,Chicago Bears,KREAR72,Sam Darnold,Seattle Seahawks,0,,,Pittsburgh Steelers,0,0,Pre-ETR,57.png
+56,4,45,Jared Goff,QB,Detroit Lions,CGEEEEEE,Jared Goff,Detroit Lions,1,1,1,New York Giants,0,0,Pre-ETR,57.png
+56,3,46,Xavier Worthy,WR,Kansas City Chiefs,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Indianapolis Colts,0,0,Pre-ETR,57.png
+56,2,47,Michael Wilson,WR,Arizona Cardinals,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Jacksonville Jaguars,0,0,Pre-ETR,57.png
+56,1,48,Jaylen Warren,RB,Pittsburgh Steelers,D4VE,Daniel Jones,Indianapolis Colts,0,,,Chicago Bears,0,0,Pre-ETR,57.png
+56,1,49,Daniel Jones,QB,Indianapolis Colts,D4VE,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,0,0,Pre-ETR,57.png
+56,2,50,Emanuel Wilson,RB,Green Bay Packers,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,Minnesota Vikings,0,0,Pre-ETR,57.png
+56,3,51,Dallas Goedert,TE,Philadelphia Eagles,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Dallas Cowboys,0,0,Pre-ETR,57.png
+56,4,52,Josh Jacobs,RB,Green Bay Packers,CGEEEEEE,Jared Goff,Detroit Lions,0,,,Minnesota Vikings,1,1,Pre-ETR,57.png
+56,5,53,Juwan Johnson,TE,New Orleans Saints,KREAR72,Sam Darnold,Seattle Seahawks,0,,,Atlanta Falcons,0,0,Pre-ETR,57.png
+56,6,54,Marvin Harrison,WR,Arizona Cardinals,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,0,,,Jacksonville Jaguars,1,1,Pre-ETR,57.png
+56,7,55,Jake Ferguson,TE,Dallas Cowboys,LENKEITH,Jacoby Brissett,Arizona Cardinals,0,,,Philadelphia Eagles,0,0,Pre-ETR,57.png
+56,8,56,Alec Pierce,WR,Indianapolis Colts,MARIOSOLAR,Jalen Hurts,Philadelphia Eagles,0,,,Kansas City Chiefs,1,1,Pre-ETR,57.png
+56,9,57,Jakobi Meyers,WR,Jacksonville Jaguars,BOOMERWINS,Drake Maye,New England Patriots,0,,,Arizona Cardinals,0,0,Pre-ETR,57.png
+56,10,58,Kyle Pitts,TE,Atlanta Falcons,HDJDHDJDJSK,Dak Prescott,Dallas Cowboys,0,,,New Orleans Saints,0,0,Pre-ETR,57.png
+56,11,59,Colston Loveland,TE,Chicago Bears,CHADCANDLES,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,1,1,Pre-ETR,57.png
+56,12,60,Alvin Kamara,RB,New Orleans Saints,TUBINIS2121,Jaxson Dart,New York Giants,0,,,Atlanta Falcons,1,1,Pre-ETR,57.png
+56,12,61,Darnell Mooney,WR,Atlanta Falcons,TUBINIS2121,Jaxson Dart,New York Giants,0,,,New Orleans Saints,1,1,Pre-ETR,57.png
+56,11,62,Caleb Williams,QB,Chicago Bears,CHADCANDLES,Caleb Williams,Chicago Bears,1,1,1,Pittsburgh Steelers,1,1,Pre-ETR,57.png
+56,10,63,Bhayshul Tuten,RB,Jacksonville Jaguars,HDJDHDJDJSK,Dak Prescott,Dallas Cowboys,0,,,Arizona Cardinals,0,0,Pre-ETR,57.png
+56,9,64,Kenneth Gainwell,RB,Pittsburgh Steelers,BOOMERWINS,Drake Maye,New England Patriots,0,,,Chicago Bears,0,0,Pre-ETR,57.png
+56,8,65,Christian Watson,WR,Green Bay Packers,MARIOSOLAR,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,57.png
+56,7,66,Jacoby Brissett,QB,Arizona Cardinals,LENKEITH,Jacoby Brissett,Arizona Cardinals,1,0,0,Jacksonville Jaguars,0,0,Pre-ETR,57.png
+56,6,67,Trevor Lawrence,QB,Jacksonville Jaguars,KRUTCHES93,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,2,1,Pre-ETR,57.png
+56,5,68,Sam Darnold,QB,Seattle Seahawks,KREAR72,Sam Darnold,Seattle Seahawks,1,1,1,Tennessee Titans,0,0,Pre-ETR,57.png
+56,4,69,Mark Andrews,TE,Baltimore Ravens,CGEEEEEE,Jared Goff,Detroit Lions,0,,,New York Jets,0,0,Pre-ETR,57.png
+56,3,70,Romeo Doubs,WR,Green Bay Packers,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,57.png
+56,2,71,Noah Fant,TE,Cincinnati Bengals,LEE121503,Patrick Mahomes,Kansas City Chiefs,0,,,New England Patriots,1,1,Pre-ETR,57.png
+56,1,72,Brian Thomas,WR,Jacksonville Jaguars,D4VE,Daniel Jones,Indianapolis Colts,0,,,Arizona Cardinals,0,0,Pre-ETR,57.png
+57,1,1,Jahmyr Gibbs,RB,Detroit Lions,AARONJH22,Jordan Love,Green Bay Packers,0,,,New York Giants,0,0,Pre-ETR,58.png
+57,2,2,Jonathan Taylor,RB,Indianapolis Colts,JTBINEGAR2,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,1,1,Pre-ETR,58.png
+57,3,3,Bijan Robinson,RB,Atlanta Falcons,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,New Orleans Saints,0,0,Pre-ETR,58.png
+57,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,KCPOLACK,Jaxson Dart,New York Giants,0,,,Tennessee Titans,0,0,Pre-ETR,58.png
+57,5,5,Amon-Ra St. Brown,WR,Detroit Lions,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,New York Giants,0,0,Pre-ETR,58.png
+57,6,6,Trey McBride,TE,Arizona Cardinals,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,0,0,Pre-ETR,58.png
+57,7,7,Derrick Henry,RB,Baltimore Ravens,DYLANCASH22,Jared Goff,Detroit Lions,0,,,New York Jets,0,0,Pre-ETR,58.png
+57,8,8,Saquon Barkley,RB,Philadelphia Eagles,BUSTERSBOYS,Daniel Jones,Indianapolis Colts,0,,,Dallas Cowboys,0,0,Pre-ETR,58.png
+57,9,9,TreVeyon Henderson,RB,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,2,1,Pre-ETR,58.png
+57,10,10,CeeDee Lamb,WR,Dallas Cowboys,EZ116,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,58.png
+57,11,11,Travis Etienne Jr.,RB,Jacksonville Jaguars,SHOCKTRAUM,Jalen Hurts,Philadelphia Eagles,0,,,Arizona Cardinals,1,1,Pre-ETR,58.png
+57,12,12,Rashee Rice,WR,Kansas City Chiefs,D4VE,Caleb Williams,Chicago Bears,0,,,Indianapolis Colts,0,0,Pre-ETR,58.png
+57,12,13,George Pickens,WR,Dallas Cowboys,D4VE,Caleb Williams,Chicago Bears,0,,,Philadelphia Eagles,0,0,Pre-ETR,58.png
+57,11,14,Jalen Hurts,QB,Philadelphia Eagles,SHOCKTRAUM,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,58.png
+57,10,15,Tee Higgins,WR,Cincinnati Bengals,EZ116,Dak Prescott,Dallas Cowboys,0,,,New England Patriots,0,0,Pre-ETR,58.png
+57,9,16,Drake Maye,QB,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,2,1,Pre-ETR,58.png
+57,8,17,Brock Bowers,TE,Las Vegas Raiders,BUSTERSBOYS,Daniel Jones,Indianapolis Colts,0,,,Cleveland Browns,0,0,Pre-ETR,58.png
+57,7,18,Jameson Williams,WR,Detroit Lions,DYLANCASH22,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,58.png
+57,6,19,Justin Jefferson,WR,Minnesota Vikings,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Green Bay Packers,0,0,Pre-ETR,58.png
+57,5,20,Javonte Williams,RB,Dallas Cowboys,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Philadelphia Eagles,0,0,Pre-ETR,58.png
+57,4,21,Chris Olave,WR,New Orleans Saints,KCPOLACK,Jaxson Dart,New York Giants,0,,,Atlanta Falcons,0,0,Pre-ETR,58.png
+57,3,22,A.J. Brown,WR,Philadelphia Eagles,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,0,0,Pre-ETR,58.png
+57,2,23,Lamar Jackson,QB,Baltimore Ravens,JTBINEGAR2,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,0,0,Pre-ETR,58.png
+57,1,24,Stefon Diggs,WR,New England Patriots,AARONJH22,Jordan Love,Green Bay Packers,0,,,Cincinnati Bengals,0,0,Pre-ETR,58.png
+57,1,25,Quinshon Judkins,RB,Cleveland Browns,AARONJH22,Jordan Love,Green Bay Packers,0,,,Las Vegas Raiders,0,0,Pre-ETR,58.png
+57,2,26,DeVonta Smith,WR,Philadelphia Eagles,JTBINEGAR2,Lamar Jackson,Baltimore Ravens,0,,,Dallas Cowboys,0,0,Pre-ETR,58.png
+57,3,27,Tyler Warren,TE,Indianapolis Colts,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Kansas City Chiefs,0,0,Pre-ETR,58.png
+57,4,28,Chase Brown,RB,Cincinnati Bengals,KCPOLACK,Jaxson Dart,New York Giants,0,,,New England Patriots,0,0,Pre-ETR,58.png
+57,5,29,Patrick Mahomes,QB,Kansas City Chiefs,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,1,0,0,Indianapolis Colts,1,1,Pre-ETR,58.png
+57,6,30,Kenneth Walker III,RB,Seattle Seahawks,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Tennessee Titans,0,0,Pre-ETR,58.png
+57,7,31,Travis Kelce,TE,Kansas City Chiefs,DYLANCASH22,Jared Goff,Detroit Lions,0,,,Indianapolis Colts,0,0,Pre-ETR,58.png
+57,8,32,Zay Flowers,WR,Baltimore Ravens,BUSTERSBOYS,Daniel Jones,Indianapolis Colts,0,,,New York Jets,1,1,Pre-ETR,58.png
+57,9,33,DK Metcalf,WR,Pittsburgh Steelers,CUTCUTLER,Drake Maye,New England Patriots,0,,,Chicago Bears,1,1,Pre-ETR,58.png
+57,10,34,Ashton Jeanty,RB,Las Vegas Raiders,EZ116,Dak Prescott,Dallas Cowboys,0,,,Cleveland Browns,0,0,Pre-ETR,58.png
+57,11,35,Dallas Goedert,TE,Philadelphia Eagles,SHOCKTRAUM,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,58.png
+57,12,36,Jaylen Warren,RB,Pittsburgh Steelers,D4VE,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR,58.png
+57,12,37,Hunter Henry,TE,New England Patriots,D4VE,Caleb Williams,Chicago Bears,0,,,Cincinnati Bengals,0,0,Pre-ETR,58.png
+57,11,38,Michael Wilson,WR,Arizona Cardinals,SHOCKTRAUM,Jalen Hurts,Philadelphia Eagles,0,,,Jacksonville Jaguars,2,1,Pre-ETR,58.png
+57,10,39,Dak Prescott,QB,Dallas Cowboys,EZ116,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,58.png
+57,9,40,Rome Odunze,WR,Chicago Bears,CUTCUTLER,Drake Maye,New England Patriots,0,,,Pittsburgh Steelers,1,1,Pre-ETR,58.png
+57,8,41,Breece Hall,RB,New York Jets,BUSTERSBOYS,Daniel Jones,Indianapolis Colts,0,,,Baltimore Ravens,1,1,Pre-ETR,58.png
+57,7,42,Jared Goff,QB,Detroit Lions,DYLANCASH22,Jared Goff,Detroit Lions,1,1,1,New York Giants,0,0,Pre-ETR,58.png
+57,6,43,Wan'Dale Robinson,WR,New York Giants,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Detroit Lions,0,0,Pre-ETR,58.png
+57,5,44,D'Andre Swift,RB,Chicago Bears,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Pittsburgh Steelers,0,0,Pre-ETR,58.png
+57,4,45,Jaxson Dart,QB,New York Giants,KCPOLACK,Jaxson Dart,New York Giants,1,0,0,Detroit Lions,0,0,Pre-ETR,58.png
+57,3,46,David Montgomery,RB,Detroit Lions,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Giants,0,0,Pre-ETR,58.png
+57,2,47,Xavier Worthy,WR,Kansas City Chiefs,JTBINEGAR2,Lamar Jackson,Baltimore Ravens,0,,,Indianapolis Colts,1,1,Pre-ETR,58.png
+57,1,48,Kyle Pitts,TE,Atlanta Falcons,AARONJH22,Jordan Love,Green Bay Packers,0,,,New Orleans Saints,0,0,Pre-ETR,58.png
+57,1,49,Romeo Doubs,WR,Green Bay Packers,AARONJH22,Jordan Love,Green Bay Packers,1,,,Minnesota Vikings,0,0,Pre-ETR,58.png
+57,2,50,Aaron Jones,RB,Minnesota Vikings,JTBINEGAR2,Lamar Jackson,Baltimore Ravens,0,,,Green Bay Packers,0,0,Pre-ETR,58.png
+57,3,51,Darnell Mooney,WR,Atlanta Falcons,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,New Orleans Saints,0,0,Pre-ETR,58.png
+57,4,52,Josh Jacobs,RB,Green Bay Packers,KCPOLACK,Jaxson Dart,New York Giants,0,,,Minnesota Vikings,0,0,Pre-ETR,58.png
+57,5,53,Jake Ferguson,TE,Dallas Cowboys,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Philadelphia Eagles,0,0,Pre-ETR,58.png
+57,6,54,Alvin Kamara,RB,New Orleans Saints,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Atlanta Falcons,0,0,Pre-ETR,58.png
+57,7,55,Juwan Johnson,TE,New Orleans Saints,DYLANCASH22,Jared Goff,Detroit Lions,0,,,Atlanta Falcons,0,0,Pre-ETR,58.png
+57,8,56,Michael Pittman Jr.,WR,Indianapolis Colts,BUSTERSBOYS,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,58.png
+57,9,57,Andrei Iosivas,WR,Cincinnati Bengals,CUTCUTLER,Drake Maye,New England Patriots,0,,,New England Patriots,2,1,Pre-ETR,58.png
+57,10,58,Emanuel Wilson,RB,Green Bay Packers,EZ116,Dak Prescott,Dallas Cowboys,0,,,Minnesota Vikings,0,0,Pre-ETR,58.png
+57,11,59,Jakobi Meyers,WR,Jacksonville Jaguars,SHOCKTRAUM,Jalen Hurts,Philadelphia Eagles,0,,,Arizona Cardinals,1,1,Pre-ETR,58.png
+57,12,60,Caleb Williams,QB,Chicago Bears,D4VE,Caleb Williams,Chicago Bears,1,0,0,Pittsburgh Steelers,1,1,Pre-ETR,58.png
+57,12,61,Tyrone Tracy,RB,New York Giants,D4VE,Caleb Williams,Chicago Bears,0,,,Detroit Lions,0,0,Pre-ETR,58.png
+57,11,62,Kenneth Gainwell,RB,Pittsburgh Steelers,SHOCKTRAUM,Jalen Hurts,Philadelphia Eagles,0,,,Chicago Bears,0,0,Pre-ETR,58.png
+57,10,63,Theo Johnson,TE,New York Giants,EZ116,Dak Prescott,Dallas Cowboys,0,,,Detroit Lions,0,0,Pre-ETR,58.png
+57,9,64,Noah Fant,TE,Cincinnati Bengals,CUTCUTLER,Drake Maye,New England Patriots,0,,,New England Patriots,2,1,Pre-ETR,58.png
+57,8,65,Daniel Jones,QB,Indianapolis Colts,BUSTERSBOYS,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,0,0,Pre-ETR,58.png
+57,7,66,Luther Burden,WR,Chicago Bears,DYLANCASH22,Jared Goff,Detroit Lions,0,,,Pittsburgh Steelers,0,0,Pre-ETR,58.png
+57,6,67,Jacoby Brissett,QB,Arizona Cardinals,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,1,1,1,Jacksonville Jaguars,0,0,Pre-ETR,58.png
+57,5,68,Alec Pierce,WR,Indianapolis Colts,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR,58.png
+57,4,69,Mark Andrews,TE,Baltimore Ravens,KCPOLACK,Jaxson Dart,New York Giants,0,,,New York Jets,0,0,Pre-ETR,58.png
+57,3,70,Trevor Lawrence,QB,Jacksonville Jaguars,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,58.png
+57,2,71,AJ Barner,TE,Seattle Seahawks,JTBINEGAR2,Lamar Jackson,Baltimore Ravens,0,,,Tennessee Titans,0,0,Pre-ETR,58.png
+57,1,72,Jordan Love,QB,Green Bay Packers,AARONJH22,Jordan Love,Green Bay Packers,1,1,1,Minnesota Vikings,0,0,Pre-ETR,58.png
+58,1,1,Jonathan Taylor,RB,Indianapolis Colts,EZ116,Jaxson Dart,New York Giants,0,,,Kansas City Chiefs,1,1,Pre-ETR,59.png
+58,2,2,Jahmyr Gibbs,RB,Detroit Lions,GUNNEROSS,Dak Prescott,Dallas Cowboys,0,,,New York Giants,0,0,Pre-ETR,59.png
+58,3,3,Jaxon Smith-Njigba,WR,Seattle Seahawks,JDUBS1035,Daniel Jones,Indianapolis Colts,0,,,Tennessee Titans,0,0,Pre-ETR,59.png
+58,4,4,Bijan Robinson,RB,Atlanta Falcons,KREAR72,Jordan Love,Green Bay Packers,0,,,New Orleans Saints,1,1,Pre-ETR,59.png
+58,5,5,Derrick Henry,RB,Baltimore Ravens,BIFFTANNEN,Jalen Hurts,Philadelphia Eagles,0,,,New York Jets,0,0,Pre-ETR,59.png
+58,6,6,Amon-Ra St. Brown,WR,Detroit Lions,JASTA29,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,59.png
+58,7,7,Saquon Barkley,RB,Philadelphia Eagles,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,0,0,Pre-ETR,59.png
+58,8,8,Trey McBride,TE,Arizona Cardinals,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Jacksonville Jaguars,0,0,Pre-ETR,59.png
+58,9,9,Rashee Rice,WR,Kansas City Chiefs,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,0,0,Pre-ETR,59.png
+58,10,10,CeeDee Lamb,WR,Dallas Cowboys,D4VE,Drake Maye,New England Patriots,0,,,Philadelphia Eagles,0,0,Pre-ETR,59.png
+58,11,11,TreVeyon Henderson,RB,New England Patriots,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Cincinnati Bengals,0,0,Pre-ETR,59.png
+58,12,12,Travis Etienne Jr.,RB,Jacksonville Jaguars,YUZENN,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR,59.png
+58,12,13,Brock Bowers,TE,Las Vegas Raiders,YUZENN,Jacoby Brissett,Arizona Cardinals,0,,,Cleveland Browns,0,0,Pre-ETR,59.png
+58,11,14,Lamar Jackson,QB,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,1,1,Pre-ETR,59.png
+58,10,15,Drake Maye,QB,New England Patriots,D4VE,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,0,0,Pre-ETR,59.png
+58,9,16,Tee Higgins,WR,Cincinnati Bengals,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,New England Patriots,1,1,Pre-ETR,59.png
+58,8,17,Jameson Williams,WR,Detroit Lions,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,New York Giants,1,1,Pre-ETR,59.png
+58,7,18,A.J. Brown,WR,Philadelphia Eagles,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,0,0,Pre-ETR,59.png
+58,6,19,Javonte Williams,RB,Dallas Cowboys,JASTA29,Jared Goff,Detroit Lions,0,,,Philadelphia Eagles,1,1,Pre-ETR,59.png
+58,5,20,Jalen Hurts,QB,Philadelphia Eagles,BIFFTANNEN,Jalen Hurts,Philadelphia Eagles,1,0,0,Dallas Cowboys,0,0,Pre-ETR,59.png
+58,4,21,DeVonta Smith,WR,Philadelphia Eagles,KREAR72,Jordan Love,Green Bay Packers,0,,,Dallas Cowboys,0,0,Pre-ETR,59.png
+58,3,22,George Pickens,WR,Dallas Cowboys,JDUBS1035,Daniel Jones,Indianapolis Colts,0,,,Philadelphia Eagles,0,0,Pre-ETR,59.png
+58,2,23,Chris Olave,WR,New Orleans Saints,GUNNEROSS,Dak Prescott,Dallas Cowboys,0,,,Atlanta Falcons,0,0,Pre-ETR,59.png
+58,1,24,Justin Jefferson,WR,Minnesota Vikings,EZ116,Jaxson Dart,New York Giants,0,,,Green Bay Packers,0,0,Pre-ETR,59.png
+58,1,25,Chase Brown,RB,Cincinnati Bengals,EZ116,Jaxson Dart,New York Giants,0,,,New England Patriots,0,0,Pre-ETR,59.png
+58,2,26,Quinshon Judkins,RB,Cleveland Browns,GUNNEROSS,Dak Prescott,Dallas Cowboys,0,,,Las Vegas Raiders,0,0,Pre-ETR,59.png
+58,3,27,Tyler Warren,TE,Indianapolis Colts,JDUBS1035,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,0,0,Pre-ETR,59.png
+58,4,28,Stefon Diggs,WR,New England Patriots,KREAR72,Jordan Love,Green Bay Packers,0,,,Cincinnati Bengals,0,0,Pre-ETR,59.png
+58,5,29,Rome Odunze,WR,Chicago Bears,BIFFTANNEN,Jalen Hurts,Philadelphia Eagles,0,,,Pittsburgh Steelers,0,0,Pre-ETR,59.png
+58,6,30,Kenneth Walker III,RB,Seattle Seahawks,JASTA29,Jared Goff,Detroit Lions,0,,,Tennessee Titans,0,0,Pre-ETR,59.png
+58,7,31,Zay Flowers,WR,Baltimore Ravens,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Jets,0,0,Pre-ETR,59.png
+58,8,32,Ashton Jeanty,RB,Las Vegas Raiders,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Cleveland Browns,0,0,Pre-ETR,59.png
+58,9,33,Patrick Mahomes,QB,Kansas City Chiefs,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,1,1,1,Indianapolis Colts,0,0,Pre-ETR,59.png
+58,10,34,Travis Kelce,TE,Kansas City Chiefs,D4VE,Drake Maye,New England Patriots,0,,,Indianapolis Colts,0,0,Pre-ETR,59.png
+58,11,35,Breece Hall,RB,New York Jets,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Baltimore Ravens,1,1,Pre-ETR,59.png
+58,12,36,Michael Pittman Jr.,WR,Indianapolis Colts,YUZENN,Jacoby Brissett,Arizona Cardinals,0,,,Kansas City Chiefs,0,0,Pre-ETR,59.png
+58,12,37,Michael Wilson,WR,Arizona Cardinals,YUZENN,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,1,1,Pre-ETR,59.png
+58,11,38,DK Metcalf,WR,Pittsburgh Steelers,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Chicago Bears,0,0,Pre-ETR,59.png
+58,10,39,Jaylen Warren,RB,Pittsburgh Steelers,D4VE,Drake Maye,New England Patriots,0,,,Chicago Bears,0,0,Pre-ETR,59.png
+58,9,40,D'Andre Swift,RB,Chicago Bears,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Pittsburgh Steelers,0,0,Pre-ETR,59.png
+58,8,41,Aaron Jones,RB,Minnesota Vikings,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR,59.png
+58,7,42,Hunter Henry,TE,New England Patriots,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Cincinnati Bengals,0,0,Pre-ETR,59.png
+58,6,43,Dallas Goedert,TE,Philadelphia Eagles,JASTA29,Jared Goff,Detroit Lions,0,,,Dallas Cowboys,1,1,Pre-ETR,59.png
+58,5,44,Emanuel Wilson,RB,Green Bay Packers,BIFFTANNEN,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,59.png
+58,4,45,David Montgomery,RB,Detroit Lions,KREAR72,Jordan Love,Green Bay Packers,0,,,New York Giants,0,0,Pre-ETR,59.png
+58,3,46,Alvin Kamara,RB,New Orleans Saints,JDUBS1035,Daniel Jones,Indianapolis Colts,0,,,Atlanta Falcons,0,0,Pre-ETR,59.png
+58,2,47,Jake Ferguson,TE,Dallas Cowboys,GUNNEROSS,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,59.png
+58,1,48,Xavier Worthy,WR,Kansas City Chiefs,EZ116,Jaxson Dart,New York Giants,0,,,Indianapolis Colts,1,1,Pre-ETR,59.png
+58,1,49,Jaxson Dart,QB,New York Giants,EZ116,Jaxson Dart,New York Giants,1,0,0,Detroit Lions,0,0,Pre-ETR,59.png
+58,2,50,Dak Prescott,QB,Dallas Cowboys,GUNNEROSS,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,59.png
+58,3,51,Daniel Jones,QB,Indianapolis Colts,JDUBS1035,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,0,0,Pre-ETR,59.png
+58,4,52,Juwan Johnson,TE,New Orleans Saints,KREAR72,Jordan Love,Green Bay Packers,0,,,Atlanta Falcons,1,1,Pre-ETR,59.png
+58,5,53,Darnell Mooney,WR,Atlanta Falcons,BIFFTANNEN,Jalen Hurts,Philadelphia Eagles,0,,,New Orleans Saints,0,0,Pre-ETR,59.png
+58,6,54,Jared Goff,QB,Detroit Lions,JASTA29,Jared Goff,Detroit Lions,1,1,1,New York Giants,0,0,Pre-ETR,59.png
+58,7,55,Josh Jacobs,RB,Green Bay Packers,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Minnesota Vikings,0,0,Pre-ETR,59.png
+58,8,56,Wan'Dale Robinson,WR,New York Giants,CHADCANDLES,Caleb Williams,Chicago Bears,0,,,Detroit Lions,1,1,Pre-ETR,59.png
+58,9,57,Mark Andrews,TE,Baltimore Ravens,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,New York Jets,0,0,Pre-ETR,59.png
+58,10,58,Tyrone Tracy,RB,New York Giants,D4VE,Drake Maye,New England Patriots,0,,,Detroit Lions,0,0,Pre-ETR,59.png
+58,11,59,Kyle Pitts,TE,Atlanta Falcons,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,59.png
+58,12,60,Jacoby Brissett,QB,Arizona Cardinals,YUZENN,Jacoby Brissett,Arizona Cardinals,1,1,1,Jacksonville Jaguars,1,1,Pre-ETR,59.png
+58,12,61,Kenneth Gainwell,RB,Pittsburgh Steelers,YUZENN,Jacoby Brissett,Arizona Cardinals,0,,,Chicago Bears,0,0,Pre-ETR,59.png
+58,11,62,Romeo Doubs,WR,Green Bay Packers,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,59.png
+58,10,63,Kayshon Boutte,WR,New England Patriots,D4VE,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,59.png
+58,9,64,Rhamondre Stevenson,RB,New England Patriots,KRUTCHES93,Patrick Mahomes,Kansas City Chiefs,0,,,Cincinnati Bengals,1,1,Pre-ETR,59.png
+58,8,65,Caleb Williams,QB,Chicago Bears,CHADCANDLES,Caleb Williams,Chicago Bears,1,0,0,Pittsburgh Steelers,0,0,Pre-ETR,59.png
+58,7,66,Trevor Lawrence,QB,Jacksonville Jaguars,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,59.png
+58,6,67,Alec Pierce,WR,Indianapolis Colts,JASTA29,Jared Goff,Detroit Lions,0,,,Kansas City Chiefs,0,0,Pre-ETR,59.png
+58,5,68,Theo Johnson,TE,New York Giants,BIFFTANNEN,Jalen Hurts,Philadelphia Eagles,0,,,Detroit Lions,0,0,Pre-ETR,59.png
+58,4,69,Jordan Love,QB,Green Bay Packers,KREAR72,Jordan Love,Green Bay Packers,1,0,0,Minnesota Vikings,0,0,Pre-ETR,59.png
+58,3,70,Christian Watson,WR,Green Bay Packers,JDUBS1035,Daniel Jones,Indianapolis Colts,0,,,Minnesota Vikings,0,0,Pre-ETR,59.png
+58,2,71,Marvin Harrison,WR,Arizona Cardinals,GUNNEROSS,Dak Prescott,Dallas Cowboys,0,,,Jacksonville Jaguars,0,0,Pre-ETR,59.png
+58,1,72,Harold Fannin,TE,Cleveland Browns,EZ116,Jaxson Dart,New York Giants,0,,,Las Vegas Raiders,0,0,Pre-ETR,59.png
+59,1,1,Jonathan Taylor,RB,Indianapolis Colts,CHADCANDLES,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,3,1,Pre-ETR,60.png
+59,2,2,Jahmyr Gibbs,RB,Detroit Lions,LENKEITH,Jared Goff,Detroit Lions,1,,,New York Giants,1,1,Pre-ETR,60.png
+59,3,3,Bijan Robinson,RB,Atlanta Falcons,EZ116,Daniel Jones,Indianapolis Colts,0,,,New Orleans Saints,1,1,Pre-ETR,60.png
+59,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,____,Dak Prescott,Dallas Cowboys,0,,,Tennessee Titans,0,0,Pre-ETR,60.png
+59,5,5,Amon-Ra St. Brown,WR,Detroit Lions,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Giants,0,0,Pre-ETR,60.png
+59,6,6,Trey McBride,TE,Arizona Cardinals,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,1,1,Pre-ETR,60.png
+59,7,7,TreVeyon Henderson,RB,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,1,1,Pre-ETR,60.png
+59,8,8,Derrick Henry,RB,Baltimore Ravens,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,New York Jets,0,0,Pre-ETR,60.png
+59,9,9,Saquon Barkley,RB,Philadelphia Eagles,KURUC711,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,60.png
+59,10,10,Rashee Rice,WR,Kansas City Chiefs,JASTA29,Sam Darnold,Seattle Seahawks,0,,,Indianapolis Colts,1,1,Pre-ETR,60.png
+59,11,11,CeeDee Lamb,WR,Dallas Cowboys,KRUTCHES93,Jaxson Dart,New York Giants,0,,,Philadelphia Eagles,0,0,Pre-ETR,60.png
+59,12,12,Lamar Jackson,QB,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,1,1,New York Jets,0,0,Pre-ETR,60.png
+59,12,13,Brock Bowers,TE,Las Vegas Raiders,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Cleveland Browns,0,0,Pre-ETR,60.png
+59,11,14,Chase Brown,RB,Cincinnati Bengals,KRUTCHES93,Jaxson Dart,New York Giants,0,,,New England Patriots,0,0,Pre-ETR,60.png
+59,10,15,Travis Etienne Jr.,RB,Jacksonville Jaguars,JASTA29,Sam Darnold,Seattle Seahawks,0,,,Arizona Cardinals,0,0,Pre-ETR,60.png
+59,9,16,Jalen Hurts,QB,Philadelphia Eagles,KURUC711,Jalen Hurts,Philadelphia Eagles,1,2,1,Dallas Cowboys,0,0,Pre-ETR,60.png
+59,8,17,Tee Higgins,WR,Cincinnati Bengals,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,New England Patriots,0,0,Pre-ETR,60.png
+59,7,18,Drake Maye,QB,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,2,1,Cincinnati Bengals,1,1,Pre-ETR,60.png
+59,6,19,Javonte Williams,RB,Dallas Cowboys,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Philadelphia Eagles,0,0,Pre-ETR,60.png
+59,5,20,A.J. Brown,WR,Philadelphia Eagles,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,0,0,Pre-ETR,60.png
+59,4,21,George Pickens,WR,Dallas Cowboys,____,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,60.png
+59,3,22,Justin Jefferson,WR,Minnesota Vikings,EZ116,Daniel Jones,Indianapolis Colts,0,,,Green Bay Packers,0,0,Pre-ETR,60.png
+59,2,23,Jameson Williams,WR,Detroit Lions,LENKEITH,Jared Goff,Detroit Lions,1,,,New York Giants,1,1,Pre-ETR,60.png
+59,1,24,Patrick Mahomes,QB,Kansas City Chiefs,CHADCANDLES,Patrick Mahomes,Kansas City Chiefs,1,2,1,Indianapolis Colts,2,1,Pre-ETR,60.png
+59,1,25,Travis Kelce,TE,Kansas City Chiefs,CHADCANDLES,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,2,1,Pre-ETR,60.png
+59,2,26,Jared Goff,QB,Detroit Lions,LENKEITH,Jared Goff,Detroit Lions,1,2,1,New York Giants,1,1,Pre-ETR,60.png
+59,3,27,Chris Olave,WR,New Orleans Saints,EZ116,Daniel Jones,Indianapolis Colts,0,,,Atlanta Falcons,1,1,Pre-ETR,60.png
+59,4,28,Tyler Warren,TE,Indianapolis Colts,____,Dak Prescott,Dallas Cowboys,0,,,Kansas City Chiefs,0,0,Pre-ETR,60.png
+59,5,29,Kenneth Walker III,RB,Seattle Seahawks,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Tennessee Titans,0,0,Pre-ETR,60.png
+59,6,30,Quinshon Judkins,RB,Cleveland Browns,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Las Vegas Raiders,0,0,Pre-ETR,60.png
+59,7,31,Rome Odunze,WR,Chicago Bears,CUTCUTLER,Drake Maye,New England Patriots,0,,,Pittsburgh Steelers,1,1,Pre-ETR,60.png
+59,8,32,DeVonta Smith,WR,Philadelphia Eagles,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,Dallas Cowboys,0,0,Pre-ETR,60.png
+59,9,33,Stefon Diggs,WR,New England Patriots,KURUC711,Jalen Hurts,Philadelphia Eagles,0,,,Cincinnati Bengals,0,0,Pre-ETR,60.png
+59,10,34,Ashton Jeanty,RB,Las Vegas Raiders,JASTA29,Sam Darnold,Seattle Seahawks,0,,,Cleveland Browns,0,0,Pre-ETR,60.png
+59,11,35,Breece Hall,RB,New York Jets,KRUTCHES93,Jaxson Dart,New York Giants,0,,,Baltimore Ravens,0,0,Pre-ETR,60.png
+59,12,36,Zay Flowers,WR,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,60.png
+59,12,37,David Montgomery,RB,Detroit Lions,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR,60.png
+59,11,38,Jaxson Dart,QB,New York Giants,KRUTCHES93,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,60.png
+59,10,39,Michael Pittman Jr.,WR,Indianapolis Colts,JASTA29,Sam Darnold,Seattle Seahawks,0,,,Kansas City Chiefs,1,1,Pre-ETR,60.png
+59,9,40,Dallas Goedert,TE,Philadelphia Eagles,KURUC711,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,60.png
+59,8,41,Aaron Jones,RB,Minnesota Vikings,VOGEYBERRA8,Caleb Williams,Chicago Bears,0,,,Green Bay Packers,0,0,Pre-ETR,60.png
+59,7,42,Hunter Henry,TE,New England Patriots,CUTCUTLER,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,1,1,Pre-ETR,60.png
+59,6,43,DK Metcalf,WR,Pittsburgh Steelers,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Chicago Bears,0,0,Pre-ETR,60.png
+59,5,44,Emanuel Wilson,RB,Green Bay Packers,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Minnesota Vikings,0,0,Pre-ETR,60.png
+59,4,45,Jaylen Warren,RB,Pittsburgh Steelers,____,Dak Prescott,Dallas Cowboys,0,,,Chicago Bears,0,0,Pre-ETR,60.png
+59,3,46,D'Andre Swift,RB,Chicago Bears,EZ116,Daniel Jones,Indianapolis Colts,0,,,Pittsburgh Steelers,0,0,Pre-ETR,60.png
+59,2,47,Michael Wilson,WR,Arizona Cardinals,LENKEITH,Jared Goff,Detroit Lions,0,,,Jacksonville Jaguars,0,0,Pre-ETR,60.png
+59,1,48,Alvin Kamara,RB,New Orleans Saints,CHADCANDLES,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,0,0,Pre-ETR,60.png
+59,1,49,Xavier Worthy,WR,Kansas City Chiefs,CHADCANDLES,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,2,1,Pre-ETR,60.png
+59,2,50,Wan'Dale Robinson,WR,New York Giants,LENKEITH,Jared Goff,Detroit Lions,0,,,Detroit Lions,3,1,Pre-ETR,60.png
+59,3,51,Daniel Jones,QB,Indianapolis Colts,EZ116,Daniel Jones,Indianapolis Colts,1,0,0,Kansas City Chiefs,0,0,Pre-ETR,60.png
+59,4,52,Dak Prescott,QB,Dallas Cowboys,____,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,0,0,Pre-ETR,60.png
+59,5,53,Kyle Pitts,TE,Atlanta Falcons,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,New Orleans Saints,0,0,Pre-ETR,60.png
+59,6,54,Jakobi Meyers,WR,Jacksonville Jaguars,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR,60.png
+59,7,55,Kenneth Gainwell,RB,Pittsburgh Steelers,CUTCUTLER,Drake Maye,New England Patriots,0,,,Chicago Bears,1,1,Pre-ETR,60.png
+59,8,56,Caleb Williams,QB,Chicago Bears,VOGEYBERRA8,Caleb Williams,Chicago Bears,1,1,1,Pittsburgh Steelers,0,0,Pre-ETR,60.png
+59,9,57,Tyrone Tracy,RB,New York Giants,KURUC711,Jalen Hurts,Philadelphia Eagles,0,,,Detroit Lions,0,0,Pre-ETR,60.png
+59,10,58,AJ Barner,TE,Seattle Seahawks,JASTA29,Sam Darnold,Seattle Seahawks,1,,,Tennessee Titans,0,0,Pre-ETR,60.png
+59,11,59,Romeo Doubs,WR,Green Bay Packers,KRUTCHES93,Jaxson Dart,New York Giants,0,,,Minnesota Vikings,0,0,Pre-ETR,60.png
+59,12,60,Darnell Mooney,WR,Atlanta Falcons,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,60.png
+59,12,61,Josh Jacobs,RB,Green Bay Packers,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,60.png
+59,11,62,Theo Johnson,TE,New York Giants,KRUTCHES93,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,60.png
+59,10,63,Sam Darnold,QB,Seattle Seahawks,JASTA29,Sam Darnold,Seattle Seahawks,1,1,1,Tennessee Titans,0,0,Pre-ETR,60.png
+59,9,64,Christian Watson,WR,Green Bay Packers,KURUC711,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,60.png
+59,8,65,Colston Loveland,TE,Chicago Bears,VOGEYBERRA8,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,60.png
+59,7,66,Andrei Iosivas,WR,Cincinnati Bengals,CUTCUTLER,Drake Maye,New England Patriots,0,,,New England Patriots,3,1,Pre-ETR,60.png
+59,6,67,Jacoby Brissett,QB,Arizona Cardinals,GOAZCARDS,Jacoby Brissett,Arizona Cardinals,1,1,1,Jacksonville Jaguars,1,1,Pre-ETR,60.png
+59,5,68,Trevor Lawrence,QB,Jacksonville Jaguars,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,60.png
+59,4,69,Rhamondre Stevenson,RB,New England Patriots,____,Dak Prescott,Dallas Cowboys,0,,,Cincinnati Bengals,0,0,Pre-ETR,60.png
+59,3,70,Jake Ferguson,TE,Dallas Cowboys,EZ116,Daniel Jones,Indianapolis Colts,0,,,Philadelphia Eagles,0,0,Pre-ETR,60.png
+59,2,71,Mark Andrews,TE,Baltimore Ravens,LENKEITH,Jared Goff,Detroit Lions,0,,,New York Jets,0,0,Pre-ETR,60.png
+59,1,72,Alec Pierce,WR,Indianapolis Colts,CHADCANDLES,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,3,1,Pre-ETR,60.png
+60,1,1,Jahmyr Gibbs,RB,Detroit Lions,JDUBS1035,Dak Prescott,Dallas Cowboys,0,,,New York Giants,1,1,Pre-ETR,61.png
+60,2,2,Jonathan Taylor,RB,Indianapolis Colts,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,2,1,Pre-ETR,61.png
+60,3,3,Bijan Robinson,RB,Atlanta Falcons,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New Orleans Saints,0,0,Pre-ETR,61.png
+60,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,MANGIGIS,Jalen Hurts,Philadelphia Eagles,0,,,Tennessee Titans,0,0,Pre-ETR,61.png
+60,5,5,Amon-Ra St. Brown,WR,Detroit Lions,JGFC,Daniel Jones,Indianapolis Colts,0,,,New York Giants,0,0,Pre-ETR,61.png
+60,6,6,Trey McBride,TE,Arizona Cardinals,EZ116,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,0,0,Pre-ETR,61.png
+60,7,7,CeeDee Lamb,WR,Dallas Cowboys,XCHEERFUL,Trevor Lawrence,Jacksonville Jaguars,0,,,Philadelphia Eagles,0,0,Pre-ETR,61.png
+60,8,8,Derrick Henry,RB,Baltimore Ravens,JASTA29,Caleb Williams,Chicago Bears,0,,,New York Jets,0,0,Pre-ETR,61.png
+60,9,9,Saquon Barkley,RB,Philadelphia Eagles,PATRICKBARN,Jared Goff,Detroit Lions,0,,,Dallas Cowboys,0,0,Pre-ETR,61.png
+60,10,10,Rashee Rice,WR,Kansas City Chiefs,KRUTCHES93,Jaxson Dart,New York Giants,0,,,Indianapolis Colts,0,0,Pre-ETR,61.png
+60,11,11,Tee Higgins,WR,Cincinnati Bengals,CHADCANDLES,J.J. McCarthy,Minnesota Vikings,0,,,New England Patriots,0,0,Pre-ETR,61.png
+60,12,12,George Pickens,WR,Dallas Cowboys,D4VE,Drake Maye,New England Patriots,0,,,Philadelphia Eagles,0,0,Pre-ETR,61.png
+60,12,13,Drake Maye,QB,New England Patriots,D4VE,Drake Maye,New England Patriots,1,1,1,Cincinnati Bengals,0,0,Pre-ETR,61.png
+60,11,14,Justin Jefferson,WR,Minnesota Vikings,CHADCANDLES,J.J. McCarthy,Minnesota Vikings,1,,,Green Bay Packers,0,0,Pre-ETR,61.png
+60,10,15,Chase Brown,RB,Cincinnati Bengals,KRUTCHES93,Jaxson Dart,New York Giants,0,,,New England Patriots,0,0,Pre-ETR,61.png
+60,9,16,TreVeyon Henderson,RB,New England Patriots,PATRICKBARN,Jared Goff,Detroit Lions,0,,,Cincinnati Bengals,0,0,Pre-ETR,61.png
+60,8,17,Travis Etienne Jr.,RB,Jacksonville Jaguars,JASTA29,Caleb Williams,Chicago Bears,0,,,Arizona Cardinals,0,0,Pre-ETR,61.png
+60,7,18,Brock Bowers,TE,Las Vegas Raiders,XCHEERFUL,Trevor Lawrence,Jacksonville Jaguars,0,,,Cleveland Browns,0,0,Pre-ETR,61.png
+60,6,19,A.J. Brown,WR,Philadelphia Eagles,EZ116,Jacoby Brissett,Arizona Cardinals,0,,,Dallas Cowboys,0,0,Pre-ETR,61.png
+60,5,20,Jameson Williams,WR,Detroit Lions,JGFC,Daniel Jones,Indianapolis Colts,0,,,New York Giants,0,0,Pre-ETR,61.png
+60,4,21,Jalen Hurts,QB,Philadelphia Eagles,MANGIGIS,Jalen Hurts,Philadelphia Eagles,1,0,0,Dallas Cowboys,0,0,Pre-ETR,61.png
+60,3,22,Lamar Jackson,QB,Baltimore Ravens,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,1,0,0,New York Jets,0,0,Pre-ETR,61.png
+60,2,23,Javonte Williams,RB,Dallas Cowboys,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Philadelphia Eagles,0,0,Pre-ETR,61.png
+60,1,24,DeVonta Smith,WR,Philadelphia Eagles,JDUBS1035,Dak Prescott,Dallas Cowboys,0,,,Dallas Cowboys,2,1,Pre-ETR,61.png
+60,1,25,Chris Olave,WR,New Orleans Saints,JDUBS1035,Dak Prescott,Dallas Cowboys,0,,,Atlanta Falcons,0,0,Pre-ETR,61.png
+60,2,26,Patrick Mahomes,QB,Kansas City Chiefs,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,1,1,1,Indianapolis Colts,1,1,Pre-ETR,61.png
+60,3,27,Tyler Warren,TE,Indianapolis Colts,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Kansas City Chiefs,0,0,Pre-ETR,61.png
+60,4,28,Quinshon Judkins,RB,Cleveland Browns,MANGIGIS,Jalen Hurts,Philadelphia Eagles,0,,,Las Vegas Raiders,0,0,Pre-ETR,61.png
+60,5,29,Travis Kelce,TE,Kansas City Chiefs,JGFC,Daniel Jones,Indianapolis Colts,0,,,Indianapolis Colts,2,1,Pre-ETR,61.png
+60,6,30,Stefon Diggs,WR,New England Patriots,EZ116,Jacoby Brissett,Arizona Cardinals,0,,,Cincinnati Bengals,0,0,Pre-ETR,61.png
+60,7,31,Zay Flowers,WR,Baltimore Ravens,XCHEERFUL,Trevor Lawrence,Jacksonville Jaguars,0,,,New York Jets,0,0,Pre-ETR,61.png
+60,8,32,Rome Odunze,WR,Chicago Bears,JASTA29,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,61.png
+60,9,33,DK Metcalf,WR,Pittsburgh Steelers,PATRICKBARN,Jared Goff,Detroit Lions,0,,,Chicago Bears,0,0,Pre-ETR,61.png
+60,10,34,Breece Hall,RB,New York Jets,KRUTCHES93,Jaxson Dart,New York Giants,0,,,Baltimore Ravens,1,1,Pre-ETR,61.png
+60,11,35,Kenneth Walker III,RB,Seattle Seahawks,CHADCANDLES,J.J. McCarthy,Minnesota Vikings,0,,,Tennessee Titans,0,0,Pre-ETR,61.png
+60,12,36,Ashton Jeanty,RB,Las Vegas Raiders,D4VE,Drake Maye,New England Patriots,0,,,Cleveland Browns,0,0,Pre-ETR,61.png
+60,12,37,Hunter Henry,TE,New England Patriots,D4VE,Drake Maye,New England Patriots,1,,,Cincinnati Bengals,0,0,Pre-ETR,61.png
+60,11,38,Aaron Jones,RB,Minnesota Vikings,CHADCANDLES,J.J. McCarthy,Minnesota Vikings,1,,,Green Bay Packers,0,0,Pre-ETR,61.png
+60,10,39,Jaxson Dart,QB,New York Giants,KRUTCHES93,Jaxson Dart,New York Giants,1,0,0,Detroit Lions,0,0,Pre-ETR,61.png
+60,9,40,Jared Goff,QB,Detroit Lions,PATRICKBARN,Jared Goff,Detroit Lions,1,1,1,New York Giants,0,0,Pre-ETR,61.png
+60,8,41,Dallas Goedert,TE,Philadelphia Eagles,JASTA29,Caleb Williams,Chicago Bears,0,,,Dallas Cowboys,0,0,Pre-ETR,61.png
+60,7,42,D'Andre Swift,RB,Chicago Bears,XCHEERFUL,Trevor Lawrence,Jacksonville Jaguars,0,,,Pittsburgh Steelers,0,0,Pre-ETR,61.png
+60,6,43,Emanuel Wilson,RB,Green Bay Packers,EZ116,Jacoby Brissett,Arizona Cardinals,0,,,Minnesota Vikings,0,0,Pre-ETR,61.png
+60,5,44,Michael Pittman Jr.,WR,Indianapolis Colts,JGFC,Daniel Jones,Indianapolis Colts,1,,,Kansas City Chiefs,1,1,Pre-ETR,61.png
+60,4,45,Jaylen Warren,RB,Pittsburgh Steelers,MANGIGIS,Jalen Hurts,Philadelphia Eagles,0,,,Chicago Bears,0,0,Pre-ETR,61.png
+60,3,46,Wan'Dale Robinson,WR,New York Giants,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Detroit Lions,1,1,Pre-ETR,61.png
+60,2,47,Xavier Worthy,WR,Kansas City Chiefs,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,1,,,Indianapolis Colts,1,1,Pre-ETR,61.png
+60,1,48,Dak Prescott,QB,Dallas Cowboys,JDUBS1035,Dak Prescott,Dallas Cowboys,1,1,1,Philadelphia Eagles,1,1,Pre-ETR,61.png
+60,1,49,Jake Ferguson,TE,Dallas Cowboys,JDUBS1035,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,1,1,Pre-ETR,61.png
+60,2,50,Kyle Pitts,TE,Atlanta Falcons,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,New Orleans Saints,0,0,Pre-ETR,61.png
+60,3,51,David Montgomery,RB,Detroit Lions,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,1,1,Pre-ETR,61.png
+60,4,52,Michael Wilson,WR,Arizona Cardinals,MANGIGIS,Jalen Hurts,Philadelphia Eagles,0,,,Jacksonville Jaguars,0,0,Pre-ETR,61.png
+60,5,53,Daniel Jones,QB,Indianapolis Colts,JGFC,Daniel Jones,Indianapolis Colts,1,1,1,Kansas City Chiefs,1,1,Pre-ETR,61.png
+60,6,54,Marvin Harrison,WR,Arizona Cardinals,EZ116,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,0,0,Pre-ETR,61.png
+60,7,55,Josh Jacobs,RB,Green Bay Packers,XCHEERFUL,Trevor Lawrence,Jacksonville Jaguars,0,,,Minnesota Vikings,0,0,Pre-ETR,61.png
+60,8,56,Caleb Williams,QB,Chicago Bears,JASTA29,Caleb Williams,Chicago Bears,1,2,1,Pittsburgh Steelers,0,0,Pre-ETR,61.png
+60,9,57,Darnell Mooney,WR,Atlanta Falcons,PATRICKBARN,Jared Goff,Detroit Lions,0,,,New Orleans Saints,0,0,Pre-ETR,61.png
+60,10,58,Romeo Doubs,WR,Green Bay Packers,KRUTCHES93,Jaxson Dart,New York Giants,0,,,Minnesota Vikings,0,0,Pre-ETR,61.png
+60,11,59,Juwan Johnson,TE,New Orleans Saints,CHADCANDLES,J.J. McCarthy,Minnesota Vikings,0,,,Atlanta Falcons,0,0,Pre-ETR,61.png
+60,12,60,Alvin Kamara,RB,New Orleans Saints,D4VE,Drake Maye,New England Patriots,0,,,Atlanta Falcons,0,0,Pre-ETR,61.png
+60,12,61,Alec Pierce,WR,Indianapolis Colts,D4VE,Drake Maye,New England Patriots,0,,,Kansas City Chiefs,0,0,Pre-ETR,61.png
+60,11,62,J.J. McCarthy,QB,Minnesota Vikings,CHADCANDLES,J.J. McCarthy,Minnesota Vikings,1,2,1,Green Bay Packers,0,0,Pre-ETR,61.png
+60,10,63,Mark Andrews,TE,Baltimore Ravens,KRUTCHES93,Jaxson Dart,New York Giants,0,,,New York Jets,1,1,Pre-ETR,61.png
+60,9,64,Brock Wright,TE,Detroit Lions,PATRICKBARN,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,61.png
+60,8,65,Luther Burden,WR,Chicago Bears,JASTA29,Caleb Williams,Chicago Bears,1,,,Pittsburgh Steelers,0,0,Pre-ETR,61.png
+60,7,66,Trevor Lawrence,QB,Jacksonville Jaguars,XCHEERFUL,Trevor Lawrence,Jacksonville Jaguars,1,0,0,Arizona Cardinals,0,0,Pre-ETR,61.png
+60,6,67,Jacoby Brissett,QB,Arizona Cardinals,EZ116,Jacoby Brissett,Arizona Cardinals,1,2,1,Jacksonville Jaguars,0,0,Pre-ETR,61.png
+60,5,68,Kenneth Gainwell,RB,Pittsburgh Steelers,JGFC,Daniel Jones,Indianapolis Colts,0,,,Chicago Bears,0,0,Pre-ETR,61.png
+60,4,69,Theo Johnson,TE,New York Giants,MANGIGIS,Jalen Hurts,Philadelphia Eagles,0,,,Detroit Lions,0,0,Pre-ETR,61.png
+60,3,70,Christian Watson,WR,Green Bay Packers,BUSTERSBOYS,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,61.png
+60,2,71,Brian Thomas,WR,Jacksonville Jaguars,HDJDHDJDJSK,Patrick Mahomes,Kansas City Chiefs,0,,,Arizona Cardinals,0,0,Pre-ETR,61.png
+60,1,72,Tyrone Tracy,RB,New York Giants,JDUBS1035,Dak Prescott,Dallas Cowboys,0,,,Detroit Lions,1,1,Pre-ETR,61.png
+61,1,1,Jahmyr Gibbs,RB,Detroit Lions,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,New York Giants,0,0,Pre-ETR,62.jpg
+61,2,2,Bijan Robinson,RB,Atlanta Falcons,KRUTCHES93,Drake Maye,New England Patriots,0,,,New Orleans Saints,0,0,Pre-ETR,62.jpg
+61,3,3,Jonathan Taylor,RB,Indianapolis Colts,ALBOOGIE78,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR,62.jpg
+61,4,4,Jaxon Smith-Njigba,WR,Seattle Seahawks,GUNNEROSS,Sam Darnold,Seattle Seahawks,1,,,Tennessee Titans,0,0,Pre-ETR,62.jpg
+61,5,5,Amon-Ra St. Brown,WR,Detroit Lions,EZ116,Dak Prescott,Dallas Cowboys,0,,,New York Giants,0,0,Pre-ETR,62.jpg
+61,6,6,Trey McBride,TE,Arizona Cardinals,D4RKSH33P,Lamar Jackson,Baltimore Ravens,0,,,Jacksonville Jaguars,0,0,Pre-ETR,62.jpg
+61,7,7,Derrick Henry,RB,Baltimore Ravens,DYLANCASH22,Jared Goff,Detroit Lions,0,,,New York Jets,1,1,Pre-ETR,62.jpg
+61,8,8,Saquon Barkley,RB,Philadelphia Eagles,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Dallas Cowboys,0,0,Pre-ETR,62.jpg
+61,9,9,Rashee Rice,WR,Kansas City Chiefs,D4VE,Caleb Williams,Chicago Bears,0,,,Indianapolis Colts,0,0,Pre-ETR,62.jpg
+61,10,10,CeeDee Lamb,WR,Dallas Cowboys,GOAZCARDS,Jaxson Dart,New York Giants,0,,,Philadelphia Eagles,0,0,Pre-ETR,62.jpg
+61,11,11,TreVeyon Henderson,RB,New England Patriots,KURUC711,Daniel Jones,Indianapolis Colts,0,,,Cincinnati Bengals,0,0,Pre-ETR,62.jpg
+61,12,12,Travis Etienne Jr.,RB,Jacksonville Jaguars,JASTA29,Jacoby Brissett,Arizona Cardinals,0,,,Arizona Cardinals,2,1,Pre-ETR,62.jpg
+61,12,13,Tee Higgins,WR,Cincinnati Bengals,JASTA29,Jacoby Brissett,Arizona Cardinals,0,,,New England Patriots,0,0,Pre-ETR,62.jpg
+61,11,14,Brock Bowers,TE,Las Vegas Raiders,KURUC711,Daniel Jones,Indianapolis Colts,0,,,Cleveland Browns,0,0,Pre-ETR,62.jpg
+61,10,15,Chase Brown,RB,Cincinnati Bengals,GOAZCARDS,Jaxson Dart,New York Giants,0,,,New England Patriots,1,1,Pre-ETR,62.jpg
+61,9,16,Javonte Williams,RB,Dallas Cowboys,D4VE,Caleb Williams,Chicago Bears,0,,,Philadelphia Eagles,0,0,Pre-ETR,62.jpg
+61,8,17,Justin Jefferson,WR,Minnesota Vikings,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Green Bay Packers,1,1,Pre-ETR,62.jpg
+61,7,18,Jameson Williams,WR,Detroit Lions,DYLANCASH22,Jared Goff,Detroit Lions,1,,,New York Giants,0,0,Pre-ETR,62.jpg
+61,6,19,Lamar Jackson,QB,Baltimore Ravens,D4RKSH33P,Lamar Jackson,Baltimore Ravens,1,1,1,New York Jets,0,0,Pre-ETR,62.jpg
+61,5,20,George Pickens,WR,Dallas Cowboys,EZ116,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,62.jpg
+61,4,21,Quinshon Judkins,RB,Cleveland Browns,GUNNEROSS,Sam Darnold,Seattle Seahawks,0,,,Las Vegas Raiders,0,0,Pre-ETR,62.jpg
+61,3,22,Chris Olave,WR,New Orleans Saints,ALBOOGIE78,Patrick Mahomes,Kansas City Chiefs,0,,,Atlanta Falcons,1,1,Pre-ETR,62.jpg
+61,2,23,Drake Maye,QB,New England Patriots,KRUTCHES93,Drake Maye,New England Patriots,1,0,0,Cincinnati Bengals,0,0,Pre-ETR,62.jpg
+61,1,24,Jalen Hurts,QB,Philadelphia Eagles,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,1,1,1,Dallas Cowboys,0,0,Pre-ETR,62.jpg
+61,1,25,A.J. Brown,WR,Philadelphia Eagles,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,1,,,Dallas Cowboys,0,0,Pre-ETR,62.jpg
+61,2,26,Ashton Jeanty,RB,Las Vegas Raiders,KRUTCHES93,Drake Maye,New England Patriots,0,,,Cleveland Browns,0,0,Pre-ETR,62.jpg
+61,3,27,Patrick Mahomes,QB,Kansas City Chiefs,ALBOOGIE78,Patrick Mahomes,Kansas City Chiefs,1,0,0,Indianapolis Colts,2,1,Pre-ETR,62.jpg
+61,4,28,DeVonta Smith,WR,Philadelphia Eagles,GUNNEROSS,Sam Darnold,Seattle Seahawks,0,,,Dallas Cowboys,0,0,Pre-ETR,62.jpg
+61,5,29,Tyler Warren,TE,Indianapolis Colts,EZ116,Dak Prescott,Dallas Cowboys,0,,,Kansas City Chiefs,0,0,Pre-ETR,62.jpg
+61,6,30,Zay Flowers,WR,Baltimore Ravens,D4RKSH33P,Lamar Jackson,Baltimore Ravens,1,,,New York Jets,0,0,Pre-ETR,62.jpg
+61,7,31,Kenneth Walker III,RB,Seattle Seahawks,DYLANCASH22,Jared Goff,Detroit Lions,0,,,Tennessee Titans,0,0,Pre-ETR,62.jpg
+61,8,32,Stefon Diggs,WR,New England Patriots,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Cincinnati Bengals,0,0,Pre-ETR,62.jpg
+61,9,33,Travis Kelce,TE,Kansas City Chiefs,D4VE,Caleb Williams,Chicago Bears,0,,,Indianapolis Colts,0,0,Pre-ETR,62.jpg
+61,10,34,Breece Hall,RB,New York Jets,GOAZCARDS,Jaxson Dart,New York Giants,0,,,Baltimore Ravens,0,0,Pre-ETR,62.jpg
+61,11,35,Rome Odunze,WR,Chicago Bears,KURUC711,Daniel Jones,Indianapolis Colts,0,,,Pittsburgh Steelers,0,0,Pre-ETR,62.jpg
+61,12,36,Aaron Jones,RB,Minnesota Vikings,JASTA29,Jacoby Brissett,Arizona Cardinals,0,,,Green Bay Packers,0,0,Pre-ETR,62.jpg
+61,12,37,Michael Wilson,WR,Arizona Cardinals,JASTA29,Jacoby Brissett,Arizona Cardinals,1,,,Jacksonville Jaguars,1,1,Pre-ETR,62.jpg
+61,11,38,D'Andre Swift,RB,Chicago Bears,KURUC711,Daniel Jones,Indianapolis Colts,0,,,Pittsburgh Steelers,0,0,Pre-ETR,62.jpg
+61,10,39,Jaxson Dart,QB,New York Giants,GOAZCARDS,Jaxson Dart,New York Giants,1,1,1,Detroit Lions,0,0,Pre-ETR,62.jpg
+61,9,40,DK Metcalf,WR,Pittsburgh Steelers,D4VE,Caleb Williams,Chicago Bears,0,,,Chicago Bears,1,1,Pre-ETR,62.jpg
+61,8,41,Emanuel Wilson,RB,Green Bay Packers,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,0,,,Minnesota Vikings,1,1,Pre-ETR,62.jpg
+61,7,42,Jared Goff,QB,Detroit Lions,DYLANCASH22,Jared Goff,Detroit Lions,1,1,1,New York Giants,0,0,Pre-ETR,62.jpg
+61,6,43,Alvin Kamara,RB,New Orleans Saints,D4RKSH33P,Lamar Jackson,Baltimore Ravens,0,,,Atlanta Falcons,0,0,Pre-ETR,62.jpg
+61,5,44,Jaylen Warren,RB,Pittsburgh Steelers,EZ116,Dak Prescott,Dallas Cowboys,0,,,Chicago Bears,0,0,Pre-ETR,62.jpg
+61,4,45,Hunter Henry,TE,New England Patriots,GUNNEROSS,Sam Darnold,Seattle Seahawks,0,,,Cincinnati Bengals,0,0,Pre-ETR,62.jpg
+61,3,46,Kyle Pitts,TE,Atlanta Falcons,ALBOOGIE78,Patrick Mahomes,Kansas City Chiefs,0,,,New Orleans Saints,1,1,Pre-ETR,62.jpg
+61,2,47,Dallas Goedert,TE,Philadelphia Eagles,KRUTCHES93,Drake Maye,New England Patriots,0,,,Dallas Cowboys,0,0,Pre-ETR,62.jpg
+61,1,48,Michael Pittman Jr.,WR,Indianapolis Colts,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,Kansas City Chiefs,0,0,Pre-ETR,62.jpg
+61,1,49,Josh Jacobs,RB,Green Bay Packers,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,Minnesota Vikings,0,0,Pre-ETR,62.jpg
+61,2,50,Wan'Dale Robinson,WR,New York Giants,KRUTCHES93,Drake Maye,New England Patriots,0,,,Detroit Lions,0,0,Pre-ETR,62.jpg
+61,3,51,Alec Pierce,WR,Indianapolis Colts,ALBOOGIE78,Patrick Mahomes,Kansas City Chiefs,0,,,Kansas City Chiefs,1,1,Pre-ETR,62.jpg
+61,4,52,Kenneth Gainwell,RB,Pittsburgh Steelers,GUNNEROSS,Sam Darnold,Seattle Seahawks,0,,,Chicago Bears,0,0,Pre-ETR,62.jpg
+61,5,53,Dak Prescott,QB,Dallas Cowboys,EZ116,Dak Prescott,Dallas Cowboys,1,2,1,Philadelphia Eagles,0,0,Pre-ETR,62.jpg
+61,6,54,David Montgomery,RB,Detroit Lions,D4RKSH33P,Lamar Jackson,Baltimore Ravens,0,,,New York Giants,0,0,Pre-ETR,62.jpg
+61,7,55,Juwan Johnson,TE,New Orleans Saints,DYLANCASH22,Jared Goff,Detroit Lions,0,,,Atlanta Falcons,0,0,Pre-ETR,62.jpg
+61,8,56,Trevor Lawrence,QB,Jacksonville Jaguars,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,1,1,1,Arizona Cardinals,0,0,Pre-ETR,62.jpg
+61,9,57,Caleb Williams,QB,Chicago Bears,D4VE,Caleb Williams,Chicago Bears,1,0,0,Pittsburgh Steelers,1,1,Pre-ETR,62.jpg
+61,10,58,Theo Johnson,TE,New York Giants,GOAZCARDS,Jaxson Dart,New York Giants,1,,,Detroit Lions,0,0,Pre-ETR,62.jpg
+61,11,59,Parker Washington,WR,Jacksonville Jaguars,KURUC711,Daniel Jones,Indianapolis Colts,0,,,Arizona Cardinals,0,0,Pre-ETR,62.jpg
+61,12,60,Jacoby Brissett,QB,Arizona Cardinals,JASTA29,Jacoby Brissett,Arizona Cardinals,1,1,1,Jacksonville Jaguars,1,1,Pre-ETR,62.jpg
+61,12,61,Noah Fant,TE,Cincinnati Bengals,JASTA29,Jacoby Brissett,Arizona Cardinals,0,,,New England Patriots,0,0,Pre-ETR,62.jpg
+61,11,62,Daniel Jones,QB,Indianapolis Colts,KURUC711,Daniel Jones,Indianapolis Colts,1,0,0,Kansas City Chiefs,0,0,Pre-ETR,62.jpg
+61,10,63,Kayshon Boutte,WR,New England Patriots,GOAZCARDS,Jaxson Dart,New York Giants,0,,,Cincinnati Bengals,1,1,Pre-ETR,62.jpg
+61,9,64,Rhamondre Stevenson,RB,New England Patriots,D4VE,Caleb Williams,Chicago Bears,0,,,Cincinnati Bengals,0,0,Pre-ETR,62.jpg
+61,8,65,Brenton Strange,TE,Jacksonville Jaguars,PATRICKBARN,Trevor Lawrence,Jacksonville Jaguars,1,,,Arizona Cardinals,0,0,Pre-ETR,62.jpg
+61,7,66,Adonai Mitchell,WR,New York Jets,DYLANCASH22,Jared Goff,Detroit Lions,0,,,Baltimore Ravens,1,1,Pre-ETR,62.jpg
+61,6,67,Christian Watson,WR,Green Bay Packers,D4RKSH33P,Lamar Jackson,Baltimore Ravens,0,,,Minnesota Vikings,0,0,Pre-ETR,62.jpg
+61,5,68,Jake Ferguson,TE,Dallas Cowboys,EZ116,Dak Prescott,Dallas Cowboys,1,,,Philadelphia Eagles,0,0,Pre-ETR,62.jpg
+61,4,69,Sam Darnold,QB,Seattle Seahawks,GUNNEROSS,Sam Darnold,Seattle Seahawks,1,1,1,Tennessee Titans,0,0,Pre-ETR,62.jpg
+61,3,70,Tyrone Tracy,RB,New York Giants,ALBOOGIE78,Patrick Mahomes,Kansas City Chiefs,0,,,Detroit Lions,0,0,Pre-ETR,62.jpg
+61,2,71,Romeo Doubs,WR,Green Bay Packers,KRUTCHES93,Drake Maye,New England Patriots,0,,,Minnesota Vikings,0,0,Pre-ETR,62.jpg
+61,1,72,Mark Andrews,TE,Baltimore Ravens,CGEEEEEE,Jalen Hurts,Philadelphia Eagles,0,,,New York Jets,0,0,Pre-ETR,62.jpg
