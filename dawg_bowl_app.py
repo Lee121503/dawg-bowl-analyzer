@@ -1186,7 +1186,11 @@ if auth_status:
             pivot = pivot.rename(columns={k: v for k, v in rename_map.items() if k in pivot.columns})
     
             summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
-            summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_Pre"]
+            if "Post-ETR ADP" in summary.columns and "Average Draft Position" in summary.columns:
+                summary["ADP_Diff"] = summary["Post-ETR ADP"] - summary["Average Draft Position"]
+            else:
+                summary["ADP_Diff"] = None
+
             summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
     
             name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
