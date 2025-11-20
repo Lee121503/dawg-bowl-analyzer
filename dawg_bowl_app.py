@@ -1191,7 +1191,11 @@ if auth_status:
             else:
                 summary["ADP_Diff"] = None
 
-            summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
+            if "Post-ETR % Exposure" in summary.columns and "Pre-ETR % Exposure" in summary.columns:
+                summary["Pct_Diff"] = summary["Post-ETR % Exposure"] - summary["Pre-ETR % Exposure"]
+            else:
+                summary["Pct_Diff"] = None
+
     
             name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
             summary = summary.merge(name_map, on="CleanPlayer", how="left")
