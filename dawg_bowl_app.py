@@ -1136,7 +1136,7 @@ if auth_status:
     # --- Tab 9: ETR Impact Dashboard ---
     elif selected_tab == "📊 ETR Impact Dashboard":
         st.subheader("📊 ETR Impact Dashboard")
-    
+        
         required_cols = ["Player", "Draft", "Pick", "ETR Timing"]
         if all(col in df.columns for col in required_cols):
             df["ETR Timing"] = df["ETR Timing"].astype(str).str.strip().str.replace("-ETR", "").str.title()
@@ -1186,16 +1186,15 @@ if auth_status:
             pivot = pivot.rename(columns={k: v for k, v in rename_map.items() if k in pivot.columns})
     
             summary = pivot.merge(all_grouped, on="CleanPlayer", how="left")
-            if "Post-ETR ADP" in summary.columns and "Average Draft Position" in summary.columns:
-                summary["ADP_Diff"] = summary["Post-ETR ADP"] - summary["Average Draft Position"]
+            if "ADP_Post" in summary.columns and "ADP_All" in summary.columns:
+                summary["ADP_Diff"] = summary["ADP_Post"] - summary["ADP_All"]
             else:
                 summary["ADP_Diff"] = None
-
-            if "Post-ETR % Exposure" in summary.columns and "Pre-ETR % Exposure" in summary.columns:
-                summary["Pct_Diff"] = summary["Post-ETR % Exposure"] - summary["Pre-ETR % Exposure"]
+    
+            if "Pct_Post" in summary.columns and "Pct_Pre" in summary.columns:
+                summary["Pct_Diff"] = summary["Pct_Post"] - summary["Pct_Pre"]
             else:
                 summary["Pct_Diff"] = None
-
     
             name_map = df[["CleanPlayer", "Player"]].drop_duplicates()
             summary = summary.merge(name_map, on="CleanPlayer", how="left")
@@ -1207,10 +1206,29 @@ if auth_status:
             existing_cols = [col for col in display_cols if col in summary.columns]
             summary = summary[existing_cols].sort_values("ADP_Diff", ascending=False)
     
-            styled = summary.style.format({
-                "ADP_Pre": "{:.2f}", "ADP_Post": "{:.2f}", "ADP_All": "{:.2f}", "ADP_Diff": "{:.2f}",
-                "Pct_Pre": "{:.2%}", "Pct_Post": "{:.2%}", "Pct Drafted_All": "{:.2%}", "Pct_Diff": "{:.2%}"
-            }).background_gradient(subset=["ADP_Diff", "Pct_Diff"], cmap="coolwarm")
+            # --- FIX: Build formatters dynamically ---
+            formatters = {}
+            if "ADP_Pre" in summary.columns:
+                formatters["ADP_Pre"] = "{:.2f}"
+            if "ADP_Post" in summary.columns:
+                formatters["ADP_Post"] = "{:.2f}"
+            if "ADP_All" in summary.columns:
+                formatters["ADP_All"] = "{:.2f}"
+            if "ADP_Diff" in summary.columns:
+                formatters["ADP_Diff"] = "{:.2f}"
+            if "Pct_Pre" in summary.columns:
+                formatters["Pct_Pre"] = "{:.2%}"
+            if "Pct_Post" in summary.columns:
+                formatters["Pct_Post"] = "{:.2%}"
+            if "Pct Drafted_All" in summary.columns:
+                formatters["Pct Drafted_All"] = "{:.2%}"
+            if "Pct_Diff" in summary.columns:
+                formatters["Pct_Diff"] = "{:.2%}"
+    
+            styled = summary.style.format(formatters).background_gradient(
+                subset=[col for col in ["ADP_Diff", "Pct_Diff"] if col in summary.columns],
+                cmap="coolwarm"
+            )
     
             st.dataframe(styled, use_container_width=True)
         else:
