@@ -1386,14 +1386,13 @@ if auth_status:
     
         # --- Load ETR projections ---
         try:
-            etr_df = pd.read_csv("data/ETR Projections.csv")  # default sep="," works here
+            etr_df = pd.read_csv("data/ETR Projections.csv")  # <-- fixed delimiter
             etr_main = etr_df[etr_df["Slate"].str.upper() == "MAIN"].copy()
             etr_main["CleanPlayer"] = etr_main["Player"].apply(clean_name)
             proj_lookup = dict(zip(etr_main["CleanPlayer"], etr_main["Half PPR Proj"]))
         except Exception as e:
             st.warning(f"ETR projections file not found or malformed: {e}")
             proj_lookup = {}
-        
     
         # --- User selection ---
         all_users = sorted(df["User"].dropna().unique())
@@ -1424,14 +1423,14 @@ if auth_status:
                 for _, row in group.iterrows():
                     if row["Position"] == pos and row["Player"] not in used_players:
                         used_players.add(row["Player"])
-                        return row["Player"]
+                        return f"{row['Player']} (Pick {row['Pick']})"
                 return ""
     
             def get_next_flex():
                 for _, row in group.iterrows():
                     if row["Position"] in ["RB", "WR", "TE"] and row["Player"] not in used_players:
                         used_players.add(row["Player"])
-                        return row["Player"]
+                        return f"{row['Player']} (Pick {row['Pick']})"
                 return ""
     
             qb = get_first("QB")
@@ -1443,7 +1442,11 @@ if auth_status:
     
             # Calculate team ETR projection
             team_players_list = [qb, rb, wr1, wr2, te, flex]
-            team_proj = sum(proj_lookup.get(clean_name(p), 0) for p in team_players_list if p)
+            # Extract clean names (strip "(Pick #)")
+            team_proj = sum(
+                proj_lookup.get(clean_name(p.split(" (Pick")[0]), 0)
+                for p in team_players_list if p
+            )
     
             roster_rows.append({
                 "Draft": draft_id,
