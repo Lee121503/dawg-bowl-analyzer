@@ -720,9 +720,10 @@ if auth_status:
         injury_file_map = {
             "Week 9": "Week9UD.csv",
             "Week 10": "week10UD.csv",
-            "Week 11": "week11UD.csv"
+            "Week 11": "week11UD.csv",
+            "Week 12": "week12UD.csv"   # <-- add this line
         }
-        injury_file = injury_file_map.get(selected_week_label, "week11UD.csv")
+        injury_file = injury_file_map.get(selected_week_label, f"week{DEFAULT_WEEK}UD.csv")
         injury_df = pd.read_csv(f"data/{injury_file}")
         etr_df = pd.read_csv("data/ETR Projections.csv", sep=",")
     
