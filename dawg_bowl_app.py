@@ -1025,6 +1025,70 @@ if auth_status:
             mime="text/csv"
         )
 
+        # --- Exposure Comparison (Pre vs Post Swaps) ---
+        st.markdown("### 📊 Exposure Comparison (Selected User Only)")
+        
+        selected_user = st.selectbox(
+            "Select User for Exposure Comparison",
+            sorted(df["User"].dropna().unique()),
+            key="tab7_user"
+        )
+        
+        if selected_user:
+            # Pre-swap exposure
+            user_drafts = df[df["User"] == selected_user]
+            total_drafts = user_drafts["Draft"].nunique()
+            pre_exposure = (
+                user_drafts.groupby("Player")["Draft"].nunique().reset_index()
+            )
+            pre_exposure["Pre-Swap Exposure %"] = (
+                pre_exposure["Draft"] / total_drafts * 100
+            ).round(2)
+        
+            # Post-swap exposure (replace injured players with Suggested Replacement)
+            post_df = user_drafts.copy()
+            if "Suggested Replacement" in post_df.columns:
+                post_df.loc[
+                    post_df["Suggested Replacement"].notna(),
+                    "Player"
+                ] = post_df.loc[
+                    post_df["Suggested Replacement"].notna(),
+                    "Suggested Replacement"
+                ]
+        
+            post_exposure = (
+                post_df.groupby("Player")["Draft"].nunique().reset_index()
+            )
+            post_exposure["Post-Swap Exposure %"] = (
+                post_exposure["Draft"] / total_drafts * 100
+            ).round(2)
+        
+            # Merge pre and post
+            exposure_compare = pd.merge(
+                pre_exposure[["Player", "Pre-Swap Exposure %"]],
+                post_exposure[["Player", "Post-Swap Exposure %"]],
+                on="Player",
+                how="outer"
+            ).fillna(0)
+        
+            exposure_compare = exposure_compare.sort_values(
+                "Post-Swap Exposure %", ascending=False
+            )
+        
+            styled_exposure = exposure_compare.style.background_gradient(
+                subset=["Pre-Swap Exposure %", "Post-Swap Exposure %"],
+                cmap="Blues"
+            ).format({
+                "Pre-Swap Exposure %": "{:.2f}",
+                "Post-Swap Exposure %": "{:.2f}"
+            })
+        
+            st.dataframe(styled_exposure, use_container_width=True)
+        else:
+            st.info("Select a user to view exposure changes.")
+
+
+    
     # --- Tab8: ETR Leaderboard ---
     elif selected_tab == "📈 ETR Leaderboard":
         st.subheader(f"📈 ETR Leaderboard — {selected_week_label}")
