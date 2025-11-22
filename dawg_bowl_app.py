@@ -928,7 +928,51 @@ if auth_status:
                     "Pick": "{:.2f}"
                 }).background_gradient(subset=["Pick"], cmap="Oranges")
                 st.dataframe(styled_swap_df, use_container_width=True)
-    
+
+            # --- Adjustable Global Swap Mapping ---
+            st.markdown("**Adjust Global Swap Choices:**")
+            global_swap_map = {}
+            
+            # Loop through injured players
+            for injured_player in injury_df["CleanPlayer"].unique():
+                # Get suggested replacements for this specific injured player
+                player_suggestions = swap_df.loc[
+                    swap_df["Player"].apply(clean_name) == injured_player, "Suggested Replacement"
+                ].dropna().unique().tolist()
+            
+                # Fallback: if no specific suggestions, show the whole pool
+                if not player_suggestions:
+                    player_suggestions = swap_df["Suggested Replacement"].dropna().unique().tolist()
+            
+                chosen = st.selectbox(
+                    f"Replacement for {clean_to_original.get(injured_player, injured_player)}",
+                    options=player_suggestions,
+                    index=0,
+                    key=f"global_swap_{injured_player}"
+                )
+                global_swap_map[injured_player] = chosen
+
+            # --- Exposure Impact After Global Swaps (Step 2) ---
+            st.header("📊 Exposure Impact After Global Swaps")
+            
+            all_after_players = []
+            for draft_id, full_draft, user_out_picks in flagged_drafts:
+                # Apply global swap overrides to each draft roster
+                after_players = full_draft["CleanPlayer"].replace(global_swap_map)
+                all_after_players.extend(after_players.tolist())
+            
+            # Aggregate exposures across all drafts
+            after_counts = pd.Series(all_after_players).value_counts()
+            before_counts = df["CleanPlayer"].value_counts()
+            
+            exposure_df = pd.DataFrame({
+                "Player": before_counts.index,
+                "Before": before_counts.values,
+                "After": after_counts.reindex(before_counts.index).fillna(0).values
+            })
+            exposure_df["Delta"] = exposure_df["After"] - exposure_df["Before"]
+            
+            st.dataframe(exposure_df, use_container_width=True)
             # --- Global Swap List from Suggested Replacements ---
             st.header("🩹 Global Swap List — Suggested Replacements (Extended)")
             
