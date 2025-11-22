@@ -904,8 +904,23 @@ if auth_status:
                                 boost += correlation_boost
                             elif ep == "QB" and team in drafted_passcatchers:
                                 boost += correlation_boost
-                            base_proj = proj_lookup.get(p, 0)
+                    
+                            # --- IKB override logic ---
+                            if user_name == selected_user:  # only apply overrides for this user
+                                ikb_proj = st.number_input(
+                                    f"IKB projection for {clean_to_original.get(p, p)}",
+                                    min_value=0.0,
+                                    max_value=50.0,
+                                    value=float(proj_lookup.get(p, 0)),
+                                    step=0.1,
+                                    key=f"ikb_{p}_{user_name}"
+                                )
+                                base_proj = ikb_proj
+                            else:
+                                base_proj = proj_lookup.get(p, 0)  # field sticks with ETR
+                    
                             scored_candidates.append((p, base_proj + boost))
+
     
                     scored_candidates.sort(key=lambda x: x[1], reverse=True)
                     replacement = scored_candidates[0][0] if scored_candidates else "None Available"
