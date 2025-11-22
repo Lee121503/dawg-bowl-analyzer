@@ -982,9 +982,16 @@ if auth_status:
                 team = team_lookup.get(p, "Unknown")
                 proj = proj_lookup.get(p, 0)
                 ceiling = ceiling_lookup.get(p, 0)
+            
                 swap_rows.append({
                     "Player": original,
                     "Position": pos,
+                    "Team": team,
+                    "Projection": round(proj, 2),
+                    "Ceiling": round(ceiling, 2)
+                })
+
+
             # --- Exposure Comparison (Pre vs Post Swaps for Selected User) ---
             st.markdown("### 📊 Exposure Comparison (Selected User Only)")
             selected_user = user
