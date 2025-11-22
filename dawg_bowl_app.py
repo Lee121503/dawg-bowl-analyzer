@@ -882,7 +882,7 @@ if auth_status:
                 )
                 
                 # --- Custom ordering UI for swaps ---
-                injured_names = list(injured_in_draft
+                injured_names = list(injured_in_draft["CleanPlayer"].unique())
                 custom_order = st.multiselect(
                     "Set custom swap order (drag to reorder)",
                     options=injured_names,
