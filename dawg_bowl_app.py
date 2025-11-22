@@ -1155,8 +1155,9 @@ if auth_status:
 
         else:
             st.info("Select a user to view exposure changes.")
-
-
+    
+    else:
+        st.info("No injury swaps available for the current selection.")
     
     # --- Tab8: ETR Leaderboard ---
     elif selected_tab == "📈 ETR Leaderboard":
