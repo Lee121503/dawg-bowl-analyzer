@@ -871,16 +871,33 @@ if auth_status:
     
                 # --- Swap Priority Table ---
                 st.markdown("**Swap Priority for Injured Picks in This Draft (Underdog Logic):**")
-                injured_in_draft = full_draft[full_draft["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))].copy()
+                
+                injured_in_draft = full_draft[
+                    full_draft["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))
+                ].copy()
                 injured_in_draft["Round"] = injured_in_draft["Pick"].astype(int)
                 injured_in_draft["PickInRound"] = injured_in_draft["Pick"].astype(int)
                 injured_in_draft["Swap Priority"] = injured_in_draft.apply(
-                    lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1            
+                    lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
                 )
-                injured_sorted = injured_in_draft.sort_values("Swap Priority")
-    
+                
+                # --- Custom ordering UI for swaps ---
+                injured_names = list(injured_in_draft["CleanPlayer"].unique())
+                custom_order = st.multiselect(
+                    "Set custom swap order (drag to reorder)",
+                    options=injured_names,
+                    default=injured_names
+                )
+                
+                # Apply custom order if provided, else fall back to default priority
+                if custom_order and len(custom_order) == len(injured_names):
+                    injured_sorted = injured_in_draft.set_index("CleanPlayer").loc[custom_order].reset_index()
+                else:
+                    injured_sorted = injured_in_draft.sort_values("Swap Priority")
+                
                 swap_rows = []
                 used_replacements = set()
+
     
                 for _, row in injured_sorted.iterrows():
                     pos = row["Position"]
