@@ -882,12 +882,14 @@ if auth_status:
                 )
                 
                 # --- Custom ordering UI for swaps ---
-                injured_names = list(injured_in_draft["CleanPlayer"].unique())
+                injured_names = list(injured_in_draft
                 custom_order = st.multiselect(
                     "Set custom swap order (drag to reorder)",
                     options=injured_names,
-                    default=injured_names
+                    default=injured_names,
+                    key=f"swap_order_{draft_id}"
                 )
+
                 
                 # Apply custom order if provided, else fall back to default priority
                 if custom_order and len(custom_order) == len(injured_names):
