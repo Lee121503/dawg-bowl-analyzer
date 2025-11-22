@@ -931,6 +931,13 @@ if auth_status:
 
             # --- Adjustable Global Swap Mapping ---
             st.markdown("**Adjust Global Swap Choices:**")
+            
+            # ✅ Ensure CleanPlayer column exists in injury_df
+            if "CleanPlayer" not in injury_df.columns:
+                injury_df["CleanPlayer"] = (
+                    injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()
+                ).apply(clean_name)
+            
             global_swap_map = {}
             
             # Loop through injured players
@@ -951,7 +958,7 @@ if auth_status:
                     key=f"global_swap_{injured_player}"
                 )
                 global_swap_map[injured_player] = chosen
-
+            
             # --- Exposure Impact After Global Swaps (Step 2) ---
             st.header("📊 Exposure Impact After Global Swaps")
             
@@ -972,7 +979,13 @@ if auth_status:
             })
             exposure_df["Delta"] = exposure_df["After"] - exposure_df["Before"]
             
-            st.dataframe(exposure_df, use_container_width=True)
+            # Optional: add gradient formatting for clarity
+            styled_exposure = exposure_df.style.background_gradient(
+                subset=["Delta"], cmap="RdYlGn"
+            ).format({"Before":"{:.0f}", "After":"{:.0f}", "Delta":"{:+.0f}"})
+            
+            st.dataframe(styled_exposure, use_container_width=True)
+
             # --- Global Swap List from Suggested Replacements ---
             st.header("🩹 Global Swap List — Suggested Replacements (Extended)")
             
