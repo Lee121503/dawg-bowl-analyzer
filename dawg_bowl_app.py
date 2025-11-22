@@ -1025,65 +1025,134 @@ if auth_status:
             mime="text/csv"
         )
 
-        # --- Exposure Comparison (Pre vs Post Swaps) ---
+        # --- Exposure Comparison (Pre vs Post Swaps for Selected User) ---
         st.markdown("### 📊 Exposure Comparison (Selected User Only)")
         
-        selected_user = st.selectbox(
-            "Select User for Exposure Comparison",
-            sorted(df["User"].dropna().unique()),
-            key="tab7_user"
+        # We already have 'user' selected earlier in Tab 7, reuse it here
+        selected_user = user
+        
+        # Collect all suggested swaps across flagged drafts into one DataFrame
+        all_swaps = []
+        
+        # Re-run the swap generation portion to capture swap_rows globally per draft
+        # (If you prefer, you can refactor the earlier loop to append to all_swaps directly.)
+        for draft_id, full_draft, user_out_picks in flagged_drafts:
+            injured_in_draft = full_draft[full_draft["CleanPlayer"].apply(lambda x: is_fuzzy_match(x, out_names))].copy()
+            injured_in_draft["Round"] = injured_in_draft["Pick"].astype(int)
+            injured_in_draft["PickInRound"] = injured_in_draft["Pick"].astype(int)
+            injured_in_draft["Swap Priority"] = injured_in_draft.apply(
+                lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
+            )
+            injured_sorted = injured_in_draft.sort_values("Swap Priority")
+        
+            used_replacements = set()
+            drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
+            drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
+            drafted_clean = set(full_draft["CleanPlayer"])
+        
+            for _, row in injured_sorted.iterrows():
+                pos = row["Position"]
+                is_flex = row.get("IsFlex", False)
+                eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
+                scored_candidates = []
+        
+                for ep in eligible_positions:
+                    for p in rankings.get(ep, []):
+                        if p in drafted_clean or p in used_replacements:
+                            continue
+                        team = team_lookup.get(p, None)
+                        boost = 0
+                        if ep in ["WR", "TE"] and team in drafted_qbs:
+                            boost += correlation_boost
+                        elif ep == "QB" and team in drafted_passcatchers:
+                            boost += correlation_boost
+                        base_proj = proj_lookup.get(p, 0)
+                        scored_candidates.append((p, base_proj + boost))
+        
+                scored_candidates.sort(key=lambda x: x[1], reverse=True)
+                replacement_clean = scored_candidates[0][0] if scored_candidates else None
+                if replacement_clean:
+                    used_replacements.add(replacement_clean)
+        
+                all_swaps.append({
+                    "Draft": draft_id,
+                    "Out_Player": row["Player"],
+                    "Out_Clean": row["CleanPlayer"],
+                    "Position": pos,
+                    "IsFlex": is_flex,
+                    "Suggested_Replacement_Clean": replacement_clean,
+                    "Suggested_Replacement": clean_to_original.get(replacement_clean, replacement_clean) if replacement_clean else None
+                })
+        
+        swaps_df = pd.DataFrame(all_swaps)
+        
+        # Filter to the selected user’s drafts only
+        user_drafts = df[df["User"] == selected_user].copy()
+        total_user_drafts = user_drafts["Draft"].nunique()
+        
+        # Pre-swap exposure (by Player name)
+        pre_exposure = (
+            user_drafts.groupby("Player")["Draft"].nunique().reset_index()
+            .rename(columns={"Draft": "Pre_Drafts"})
+        )
+        pre_exposure["Pre-Swap Exposure %"] = (pre_exposure["Pre_Drafts"] / total_user_drafts * 100).round(2)
+        
+        # Build a replacement map keyed by (Draft, Out_Clean) -> Suggested_Replacement_Clean
+        # Skip rows with no replacement (None / "None Available")
+        valid_swaps = swaps_df.dropna(subset=["Suggested_Replacement_Clean"]).copy()
+        replacement_map = {
+            (int(row["Draft"]), row["Out_Clean"]): row["Suggested_Replacement_Clean"]
+            for _, row in valid_swaps.iterrows()
+        }
+        
+        # Apply replacements to user_drafts copy (post-swap view)
+        post_df = user_drafts.copy()
+        post_df["CleanPlayer"] = post_df["Player"].apply(clean_name)
+        
+        def apply_swap(row):
+            key = (int(row["Draft"]), row["CleanPlayer"])
+            if key in replacement_map:
+                new_clean = replacement_map[key]
+                # Prefer original name if available from ETR list, else keep clean
+                new_name = clean_to_original.get(new_clean, row["Player"])
+                return pd.Series({"Player": new_name, "CleanPlayer": new_clean})
+            else:
+                return pd.Series({"Player": row["Player"], "CleanPlayer": row["CleanPlayer"]})
+        
+        post_df[["Player", "CleanPlayer"]] = post_df.apply(apply_swap, axis=1)
+        
+        # Post-swap exposure (by Player after replacements)
+        post_exposure = (
+            post_df.groupby("Player")["Draft"].nunique().reset_index()
+            .rename(columns={"Draft": "Post_Drafts"})
+        )
+        post_exposure["Post-Swap Exposure %"] = (post_exposure["Post_Drafts"] / total_user_drafts * 100).round(2)
+        
+        # Combine and show delta
+        exposure_compare = (
+            pre_exposure[["Player", "Pre-Swap Exposure %"]]
+            .merge(post_exposure[["Player", "Post-Swap Exposure %"]], on="Player", how="outer")
+            .fillna(0)
+        )
+        exposure_compare["Exposure Δ"] = (exposure_compare["Post-Swap Exposure %"] - exposure_compare["Pre-Swap Exposure %"]).round(2)
+        
+        # Sort by absolute delta, then post exposure
+        exposure_compare = exposure_compare.sort_values(
+            ["Exposure Δ", "Post-Swap Exposure %"], ascending=[False, False]
         )
         
-        if selected_user:
-            # Pre-swap exposure
-            user_drafts = df[df["User"] == selected_user]
-            total_drafts = user_drafts["Draft"].nunique()
-            pre_exposure = (
-                user_drafts.groupby("Player")["Draft"].nunique().reset_index()
-            )
-            pre_exposure["Pre-Swap Exposure %"] = (
-                pre_exposure["Draft"] / total_drafts * 100
-            ).round(2)
+        styled_exposure = exposure_compare.style.background_gradient(
+            subset=["Pre-Swap Exposure %", "Post-Swap Exposure %"], cmap="Blues"
+        ).background_gradient(
+            subset=["Exposure Δ"], cmap="coolwarm"
+        ).format({
+            "Pre-Swap Exposure %": "{:.2f}",
+            "Post-Swap Exposure %": "{:.2f}",
+            "Exposure Δ": "{:.2f}"
+        })
         
-            # Post-swap exposure (replace injured players with Suggested Replacement)
-            post_df = user_drafts.copy()
-            if "Suggested Replacement" in post_df.columns:
-                post_df.loc[
-                    post_df["Suggested Replacement"].notna(),
-                    "Player"
-                ] = post_df.loc[
-                    post_df["Suggested Replacement"].notna(),
-                    "Suggested Replacement"
-                ]
-        
-            post_exposure = (
-                post_df.groupby("Player")["Draft"].nunique().reset_index()
-            )
-            post_exposure["Post-Swap Exposure %"] = (
-                post_exposure["Draft"] / total_drafts * 100
-            ).round(2)
-        
-            # Merge pre and post
-            exposure_compare = pd.merge(
-                pre_exposure[["Player", "Pre-Swap Exposure %"]],
-                post_exposure[["Player", "Post-Swap Exposure %"]],
-                on="Player",
-                how="outer"
-            ).fillna(0)
-        
-            exposure_compare = exposure_compare.sort_values(
-                "Post-Swap Exposure %", ascending=False
-            )
-        
-            styled_exposure = exposure_compare.style.background_gradient(
-                subset=["Pre-Swap Exposure %", "Post-Swap Exposure %"],
-                cmap="Blues"
-            ).format({
-                "Pre-Swap Exposure %": "{:.2f}",
-                "Post-Swap Exposure %": "{:.2f}"
-            })
-        
-            st.dataframe(styled_exposure, use_container_width=True)
+        st.dataframe(styled_exposure, use_container_width=True)
+
         else:
             st.info("Select a user to view exposure changes.")
 
