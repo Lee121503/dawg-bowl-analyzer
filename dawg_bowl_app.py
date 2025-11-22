@@ -931,14 +931,14 @@ if auth_status:
     
             # --- Global Swap List from Suggested Replacements ---
             st.header("🩹 Global Swap List — Suggested Replacements (Extended)")
-    
+            
             all_suggested = []
             for draft_id, full_draft, user_out_picks in flagged_drafts:
                 drafted_qbs = full_draft[full_draft["Position"] == "QB"]["CleanPlayer"].map(team_lookup).dropna().unique()
                 drafted_passcatchers = full_draft[full_draft["Position"].isin(["WR", "TE"])]["CleanPlayer"].map(team_lookup).dropna().unique()
                 drafted = set(full_draft["CleanPlayer"])
                 used_replacements = set()
-    
+            
                 injured_sorted = user_out_picks.copy()
                 injured_sorted["Round"] = injured_sorted["Pick"].astype(int)
                 injured_sorted["PickInRound"] = injured_sorted["Pick"].astype(int)
@@ -946,13 +946,13 @@ if auth_status:
                     lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1
                 )
                 injured_sorted = injured_sorted.sort_values("Swap Priority")
-    
+            
                 for _, row in injured_sorted.iterrows():
                     pos = row["Position"]
                     is_flex = row.get("IsFlex", False)
                     eligible_positions = ["RB", "WR", "TE"] if is_flex else [pos]
                     scored_candidates = []
-    
+            
                     for ep in eligible_positions:
                         for p in rankings.get(ep, []):
                             if p in drafted or p in used_replacements:
@@ -965,15 +965,16 @@ if auth_status:
                                 boost += correlation_boost
                             base_proj = proj_lookup.get(p, 0)
                             scored_candidates.append((p, base_proj + boost))
-    
+            
                     scored_candidates.sort(key=lambda x: x[1], reverse=True)
-    
+            
                     # Expanded: capture multiple candidates, not just the top one
                     for cand, _ in scored_candidates[:5]:
                         if cand not in used_replacements:
                             all_suggested.append(cand)
                             used_replacements.add(cand)
-    
+            
+            # --- Build DataFrame of unique suggestions ---
             unique_suggestions = list(set(all_suggested))
             swap_rows = []
             for p in unique_suggestions:
@@ -990,6 +991,35 @@ if auth_status:
                     "Projection": round(proj, 2),
                     "Ceiling": round(ceiling, 2)
                 })
+            
+            swap_df = pd.DataFrame(swap_rows)
+            swap_df = swap_df.sort_values("Projection", ascending=False).reset_index(drop=True)
+            
+            # --- Style and display table ---
+            styled_swap_df = swap_df.style.format({
+                "Projection": "{:.2f}",
+                "Ceiling": "{:.2f}"
+            }).background_gradient(subset=["Projection"], cmap="Greens")
+            
+            st.dataframe(styled_swap_df, use_container_width=True)
+            
+            # --- Export CSV aligned with table order ---
+            injury_df["CleanPlayer"] = (
+                injury_df["firstName"].str.strip() + " " + injury_df["lastName"].str.strip()
+            ).apply(clean_name)
+            injury_id_lookup = dict(zip(injury_df["CleanPlayer"], injury_df["id"]))
+            
+            export_df = swap_df.copy()
+            export_df["id"] = export_df["Player"].apply(lambda p: injury_id_lookup.get(clean_name(p), ""))
+            
+            csv_data = export_df[["id", "Player"]].to_csv(index=False).encode("utf-8")
+            
+            st.download_button(
+                label="📥 Download Global Swap List (CSV)",
+                data=csv_data,
+                file_name="global_swap_list.csv",
+                mime="text/csv"
+            )
 
 
             # --- Exposure Comparison (Pre vs Post Swaps for Selected User) ---
