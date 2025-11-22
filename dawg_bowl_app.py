@@ -875,8 +875,8 @@ if auth_status:
                 injured_in_draft["Round"] = injured_in_draft["Pick"].astype(int)
                 injured_in_draft["PickInRound"] = injured_in_draft["Pick"].astype(int)
                 injured_in_draft["Swap Priority"] = injured_in_draft.apply(
-                    lambda row: (row["Round"], 13 - row["PickInRound            
-                    )
+                    lambda row: (row["Round"], 13 - row["PickInRound"]), axis=1            
+                )
                 injured_sorted = injured_in_draft.sort_values("Swap Priority")
     
                 swap_rows = []
